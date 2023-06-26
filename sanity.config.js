@@ -4,13 +4,14 @@ import { visionTool } from '@sanity/vision'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
+const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION
 const title = 'Portfolio Website - Next, Sanity & Tailwind'
 
 const config = defineConfig({
   projectId: projectId,
   dataset: dataset,
   title: title,
-  apiVersion: '2023-02-18',
+  apiVersion: apiVersion,
   basePath: '/studio',
   plugins: [
     deskTool(),
