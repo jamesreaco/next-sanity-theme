@@ -47,3 +47,15 @@ export async function getHomePage() {
     }`,
   )
 }
+
+export async function getBlogPage() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'blogPage'][0]{
+      _id,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
+      pageBuilder
+    }`,
+  )
+}
