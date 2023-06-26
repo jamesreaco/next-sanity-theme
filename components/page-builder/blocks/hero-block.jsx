@@ -1,4 +1,4 @@
-import Button from '@/components/global/button'
+import Button from '@/components/shared/button'
 import Image from 'next/image'
 
 export default function HeroBlock({ block }) {

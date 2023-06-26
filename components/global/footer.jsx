@@ -1,4 +1,4 @@
-import Logo from '@/components/global/logo'
+import Logo from '@/components/shared/logo'
 
 export default function Footer({ logoText }) {
   return (
