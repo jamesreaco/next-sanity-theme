@@ -1,39 +1,27 @@
-import { getBlogPage } from '@/sanity/utils'
+import { getAllPosts } from '@/sanity/utils'
 
 // components
 import Layout from '@/components/global/layout'
-import Block from '@/components/page-builder/block'
 
-export default function BlogPage({ page }) {
-
-  const { pageBuilder } = page
-
+export default function BlogPage({ posts }) {
   return (
     <Layout>
-      {pageBuilder ?
-        <>
-          {pageBuilder?.map(block => (
-            <Block block={block} />
-          ))} 
-        </>
-      :
-        <>
-          <p className='mt-4 mb-12 p-10 rounded-lg bg-white'>
-            Nothing to see here. Start adding some blocks to this page in your Sanity Studio!
-          </p>
-        </>
-      }
+      <header>
+        <h1 className='-ml-1 mb-12 text-[6vw] font-light leading-none'>
+          Blog
+        </h1>
+      </header>
     </Layout>
   )
 }
 
 export async function getServerSideProps() {
 
-  const page = await getBlogPage()
+  const posts = await getAllPosts()
   
   return {
     props: {
-      page: page,
+      posts: posts,
     }
   }
   
