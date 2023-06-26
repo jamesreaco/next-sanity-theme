@@ -8,7 +8,7 @@ export default function Topbar({
   topbarLinkColor 
 }) {
   return (
-    <div className='flex items-center justify-center p-4 text-lg text-white tracking-wide bg-black'>
+    <div className='flex items-center justify-center p-4 text-base text-white tracking-wide bg-black'>
       <div>
         {message}
       </div>
