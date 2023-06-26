@@ -23,9 +23,9 @@ export default function LatestPostsBlock({ block }) {
       marginBottom: `${block.marginBottom * 0.0625}rem` 
     }}>
       <h3 className='pt-12 pb-6 text-2xl font-light uppercase tracking-widest border-b border-black'>
-        Recent Posts
+        {block.heading}
       </h3>
-      <div className='mt-20 grid grid-cols-1 gap-32'>
+      <div className='mt-20 grid grid-cols-1 gap-20'>
         {posts.slice(0, block.postLimit).map((post) => (
           <BlogCard key={post.title} post={post} />
         ))}

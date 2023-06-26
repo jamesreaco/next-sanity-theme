@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function BlogCard({ post }) {
   return (
-    <article className='pb-12 flex items-center justify-between border-b border-black cursor-pointer group'>
+    <article className='pb-8 flex items-center justify-between border-b border-black cursor-pointer group'>
       <h4 className='text-[4vw] font-normal'>
         {post.title}
       </h4>
