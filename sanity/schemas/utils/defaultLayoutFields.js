@@ -1,4 +1,4 @@
-export const layoutFields = [
+export const defaultLayoutFields = [
   {
     name: 'marginTop',
     title: 'Margin Top - Desktop',
