@@ -4,6 +4,10 @@ export const defaultGroups = [
     title: 'Content'
   },
   {
+    name: 'pageBuilder',
+    title: 'Page Builder'
+  },
+  {
     name: 'seo',
     title: 'SEO'
   },
@@ -14,5 +18,5 @@ export const defaultGroups = [
   {
     name: 'layout',
     title: 'Layout'
-  }
+  },
 ]

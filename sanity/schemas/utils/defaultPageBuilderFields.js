@@ -3,6 +3,7 @@ export const defaultPageBuilderFields = [
     name: 'pageBuilder',
     title: 'Page Builder',
     type: 'array',
+    group: 'pageBuilder',
     of: [
       {
         name: 'heroBlock',

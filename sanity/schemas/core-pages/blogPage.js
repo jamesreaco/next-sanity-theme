@@ -1,6 +1,6 @@
 import { defaultGroups } from "../utils/defaultGroups"
 import { defaultFieldsets } from "../utils/defaultFieldsets"
-import { defaultFields } from "../utils/defaultFields"
+import { defaultSeoFields } from "../utils/defaultSeoFields"
 import { defaultPageBuilderFields } from "../utils/defaultPageBuilderFields"
 
 export default {
@@ -14,7 +14,7 @@ export default {
     ...defaultGroups
   ],
   fields: [
-    ...defaultFields,
+    ...defaultSeoFields,
     ...defaultPageBuilderFields,
   ]
 }
