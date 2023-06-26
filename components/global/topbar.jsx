@@ -15,7 +15,7 @@ export default function Topbar({
       {enableTopbarLink && (
         <Link 
           href={`${topbarLinkUrl}`} 
-          className='ml-4 py-0.5 px-2.5 rounded text-black'
+          className='ml-4 py px-2 rounded text-black'
           style={{ backgroundColor: topbarLinkColor }}
         >
           {topbarLinkText}
