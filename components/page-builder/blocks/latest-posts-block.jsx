@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { getLatestPosts } from '@/sanity/utils'
 
 // components
-import BlogCard from '@/components/shared/blog-card'
+import BlogRow from '@/components/shared/blog-row'
 
 export default function LatestPostsBlock({ block }) {
 
@@ -27,7 +27,7 @@ export default function LatestPostsBlock({ block }) {
       </h3>
       <div className='mt-20 grid grid-cols-1 gap-20'>
         {posts.slice(0, block.postLimit).map((post) => (
-          <BlogCard key={post.title} post={post} />
+          <BlogRow key={post.title} post={post} />
         ))}
       </div>
     </section>
