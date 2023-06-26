@@ -1,6 +1,7 @@
 import settings from "./settings";
 import page from "./page";
-import homePage from "./homePage";
+import homePage from "./core-pages/homePage";
+import blogPage from "./core-pages/blogPage";
 import post from "./post";
 import caseStudy from "./caseStudy";
 import menuItem from "./menuItem";
@@ -14,6 +15,7 @@ export const schemaTypes = [
   settings,
   page,
   homePage,
+  blogPage,
   post,
   caseStudy,
   menuItem,

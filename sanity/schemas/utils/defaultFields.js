@@ -1,14 +1,7 @@
 export const defaultFields = [
   {
     name: 'heading',
-    title: 'Heading',
-    type: 'string',
-    group: 'content',
-    fieldset: 'content'
-  },
-  {
-    name: 'tagline',
-    title: 'Tagline',
+    title: 'Page Heading',
     type: 'string',
     group: 'content',
     fieldset: 'content'

@@ -27,6 +27,9 @@ export const structure = (S, context) =>
               S.listItem()
                 .title('Home')
                 .child(S.document().schemaType('homePage').documentId('homePage').title('Home Page')),
+              S.listItem()
+                .title('Blog')
+                .child(S.document().schemaType('blogPage').documentId('blogPage').title('Blog Page')),
             ])
         ),
       
@@ -37,6 +40,7 @@ export const structure = (S, context) =>
           ![
             'settings',
             'homePage',
+            'blogPage'
           ].includes(listItem.getId())
       )
 
