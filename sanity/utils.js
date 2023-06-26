@@ -25,12 +25,19 @@ export async function getSettings() {
   )
 }
 
-export async function getLatestPosts() {
+export async function getPageBySlug(slug) {
   return createClient(clientConfig).fetch(
-    groq`*[_type == 'post'] | order(_createdAt desc) {
+    groq`*[_type == 'page' && slug.current == $slug][0] {
       _id,
       title,
-    }`,
+      slug->{
+        current
+      },
+      metaTitle,
+      metaDescription,
+      metaKeywords,
+      pageBuilder,
+    }`, { slug: slug }
   )
 }
 
@@ -44,6 +51,15 @@ export async function getHomePage() {
       metaDescription,
       metaKeywords,
       pageBuilder
+    }`,
+  )
+}
+
+export async function getLatestPosts() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'post'] | order(_createdAt desc) {
+      _id,
+      title,
     }`,
   )
 }

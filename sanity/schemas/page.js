@@ -1,4 +1,4 @@
-import { defaultFields } from "./utils/defaultFields"
+import { defaultSeoFields } from "./utils/defaultSeoFields"
 import { defaultGroups } from "./utils/defaultGroups"
 import { defaultFieldsets } from "./utils/defaultFieldsets"
 import { defaultPageBuilderFields } from "./utils/defaultPageBuilderFields"
@@ -22,7 +22,15 @@ export default {
       title: 'Page Title',
       type: 'string'
     },
+    {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+      }
+    },
     ...defaultPageBuilderFields,
-    ...defaultFields,
+    ...defaultSeoFields
   ]
 }
