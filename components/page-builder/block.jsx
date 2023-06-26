@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic"
 
 const HeroBlock = dynamic(() => import('./blocks/hero-block'))
+const LatestPostsBlock = dynamic(() => import('./blocks/latest-posts-block'))
 
 export default function Block({ block }) {
 
@@ -9,6 +10,8 @@ export default function Block({ block }) {
   switch (type) {
     case 'heroBlock':
       return <HeroBlock block={block} />
-    }
+    case 'latestPostsBlock':
+      return <LatestPostsBlock block={block} />
+  }
 
 }

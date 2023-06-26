@@ -5,7 +5,7 @@ import post from "./post";
 import menuItem from "./menuItem";
 import heroBlock from "./blocks/heroBlock";
 import headerBlock from "./blocks/headerBlock";
-import latestPosts from "./blocks/latestPosts";
+import latestPostsBlock from "./blocks/latestPostsBlock";
 import latestCaseStudies from "./blocks/latestCaseStudies";
 import caseStudyArchiveBlock from "./blocks/caseStudyArchiveBlock";
 
@@ -17,7 +17,7 @@ export const schemaTypes = [
   menuItem,
   heroBlock,
   headerBlock,
-  latestPosts,
+  latestPostsBlock,
   latestCaseStudies,
   caseStudyArchiveBlock
 ]

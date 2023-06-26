@@ -13,8 +13,8 @@ export const defaultPageBuilderFields = [
         type: 'headerBlock'
       },
       {
-        name: 'latestPosts',
-        type: 'latestPosts'
+        name: 'latestPostsBlock',
+        type: 'latestPostsBlock'
       },
       {
         name: 'latestCaseStudies',

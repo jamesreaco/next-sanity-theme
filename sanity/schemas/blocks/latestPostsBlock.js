@@ -4,7 +4,7 @@ import { defaultFieldsets } from '../utils/defaultFieldsets'
 import { defaultLayoutFields } from '../utils/defaultLayoutFields'
 
 export default {
-  name: 'latestPosts',
+  name: 'latestPostsBlock',
   title: 'Latest Posts',
   type: 'object',
   icon: DocumentTextIcon,
