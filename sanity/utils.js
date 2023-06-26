@@ -24,3 +24,12 @@ export async function getSettings() {
     }`
   )
 }
+
+export async function getLatestPosts() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'post'] | order(_createdAt desc) {
+      _id,
+      title,
+    }`,
+  )
+}
