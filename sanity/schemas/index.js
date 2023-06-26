@@ -1,6 +1,7 @@
 import settings from "./settings";
 import page from "./page";
 import homePage from "./homePage";
+import post from "./post";
 import menuItem from "./menuItem";
 import heroBlock from "./blocks/heroBlock";
 import headerBlock from "./blocks/headerBlock";
@@ -12,6 +13,7 @@ export const schemaTypes = [
   settings,
   page,
   homePage,
+  post,
   menuItem,
   heroBlock,
   headerBlock,
