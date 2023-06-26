@@ -55,11 +55,27 @@ export async function getHomePage() {
   )
 }
 
+export async function getAllPosts() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'post'] | order(_createdAt desc) {
+      _id,
+      title,
+      slug->{
+        current
+      },
+      content
+    }`,
+  )
+}
+
 export async function getLatestPosts() {
   return createClient(clientConfig).fetch(
     groq`*[_type == 'post'] | order(_createdAt desc) {
       _id,
       title,
+      slug->{
+        current
+      }
     }`,
   )
 }
