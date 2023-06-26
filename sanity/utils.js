@@ -33,3 +33,17 @@ export async function getLatestPosts() {
     }`,
   )
 }
+
+export async function getHomePage() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'homePage'][0]{
+      _id,
+      heading,
+      tagline,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
+      pageBuilder
+    }`,
+  )
+}
