@@ -30,6 +30,9 @@ export const structure = (S, context) =>
               S.listItem()
                 .title('Blog')
                 .child(S.document().schemaType('blogPage').documentId('blogPage').title('Blog Page')),
+              S.listItem()
+                .title('Case Studies')
+                .child(S.document().schemaType('caseStudyPage').documentId('caseStudyPage').title('Case Studies')),
             ])
         ),
       

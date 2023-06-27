@@ -62,7 +62,17 @@ export async function getBlogPage() {
       metaTitle,
       metaDescription,
       metaKeywords,
-      pageBuilder
+    }`,
+  )
+}
+
+export async function getCaseStudyPage() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'caseStudyPage'][0]{
+      _id,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
     }`,
   )
 }
