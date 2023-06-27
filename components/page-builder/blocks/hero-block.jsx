@@ -17,6 +17,7 @@ export default function HeroBlock({ block }) {
         <Button 
           text={block.buttonText} 
           destination={`${block.buttonUrl}`} 
+          variant="dark"
         />
       </div>
       <Image 
