@@ -39,6 +39,11 @@ export default {
       ]
     },
     {
+      name: 'readTime',
+      title: 'Read Time - Minutes',
+      type: 'number'
+    },
+    {
       name: 'content',
       title: 'Content',
       type: 'array',

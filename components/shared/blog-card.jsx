@@ -7,11 +7,16 @@ export default function BlogCard({ post }) {
         src={post.image}
         width={600}
         height={300}
-        className='bg-black rounded-lg'
+        className='bg-black rounded-lg group-hover:scale-[1.01] transition'
       />
-      <h5 className='mt-5 py-0.5 px-2.5 border-solid border rounded-full'>
-        {post.category.title}
-      </h5>
+      <div className='mt-5 flex items-center'>
+        <h5 className='py-0.5 px-2.5 border-solid border rounded-full'>
+          {post.category.title}
+        </h5>
+        <div className='ml-3 text-gray-500 font-light tracking-wide'>
+          {post.readTime} Minute Read
+        </div>
+      </div>
       <div className='mt-3 flex items-end justify-between'>
         <h4 className='text-[2.8vw] pr-12 font-normal'>
           {post.title}
