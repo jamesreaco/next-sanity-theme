@@ -118,13 +118,13 @@ export async function getBlogPage() {
 
 export async function getPostBySlug(slug) {
   return createClient(clientConfig).fetch(
-    groq`*[_type == 'post'][0]{
+    groq`*[_type == 'post' && slug.current == $slug][0]{
       _id,
       title,
       slug->{
         current
       },
-      category,
+      'category': category->title,
       'image': image.asset->url,
       readTime,
       content
