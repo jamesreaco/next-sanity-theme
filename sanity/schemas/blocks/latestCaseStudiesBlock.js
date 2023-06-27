@@ -3,7 +3,7 @@ import { defaultFieldsets } from '../utils/defaultFieldsets'
 import { defaultLayoutFields } from '../utils/defaultLayoutFields'
 
 export default {
-  name: 'latestCaseStudies',
+  name: 'latestCaseStudiesBlock',
   title: 'Latest Case Studies',
   type: 'object',
   icon: DocumentTextIcon,

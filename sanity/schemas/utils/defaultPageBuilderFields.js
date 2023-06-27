@@ -18,8 +18,8 @@ export const defaultPageBuilderFields = [
         type: 'latestPostsBlock'
       },
       {
-        name: 'latestCaseStudies',
-        type: 'latestCaseStudies'
+        name: 'latestCaseStudiesBlock',
+        type: 'latestCaseStudiesBlock'
       },
       {
         name: 'caseStudyArchiveBlock',

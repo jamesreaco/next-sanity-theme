@@ -95,9 +95,7 @@ export async function getLatestCaseStudies() {
         current
       },
       url,
-      image {
-        asset->
-      },
+      'image': image.asset->url,
     }`,
   )
 }

@@ -9,7 +9,7 @@ import menuItem from "./menuItem";
 import heroBlock from "./blocks/heroBlock";
 import headerBlock from "./blocks/headerBlock";
 import latestPostsBlock from "./blocks/latestPostsBlock";
-import latestCaseStudies from "./blocks/latestCaseStudies";
+import latestCaseStudiesBlock from "./blocks/latestCaseStudiesBlock";
 import caseStudyArchiveBlock from "./blocks/caseStudyArchiveBlock";
 
 export const schemaTypes = [
@@ -24,6 +24,6 @@ export const schemaTypes = [
   heroBlock,
   headerBlock,
   latestPostsBlock,
-  latestCaseStudies,
+  latestCaseStudiesBlock,
   caseStudyArchiveBlock
 ]
