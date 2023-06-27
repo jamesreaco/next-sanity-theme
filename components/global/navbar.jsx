@@ -12,7 +12,7 @@ export default function Navbar({
     <header className='max-w-7xl mx-auto my-0 py-8 px-12 flex items-center justify-between'>
       <Logo text={logoText} />
       <nav>
-        <ul className='flex gap-12 items-center list-none'>
+        <ul className='hidden md:flex gap-12 items-center list-none'>
           {menuItems.map(item => (
             <li>
               <Link 

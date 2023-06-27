@@ -23,14 +23,14 @@ export default function BlogCard({ post }) {
           </div>
         </div>
         <div className='mt-3 flex items-end justify-between'>
-          <h4 className='text-[2.8vw] pr-12 font-normal'>
+          <h4 className='text-[4.8vw] md:text-[2.8vw] lg:text-[2.8vw]  pr-12 font-normal '>
             {post.title}
           </h4>
           <Image
             src="/images/link-icon.png"
             width={30}
             height={30}
-            className='invert-[100%] transition group-hover:rotate-90'
+            className='invert-[100%] transition group-hover:rotate-90 w-6'
           />
         </div>
       </Link>
