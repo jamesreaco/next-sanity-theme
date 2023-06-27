@@ -20,6 +20,12 @@ export default {
       }
     },
     {
+      name: 'category',
+      type: 'reference',
+      title: 'Category',
+      to: { type: 'postCategory' }
+    },
+    {
       name: 'content',
       title: 'Content',
       type: 'array',

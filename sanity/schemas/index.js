@@ -3,6 +3,7 @@ import page from "./page";
 import homePage from "./core-pages/homePage";
 import blogPage from "./core-pages/blogPage";
 import post from "./post";
+import postCategory from "./postCategory";
 import caseStudy from "./caseStudy";
 import menuItem from "./menuItem";
 import heroBlock from "./blocks/heroBlock";
@@ -17,6 +18,7 @@ export const schemaTypes = [
   homePage,
   blogPage,
   post,
+  postCategory,
   caseStudy,
   menuItem,
   heroBlock,

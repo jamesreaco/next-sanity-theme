@@ -63,6 +63,9 @@ export async function getAllPosts() {
       slug->{
         current
       },
+      category->{
+        title
+      },
       content
     }`,
   )
@@ -73,6 +76,9 @@ export async function getLatestPosts() {
     groq`*[_type == 'post'] | order(_createdAt desc) {
       _id,
       title,
+      category->{
+        title
+      },
       slug->{
         current
       }
