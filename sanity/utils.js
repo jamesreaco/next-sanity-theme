@@ -55,6 +55,18 @@ export async function getHomePage() {
   )
 }
 
+export async function getBlogPage() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'blogPage'][0]{
+      _id,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
+      pageBuilder
+    }`,
+  )
+}
+
 export async function getAllPosts() {
   return createClient(clientConfig).fetch(
     groq`*[_type == 'post'] | order(_createdAt desc) {
@@ -73,7 +85,7 @@ export async function getAllPosts() {
 
 export async function getLatestPosts() {
   return createClient(clientConfig).fetch(
-    groq`*[_type == 'post'] | order(_createdAt desc) {
+    groq`*[_type == 'post'][0...5] | order(_createdAt desc) {
       _id,
       title,
       category->{
@@ -82,30 +94,6 @@ export async function getLatestPosts() {
       readTime,
       'image': image.asset->url,
       'slug': slug.current,
-    }`,
-  )
-}
-
-export async function getLatestCaseStudies() {
-  return createClient(clientConfig).fetch(
-    groq`*[_type == 'caseStudy'] | order(_createdAt desc) {
-      _id,
-      title,
-      'slug': slug.current,
-      url,
-      'image': image.asset->url,
-    }`,
-  )
-}
-
-export async function getBlogPage() {
-  return createClient(clientConfig).fetch(
-    groq`*[_type == 'blogPage'][0]{
-      _id,
-      metaTitle,
-      metaDescription,
-      metaKeywords,
-      pageBuilder
     }`,
   )
 }
@@ -121,5 +109,29 @@ export async function getPostBySlug(slug) {
       readTime,
       content
     }`, { slug: slug }
+  )
+}
+
+export async function getLatestCaseStudies() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'caseStudy'][0...2] | order(_createdAt desc) {
+      _id,
+      title,
+      'slug': slug.current,
+      url,
+      'image': image.asset->url,
+    }`,
+  )
+}
+
+export async function getAllCaseStudies() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'caseStudy'] | order(_createdAt desc) {
+      _id,
+      title,
+      'slug': slug.current,
+      url,
+      'image': image.asset->url,
+    }`,
   )
 }
