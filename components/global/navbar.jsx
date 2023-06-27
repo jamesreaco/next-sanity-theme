@@ -9,7 +9,7 @@ export default function Navbar({
   buttonLink 
 }) {
   return (
-    <header className='max-w-7xl mx-auto my-0 py-8 px-12 flex items-center justify-between'>
+    <header className='max-w-7xl mx-auto my-0 py-8 px-6 md:px-12 flex items-center justify-between border-b'>
       <Logo text={logoText} />
       <nav>
         <ul className='hidden md:flex gap-12 items-center list-none'>

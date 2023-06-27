@@ -10,8 +10,8 @@ export default function BlogCard({ post }) {
       >
         <Image 
           src={post.image}
-          width={600}
-          height={300}
+          width={1200}
+          height={600}
           className='bg-black rounded-lg group-hover:scale-[1.01] transition'
         />
         <div className='mt-5 flex items-center'>

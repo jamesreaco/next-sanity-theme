@@ -10,7 +10,7 @@ export default function BlogRow({ post }) {
       > 
         <div>
           <div className='mt-5 flex items-center '>
-            <h5 className='py-0.5 px-2.5 border-solid border rounded-full'>
+            <h5 className='py-0.5 px-2.5 border-solid bg-white border rounded-full'>
               {post.category.title}
             </h5>
             <div className='ml-3 text-gray-500 font-light tracking-wide'>

@@ -46,7 +46,7 @@ export default function Layout({ children }) {
         logoText={settings.logoText}
         menuItems={settings.navbarMenuItems}
       />
-      <main className='max-w-7xl mx-auto my-0 px-12'>
+      <main className='max-w-7xl mx-auto my-0 px-6 md:px-12'>
         {children}
       </main>
       <Footer 

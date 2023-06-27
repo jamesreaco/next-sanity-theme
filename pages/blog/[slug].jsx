@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default function PostPage({ post }) {
   return (
     <Layout>
-      <header className='grid'>
+      <header className='grid mt-8'>
         <Image 
           src={post.image}
           width={2000}
