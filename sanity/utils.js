@@ -66,6 +66,7 @@ export async function getAllPosts() {
       category->{
         title
       },
+      'image': image.asset->url,
       content
     }`,
   )
@@ -79,6 +80,7 @@ export async function getLatestPosts() {
       category->{
         title
       },
+      'image': image.asset->url,
       slug->{
         current
       }

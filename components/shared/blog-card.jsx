@@ -4,7 +4,7 @@ export default function BlogCard({ post }) {
   return (
     <article className='flex flex-col items-start pb-8 border-b border-black cursor-pointer group'>
       <Image 
-        src=""
+        src={post.image}
         width={600}
         height={300}
         className='bg-black rounded-lg'
