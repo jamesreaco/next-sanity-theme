@@ -1,10 +1,9 @@
 import { CogIcon } from '@sanity/icons'
 
-export const structure = (S, context) =>
+export const structure = (S) =>
   S.list()
     .title('Content')
     .items([
-      
       S.listItem()
         .title('Site Settings')
         .icon(CogIcon)
@@ -15,9 +14,7 @@ export const structure = (S, context) =>
           .documentId('settings')
           .title('Site Settings')
         ),
-
       S.divider(),
-
       S.listItem()
         .title('Core Pages')
         .child(
@@ -35,9 +32,7 @@ export const structure = (S, context) =>
                 .child(S.document().schemaType('caseStudyPage').documentId('caseStudyPage').title('Case Studies')),
             ])
         ),
-      
       S.divider(),
-
       ...S.documentTypeListItems().filter(
         (listItem) =>
           ![
@@ -46,7 +41,6 @@ export const structure = (S, context) =>
             'blogPage'
           ].includes(listItem.getId())
       )
-
     ])
     
   
