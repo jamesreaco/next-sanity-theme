@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import Image from 'next/image'
 import { motion, useScroll, useTransform } from "framer-motion";
 import { getLatestCaseStudies } from '@/sanity/utils';
-import Button from '@/components/shared/button'
+import CaseStudyCard from '@/components/shared/case-study-card';
 
 export default function LatestCaseStudiesBlock({ block }) {
 
@@ -30,18 +29,7 @@ export default function LatestCaseStudiesBlock({ block }) {
       </motion.div>
       <div className='flex gap-4'>
         {caseStudies.map((item) => (
-          <div key={item.title} className='relative cursor-pointer overflow-hidden rounded-lg group'>
-            <Image 
-              src={item.image}
-              width={800}
-              height={1000}
-              alt={item.title}
-              className='w-full h-full object-cover transition hover:scale-[1.02]'
-            />
-            <div className='p-[1rem] absolute bottom-0 left-0 right-0 transition-all group-hover:p-[2rem]'>
-              <Button text={item.title} />
-            </div>
-          </div>
+          <CaseStudyCard caseStudy={item} />
         ))}
       </div>
     </section>
