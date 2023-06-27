@@ -22,7 +22,7 @@ export default function BlogPage({ posts }) {
 export async function getServerSideProps() {
 
   const posts = await getAllPosts()
-  
+
   return {
     props: {
       posts: posts,

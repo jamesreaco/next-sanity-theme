@@ -60,9 +60,7 @@ export async function getAllPosts() {
     groq`*[_type == 'post'] | order(_createdAt desc) {
       _id,
       title,
-      slug->{
-        current
-      },
+      'slug': slug.current,
       category->{
         title
       },
@@ -83,9 +81,7 @@ export async function getLatestPosts() {
       },
       readTime,
       'image': image.asset->url,
-      slug->{
-        current
-      }
+      'slug': slug.current,
     }`,
   )
 }
@@ -95,9 +91,7 @@ export async function getLatestCaseStudies() {
     groq`*[_type == 'caseStudy'] | order(_createdAt desc) {
       _id,
       title,
-      slug->{
-        current
-      },
+      'slug': slug.current,
       url,
       'image': image.asset->url,
     }`,
@@ -121,9 +115,7 @@ export async function getPostBySlug(slug) {
     groq`*[_type == 'post' && slug.current == $slug][0]{
       _id,
       title,
-      slug->{
-        current
-      },
+      'slug': slug.current,
       'category': category->title,
       'image': image.asset->url,
       readTime,
