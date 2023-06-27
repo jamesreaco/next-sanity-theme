@@ -30,7 +30,7 @@ export default function LatestCaseStudiesBlock({ block }) {
       </motion.div>
       <div className='flex gap-4'>
         {caseStudies.map((item) => (
-          <div key={item.title} className='relative cursor-pointer overflow-hidden rounded-xl group'>
+          <div key={item.title} className='relative cursor-pointer overflow-hidden rounded-lg group'>
             <Image 
               src={item.image}
               width={800}
