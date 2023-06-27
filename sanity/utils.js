@@ -86,6 +86,22 @@ export async function getLatestPosts() {
   )
 }
 
+export async function getLatestCaseStudies() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'caseStudy'] | order(_createdAt desc) {
+      _id,
+      title,
+      slug->{
+        current
+      },
+      url,
+      image {
+        asset->
+      },
+    }`,
+  )
+}
+
 export async function getBlogPage() {
   return createClient(clientConfig).fetch(
     groq`*[_type == 'blogPage'][0]{
