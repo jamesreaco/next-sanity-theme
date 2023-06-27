@@ -1,12 +1,13 @@
 import Layout from '@/components/global/layout'
 import React from 'react'
 import { getPostBySlug } from '@/sanity/utils'
+import { PortableText } from '@portabletext/react';
 import Image from 'next/image'
 
 export default function PostPage({ post }) {
   return (
     <Layout>
-      <header className='grid mb-16'>
+      <header className='grid'>
         <Image 
           src={post.image}
           width={2000}
@@ -28,6 +29,10 @@ export default function PostPage({ post }) {
           </h1>
         </div>
       </header>
+      <hr className='mx-10'/>
+      <div className='mt-10 px-10 pb-14 text-lg text-gray-700 blog-content'>
+        <PortableText value={post.content} />
+      </div>
     </Layout>
   )
 }
@@ -37,8 +42,6 @@ export async function getServerSideProps(context) {
   const { slug } = context.params
   const post = await getPostBySlug(slug)
 
-  console.log(slug)
-  
   return {
     props: {
       post: post,

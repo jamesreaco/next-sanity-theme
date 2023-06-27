@@ -7,13 +7,20 @@ export default function BlogRow({ post }) {
       <Link 
         href={`/blog/${post.slug}`}
         className='pb-8 flex items-center justify-between border-b border-black cursor-pointer group'
-      >
-        <h5 className='mt-3 py-0.5 px-2.5 border-solid bg-black text-white border rounded-full'>
-          {post.category.title}
-        </h5>
-        <h4 className='mr-auto ml-6 text-[4vw] font-normal'>
-          {post.title}
-        </h4>
+      > 
+        <div>
+          <div className='mt-5 flex items-center '>
+            <h5 className='py-0.5 px-2.5 border-solid border rounded-full'>
+              {post.category.title}
+            </h5>
+            <div className='ml-3 text-gray-500 font-light tracking-wide'>
+              {post.readTime} Minute Read
+            </div>
+          </div>
+          <h4 className='mr-auto mt-3 text-[4vw] font-normal'>
+            {post.title}
+          </h4>
+        </div>
         <Image
           src="/images/link-icon.png"
           width={40}

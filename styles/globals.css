@@ -10,3 +10,11 @@ body {
 body {
   background-color: #F6F6F2;
 }
+
+.blog-content > p {
+  margin-top: 12px;
+}
+
+.blog-content > p:first-of-type {
+  margin-top: 0px;
+}
