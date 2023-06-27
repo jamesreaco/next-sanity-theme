@@ -135,3 +135,15 @@ export async function getAllCaseStudies() {
     }`,
   )
 }
+
+export async function getCaseStudyBySlug(slug) {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'caseStudy' && slug.current == $slug][0]{
+      _id,
+      title,
+      'slug': slug.current,
+      url,
+      'image': image.asset->url,
+    }`, { slug: slug }
+  )
+}
