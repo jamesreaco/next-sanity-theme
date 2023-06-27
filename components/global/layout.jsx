@@ -26,7 +26,7 @@ export default function Layout({ children }) {
   }
 
   if (isLoading) {
-    return <p>Loading...</p>
+    return 
   }
 
   return (
