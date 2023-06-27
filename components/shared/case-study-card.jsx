@@ -19,6 +19,7 @@ export default function CaseStudyCard({ caseStudy }) {
         />
         <div className='p-[1rem] absolute bottom-0 left-0 right-0 transition-all group-hover:p-[2rem]'>
           <Button 
+            destination={`/case-studies/${caseStudy.slug}`}
             text={caseStudy.title} 
             variant="light"
           />
