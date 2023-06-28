@@ -35,12 +35,41 @@ export const structure = (S) =>
       S.divider(),
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          ![
-            'settings',
-            'homePage',
-            'blogPage'
+          [
+            'page',
+            'menuItem',
           ].includes(listItem.getId())
-      )
+      ),
+      S.divider(),
+      S.listItem()
+        .title('Blog')
+        .child(
+          S.list()
+            .title('Blog')
+            .items([
+              S.listItem()
+                .title('Posts')
+                .child(
+                  S.documentList()
+                    .title('All Posts')
+                    .filter('_type == "post"')
+                ),
+              S.listItem()
+                .title('Categories')
+                .child(
+                  S.documentList()
+                    .title('Post Categories')
+                    .filter('_type == "postCategory"')
+                ),
+            ])
+        ),
+        ...S.documentTypeListItems().filter(
+          (listItem) =>
+            [
+              'caseStudy',
+            ].includes(listItem.getId())
+        ),
+        S.divider(),
     ])
     
   
