@@ -1,4 +1,5 @@
 import Layout from '@/components/global/layout'
+import CaseStudyCTA from '@/components/pages/case-studies/case-study-cta'
 import CaseStudyHeader from '@/components/pages/case-studies/case-study-header'
 import CaseStudyImageGallery from '@/components/pages/case-studies/case-study-image-gallery'
 import CaseStudyOverview from '@/components/pages/case-studies/case-study-overview'
@@ -21,6 +22,7 @@ export default function CaseStudyPage({ caseStudy }) {
       />
       <CaseStudyOverview overview={overview} />
       <CaseStudyImageGallery images={imageGallery} />
+      <CaseStudyCTA />
     </Layout>
   )
 }
