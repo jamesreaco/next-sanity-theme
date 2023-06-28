@@ -48,5 +48,22 @@ export default {
         }
       ]
     },
+    {
+      name: 'imageGallery',
+      title: 'Image Gallery',
+      description: "Reccommended image size: 500px (width) - 500px (height)",
+      type: 'array',
+      of: [{ 
+        type: 'image',
+        fields: [
+          {
+            name: 'alt',
+            title: 'Alt',
+            type: 'string'
+          }
+        ]
+      }],
+      options: { hotspot: true },
+    },
   ]
 }
