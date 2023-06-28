@@ -8,14 +8,14 @@ export default function Topbar({
   topbarLinkColor 
 }) {
   return (
-    <div className='m-2 md:m-0 rounded-lg md:rounded-none flex flex-col md:flex-row items-center justify-center p-4 text-base text-white tracking-wide bg-black'>
+    <div className='hidden sm:flex flex-row items-center justify-center p-4 text-base text-white tracking-wide bg-black'>
       <div>
         {message}
       </div>
       {enableTopbarLink && (
         <Link 
           href={`${topbarLinkUrl}`} 
-          className='mt-2 md:mt-0 ml-4 py px-2 rounded text-black'
+          className='ml-3 py-0.5 px-1.5 rounded text-sm text-black'
           style={{ backgroundColor: topbarLinkColor }}
         >
           {topbarLinkText}
