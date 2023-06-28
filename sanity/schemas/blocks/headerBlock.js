@@ -34,7 +34,7 @@ export default {
           { title: 'Right',  value: 'right' },
         ],
       }
-  },
+    },
     ...defaultLayoutFields
   ]
 }
