@@ -1,10 +1,24 @@
 import { CaseIcon } from '@sanity/icons'
+import { m } from 'framer-motion'
 
 export default {
   name: 'caseStudy',
   title: 'Case Studies',
   type: 'document',
   icon: CaseIcon,
+  fieldsets: [
+    {
+      name: 'cta',
+      title: 'Call To Action',
+      description: 'Add a unique call to action at the end of every case study.'
+    }
+  ],
+  groups: [
+    {
+      name: 'cta',
+      title: 'Call To Action'
+    }
+  ],
   fields: [
     {
       name: 'title',
@@ -65,5 +79,33 @@ export default {
       }],
       options: { hotspot: true },
     },
+    {
+      name: 'caseStudyCtaHeading',
+      title: 'Heading',
+      type: 'string',
+      group: 'cta',
+      fieldset: 'cta'
+    },
+    {
+      name: 'caseStudyCtaText',
+      title: 'Text',
+      type: 'string',
+      group: 'cta',
+      fieldset: 'cta'
+    },
+    {
+      name: 'caseStudyCtaButtonText',
+      title: 'Button Text',
+      type: 'string',
+      group: 'cta',
+      fieldset: 'cta'
+    },
+    {
+      name: 'caseStudyCtaButtonDestination',
+      title: 'Button Link',
+      type: 'string',
+      group: 'cta',
+      fieldset: 'cta'
+    }
   ]
 }

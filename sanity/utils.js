@@ -173,7 +173,11 @@ export async function getCaseStudyBySlug(slug) {
       imageGallery[] {
         'alt': alt,
         'url': asset->url
-      }
+      },
+      caseStudyCtaHeading,
+      caseStudyCtaText,
+      caseStudyCtaButtonText,
+      caseStudyCtaButtonDestination
     }`, { slug: slug }
   )
 }

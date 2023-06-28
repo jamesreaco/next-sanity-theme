@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { getLatestPosts } from '@/sanity/utils'
 
 // components
-import BlogRow from '@/components/shared/blog-row'
 import BlogCard from '@/components/shared/blog-card'
 import Button from '@/components/shared/button'
 

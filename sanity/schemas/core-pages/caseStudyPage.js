@@ -7,10 +7,10 @@ export default {
   title: 'Case Study Page',
   type: 'document',
   fieldsets: [
-    ...defaultFieldsets
+    ...defaultFieldsets,
   ],
   groups: [
-    ...defaultGroups
+    ...defaultGroups,
   ],
   fields: [
     ...defaultSeoFields,

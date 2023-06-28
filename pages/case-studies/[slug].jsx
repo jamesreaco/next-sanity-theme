@@ -9,7 +9,16 @@ import React from 'react'
 export default function CaseStudyPage({ caseStudy }) {
 
   const { 
-    title, shortDescription, overview, image, url, imageGallery
+    title, 
+    shortDescription, 
+    overview, 
+    image, 
+    url, 
+    imageGallery,
+    caseStudyCtaHeading,
+    caseStudyCtaText,
+    caseStudyCtaButtonText,
+    caseStudyCtaButtonDestination
   } = caseStudy
 
   return (
@@ -22,7 +31,12 @@ export default function CaseStudyPage({ caseStudy }) {
       />
       <CaseStudyOverview overview={overview} />
       <CaseStudyImageGallery images={imageGallery} />
-      <CaseStudyCTA />
+      <CaseStudyCTA 
+        heading={caseStudyCtaHeading}
+        text={caseStudyCtaText}
+        buttonText={caseStudyCtaButtonText}
+        buttonDestination={caseStudyCtaButtonDestination}
+      />
     </Layout>
   )
 }
