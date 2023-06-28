@@ -1,5 +1,6 @@
 import Layout from '@/components/global/layout'
 import CaseStudyHeader from '@/components/pages/case-studies/case-study-header'
+import CaseStudyImageGallery from '@/components/pages/case-studies/case-study-image-gallery'
 import CaseStudyOverview from '@/components/pages/case-studies/case-study-overview'
 import { getCaseStudyBySlug } from '@/sanity/utils'
 import React from 'react'
@@ -7,7 +8,7 @@ import React from 'react'
 export default function CaseStudyPage({ caseStudy }) {
 
   const { 
-    title, shortDescription, overview, image, url
+    title, shortDescription, overview, image, url, imageGallery
   } = caseStudy
 
   return (
@@ -19,6 +20,7 @@ export default function CaseStudyPage({ caseStudy }) {
         url={url}
       />
       <CaseStudyOverview overview={overview} />
+      <CaseStudyImageGallery images={imageGallery} />
     </Layout>
   )
 }

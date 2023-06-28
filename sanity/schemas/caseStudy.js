@@ -51,7 +51,7 @@ export default {
     {
       name: 'imageGallery',
       title: 'Image Gallery',
-      description: "Reccommended image size: 500px (width) - 500px (height)",
+      description: "Reccommended image size: 600px (width) - 600px (height)",
       type: 'array',
       of: [{ 
         type: 'image',

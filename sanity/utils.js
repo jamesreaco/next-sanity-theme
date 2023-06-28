@@ -170,6 +170,10 @@ export async function getCaseStudyBySlug(slug) {
       'slug': slug.current,
       url,
       'image': image.asset->url,
+      imageGallery[] {
+        'alt': alt,
+        'url': asset->url
+      }
     }`, { slug: slug }
   )
 }
