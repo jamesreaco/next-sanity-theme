@@ -7,7 +7,7 @@ import React from 'react'
 export default function CaseStudyPage({ caseStudy }) {
 
   const { 
-    title, shortDescription, image, url
+    title, shortDescription, overview, image, url
   } = caseStudy
 
   return (
@@ -18,7 +18,7 @@ export default function CaseStudyPage({ caseStudy }) {
         image={image}
         url={url}
       />
-      <CaseStudyOverview />
+      <CaseStudyOverview overview={overview} />
     </Layout>
   )
 }

@@ -166,6 +166,7 @@ export async function getCaseStudyBySlug(slug) {
       _id,
       title,
       shortDescription,
+      overview,
       'slug': slug.current,
       url,
       'image': image.asset->url,

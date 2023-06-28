@@ -17,6 +17,12 @@ export default {
       type: 'string',
     },
     {
+      name: 'overview',
+      title: 'Project Overview',
+      type: 'array',
+      of: [{ type: 'block' }]
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
