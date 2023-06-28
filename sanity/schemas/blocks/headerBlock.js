@@ -7,6 +7,13 @@ export default {
   title: 'Header Block',
   type: 'object',
   icon: DocumentTextIcon,
+  preview: {
+    prepare() {
+      return {
+        title: 'Header',
+      }
+    }
+  },
   fieldsets: [
     ...defaultFieldsets
   ],
@@ -15,6 +22,19 @@ export default {
       name: 'heading',
       type: 'string'
     },
+    {
+      title: 'Text Align',
+      name: 'textAlign',
+      type: 'string',
+      initialValue: 'left',
+      options: {
+        list: [
+          { title: 'Left', value: 'left' },
+          { title: 'Center', value: 'center' },
+          { title: 'Right',  value: 'right' },
+        ],
+      }
+  },
     ...defaultLayoutFields
   ]
 }
