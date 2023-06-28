@@ -1,7 +1,14 @@
 import Logo from '@/components/shared/logo'
 import Link from 'next/link'
 
-export default function Footer({ logoText }) {
+export default function Footer({ 
+  logoText, 
+  footerTagline,
+  footerQuickLinks,
+  footerSocialLinks,
+  footerCopyright,
+  footerLegalLinks
+}) {
   return (
     <footer className='bg-white border-t'>
       <div className='max-w-7xl mx-auto p-12 pb-6 px-6 md:px-12'>
@@ -9,7 +16,7 @@ export default function Footer({ logoText }) {
           <div className='mr-auto'>
             <Logo text={logoText} />
             <p className='mt-4'>
-              Freelance digital designer from London.
+              {footerTagline}
             </p>
           </div>
           <div className='grid grid-cols-2 gap-24'>
@@ -18,21 +25,13 @@ export default function Footer({ logoText }) {
                 Quick Links
               </h5>
               <ul>
-                <li className='mb-4'>
-                  <Link href=''>
-                    Case Studies
-                  </Link>
-                </li>
-                <li className='mb-4'>
-                  <Link href=''>
-                    About
-                  </Link>
-                </li>
-                <li className='mb-4'>
-                  <Link href=''>
-                    Blog
-                  </Link>
-                </li>
+                {footerQuickLinks?.map((item) => (
+                  <li className='mb-4'>
+                    <Link href={`${item.link}`}>
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
@@ -40,23 +39,20 @@ export default function Footer({ logoText }) {
                 Socials
               </h5>
               <ul>
-                <li className='mb-4'>
-                  <Link href=''>
-                    Twitter
-                  </Link>
-                </li>
-                <li className='mb-4'>
-                  <Link href=''>
-                    Instagram
-                  </Link>
-                </li>
+                {footerSocialLinks?.map((item) => (
+                  <li className='mb-4'>
+                    <Link href={`${item.link}`}>
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
         <div className='mt-28 flex justify-between'>
           <p className='font-light text-sm'>
-            Brooke © 2023 - A free and open source theme by
+            {footerCopyright}
             <span>
               <a 
                 href="https://twitter.com/jamesreaco" 
@@ -64,22 +60,22 @@ export default function Footer({ logoText }) {
               >
               &nbsp;James Rea
               </a>
-            </span>.
+            </span>
           </p>
           <div className='flex items-center gap-1'>
-            <Link 
-              href=""
-              className='text-sm'
-            >
-              Privacy Policy
-            </Link>
-            /
-            <Link 
-              href=""
-              className='text-sm'
-            >
-              Terms
-            </Link>
+            {footerLegalLinks?.map((item) => (
+              <div className='flex items-center gap-1 group'>
+                <Link 
+                  href={item.link}
+                  className='text-sm'
+                >
+                  {item.title}
+                </Link>
+                <span className='group-last:hidden'>
+                  •
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -14,6 +14,10 @@ export default {
       name: 'navbar',
       title: 'Navbar',
     },
+    {
+      name: 'footer',
+      title: 'Footer'
+    }
   ],
   groups: [
     {
@@ -23,6 +27,10 @@ export default {
     {
       name: 'navbar',
       title: 'Navbar',
+    },
+    {
+      name: 'footer',
+      title: 'Footer',
     },
   ],
   fields: [
@@ -110,6 +118,59 @@ export default {
       type: 'string',
       fieldset: 'navbar',
       group: 'navbar',
+    },
+    {
+      name: 'footerTagline',
+      title: 'Footer Tagline',
+      type: 'string',
+      fieldset: 'footer',
+      group: 'footer',
+    },
+    {
+      name: 'footerCopyright',
+      title: 'Footer Copyright',
+      type: 'string',
+      fieldset: 'footer',
+      group: 'footer',
+    },
+    {
+      name: 'footerQuickLinks',
+      title: 'Quick Links',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'menuItem' },
+        },
+      ],
+      fieldset: 'footer',
+      group: 'footer',
+    },
+    {
+      name: 'footerSocialLinks',
+      title: 'Social Links',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'menuItem' },
+        },
+      ],
+      fieldset: 'footer',
+      group: 'footer',
+    },
+    {
+      name: 'footerLegalLinks',
+      title: 'Legal Links',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'menuItem' },
+        },
+      ],
+      fieldset: 'footer',
+      group: 'footer',
     },
   ],
 }

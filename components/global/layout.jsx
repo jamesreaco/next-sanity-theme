@@ -51,6 +51,11 @@ export default function Layout({ children }) {
       </main>
       <Footer 
         logoText={settings.logoText}
+        footerTagline={settings.footerTagline}
+        footerQuickLinks={settings.footerQuickLinks}
+        footerSocialLinks={settings.footerSocialLinks}
+        footerCopyright={settings.footerCopyright}
+        footerLegalLinks={settings.footerLegalLinks}
       />
     </div>
   )

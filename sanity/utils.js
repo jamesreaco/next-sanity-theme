@@ -21,6 +21,20 @@ export async function getSettings() {
       },
       navbarButtonText,
       navbarButtonLink,
+      footerTagline,
+      footerCopyright,
+      footerQuickLinks[]-> {
+        title,
+        link
+      },
+      footerSocialLinks[]-> {
+        title,
+        link
+      },
+      footerLegalLinks[]-> {
+        title,
+        link
+      },
     }`
   )
 }
