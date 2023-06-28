@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Tag from '@/components/shared/tag'
 
 export default function PostHeader({
   image,
@@ -17,9 +18,7 @@ export default function PostHeader({
       />
       <div className='p-10 flex flex-col items-start justify-start'>
         <div className='mt-5 flex items-center '>
-          <h5 className='py-0.5 px-2.5 border-solid border rounded-full'>
-            {category}
-          </h5>
+          <Tag text={category} />
           <div className='ml-3 text-gray-500 font-light tracking-wide'>
             {readTime} Minute Read
           </div>

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Tag from './tag'
 
 export default function BlogCard({ post }) {
   return (
@@ -15,9 +16,7 @@ export default function BlogCard({ post }) {
           className='bg-black rounded-lg group-hover:scale-[1.01] transition'
         />
         <div className='mt-5 flex items-center'>
-          <h5 className='py-0.5 px-2.5 border-solid border rounded-full'>
-            {post.category.title}
-          </h5>
+          <Tag text={post.category.title} />
           <div className='ml-3 text-gray-500 font-light tracking-wide'>
             {post.readTime} Minute Read
           </div>

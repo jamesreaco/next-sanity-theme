@@ -1,4 +1,5 @@
 import Button from '@/components/shared/button'
+import Tag from '@/components/shared/tag'
 import Image from 'next/image'
 import React from 'react'
 
@@ -6,8 +7,9 @@ export default function CaseStudyHeader({ title, image, url }) {
   return (
     <header className='mt-20 -ml-1 flex flex-col items-start'>
       <div className='w-full flex items-end justify-between'>
-        <div>
-          <h1 className='text-7xl font-light '>
+        <div className='flex flex-col items-start'>
+          <Tag text="Case Study" />
+          <h1 className='mt-8 text-7xl font-light'>
             {title}
           </h1>
           <p className='w-[30rem] mt-4 leading-7'>
@@ -16,7 +18,7 @@ export default function CaseStudyHeader({ title, image, url }) {
         </div>
         <Button 
           text="View Project"
-          destination=""
+          destination={`${url}`}
           variant="light"
         />
       </div>
