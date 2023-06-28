@@ -1,13 +1,21 @@
 import Layout from '@/components/global/layout'
+import CaseStudyHeader from '@/components/pages/case-studies/case-study-header'
 import { getCaseStudyBySlug } from '@/sanity/utils'
 import React from 'react'
 
 export default function CaseStudyPage({ caseStudy }) {
+
+  const { 
+    title, image, url
+  } = caseStudy
+
   return (
     <Layout>
-      <h1>
-        {caseStudy.title}
-      </h1>
+      <CaseStudyHeader 
+        title={title}
+        image={image}
+        url={url}
+      />
     </Layout>
   )
 }
