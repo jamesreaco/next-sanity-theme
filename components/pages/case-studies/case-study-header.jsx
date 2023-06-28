@@ -1,9 +1,13 @@
+import Image from 'next/image'
 import Button from '@/components/shared/button'
 import Tag from '@/components/shared/tag'
-import Image from 'next/image'
-import React from 'react'
 
-export default function CaseStudyHeader({ title, image, url }) {
+export default function CaseStudyHeader({ 
+  title, 
+  shortDescription,
+  image, 
+  url 
+}) {
   return (
     <header className='mt-20 -ml-1 flex flex-col items-start'>
       <div className='w-full flex items-end justify-between'>
@@ -13,7 +17,7 @@ export default function CaseStudyHeader({ title, image, url }) {
             {title}
           </h1>
           <p className='w-[30rem] mt-4 leading-7'>
-            Lorem ipsum dolor sit amet. Eos accusamus similique est corrupti earum est voluptas voluptas ad quaerat saepe
+            {shortDescription}
           </p>
         </div>
         <Button 
@@ -27,7 +31,7 @@ export default function CaseStudyHeader({ title, image, url }) {
         width={2000}
         height={600}
         alt={title}
-        className='mt-20 rounded-lg'
+        className='mt-20 rounded-lg h-[40rem] object-cover'
       />
     </header>
   )

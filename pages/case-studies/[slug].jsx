@@ -6,13 +6,14 @@ import React from 'react'
 export default function CaseStudyPage({ caseStudy }) {
 
   const { 
-    title, image, url
+    title, shortDescription, image, url
   } = caseStudy
 
   return (
     <Layout>
       <CaseStudyHeader 
         title={title}
+        shortDescription={shortDescription}
         image={image}
         url={url}
       />

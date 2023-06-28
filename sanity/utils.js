@@ -165,6 +165,7 @@ export async function getCaseStudyBySlug(slug) {
     groq`*[_type == 'caseStudy' && slug.current == $slug][0]{
       _id,
       title,
+      shortDescription,
       'slug': slug.current,
       url,
       'image': image.asset->url,
