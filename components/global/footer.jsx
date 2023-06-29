@@ -72,7 +72,7 @@ export default function Footer({
                   {item.title}
                 </Link>
                 <span className='group-last:hidden'>
-                  •
+                  /
                 </span>
               </div>
             ))}
