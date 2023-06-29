@@ -23,15 +23,14 @@ export default {
       type: 'string'
     },
     {
-      title: 'Text Align',
-      name: 'textAlign',
+      title: 'Width',
+      name: 'headerWidth',
       type: 'string',
-      initialValue: 'left',
+      initialValue: 'wide',
       options: {
         list: [
-          { title: 'Left', value: 'left' },
-          { title: 'Center', value: 'center' },
-          { title: 'Right',  value: 'right' },
+          { title: 'Narrow', value: 'narrow' },
+          { title: 'Wide', value: 'wide' },
         ],
       }
     },
