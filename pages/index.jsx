@@ -7,16 +7,23 @@ import HomeLatestPosts from '@/components/pages/home/home-latest-posts'
 
 export default function Home({ page }) {
 
-  const { pageBuilder } = page
+  const { 
+    heading,
+    paragraph,
+    btnText,
+    btnDestination
+  } = page
 
   return (
     <Layout>
-      <HomeHero />
+      <HomeHero 
+        heading={heading}
+        paragraph={paragraph}
+        btnText={btnText}
+        btnDestination={btnDestination}
+      />
       <HomeCaseStudies />
       <HomeLatestPosts />
-      {pageBuilder?.map(block => (
-        <Block block={block} />
-      ))} 
     </Layout>
   )
 }

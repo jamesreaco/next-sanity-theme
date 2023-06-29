@@ -1,7 +1,6 @@
 import { defaultGroups } from "../utils/defaultGroups"
 import { defaultFieldsets } from "../utils/defaultFieldsets"
 import { defaultSeoFields } from "../utils/defaultSeoFields"
-import { defaultPageBuilderFields } from "../utils/defaultPageBuilderFields"
 
 export default {
   name: 'homePage',
@@ -14,7 +13,34 @@ export default {
     ...defaultGroups
   ],
   fields: [
+    {
+      name: 'heading',
+      title: 'Heading',
+      type: 'string',
+      group: 'content',
+      fieldset: 'content'
+    },
+    {
+      name: 'paragraph',
+      title: 'Paragraph',
+      type: 'string',
+      group: 'content',
+      fieldset: 'content'
+    },
+    {
+      name: 'btnText',
+      title: 'Button Text',
+      type: 'string',
+      group: 'content',
+      fieldset: 'content'
+    },
+    {
+      name: 'btnDestination',
+      title: 'Button Link',
+      type: 'string',
+      group: 'content',
+      fieldset: 'content'
+    },
     ...defaultSeoFields,
-    ...defaultPageBuilderFields,
   ]
 }

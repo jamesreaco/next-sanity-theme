@@ -1,19 +1,24 @@
 import Button from '@/components/shared/button'
 import Image from 'next/image'
 
-export default function HomeHero() {
+export default function HomeHero({ 
+  heading,
+  paragraph,
+  btnText,
+  btnDestination
+}) {
   return (
     <section className='mt-20 flex flex-col-reverse md:flex-row justify-between'>
       <div className='flex items-start flex-col'>
         <h1 className='-ml-1 md:-ml-2 text-[12vw] font-light leading-none'>
-          Freelance Designer
+          {heading}
         </h1>
         <p className='max-w-[30rem] mt-10 md:mt-20 mb-12 text-[1.2rem] md:text-2xl font-light'>
-          Expertly crafted digital experiences that help businesses grow online and beyond.
+          {paragraph}
         </p>
         <Button 
-          text={"Case Studies"} 
-          destination={`/case-studies`} 
+          text={btnText} 
+          destination={`${btnDestination}`} 
           variant="dark"
         />
       </div>

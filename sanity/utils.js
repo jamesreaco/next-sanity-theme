@@ -60,11 +60,12 @@ export async function getHomePage() {
     groq`*[_type == 'homePage'][0]{
       _id,
       heading,
-      tagline,
+      paragraph,
+      btnText,
+      btnDestination,
       metaTitle,
       metaDescription,
       metaKeywords,
-      pageBuilder
     }`,
   )
 }
