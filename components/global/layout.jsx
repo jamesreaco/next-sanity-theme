@@ -56,6 +56,10 @@ export default function Layout({ children }) {
         footerSocialLinks={settings.footerSocialLinks}
         footerCopyright={settings.footerCopyright}
         footerLegalLinks={settings.footerLegalLinks}
+        enableFootnote={settings.enableFootnote}
+        footerFootnoteText={settings.footerFootnoteText}
+        enableFootnoteLink={settings.enableFootnoteLink}
+        footerFootnoteLink={settings.footerFootnoteLink}
       />
     </div>
   )

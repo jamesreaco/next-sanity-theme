@@ -35,6 +35,10 @@ export async function getSettings() {
         title,
         link
       },
+      enableFootnote,
+      footerFootnoteText,
+      enableFootnoteLink,
+      footerFootnoteLink
     }`
   )
 }

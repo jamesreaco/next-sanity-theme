@@ -134,6 +134,37 @@ export default {
       group: 'footer',
     },
     {
+      name: 'enableFootnote',
+      title: 'Enable Footnote',
+      type: 'boolean',
+      fieldset: 'footer',
+      group: 'footer',
+    },
+    {
+      name: 'footerFootnoteText',
+      title: 'Footer Footnote Text',
+      type: 'string',
+      fieldset: 'footer',
+      group: 'footer',
+      hidden: ({document}) => document?.enableFootnote === false
+    },
+    {
+      name: 'enableFootnoteLink',
+      title: 'Enable Footnote Link',
+      type: 'boolean',
+      fieldset: 'footer',
+      group: 'footer',
+      hidden: ({document}) => document?.enableFootnote === false
+    },
+    {
+      name: 'footerFootnoteLink',
+      title: 'Footer Footnote Link',
+      type: 'string',
+      fieldset: 'footer',
+      group: 'footer',
+      hidden: ({document}) => document?.enableFootnoteLink === false || document?.enableFootnote === false
+    },
+    {
       name: 'footerQuickLinks',
       title: 'Quick Links',
       type: 'array',

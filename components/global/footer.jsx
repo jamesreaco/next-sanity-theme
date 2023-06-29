@@ -7,7 +7,11 @@ export default function Footer({
   footerQuickLinks,
   footerSocialLinks,
   footerCopyright,
-  footerLegalLinks
+  footerLegalLinks,
+  enableFootnote,
+  footerFootnoteText,
+  enableFootnoteLink,
+  footerFootnoteLink
 }) {
   return (
     <footer className='bg-white border-t'>
@@ -55,15 +59,19 @@ export default function Footer({
             <p className='font-light text-sm'>
               {footerCopyright}
             </p>
-            <span className='mt-1 md:mt-0 ml-0 md:ml-1 font-light text-sm'>
-              A free and open source theme by
-              <a 
-                href="https://twitter.com/jamesreaco" 
-                className='font-medium text-blue-800'
-              >
-              &nbsp;James Rea
-              </a>
-            </span>
+            {enableFootnote && (
+              <span className='mt-1 md:mt-0 ml-0 md:ml-1 font-light text-sm'>
+                {footerFootnoteText}
+                {enableFootnoteLink && (
+                  <a 
+                    href="https://twitter.com/jamesreaco" 
+                    className='font-medium text-blue-800'
+                  >
+                  &nbsp;{footerFootnoteLink}
+                  </a>
+                )}
+              </span>
+            )}
           </div>
           <div className='flex items-center gap-1'>
             {footerLegalLinks?.map((item) => (
