@@ -9,12 +9,12 @@ export default function HomeHero({
   btnDestination
 }) {
   return (
-    <section className='mt-20 flex flex-col-reverse md:flex-row justify-between'>
+    <section className='mt:0 md:mt-20 flex flex-col-reverse md:flex-row justify-between'>
       <div className='flex items-start flex-col'>
         <h1 className='-ml-1 md:-ml-2 text-[12vw] font-light leading-none'>
           {heading}
         </h1>
-        <p className='max-w-[30rem] mt-10 md:mt-20 mb-12 text-[1.2rem] md:text-2xl font-light'>
+        <p className='max-w-[30rem] mt-6 md:mt-20 mb-8 md:mb-12 text-[1rem] md:text-2xl font-light'>
           {paragraph}
         </p>
         <Button 
@@ -28,7 +28,7 @@ export default function HomeHero({
         width={250}
         height={350}
         alt='Image of Brooke'
-        className='w-[10rem] md:w-[14rem] mb-10 md:mb-0 mt-20 md:mt-0 object-contain'
+        className='w-[6rem] md:w-[12rem] mb-10 md:mb-0 mt-10 md:mt-20 object-contain'
       />
     </section>
   )
