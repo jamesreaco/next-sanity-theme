@@ -64,7 +64,7 @@ export default function Footer({
                 {footerFootnoteText}
                 {enableFootnoteLink && (
                   <a 
-                    href="https://twitter.com/jamesreaco" 
+                    href="https://jamesrea.co" 
                     className='font-medium text-blue-800'
                   >
                   &nbsp;{footerFootnoteLink}
