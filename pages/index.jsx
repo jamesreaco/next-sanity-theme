@@ -10,6 +10,7 @@ export default function Home({ page }) {
   const { 
     heading,
     paragraph,
+    image,
     btnText,
     btnDestination
   } = page
@@ -19,6 +20,7 @@ export default function Home({ page }) {
       <HomeHero 
         heading={heading}
         paragraph={paragraph}
+        image={image}
         btnText={btnText}
         btnDestination={btnDestination}
       />

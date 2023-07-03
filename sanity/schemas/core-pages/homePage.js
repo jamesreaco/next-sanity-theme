@@ -28,6 +28,19 @@ export default {
       fieldset: 'content'
     },
     {
+      name: 'image',
+      title: 'Hero Image',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string'
+        }
+      ]
+    },
+    {
       name: 'btnText',
       title: 'Button Text',
       type: 'string',

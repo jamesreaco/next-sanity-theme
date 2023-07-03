@@ -65,6 +65,7 @@ export async function getHomePage() {
       _id,
       heading,
       paragraph,
+      'image': image.asset->url,
       btnText,
       btnDestination,
       metaTitle,

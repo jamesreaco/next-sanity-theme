@@ -4,6 +4,7 @@ import Image from 'next/image'
 export default function HomeHero({ 
   heading,
   paragraph,
+  image,
   btnText,
   btnDestination
 }) {
@@ -23,7 +24,7 @@ export default function HomeHero({
         />
       </div>
       <Image 
-        src="/images/headshot-rounded.png"
+        src={image}
         width={250}
         height={350}
         alt='Image of Brooke'
