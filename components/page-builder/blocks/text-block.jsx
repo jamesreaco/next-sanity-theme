@@ -16,7 +16,7 @@ export default function TextBlock({ block }) {
 
   if (block.numberOfColumns === '2') {
     return (
-      <section className='mt-6 mb-6 grid grid-cols-1 md:grid-cols-2 gap:10 md:gap-20'>
+      <section className='my-14 grid grid-cols-1 md:grid-cols-2 gap:10 md:gap-20'>
         <div>
           <Content data={block.columnOne}/>
         </div>

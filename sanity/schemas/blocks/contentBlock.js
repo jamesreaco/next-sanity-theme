@@ -1,5 +1,4 @@
 import { DocumentTextIcon } from '@sanity/icons'
-import { defaultLayoutFields } from '../utils/defaultLayoutFields'
 import { defaultFieldsets } from '../utils/defaultFieldsets'
 
 export default {
@@ -19,43 +18,27 @@ export default {
   ],
   fields: [
     {
-      title: 'Number of Columns',
-      name: 'numberOfColumns',
-      type: 'string',
-      initialValue: '1',
-      options: {
-        list: [
-          { title: '1', value: '1' },
-          { title: '2', value: '2' },
-        ],
-      },
+      name: 'heading',
+      title: 'Heading',
+      type: 'string' 
     },
     {
-      title: 'Style',
-      name: 'style',
-      type: 'string',
-      initialValue: 'full',
-      options: {
-        list: [
-          { title: 'Narrow', value: 'narrow' },
-          { title: 'Full Width',  value: 'full' },
-        ],
-      },
-      hidden: ({parent}) => parent?.numberOfColumns === '2'
+      name: 'paragraph',
+      title: 'Paragraph',
+      type: 'string' 
     },
     {
-      name: 'columnOne',
-      title: 'Column One',
-      type: 'array',
-      of: [{ type: 'block' }],
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string'
+        }
+      ]
     },
-    {
-      name: 'columnTwo',
-      title: 'Column Two',
-      type: 'array',
-      of: [{ type: 'block' }],
-      hidden: ({parent}) => parent?.numberOfColumns === '1'
-    },
-    ...defaultLayoutFields
   ]
 }
