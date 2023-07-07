@@ -6,10 +6,19 @@ import Layout from '@/components/global/layout'
 
 export default function Page({ page }) {
 
-  const { pageBuilder } = page
+  const { 
+    pageBuilder, 
+    metaTitle, 
+    metaDescription, 
+    metaKeywords 
+  } = page
 
   return (
-    <Layout>
+    <Layout
+      metaTitle={metaTitle}
+      metaDescription={metaDescription}
+      metaKeywords={metaKeywords}
+    >
       {pageBuilder ?
         <>
           {pageBuilder?.map(block => (
