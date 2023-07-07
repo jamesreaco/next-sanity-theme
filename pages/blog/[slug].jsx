@@ -4,11 +4,12 @@ import { getPostBySlug } from '@/sanity/utils'
 import Layout from '@/components/global/layout'
 import PostHeader from '@/components/pages/blog/post-header';
 import PostContent from '@/components/pages/blog/post-content';
+import PostAuthor from '@/components/pages/blog/post-author';
 
 export default function PostPage({ post }) {
 
   const { 
-    image, category, readTime, title, content
+    image, category, readTime, title, content, author
   } = post
 
   return (
@@ -20,6 +21,11 @@ export default function PostPage({ post }) {
         title={title}
       />
       <PostContent content={content} />
+      <PostAuthor 
+        name={author.name}
+        description={author.description}
+        image={author.image}
+      />
     </Layout>
   )
 }
