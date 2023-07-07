@@ -18,11 +18,18 @@ export default function CaseStudyPage({ caseStudy }) {
     caseStudyCtaHeading,
     caseStudyCtaText,
     caseStudyCtaButtonText,
-    caseStudyCtaButtonDestination
+    caseStudyCtaButtonDestination,
+    metaTitle,
+    metaDescription,
+    metaKeywords
   } = caseStudy
 
   return (
-    <Layout>
+    <Layout 
+      metaTitle={metaTitle}
+      metaDescription={metaDescription}
+      metaKeywords={metaKeywords}
+    >
       <CaseStudyHeader 
         title={title}
         shortDescription={shortDescription}

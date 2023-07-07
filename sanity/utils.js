@@ -146,7 +146,10 @@ export async function getPostBySlug(slug) {
       },
       'image': image.asset->url,
       readTime,
-      content
+      content,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
     }`, { slug: slug }
   )
 }
@@ -192,7 +195,10 @@ export async function getCaseStudyBySlug(slug) {
       caseStudyCtaHeading,
       caseStudyCtaText,
       caseStudyCtaButtonText,
-      caseStudyCtaButtonDestination
+      caseStudyCtaButtonDestination,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
     }`, { slug: slug }
   )
 }

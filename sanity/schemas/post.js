@@ -1,10 +1,19 @@
 import { BlockContentIcon } from '@sanity/icons'
+import { defaultFieldsets } from './utils/defaultFieldsets'
+import { defaultGroups } from './utils/defaultGroups'
+import { defaultSeoFields } from './utils/defaultSeoFields'
 
 export default {
   name: 'post',
   title: 'Blog Posts',
   type: 'document',
   icon: BlockContentIcon,
+  fieldsets: [
+    ...defaultFieldsets
+  ],
+  groups: [
+    ...defaultGroups
+  ],
   fields: [
     {
       name: 'title',
@@ -54,6 +63,7 @@ export default {
       title: 'Content',
       type: 'array',
       of: [{ type: 'block' }]
-    }
+    },
+    ...defaultSeoFields
   ]
 }

@@ -7,7 +7,11 @@ import CaseStudyArchive from '@/components/pages/case-studies/case-study-archive
 
 export default function CaseStudiesPage({ page, caseStudies }) {
 
-  const { metaTitle, metaDescription, metaKeywords } = page
+  const { 
+    metaTitle, 
+    metaDescription, 
+    metaKeywords 
+  } = page
 
   return (
     <Layout

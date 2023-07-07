@@ -9,11 +9,23 @@ import PostAuthor from '@/components/pages/blog/post-author';
 export default function PostPage({ post }) {
 
   const { 
-    image, category, readTime, title, content, author
+    image, 
+    category, 
+    readTime, 
+    title, 
+    content, 
+    author,
+    metaTitle,
+    metaDescription,
+    metaKeywords
   } = post
 
   return (
-    <Layout>
+    <Layout 
+      metaTitle={metaTitle}
+      metaDescription={metaDescription}
+      metaKeywords={metaKeywords}
+    >
       <PostHeader 
         image={image}
         category={category}

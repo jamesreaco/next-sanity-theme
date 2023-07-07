@@ -1,4 +1,7 @@
 import { CaseIcon } from '@sanity/icons'
+import { defaultFieldsets } from './utils/defaultFieldsets'
+import { defaultGroups } from './utils/defaultGroups'
+import { defaultSeoFields } from './utils/defaultSeoFields'
 
 export default {
   name: 'caseStudy',
@@ -10,13 +13,15 @@ export default {
       name: 'cta',
       title: 'Call To Action',
       description: 'Add a unique call to action at the end of every case study.'
-    }
+    },
+    ...defaultFieldsets
   ],
   groups: [
     {
       name: 'cta',
       title: 'Call To Action'
-    }
+    },
+    ...defaultGroups
   ],
   fields: [
     {
@@ -105,6 +110,7 @@ export default {
       type: 'string',
       group: 'cta',
       fieldset: 'cta'
-    }
+    },
+    ...defaultSeoFields
   ]
 }

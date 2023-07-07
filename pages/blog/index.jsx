@@ -7,7 +7,11 @@ import PostArchive from '@/components/pages/blog/post-archive'
 
 export default function BlogPage({ page, posts }) {
 
-  const { metaTitle, metaDescription, metaKeywords } = page
+  const { 
+    metaTitle, 
+    metaDescription, 
+    metaKeywords 
+  } = page
  
   return (
     <Layout 
