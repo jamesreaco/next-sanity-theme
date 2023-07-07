@@ -3,14 +3,14 @@ import { defaultLayoutFields } from '../utils/defaultLayoutFields'
 import { defaultFieldsets } from '../utils/defaultFieldsets'
 
 export default {
-  name: 'contentBlock',
-  title: 'Content Block',
+  name: 'textBlock',
+  title: 'Text Block',
   type: 'object',
   icon: DocumentTextIcon,
   preview: {
     prepare() {
       return {
-        title: 'Content',
+        title: 'Text',
       }
     }
   },

@@ -1,6 +1,6 @@
 import Content from '@/components/shared/content'
 
-export default function ContentBlock({ block }) {
+export default function TextBlock({ block }) {
   
   if (block.numberOfColumns === '1') {
     return (
@@ -28,4 +28,5 @@ export default function ContentBlock({ block }) {
       </section>
     )
   }
+  
 }

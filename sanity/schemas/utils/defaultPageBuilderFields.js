@@ -18,6 +18,10 @@ export const defaultPageBuilderFields = [
         type: 'contentBlock'
       },
       {
+        name: 'textBlock',
+        type: 'textBlock'
+      },
+      {
         name: 'latestPostsBlock',
         type: 'latestPostsBlock'
       },
