@@ -1,6 +1,6 @@
 export default function HeaderBlock({ block }) {
   return (
-    <header className='mt-12 mb-10 mx-auto' style={{
+    <header className='mt-14 mb-10 mx-auto' style={{
       maxWidth: block.headerWidth === 'narrow' ? '600px' : '1280px'
     }}>
       <h1 

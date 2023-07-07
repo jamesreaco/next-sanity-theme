@@ -9,6 +9,7 @@ import Topbar from './topbar'
 // font
 import { Inter } from 'next/font/google'
 import PageHead from './page-head'
+import MobileNavbar from './mobile-navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Layout({ 
@@ -54,6 +55,12 @@ export default function Layout({
           />
         )}
         <Navbar 
+          buttonText={settings.navbarButtonText} 
+          buttonLink={settings.navbarButtonLink}
+          logoText={settings.logoText}
+          menuItems={settings.navbarMenuItems}
+        />
+        <MobileNavbar
           buttonText={settings.navbarButtonText} 
           buttonLink={settings.navbarButtonLink}
           logoText={settings.logoText}
