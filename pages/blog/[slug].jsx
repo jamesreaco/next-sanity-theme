@@ -8,7 +8,7 @@ import PostContent from '@/components/pages/blog/post-content';
 export default function PostPage({ post }) {
 
   const { 
-    image, category, readTime, title, content 
+    image, category, readTime, title, content
   } = post
 
   return (

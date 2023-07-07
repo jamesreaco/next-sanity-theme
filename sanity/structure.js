@@ -61,6 +61,13 @@ export const structure = (S) =>
                     .title('Post Categories')
                     .filter('_type == "postCategory"')
                 ),
+              S.listItem()
+                .title('Authors')
+                .child(
+                  S.documentList()
+                    .title('Post Authors')
+                    .filter('_type == "author"')
+                ),
             ])
         ),
         ...S.documentTypeListItems().filter(

@@ -135,6 +135,11 @@ export async function getPostBySlug(slug) {
       title,
       'slug': slug.current,
       'category': category->title,
+      author->{
+        name,
+        description,
+        'image': image.asset->url,
+      },
       'image': image.asset->url,
       readTime,
       content

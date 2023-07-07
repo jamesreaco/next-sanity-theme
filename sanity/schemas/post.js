@@ -26,6 +26,12 @@ export default {
       to: { type: 'postCategory' }
     },
     {
+      name: 'author',
+      type: 'reference',
+      title: 'Author',
+      to: { type: 'author' }
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'image',

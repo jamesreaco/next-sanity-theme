@@ -1,5 +1,4 @@
 import { CaseIcon } from '@sanity/icons'
-import { m } from 'framer-motion'
 
 export default {
   name: 'caseStudy',
