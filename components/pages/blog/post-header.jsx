@@ -8,7 +8,7 @@ export default function PostHeader({
   title
 }) {
   return (
-    <header className='mt-8'>
+    <header className='mt-6 md:mt-12'>
       <Image 
         src={image}
         width={2000}
