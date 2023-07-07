@@ -1,7 +1,7 @@
 import Content from '@/components/shared/content'
 
-export default function TextBlock({ block }) {
-
+export default function ContentBlock({ block }) {
+  
   if (block.numberOfColumns === '1') {
     return (
       <section className='mt-6 mx-auto mb-6' style={{
@@ -28,5 +28,4 @@ export default function TextBlock({ block }) {
       </section>
     )
   }
-
 }

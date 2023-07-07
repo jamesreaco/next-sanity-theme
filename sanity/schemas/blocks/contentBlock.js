@@ -3,14 +3,14 @@ import { defaultLayoutFields } from '../utils/defaultLayoutFields'
 import { defaultFieldsets } from '../utils/defaultFieldsets'
 
 export default {
-  name: 'textBlock',
-  title: 'Text Block',
+  name: 'contentBlock',
+  title: 'Content Block',
   type: 'object',
   icon: DocumentTextIcon,
   preview: {
     prepare() {
       return {
-        title: 'Text Block',
+        title: 'Content',
       }
     }
   },
@@ -38,7 +38,6 @@ export default {
       options: {
         list: [
           { title: 'Narrow', value: 'narrow' },
-          { title: 'Normal', value: 'normal' },
           { title: 'Full Width',  value: 'full' },
         ],
       },
@@ -60,4 +59,3 @@ export default {
     ...defaultLayoutFields
   ]
 }
-
