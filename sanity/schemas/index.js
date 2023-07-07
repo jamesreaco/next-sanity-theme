@@ -3,6 +3,7 @@ import page from "./page";
 import homePage from "./core-pages/homePage";
 import blogPage from "./core-pages/blogPage";
 import caseStudyPage from "./core-pages/caseStudyPage";
+import contactPage from "./core-pages/contactPage";
 import author from "./author";
 import post from "./post";
 import postCategory from "./postCategory";
@@ -23,6 +24,7 @@ export const schemaTypes = [
   homePage,
   blogPage,
   caseStudyPage,
+  contactPage,
   author,
   post,
   postCategory,

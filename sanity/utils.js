@@ -101,6 +101,17 @@ export async function getCaseStudyPage() {
   )
 }
 
+export async function getContactPage() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'contactPage'][0]{
+      _id,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
+    }`,
+  )
+}
+
 export async function getAllPosts() {
   return createClient(clientConfig).fetch(
     groq`*[_type == 'post'] | order(_createdAt desc) {

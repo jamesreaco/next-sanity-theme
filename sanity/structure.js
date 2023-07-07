@@ -29,7 +29,10 @@ export const structure = (S) =>
                 .child(S.document().schemaType('blogPage').documentId('blogPage').title('Blog Page')),
               S.listItem()
                 .title('Case Studies')
-                .child(S.document().schemaType('caseStudyPage').documentId('caseStudyPage').title('Case Studies')),
+                .child(S.document().schemaType('caseStudyPage').documentId('caseStudyPage').title('Case Studies Page')),
+              S.listItem()
+                .title('Contact')
+                .child(S.document().schemaType('contactPage').documentId('contactPage').title('Contact Page')),
             ])
         ),
       S.divider(),
