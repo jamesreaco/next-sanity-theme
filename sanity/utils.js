@@ -16,6 +16,7 @@ export async function getSettings() {
       topbarLinkText,
       topbarLinkColor,
       navbarMenuItems[]-> {
+        _id,
         title,
         link
       },
@@ -24,14 +25,17 @@ export async function getSettings() {
       footerTagline,
       footerCopyright,
       footerQuickLinks[]-> {
+        _id,
         title,
         link
       },
       footerSocialLinks[]-> {
+        _id,
         title,
         link
       },
       footerLegalLinks[]-> {
+        _id,
         title,
         link
       },

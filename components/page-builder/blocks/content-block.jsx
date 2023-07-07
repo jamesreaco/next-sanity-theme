@@ -25,6 +25,7 @@ export default function ContentBlock({ block }) {
           width={600}
           height={600}
           className='h-full w-full object-cover'
+          alt="Image alt goes here"
         />
       </div>
     </section>

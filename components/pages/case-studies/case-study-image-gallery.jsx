@@ -6,6 +6,7 @@ export default function CaseStudyImageGallery({ images }) {
     <section className='grid grid-cols-2 gap-8'>
       {images.map((image) => (
         <Image 
+          key={image.url}
           src={image.url}
           width={600}
           height={600}

@@ -30,7 +30,7 @@ export default function Footer({
               </h5>
               <ul>
                 {footerQuickLinks?.map((item) => (
-                  <li className='mb-4'>
+                  <li key={item._id} className='mb-4'>
                     <Link href={`${item.link}`}>
                       {item.title}
                     </Link>
@@ -44,7 +44,7 @@ export default function Footer({
               </h5>
               <ul>
                 {footerSocialLinks?.map((item) => (
-                  <li className='mb-4'>
+                  <li key={item._id} className='mb-4'>
                     <Link href={`${item.link}`}>
                       {item.title}
                     </Link>
@@ -75,7 +75,7 @@ export default function Footer({
           </div>
           <div className='flex items-center gap-1'>
             {footerLegalLinks?.map((item) => (
-              <div className='flex items-center gap-1 group'>
+              <div key={item._id} className='flex items-center gap-1 group'>
                 <Link 
                   href={item.link}
                   className='mt-1 md:mt-0 text-sm'

@@ -29,7 +29,7 @@ export default function HomeCaseStudies() {
       </motion.div>
       <div className='flex flex-col md:flex-row gap-6 md:gap-4'>
         {caseStudies.map((item) => (
-          <CaseStudyCard caseStudy={item} />
+          <CaseStudyCard key={item._id} caseStudy={item} />
         ))}
       </div>
     </section>

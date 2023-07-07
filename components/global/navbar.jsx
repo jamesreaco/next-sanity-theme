@@ -14,7 +14,7 @@ export default function Navbar({
       <nav>
         <ul className='hidden md:flex gap-12 items-center list-none'>
           {menuItems.map(item => (
-            <li>
+            <li key={item.title}>
               <Link 
                 href={`${item.link}`}
                 className='text-lg tracking-wider'

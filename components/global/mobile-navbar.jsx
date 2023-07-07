@@ -40,7 +40,7 @@ export default function MobileNavbar({
           >
             
             {menuItems.map(item => (
-              <li className='mb-8'>
+              <li key={item.title} className='mb-8'>
                 <Link 
                   href={`${item.link}`}
                   className='text-3xl tracking-wider'

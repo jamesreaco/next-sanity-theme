@@ -22,7 +22,7 @@ export default function Page({ page }) {
       {pageBuilder ?
         <>
           {pageBuilder?.map(block => (
-            <Block block={block} />
+            <Block key={block._key} block={block} />
           ))} 
         </>
       :

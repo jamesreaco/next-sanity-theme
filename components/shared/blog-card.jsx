@@ -14,6 +14,7 @@ export default function BlogCard({ post }) {
           width={1200}
           height={600}
           className='bg-black rounded-lg group-hover:scale-[1.01] transition'
+          alt={`${post.title} Thumbnail Image`}
         />
         <div className='mt-5 flex items-center'>
           <Tag text={post.category.title} />
@@ -30,6 +31,7 @@ export default function BlogCard({ post }) {
             width={30}
             height={30}
             className='invert-[100%] transition group-hover:rotate-90 w-6'
+            alt="Link Icon Image"
           />
         </div>
       </Link>

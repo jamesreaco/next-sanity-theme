@@ -29,7 +29,7 @@ export default function LatestCaseStudiesBlock({ block }) {
       </motion.div>
       <div className='flex gap-4'>
         {caseStudies.map((item) => (
-          <CaseStudyCard caseStudy={item} />
+          <CaseStudyCard key={item._id} caseStudy={item} />
         ))}
       </div>
     </section>
