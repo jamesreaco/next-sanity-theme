@@ -1,5 +1,66 @@
 .content > p {
-  margin-top: 16px;
+  margin-top: 1.2rem;
   font-size: 16px;
   line-height: 1.6;
+}
+
+.content > blockquote {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 5px solid rgb(0, 0, 0);
+  border-radius: 0.4rem;
+  background-color: #fff;
+}
+
+.content > p > code {
+  display: block;
+  margin-top: 1rem;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 0.4rem;
+  background-color: #0e0e0e;
+}
+
+.content > p > a {
+  color: rgb(50, 50, 255);
+}
+
+.content > ul {
+  margin-top: 1rem;
+  list-style: inside disc;
+}
+
+.content > ol {
+  margin-top: 1rem;
+  list-style: inside decimal;
+}
+
+.content > h2 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.content > h3 {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.content > h4 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.content > h5 {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.content > h6 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
