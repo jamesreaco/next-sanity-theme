@@ -22,7 +22,7 @@ export default function HomeCaseStudies() {
 
   return (
     <Container>
-      <div className='relative mt-16 mb-24 pt-28 md:pt-64'>
+      <div className='relative mt-12 md:mt-16 mb-12 md:mb-24 pt-28 md:pt-64'>
         <motion.div 
           className='-left-[40rem] top-0 absolute text-[4rem] md:text-[10rem] font-extralight whitespace-nowrap' 
           style={{ x }}

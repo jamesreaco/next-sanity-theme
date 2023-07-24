@@ -23,7 +23,7 @@ export default function HomeLatestPosts() {
     <Container 
       fullWidth={true}
     >
-      <div className='mb-4 py-20 px-6 md:px-14 bg-white border-t border-b rounded-t-2xl'>
+      <div className='mb-4 py-10 md:py-20 px-6 md:px-14 bg-white border-t border-b rounded-t-2xl'>
         <h3 className='pb-6 text-2xl font-light uppercase tracking-widest border-b border-black'>
           Latest Posts
         </h3>

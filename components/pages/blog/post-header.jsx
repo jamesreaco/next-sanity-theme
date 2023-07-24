@@ -19,13 +19,13 @@ export default function PostHeader({
           className='rounded-2xl'
         />
         <div className='max-w-xl mx-auto my-10'>
-          <div className='mt-20 flex items-center'>
+          <div className='md:mt-20 flex items-center'>
             <Tag text={category} />
             <div className='ml-3 text-gray-500 font-light tracking-wide'>
               {readTime} Minute Read
             </div>
           </div>
-          <h1 className='text-4xl mt-4'>
+          <h1 className='text-3xl md:text-4xl mt-4'>
             {title}
           </h1>
         </div>
