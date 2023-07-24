@@ -1,5 +1,7 @@
+import Container from '@/components/global/container'
 import Layout from '@/components/global/layout'
 import Page from '@/components/global/page'
+import ContactForm from '@/components/pages/contact/contact-form'
 import { getContactPage } from '@/sanity/utils'
 import React from 'react'
 
@@ -17,8 +19,10 @@ export default function ContactPage({ page }) {
       metaDescription={metaDescription}
       metaKeywords={metaKeywords}
     >
-      <Page heading="Contact">
-        
+      <Page heading="Contact Me">
+        <Container>
+          <ContactForm />
+        </Container>
       </Page>
     </Layout>
   )

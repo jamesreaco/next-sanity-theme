@@ -13,6 +13,7 @@
     "@sanity/icons": "^2.4.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.12.2",
+    "@sendgrid/mail": "^7.7.0",
     "autoprefixer": "10.4.14",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
