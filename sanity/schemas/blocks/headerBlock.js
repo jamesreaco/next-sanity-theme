@@ -34,6 +34,5 @@ export default {
         ],
       }
     },
-    ...defaultLayoutFields
   ]
 }

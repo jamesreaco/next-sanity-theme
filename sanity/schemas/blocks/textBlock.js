@@ -56,6 +56,5 @@ export default {
       of: [{ type: 'block' }],
       hidden: ({parent}) => parent?.numberOfColumns === '1'
     },
-    ...defaultLayoutFields
   ]
 }

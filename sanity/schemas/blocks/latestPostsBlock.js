@@ -33,6 +33,5 @@ export default {
       group: 'settings',
       fieldset: 'settings',
     },
-    ...defaultLayoutFields
   ]
 }

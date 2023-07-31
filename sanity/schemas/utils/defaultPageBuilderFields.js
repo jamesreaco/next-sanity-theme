@@ -6,10 +6,6 @@ export const defaultPageBuilderFields = [
     group: 'pageBuilder',
     of: [
       {
-        name: 'heroBlock',
-        type: 'heroBlock'
-      },
-      {
         name: 'headerBlock',
         type: 'headerBlock'
       },
@@ -25,14 +21,6 @@ export const defaultPageBuilderFields = [
         name: 'latestPostsBlock',
         type: 'latestPostsBlock'
       },
-      {
-        name: 'latestCaseStudiesBlock',
-        type: 'latestCaseStudiesBlock'
-      },
-      {
-        name: 'caseStudyArchiveBlock',
-        type: 'caseStudyArchiveBlock'
-      }
     ],
   },
 ]

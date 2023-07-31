@@ -15,6 +15,5 @@ export default {
   ],
   fields: [
     ...defaultSeoFields,
-    ...defaultPageBuilderFields,
   ]
 }

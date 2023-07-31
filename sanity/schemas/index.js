@@ -9,13 +9,10 @@ import post from "./post";
 import postCategory from "./postCategory";
 import caseStudy from "./caseStudy";
 import menuItem from "./menuItem";
-import heroBlock from "./blocks/heroBlock";
 import headerBlock from "./blocks/headerBlock";
 import contentBlock from "./blocks/contentBlock";
 import textBlock from "./blocks/textBlock";
 import latestPostsBlock from "./blocks/latestPostsBlock";
-import latestCaseStudiesBlock from "./blocks/latestCaseStudiesBlock";
-import caseStudyArchiveBlock from "./blocks/caseStudyArchiveBlock";
 
 export const schemaTypes = [
   settings,
@@ -29,11 +26,8 @@ export const schemaTypes = [
   post,
   postCategory,
   caseStudy,
-  heroBlock,
   headerBlock,
   contentBlock,
   textBlock,
   latestPostsBlock,
-  latestCaseStudiesBlock,
-  caseStudyArchiveBlock
 ]
