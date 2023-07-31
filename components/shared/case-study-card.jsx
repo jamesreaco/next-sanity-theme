@@ -14,6 +14,7 @@ export default function CaseStudyCard({ caseStudy }) {
           src={caseStudy.image}
           width={580}
           height={800}
+          sizes="(max-width: 640px) 320px"
           alt={caseStudy.title}
           className='w-full h-full object-cover transition md:hover:scale-[1.02]'
         />

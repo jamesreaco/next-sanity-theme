@@ -13,6 +13,7 @@ export default function BlogCard({ post }) {
           src={post.image}
           width={600}
           height={400}
+          sizes="(max-width: 640px) 320px"
           className='bg-black rounded-lg md:group-hover:scale-[1.01] transition'
           alt={`${post.title} Thumbnail Image`}
         />
@@ -23,9 +24,9 @@ export default function BlogCard({ post }) {
           </div>
         </div>
         <div className='mt-3 flex items-end justify-between'>
-          <h4 className='text-[22px] md:text-[2.8vw] lg:text-[2.8vw]  pr-12 font-normal '>
+          <h3 className='text-[22px] md:text-[2.8vw] lg:text-[2.8vw]  pr-12 font-normal '>
             {post.title}
-          </h4>
+          </h3>
           <Image
             src="/images/link-icon.png"
             width={30}

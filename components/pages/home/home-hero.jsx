@@ -29,6 +29,7 @@ export default function HomeHero({
           src={image}
           width={250}
           height={350}
+          sizes="(max-width: 640px) 100px"
           alt='Image of Brooke'
           className='w-[6rem] md:w-[12rem] mb-10 md:mb-0 mt-10 md:mt-20 object-contain'
         />
