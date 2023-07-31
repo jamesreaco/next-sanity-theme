@@ -13,8 +13,8 @@ export default function BlogCard({ post }) {
           src={post.image}
           width={600}
           height={400}
-          sizes="(max-width: 640px) 320px"
-          className='bg-black rounded-lg md:group-hover:scale-[1.01] transition'
+          sizes="(max-width: 640px) 320px, (max-width: 1280px) 584px, (max-width: 1600px) 712px"
+          className='w-full h-auto bg-black rounded-lg md:group-hover:scale-[1.01] transition'
           alt={`${post.title} Thumbnail Image`}
         />
         <div className='mt-5 flex items-center'>

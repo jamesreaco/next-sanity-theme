@@ -14,9 +14,9 @@ export default function CaseStudyCard({ caseStudy }) {
           src={caseStudy.image}
           width={580}
           height={800}
-          sizes="(max-width: 640px) 320px"
+          sizes="(max-width: 640px) 320px, (max-width: 1600px) 584px"
           alt={caseStudy.title}
-          className='w-full h-full object-cover transition md:hover:scale-[1.02]'
+          className='w-[100%] h-auto object-cover transition md:hover:scale-[1.02] '
         />
         <div className='p-[1rem] absolute bottom-0 left-0 right-0 transition-all md:group-hover:p-[2rem]'>
           <Button 
