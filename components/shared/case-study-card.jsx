@@ -15,9 +15,9 @@ export default function CaseStudyCard({ caseStudy }) {
           width={800}
           height={1000}
           alt={caseStudy.title}
-          className='w-full h-full object-cover transition hover:scale-[1.02]'
+          className='w-full h-full object-cover transition md:hover:scale-[1.02]'
         />
-        <div className='p-[1rem] absolute bottom-0 left-0 right-0 transition-all group-hover:p-[2rem]'>
+        <div className='p-[1rem] absolute bottom-0 left-0 right-0 transition-all md:group-hover:p-[2rem]'>
           <Button 
             destination={`/case-studies/${caseStudy.slug}`}
             text={caseStudy.title} 

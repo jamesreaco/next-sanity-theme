@@ -73,7 +73,7 @@ export default function Footer({
               </span>
             )}
           </div>
-          <div className='flex items-center gap-1'>
+          <div className='mt-2 md:mt-0 flex items-center gap-1'>
             {footerLegalLinks?.map((item) => (
               <div key={item._id} className='flex items-center gap-1 group'>
                 <Link 

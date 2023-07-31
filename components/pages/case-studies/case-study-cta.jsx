@@ -9,11 +9,11 @@ export default function CaseStudyCTA({
 }) {
   return (
     <Container>
-      <section className='flex flex-col items-center justify-center my-10 p-20 bg-white border rounded-lg'>
-        <h5 className='text-3xl sm:text-4xl text-gray-800 text-center'>
+      <section className='flex flex-col items-center justify-center my-10 p-8 md:p-20 bg-white border rounded-lg'>
+        <h5 className='text-2xl sm:text-4xl text-gray-800 text-center'>
           {heading}
         </h5>
-        <p className='mt-3 mb-10 text-gray-600 text-center'>
+        <p className='mt-3 mb-5 md:mb-10 text-gray-600 text-center'>
           {text}
         </p>
         <Button 
