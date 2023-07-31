@@ -23,7 +23,10 @@ export default function MobileNavbar({
       
       <div className='flex items-center justify-between'>
         <Logo text={logoText} />
-        <button onClick={() => setShowMenu(!showMenu)}>
+        <button 
+          aria-label='Navigation Menu'
+          onClick={() => setShowMenu(!showMenu)}
+        >
           {showMenu ?
             <IoClose size={30} />
             :

@@ -11,8 +11,8 @@ export default function BlogCard({ post }) {
       >
         <Image 
           src={post.image}
-          width={1200}
-          height={600}
+          width={600}
+          height={400}
           className='bg-black rounded-lg md:group-hover:scale-[1.01] transition'
           alt={`${post.title} Thumbnail Image`}
         />

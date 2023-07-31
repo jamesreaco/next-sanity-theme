@@ -12,8 +12,8 @@ export default function CaseStudyCard({ caseStudy }) {
       >
         <Image 
           src={caseStudy.image}
-          width={800}
-          height={1000}
+          width={580}
+          height={800}
           alt={caseStudy.title}
           className='w-full h-full object-cover transition md:hover:scale-[1.02]'
         />

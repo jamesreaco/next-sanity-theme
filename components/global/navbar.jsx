@@ -23,11 +23,13 @@ export default function Navbar({
               </Link>
            </li>
           ))}
-          <Button 
-            text={buttonText} 
-            destination={`${buttonLink}`} 
-            variant="dark"
-          />
+          <li>
+            <Button 
+                text={buttonText} 
+                destination={`${buttonLink}`} 
+                variant="dark"
+            />
+          </li>
         </ul>
       </nav>
     </header>
