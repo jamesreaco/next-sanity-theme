@@ -1,4 +1,4 @@
-export const defaultGroups = [
+export const fieldGroups = [
   {
     name: 'content',
     title: 'Content'

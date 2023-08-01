@@ -1,5 +1,5 @@
 import { DocumentTextIcon } from '@sanity/icons'
-import { defaultFieldsets } from '../../utils/defaultFieldsets'
+import { fieldsets } from '../../utils/fieldsets'
 
 export default {
   name: 'postContentBlock',
@@ -14,7 +14,7 @@ export default {
     }
   },
   fieldsets: [
-    ...defaultFieldsets
+    ...fieldsets
   ],
   fields: [
     {

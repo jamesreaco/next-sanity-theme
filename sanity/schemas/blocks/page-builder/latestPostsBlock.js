@@ -1,7 +1,6 @@
 import { DocumentTextIcon } from '@sanity/icons'
-import { defaultGroups } from '../../utils/defaultGroups'
-import { defaultFieldsets } from '../../utils/defaultFieldsets'
-import { defaultLayoutFields } from '../../utils/defaultLayoutFields'
+import { fieldGroups } from '../../utils/fieldGroups'
+import { fieldsets } from '../../utils/fieldsets'
 
 export default {
   name: 'latestPostsBlock',
@@ -9,10 +8,10 @@ export default {
   type: 'object',
   icon: DocumentTextIcon,
   groups: [
-    ...defaultGroups
+    ...fieldGroups
   ],
   fieldsets: [
-    ...defaultFieldsets
+    ...fieldsets
   ],
   fields: [
     {

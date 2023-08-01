@@ -1,4 +1,4 @@
-export const defaultPageBuilderFields = [
+export const pageBuilderFields = [
   {
     name: 'pageBuilder',
     title: 'Page Builder',

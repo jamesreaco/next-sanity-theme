@@ -1,16 +1,16 @@
-import { defaultGroups } from "../utils/defaultGroups"
-import { defaultFieldsets } from "../utils/defaultFieldsets"
-import { defaultSeoFields } from "../utils/defaultSeoFields"
+import { fieldGroups } from "../utils/fieldGroups"
+import { fieldsets } from "../utils/fieldsets"
+import { seoFields } from "../utils/seoFields"
 
 export default {
   name: 'homePage',
   title: 'Home Page',
   type: 'document',
   fieldsets: [
-    ...defaultFieldsets
+    ...fieldsets
   ],
   groups: [
-    ...defaultGroups
+    ...fieldGroups
   ],
   fields: [
     {
@@ -54,6 +54,6 @@ export default {
       group: 'content',
       fieldset: 'content'
     },
-    ...defaultSeoFields,
+    ...seoFields,
   ]
 }

@@ -1,4 +1,4 @@
-export const defaultSeoFields = [
+export const seoFields = [
   {
     name: 'metaTitle',
     title: 'Meta Title',

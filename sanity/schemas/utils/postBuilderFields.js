@@ -1,4 +1,4 @@
-export const defaultPostBuilderFields = [
+export const postBuilderFields = [
   {
     name: 'postBuilder',
     title: 'Post Builder',

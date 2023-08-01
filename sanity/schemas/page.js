@@ -1,7 +1,7 @@
-import { defaultSeoFields } from "./utils/defaultSeoFields"
-import { defaultGroups } from "./utils/defaultGroups"
-import { defaultFieldsets } from "./utils/defaultFieldsets"
-import { defaultPageBuilderFields } from "./utils/defaultPageBuilderFields"
+import { seoFields } from "./utils/seoFields"
+import { fieldGroups } from "./utils/fieldGroups"
+import { fieldsets } from "./utils/fieldsets"
+import { pageBuilderFields } from "./utils/pageBuilderFields"
 
 import {InsertBelowIcon} from '@sanity/icons'
 
@@ -11,10 +11,10 @@ export default {
   type: 'document',
   icon: InsertBelowIcon,
   fieldsets: [
-    ...defaultFieldsets
+    ...fieldsets
   ],
   groups: [
-    ...defaultGroups
+    ...fieldGroups
   ],
   fields: [
     {
@@ -30,7 +30,7 @@ export default {
         source: 'title',
       }
     },
-    ...defaultPageBuilderFields,
-    ...defaultSeoFields
+    ...pageBuilderFields,
+    ...seoFields
   ]
 }

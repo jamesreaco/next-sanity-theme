@@ -1,19 +1,18 @@
-import { defaultGroups } from "../utils/defaultGroups"
-import { defaultFieldsets } from "../utils/defaultFieldsets"
-import { defaultSeoFields } from "../utils/defaultSeoFields"
-import { defaultPageBuilderFields } from "../utils/defaultPageBuilderFields"
+import { fieldGroups } from "../utils/fieldGroups"
+import { fieldsets } from "../utils/fieldsets"
+import { seoFields } from "../utils/seoFields"
 
 export default {
   name: 'blogPage',
   title: 'Blog Page',
   type: 'document',
   fieldsets: [
-    ...defaultFieldsets
+    ...fieldsets
   ],
   groups: [
-    ...defaultGroups
+    ...fieldGroups
   ],
   fields: [
-    ...defaultSeoFields,
+    ...seoFields,
   ]
 }

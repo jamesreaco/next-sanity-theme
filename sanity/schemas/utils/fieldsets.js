@@ -1,4 +1,4 @@
-export const defaultFieldsets = [
+export const fieldsets = [
   {
     name: 'seo',
     title: 'SEO',

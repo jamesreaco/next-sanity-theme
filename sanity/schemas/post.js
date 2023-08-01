@@ -1,8 +1,8 @@
 import { BlockContentIcon } from '@sanity/icons'
-import { defaultFieldsets } from './utils/defaultFieldsets'
-import { defaultGroups } from './utils/defaultGroups'
-import { defaultSeoFields } from './utils/defaultSeoFields'
-import { defaultPostBuilderFields } from './utils/defaultPostBuilderFields'
+import { fieldsets } from './utils/fieldsets'
+import { fieldGroups } from './utils/fieldGroups'
+import { seoFields } from './utils/seoFields'
+import { postBuilderFields } from './utils/postBuilderFields'
 
 export default {
   name: 'post',
@@ -10,10 +10,10 @@ export default {
   type: 'document',
   icon: BlockContentIcon,
   fieldsets: [
-    ...defaultFieldsets
+    ...fieldsets
   ],
   groups: [
-    ...defaultGroups
+    ...fieldGroups
   ],
   fields: [
     {
@@ -59,7 +59,7 @@ export default {
       title: 'Read Time - Minutes',
       type: 'number'
     },
-    ...defaultPostBuilderFields,
-    ...defaultSeoFields
+    ...postBuilderFields,
+    ...seoFields
   ]
 }
