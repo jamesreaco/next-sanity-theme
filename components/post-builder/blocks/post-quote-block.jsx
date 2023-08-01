@@ -1,22 +1,39 @@
 import Container from '@/components/global/container'
-import Image from 'next/image'
-import { urlFor } from '@/sanity/image-builder'
+import { FaQuoteLeft } from 'react-icons/fa'
+
 
 export default function PostQuoteBlock({ block }) {
+
+  const { 
+    quote,
+    author,
+    bgColor, 
+    iconColor, 
+    textColor 
+  } = block
+
   return (
-    <Container>
-      <div className='mb-[60px] mx-auto max-w-[600px] p-4'>
-        <div className='p-12 border rounded-lg bg-blue-800' style={{
-          backgroundColor: block.backgroundColor
+    <div className='mb-[60px] mx-auto max-w-[600px] px-4'>
+      <div className='flex flex-col justify-center items-center p-12 border rounded-lg bg-grey-200' style={{
+        backgroundColor: `#${bgColor}`
+      }}>
+        <div>
+          <FaQuoteLeft 
+            size={20} 
+            color={`#${iconColor}`}
+          />
+        </div>
+        <div className='mt-3 text-2xl text-center' style={{
+          color: `#${textColor}`
         }}>
-          <div className='text-2xl text-center text-white'>
-            {block.quote}
-          </div>
-          <div className='mt-4 antialiased text-center text-white'>
-            {block.author}
-          </div>
+          {quote}
+        </div>
+        <div className='mt-4 antialiased text-center text-white' style={{
+          color: `#${textColor}`
+        }}>
+          {author}
         </div>
       </div>
-    </Container>
+    </div>
   )
 }

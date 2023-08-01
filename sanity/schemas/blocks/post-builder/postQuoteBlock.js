@@ -28,17 +28,22 @@ export default {
       type: 'string',
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: { hotspot: true },
-      fields: [
-        {
-          name: 'alt',
-          title: 'Alt',
-          type: 'string'
-        }
-      ]
+      name: 'bgColor',
+      title: 'Background Color',
+      type: 'string',
+      description: 'Enter a hex code (1D40AF)'
+    },
+    {
+      name: 'iconColor',
+      title: 'Icon Color',
+      type: 'string',
+      description: 'Enter a hex code (000000)'
+    },
+    {
+      name: 'textColor',
+      title: 'Text Color',
+      type: 'string',
+      description: 'Enter a hex code (FFFFFF)'
     },
   ]
 }
