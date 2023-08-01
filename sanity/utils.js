@@ -123,7 +123,7 @@ export async function getAllPosts() {
       },
       readTime,
       'image': image.asset->url,
-      content
+      postBuilder
     }`,
   )
 }
@@ -139,6 +139,7 @@ export async function getLatestPosts() {
       readTime,
       'image': image.asset->url,
       'slug': slug.current,
+      postBuilder
     }`,
   )
 }
@@ -157,7 +158,7 @@ export async function getPostBySlug(slug) {
       },
       'image': image.asset->url,
       readTime,
-      content,
+      postBuilder,
       metaTitle,
       metaDescription,
       metaKeywords,

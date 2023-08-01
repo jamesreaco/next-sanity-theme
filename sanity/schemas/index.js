@@ -1,18 +1,25 @@
 import settings from "./settings";
 import page from "./page";
+import post from "./post";
+import author from "./author";
+import postCategory from "./postCategory";
+import caseStudy from "./caseStudy";
+import menuItem from "./menuItem";
+
+// core pages
 import homePage from "./core-pages/homePage";
 import blogPage from "./core-pages/blogPage";
 import caseStudyPage from "./core-pages/caseStudyPage";
 import contactPage from "./core-pages/contactPage";
-import author from "./author";
-import post from "./post";
-import postCategory from "./postCategory";
-import caseStudy from "./caseStudy";
-import menuItem from "./menuItem";
-import headerBlock from "./blocks/headerBlock";
-import contentBlock from "./blocks/contentBlock";
-import textBlock from "./blocks/textBlock";
-import latestPostsBlock from "./blocks/latestPostsBlock";
+
+// page builder blocks
+import headerBlock from "./blocks/page-builder/headerBlock";
+import contentBlock from "./blocks/page-builder/contentBlock";
+import textBlock from "./blocks/page-builder/textBlock";
+import latestPostsBlock from "./blocks/page-builder/latestPostsBlock";
+
+// post builder blocks
+import postContentBlock from "./blocks/post-builder/postContentBlock";
 
 export const schemaTypes = [
   settings,
@@ -30,4 +37,5 @@ export const schemaTypes = [
   contentBlock,
   textBlock,
   latestPostsBlock,
+  postContentBlock
 ]

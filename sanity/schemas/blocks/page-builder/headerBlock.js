@@ -1,6 +1,6 @@
 import { DocumentTextIcon } from '@sanity/icons'
-import { defaultLayoutFields } from '../utils/defaultLayoutFields'
-import { defaultFieldsets } from '../utils/defaultFieldsets'
+import { defaultLayoutFields } from '../../utils/defaultLayoutFields'
+import { defaultFieldsets } from '../../utils/defaultFieldsets'
 
 export default {
   name: 'headerBlock',

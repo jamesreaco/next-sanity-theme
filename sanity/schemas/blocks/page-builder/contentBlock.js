@@ -1,5 +1,5 @@
 import { DocumentTextIcon } from '@sanity/icons'
-import { defaultFieldsets } from '../utils/defaultFieldsets'
+import { defaultFieldsets } from '../../utils/defaultFieldsets'
 
 export default {
   name: 'contentBlock',

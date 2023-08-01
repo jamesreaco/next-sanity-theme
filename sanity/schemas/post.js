@@ -2,6 +2,7 @@ import { BlockContentIcon } from '@sanity/icons'
 import { defaultFieldsets } from './utils/defaultFieldsets'
 import { defaultGroups } from './utils/defaultGroups'
 import { defaultSeoFields } from './utils/defaultSeoFields'
+import { defaultPostBuilderFields } from './utils/defaultPostBuilderFields'
 
 export default {
   name: 'post',
@@ -58,12 +59,7 @@ export default {
       title: 'Read Time - Minutes',
       type: 'number'
     },
-    {
-      name: 'content',
-      title: 'Content',
-      type: 'array',
-      of: [{ type: 'block' }]
-    },
+    ...defaultPostBuilderFields,
     ...defaultSeoFields
   ]
 }
