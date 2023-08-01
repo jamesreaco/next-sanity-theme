@@ -20,6 +20,7 @@ import latestPostsBlock from "./blocks/page-builder/latestPostsBlock";
 
 // post builder blocks
 import postContentBlock from "./blocks/post-builder/postContentBlock";
+import postQuoteBlock from "./blocks/post-builder/postQuoteBlock";
 
 export const schemaTypes = [
   settings,
@@ -37,5 +38,6 @@ export const schemaTypes = [
   contentBlock,
   textBlock,
   latestPostsBlock,
-  postContentBlock
+  postContentBlock,
+  postQuoteBlock
 ]

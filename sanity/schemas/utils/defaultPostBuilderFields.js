@@ -9,6 +9,10 @@ export const defaultPostBuilderFields = [
         name: 'postContentBlock',
         type: 'postContentBlock'
       },
+      {
+        name: 'postQuoteBlock',
+        type: 'postQuoteBlock'
+      },
     ],
   },
 ]
