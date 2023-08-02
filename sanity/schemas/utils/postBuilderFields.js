@@ -13,6 +13,10 @@ export const postBuilderFields = [
         name: 'postQuoteBlock',
         type: 'postQuoteBlock'
       },
+      {
+        name: 'postImageBlock',
+        type: 'postImageBlock'
+      },
     ],
   },
 ]

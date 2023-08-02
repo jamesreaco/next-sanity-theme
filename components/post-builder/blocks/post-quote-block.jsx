@@ -1,6 +1,4 @@
-import Container from '@/components/global/container'
 import { FaQuoteLeft } from 'react-icons/fa'
-
 
 export default function PostQuoteBlock({ block }) {
 
