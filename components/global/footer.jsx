@@ -11,11 +11,11 @@ export default function Footer({
   enableFootnote,
   footerFootnoteText,
   enableFootnoteLink,
-  footerFootnoteLink
+  footerFootnoteLink,
 }) {
   return (
     <footer className='bg-white border-t'>
-      <div className='max-w-7xl mx-auto p-12 pb-6 px-6 md:px-12'>
+      <div className='max-w-7xl mx-auto p-12 pb-[115px] md:pb-6 px-6 md:px-12'>
         <div className='flex flex-col md:flex-row'>
           <div className='w-full md:w-fit mr-auto pb-10 md:pb-0 border-b md:border-b-0 border-gray-100'>
             <Logo text={logoText} />

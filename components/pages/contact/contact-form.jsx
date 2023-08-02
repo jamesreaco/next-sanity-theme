@@ -88,12 +88,12 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-8 mb-12 rounded-lg md:border flex flex-col md:px-8 md:py-8 bg-[#F6F6F2]"
+      className="mt-10 md:mt-12 mb-12 rounded-lg md:border flex flex-col md:px-8 md:py-8 bg-[#F6F6F2]"
     >
 
       <label
         htmlFor="name"
-        className="text-gray-900 font-light"
+        className="text-gray-900 font-normal"
       >
         Your Name<span className="text-red-500">*</span>
       </label>
@@ -113,7 +113,7 @@ export default function ContactForm() {
 
       <label
         htmlFor="email"
-        className="mt-4 text-gray-900 font-light"
+        className="mt-4 text-gray-900 font-normal"
       >
         E-mail<span className="text-red-500">*</span>
       </label>
@@ -133,7 +133,7 @@ export default function ContactForm() {
 
       <label
         htmlFor="subject"
-        className="mt-4 text-gray-900 font-light"
+        className="mt-4 text-gray-900 font-normal"
       >
         Subject<span className="text-red-500">*</span>
       </label>
@@ -153,7 +153,7 @@ export default function ContactForm() {
 
       <label
         htmlFor="message"
-        className="mt-4 text-gray-900 font-light"
+        className="mt-4 text-gray-900 font-normal"
       >
         Message<span className="text-red-500">*</span>
       </label>
