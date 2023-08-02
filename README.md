@@ -62,7 +62,7 @@ Next, you'll need to clone this repository and set up the following environment 
 - `NEXT_PUBLIC_SANITY_DATASET` – use `production` here.
 - `NEXT_PUBLIC_SANITY_API_VERSION` – use the date you created the dataset in the format yyyy-mm-dd - (`2023-02-18`)
 
-- `SENDGRID_API_KEY` – your SendGrid API key (create an account [here](https://platform.openai.com/account/api-keys)).
+- `SENDGRID_API_KEY` – your SendGrid API key. Create an account [here](https://sendgrid.com/).
 - `YOUR_EMAIL_ADDRESS` – contact form submissions will be sent to this email.
 - `WEBSITE_EMAIL_ADDRESS` – required by SendGrid, use something like noreply@yourwebsite.com.
 
