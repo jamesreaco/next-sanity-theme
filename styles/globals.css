@@ -18,7 +18,3 @@ body {
 .blog-content > p:first-of-type {
   margin-top: 0px;
 }
-
-code {
-  background-color: red;
-}

@@ -8,8 +8,8 @@ export default function Container({
   const styles = fullWidth ? 'max-w-full mx-auto my-0 px-0 md:px-0' : 'max-w-7xl mx-auto my-0 px-6 md:px-12'
 
   return (
-    <section className={`${styles}`}>
+    <div className={`${styles}`}>
       {children}
-    </section>
+    </div>
   )
 }

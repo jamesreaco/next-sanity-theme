@@ -41,10 +41,18 @@
   font-weight: 500;
 }
 
+.content > h2:first-of-type {
+  margin-top: 0rem;
+}
+
 .content > h3 {
   margin-top: 1rem;
   font-size: 1.8rem;
   font-weight: 500;
+}
+
+.content > h3:first-of-type {
+  margin-top: 0rem;
 }
 
 .content > h4 {
@@ -53,14 +61,26 @@
   font-weight: 500;
 }
 
+.content > h4:first-of-type {
+  margin-top: 0rem;
+}
+
 .content > h5 {
   margin-top: 1rem;
   font-size: 1.4rem;
   font-weight: 500;
 }
 
+.content > h5:first-of-type {
+  margin-top: 0rem;
+}
+
 .content > h6 {
   margin-top: 1rem;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.content > h6:first-of-type {
+  margin-top: 0rem;
 }

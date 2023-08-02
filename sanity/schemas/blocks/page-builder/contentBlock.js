@@ -18,14 +18,10 @@ export default {
   ],
   fields: [
     {
-      name: 'heading',
-      title: 'Heading',
-      type: 'string' 
-    },
-    {
-      name: 'paragraph',
-      title: 'Paragraph',
-      type: 'string' 
+      name: 'content',
+      title: 'Content',
+      type: 'array',
+      of: [{ type: 'block' }],
     },
     {
       name: 'image',
