@@ -2,8 +2,7 @@ import { seoFields } from "./utils/seoFields"
 import { fieldGroups } from "./utils/fieldGroups"
 import { fieldsets } from "./utils/fieldsets"
 import { pageBuilderFields } from "./utils/pageBuilderFields"
-
-import {InsertBelowIcon} from '@sanity/icons'
+import { InsertBelowIcon } from '@sanity/icons'
 
 export default {
   name: 'page',

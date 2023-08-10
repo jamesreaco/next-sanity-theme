@@ -81,7 +81,3 @@ export const structure = (S) =>
         ),
         S.divider(),
     ])
-    
-  
-    
-

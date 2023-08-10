@@ -1,4 +1,6 @@
 import { getHomePage } from '@/sanity/utils'
+
+// components
 import Layout from '@/components/global/layout'
 import HomeHero from '@/components/pages/home/home-hero'
 import HomeCaseStudies from '@/components/pages/home/home-case-studies'
@@ -45,4 +47,5 @@ export async function getServerSideProps() {
       page: page,
     }
   }
+  
 }

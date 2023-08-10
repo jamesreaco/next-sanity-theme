@@ -1,7 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Button({ text, destination, variant, classNames }) {
+export default function Button({ 
+  text, 
+  destination, 
+  variant, 
+  classNames 
+}) {
   return (
     <Link 
       href={`${destination}`} 

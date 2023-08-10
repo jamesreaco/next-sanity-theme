@@ -21,10 +21,7 @@ export default function LatestPostsBlock({ block }) {
 
   return (
     <Container>
-      <section className='my-16' style={{ 
-        marginTop: `${block.marginTop * 0.0625}rem`,
-        marginBottom: `${block.marginBottom * 0.0625}rem` 
-      }}>
+      <section className='my-16'>
         <h3 className='pb-6 text-2xl font-light uppercase tracking-widest border-b border-black'>
           {block.heading}
         </h3>

@@ -15,5 +15,3 @@ export default function HeaderBlock({ block }) {
     </Container>
   )
 }
-
-

@@ -20,7 +20,6 @@ export default function MobileNavbar({
 
   return (
     <header className='relative md:hidden my-0 py-8 px-6 md:px-12 border-b'>
-      
       <div className='flex items-center justify-between'>
         <Logo text={logoText} />
         <button 
@@ -34,7 +33,6 @@ export default function MobileNavbar({
           }
         </button>
       </div>
-      
       {showMenu && (
         <nav className='z-10 absolute top-[6rem] bottom-0 left-0 h-[100vh] w-[100vw] pt-8 px-6 bg-[#F6F6F2] border-t'>
           <ul 
@@ -66,11 +64,9 @@ export default function MobileNavbar({
                 className='ml-8'
               />
             </Link>
-
           </ul>
         </nav>
       )}
-      
     </header>
   )
 }

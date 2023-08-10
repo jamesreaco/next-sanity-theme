@@ -25,5 +25,4 @@ export default function ContentBlock({ block }) {
       </Container>
     </div>
   )
-  
 }

@@ -6,7 +6,10 @@ import Button from './button'
 
 export default function CaseStudyCard({ caseStudy }) {
   return (
-    <article key={caseStudy.title} className='relative cursor-pointer overflow-hidden rounded-lg group'>
+    <article 
+      key={caseStudy.title} 
+      className='relative cursor-pointer overflow-hidden rounded-lg group'
+    >
       <Link 
         href={`/case-studies/${caseStudy.slug}`}
       >

@@ -5,11 +5,11 @@ import { getSettings } from '@/sanity/utils'
 import Footer from './footer'
 import Navbar from './navbar'
 import Topbar from './topbar'
+import PageHead from './page-head'
+import MobileNavbar from './mobile-navbar'
 
 // font
 import { Inter } from 'next/font/google'
-import PageHead from './page-head'
-import MobileNavbar from './mobile-navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Layout({ 

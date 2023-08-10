@@ -11,5 +11,4 @@ export default function PostContentBlock({ block }) {
       </div>
     </Container>
   )
-  
 }
