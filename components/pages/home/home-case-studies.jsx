@@ -1,3 +1,4 @@
+"use client"
 import { getLatestCaseStudies } from '@/sanity/utils';
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";

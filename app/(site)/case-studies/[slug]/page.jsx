@@ -1,12 +1,16 @@
-import Layout from '@/components/global/layout'
+import { getCaseStudyBySlug } from '@/sanity/utils'
+
+// components
 import CaseStudyCTA from '@/components/pages/case-studies/case-study-cta'
 import CaseStudyHeader from '@/components/pages/case-studies/case-study-header'
 import CaseStudyImageGallery from '@/components/pages/case-studies/case-study-image-gallery'
 import CaseStudyOverview from '@/components/pages/case-studies/case-study-overview'
-import { getCaseStudyBySlug } from '@/sanity/utils'
-import React from 'react'
 
-export default function CaseStudyPage({ caseStudy }) {
+export const dynamic = 'force-dynamic'
+
+export default async function CaseStudyPage({ params }) {
+
+  const caseStudy = await getCaseStudyBySlug(params.slug)
 
   const { 
     title, 
@@ -19,17 +23,10 @@ export default function CaseStudyPage({ caseStudy }) {
     caseStudyCtaText,
     caseStudyCtaButtonText,
     caseStudyCtaButtonDestination,
-    metaTitle,
-    metaDescription,
-    metaKeywords
   } = caseStudy
 
   return (
-    <Layout 
-      metaTitle={metaTitle}
-      metaDescription={metaDescription}
-      metaKeywords={metaKeywords}
-    >
+    <>
       <CaseStudyHeader 
         title={title}
         shortDescription={shortDescription}
@@ -44,19 +41,6 @@ export default function CaseStudyPage({ caseStudy }) {
         buttonText={caseStudyCtaButtonText}
         buttonDestination={caseStudyCtaButtonDestination}
       />
-    </Layout>
+    </>
   )
-}
-
-export async function getServerSideProps(context) {
-
-  const { slug } = context.params
-  const caseStudy = await getCaseStudyBySlug(slug)
-
-  return {
-    props: {
-      caseStudy: caseStudy,
-    }
-  }
-
 }

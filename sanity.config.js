@@ -14,7 +14,7 @@ const config = defineConfig({
   dataset: dataset,
   title: title,
   apiVersion: apiVersion,
-  basePath: '/studio',
+  basePath: '/admin',
   plugins: [
     deskTool({
       structure
@@ -23,7 +23,8 @@ const config = defineConfig({
   ],
   schema: { 
     types: schemaTypes 
-  }
+  },
+  useCdn: false
 })
 
 export default config

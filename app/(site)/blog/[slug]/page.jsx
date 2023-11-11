@@ -1,12 +1,15 @@
 import { getPostBySlug } from '@/sanity/utils'
 
 // components
-import Layout from '@/components/global/layout'
 import PostHeader from '@/components/pages/blog/post-header';
 import PostAuthor from '@/components/pages/blog/post-author';
 import Block from '@/components/post-builder/block';
 
-export default function PostPage({ post }) {
+export const dynamic = 'force-dynamic'
+
+export default async function PostPage({ params }) {
+
+  const post = await getPostBySlug(params.slug)
 
   const { 
     image, 
@@ -14,18 +17,11 @@ export default function PostPage({ post }) {
     readTime, 
     title,
     author,
-    metaTitle,
-    metaDescription,
-    metaKeywords,
     postBuilder
   } = post
 
   return (
-    <Layout 
-      metaTitle={metaTitle}
-      metaDescription={metaDescription}
-      metaKeywords={metaKeywords}
-    >
+    <>
       <PostHeader 
         image={image}
         category={category}
@@ -52,20 +48,6 @@ export default function PostPage({ post }) {
         description={author.description}
         image={author.image}
       />
-    </Layout>
+    </>
   )
 }
-
-export async function getServerSideProps(context) {
-
-  const { slug } = context.params
-  const post = await getPostBySlug(slug)
-
-  return {
-    props: {
-      post: post,
-    }
-  }
-  
-}
-

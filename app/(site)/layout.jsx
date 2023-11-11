@@ -1,50 +1,25 @@
-import { useEffect, useState } from 'react'
 import { getSettings } from '@/sanity/utils'
+import '../globals.css'
+import Topbar from '@/components/global/topbar'
+import Navbar from '@/components/global/navbar'
+import MobileNavbar from '@/components/global/mobile-navbar'
+import Footer from '@/components/global/footer'
 
-// components
-import Footer from './footer'
-import Navbar from './navbar'
-import Topbar from './topbar'
-import PageHead from './page-head'
-import MobileNavbar from './mobile-navbar'
-
-// font
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Layout({ 
-  children,
-  metaTitle,
-  metaDescription,
-  metaKeywords
-}) {
-  
-  const [settings, setSettings] = useState({})
-  const [isLoading, setIsLoading] = useState(true)
-  
-  useEffect(() => {
-    fetchSettings()
-  }, [])
-  
-  const fetchSettings = async () => {
-    const siteSettings = await getSettings()
-    setSettings(siteSettings)
-    setIsLoading(false)
-  }
+export const metadata = {
+  title: 'Next.js, Sanity & Tailwind Starter Theme',
+  description: 'Next.js, Sanity & Tailwind starter theme built by James Rea.',
+}
 
-  if (isLoading) {
-    return 
-  }
+export default async function RootLayout({ children }) {
+
+  const settings = await getSettings()
 
   return (
-
-    <>
-      <PageHead 
-        title={metaTitle}
-        description={metaDescription}
-        keywords={metaKeywords}
-      />
-      <div className={`${inter.className}`}>
+    <html lang="en">
+      <body className={`${inter.className}`}>
         {settings.enableTopbar && (
           <Topbar 
             message={settings.topbarMessage} 
@@ -81,8 +56,7 @@ export default function Layout({
           enableFootnoteLink={settings.enableFootnoteLink}
           footerFootnoteLink={settings.footerFootnoteLink}
         />
-      </div>
-    </>
-
+      </body>
+    </html>
   )
 }

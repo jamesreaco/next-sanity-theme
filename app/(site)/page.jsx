@@ -1,12 +1,15 @@
 import { getHomePage } from '@/sanity/utils'
 
 // components
-import Layout from '@/components/global/layout'
 import HomeHero from '@/components/pages/home/home-hero'
 import HomeCaseStudies from '@/components/pages/home/home-case-studies'
 import HomeLatestPosts from '@/components/pages/home/home-latest-posts'
 
-export default function Home({ page }) {
+export const dynamic = 'force-dynamic'
+
+export default async function Home() {
+
+  const page = await getHomePage()
 
   const { 
     heading,
@@ -14,17 +17,10 @@ export default function Home({ page }) {
     image,
     btnText,
     btnDestination,
-    metaTitle,
-    metaDescription,
-    metaKeywords
   } = page
 
   return (
-    <Layout 
-      metaTitle={metaTitle}
-      metaDescription={metaDescription}
-      metaKeywords={metaKeywords}
-    >
+    <>
       <HomeHero 
         heading={heading}
         paragraph={paragraph}
@@ -34,18 +30,6 @@ export default function Home({ page }) {
       />
       <HomeCaseStudies />
       <HomeLatestPosts />
-    </Layout>
+    </>
   )
-}
-
-export async function getServerSideProps() {
-
-  const page = await getHomePage()
-  
-  return {
-    props: {
-      page: page,
-    }
-  }
-  
 }

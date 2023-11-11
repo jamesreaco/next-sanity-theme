@@ -1,19 +1,12 @@
 ## Introduction
 
-Portfolio Site is an open-source [Next.js](https://nextjs.org/) + [Sanity](https://sanity.io/) starter theme designed and developed by [James Rea](https://jamesrea.co).
+[Next.js](https://nextjs.org/) + [Sanity](https://sanity.io/) starter theme designed and developed by [James Rea](https://jamesrea.co).
 
-This version is built using the Next.js [Pages Router](https://nextjs.org/docs/pages). I plan to release the [App Router](https://nextjs.org/docs/app) version soon on a separate repository. 
-
-As it stands, Portfolio Site uses [getServerSideProps](https://nextjs.org/docs/pages/building-your-application/data-fetching/get-server-side-props) to fetch page/post data from Sanity and all global site settings are fetched on the client. 
-
-
-Setting up [On-Demand Revalidation](https://nextjs.org/docs/pages/building-your-application/data-fetching/incremental-static-regeneration#using-on-demand-revalidation) with Sanity Webhooks is on my todo list for this project.
-
-
+Recently migrated to the Next.js App Router.
 
 ### Features
 
-Here are the features Portfolio Site provides out-of-the-box:
+Here are the features provided out-of-the-box:
 
 - [Page Builder](#page-builder)
 - [Post Builder](#post-builder)
@@ -34,10 +27,10 @@ Manage the entire site with global settings via the Sanity Studio dashboard. Out
 
 #### Embedded Sanity Studio
 
-Sanity Studio is embedded into the project meaning you can access it via http://localhost:3000/studio in development and https://yourwebsite.com/studio in production.
+Sanity Studio is embedded into the project meaning you can access it via http://localhost:3000/admin in development and https://yourwebsite.com/admin in production.
 
 #### Contact Form (SendGrid API)
-Portfolio Site comes integrated with the [SendGrid](https://sendgrid.com/) API for contact form submissions (free API Key is required).
+Integrated with the [SendGrid](https://sendgrid.com/) API for contact form submissions (free API Key is required).
 
 ---
 
@@ -52,7 +45,7 @@ Portfolio Site comes integrated with the [SendGrid](https://sendgrid.com/) API f
 
 ## Setup
 
-To get started with Portfolio Site, you'll first need to create a [Sanity](https://sanity.io/) and [SendGrid](https://sendgrid.com/) account. 
+To get started, you'll first need to create a [Sanity](https://sanity.io/) and [SendGrid](https://sendgrid.com/) account. 
 
 Once you have created a Sanity account, you can create a new Sanity project by following these [instructions](https://www.sanity.io/docs/create-a-sanity-project).
 
