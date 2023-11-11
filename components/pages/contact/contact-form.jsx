@@ -89,7 +89,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-10 md:mt-12 mb-12 md:border flex flex-col md:px-8 md:py-8 bg-[#F6F6F2]"
+      className="max-w-[800px] mx-auto mt-10 md:mt-12 mb-12 md:border flex flex-col md:px-8 md:py-8 bg-[#F6F6F2]"
     >
 
       <label

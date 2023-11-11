@@ -25,12 +25,12 @@ export default function Footer({
           </div>
           <div className='mt-10 md:mt-0 pb-6 md:pb-0 grid grid-cols-2 gap-24 border-b md:border-b-0 border-gray-100'>
             <div>
-              <h5 className='mb-8 font-medium'>
+              <h5 className='mb-6 font-medium'>
                 Quick Links
               </h5>
               <ul>
                 {footerQuickLinks?.map((item) => (
-                  <li key={item._id} className='mb-4'>
+                  <li key={item._id} className='mb-4 hover:underline underline-offset-[8px]'>
                     <Link href={`${item.link}`}>
                       {item.title}
                     </Link>
@@ -39,12 +39,12 @@ export default function Footer({
               </ul>
             </div>
             <div>
-              <h5 className='mb-8 font-medium'>
+              <h5 className='mb-6 font-medium'>
                 Socials
               </h5>
               <ul>
                 {footerSocialLinks?.map((item) => (
-                  <li key={item._id} className='mb-4'>
+                  <li key={item._id} className='mb-4 hover:underline underline-offset-[8px]'>
                     <Link href={`${item.link}`}>
                       {item.title}
                     </Link>
@@ -78,7 +78,7 @@ export default function Footer({
               <div key={item._id} className='flex items-center gap-1 group'>
                 <Link 
                   href={item.link}
-                  className='mt-1 md:mt-0 text-sm'
+                  className='mt-1 md:mt-0 text-sm hover:underline underline-offset-[8px]'
                 >
                   {item.title}
                 </Link>

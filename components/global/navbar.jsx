@@ -19,7 +19,7 @@ export default function Navbar({
             <li key={item.title}>
               <Link 
                 href={`${item.link}`}
-                className='text-lg tracking-wider'
+                className='text-lg tracking-wider hover:underline underline-offset-[8px]'
               >
                 {item.title}
               </Link>

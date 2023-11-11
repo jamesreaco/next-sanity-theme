@@ -1,10 +1,9 @@
 import { getCaseStudyBySlug } from '@/sanity/utils'
 
 // components
-import CaseStudyCTA from '@/components/pages/case-studies/case-study-cta'
 import CaseStudyHeader from '@/components/pages/case-studies/case-study-header'
-import CaseStudyImageGallery from '@/components/pages/case-studies/case-study-image-gallery'
 import CaseStudyOverview from '@/components/pages/case-studies/case-study-overview'
+import CaseStudyImageGallery from '@/components/pages/case-studies/case-study-image-gallery'
 
 export const dynamic = 'force-dynamic'
 
@@ -19,10 +18,6 @@ export default async function CaseStudyPage({ params }) {
     image, 
     url, 
     imageGallery,
-    caseStudyCtaHeading,
-    caseStudyCtaText,
-    caseStudyCtaButtonText,
-    caseStudyCtaButtonDestination,
   } = caseStudy
 
   return (
@@ -30,17 +25,10 @@ export default async function CaseStudyPage({ params }) {
       <CaseStudyHeader 
         title={title}
         shortDescription={shortDescription}
-        image={image}
         url={url}
       />
-      <CaseStudyOverview overview={overview} />
+      <CaseStudyOverview overview={overview} image={image} title={title} />
       <CaseStudyImageGallery images={imageGallery} />
-      <CaseStudyCTA 
-        heading={caseStudyCtaHeading}
-        text={caseStudyCtaText}
-        buttonText={caseStudyCtaButtonText}
-        buttonDestination={caseStudyCtaButtonDestination}
-      />
     </>
   )
 }

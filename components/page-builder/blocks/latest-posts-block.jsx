@@ -36,6 +36,7 @@ export default function LatestPostsBlock({ block }) {
             text="View All Posts" 
             destination="/blog" 
             variant="light"
+            classNames="border border-zinc-200"
           />
         </div>
       </section>

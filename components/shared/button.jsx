@@ -12,11 +12,10 @@ export default function Button({
   return (
     <Link 
       href={`${destination}`} 
-      className={twMerge(`flex items-center justify-between py-2 md:py-3 px-4 md:px-5 text-base md:text-lg tracking-widest cursor-pointer ${classNames}`)}
+      className={twMerge(`flex items-center justify-between py-2 md:py-3 px-4 md:px-5 text-base md:text-lg tracking-widest cursor-pointer group ${classNames}`)}
       style={{ 
         backgroundColor: variant === 'dark' ? `#000` : `#f6f6f2`,
         color: variant === 'dark' ? `#fff` : `#000`,
-        border: variant === 'dark' ? `1px solid #fff` : `1px solid #00000`,
       }}
     >
       {text}
@@ -25,7 +24,7 @@ export default function Button({
         width={12}
         height={12}
         alt="Link icon"
-        className='ml-8 md:ml-12'
+        className='ml-8 md:ml-12 transition group-hover:rotate-45'
         style={{
           filter: variant === 'dark' ? `invert(0)` : `invert(0.8)`,
         }}

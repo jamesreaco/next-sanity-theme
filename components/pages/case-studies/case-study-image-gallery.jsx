@@ -5,7 +5,7 @@ import React from 'react'
 export default function CaseStudyImageGallery({ images }) {
   return (
     <Container>
-      <section className='grid grid-cols-2 gap-8'>
+      <section className='my-[60px] grid grid-cols-2 gap-[20px] md:gap-[60px]'>
         {images.map((image) => (
           <Image 
             key={image.url}
