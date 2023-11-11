@@ -10,7 +10,7 @@ export default function Navbar({
 }) {
   return (
     <header 
-      className='hidden md:flex items-center justify-between max-w-7xl mx-auto my-0 py-8 px-6 md:px-12 border-b'
+      className='hidden md:flex items-center justify-between max-w-8xl mx-auto my-0 py-8 px-6 md:px-12 border-b'
     >
       <Logo text={logoText} />
       <nav>

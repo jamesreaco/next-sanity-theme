@@ -26,8 +26,8 @@ export default function LatestPostsBlock({ block }) {
         <h3 className='pb-6 text-2xl font-light uppercase tracking-widest border-b border-black'>
           {block.heading}
         </h3>
-        <div className='mt-14 mb-16 grid grid-cols-1 md:grid-cols-2 gap-16'>
-          {posts.slice(0, 2).map((post) => (
+        <div className='mt-14 mb-16 grid grid-cols-1 md:grid-cols-3 gap-16'>
+          {posts.slice(0, 3).map((post) => (
             <BlogCard key={post.title} post={post}/>
           ))}
         </div>

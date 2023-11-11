@@ -8,7 +8,7 @@ export default function PostImageBlock({ block }) {
         src={urlFor(block.image).url()}
         width={600}
         height={600}
-        className='object-contain rounded-lg'
+        className='object-contain'
         alt={block.image.alt}
       />
     </div>

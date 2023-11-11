@@ -34,7 +34,7 @@ export default function CaseStudyHeader({
           width={2000}
           height={600}
           alt={title}
-          className='mt-20 rounded-lg h-[40rem] object-cover'
+          className='mt-20 h-[40rem] object-cover'
         />
       </header>
     </Container>

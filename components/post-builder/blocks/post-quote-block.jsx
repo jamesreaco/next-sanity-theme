@@ -12,7 +12,7 @@ export default function PostQuoteBlock({ block }) {
 
   return (
     <div className='mb-[60px] mx-auto max-w-[600px] px-4'>
-      <div className='flex flex-col justify-center items-center p-12 border rounded-lg bg-grey-200' style={{
+      <div className='flex flex-col justify-center items-center p-12 border bg-grey-200' style={{
         backgroundColor: `#${bgColor}`
       }}>
         <div>

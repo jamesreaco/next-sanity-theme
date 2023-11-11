@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function ContentBlock({ block }) {
 
   return (
-    <div className='mt-16 pt-7 pb-10 md:py-20 bg-[#fff] border'>
+    <div className='pt-[30px] md:pt-[60px] bg-[#fff] border'>
       <Container>
         <div className='grid md:grid-cols-2 gap-10 md:gap-16'>
           <div className=''>

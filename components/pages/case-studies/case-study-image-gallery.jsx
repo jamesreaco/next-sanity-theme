@@ -13,7 +13,7 @@ export default function CaseStudyImageGallery({ images }) {
             width={600}
             height={600}
             alt={image.alt}
-            className='rounded-lg'
+            className='w-full'
           />
         ))}
       </section>

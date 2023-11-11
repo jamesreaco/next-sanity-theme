@@ -1,3 +1,5 @@
+import { twMerge } from 'tailwind-merge'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -5,16 +7,16 @@ export default function Button({
   text, 
   destination, 
   variant, 
-  classNames 
+  classNames,
 }) {
   return (
     <Link 
       href={`${destination}`} 
-      className={`flex items-center justify-between py-2 md:py-3 px-4 md:px-5 text-base md:text-lg tracking-widest rounded-lg cursor-pointer ${classNames}`}
+      className={twMerge(`flex items-center justify-between py-2 md:py-3 px-4 md:px-5 text-base md:text-lg tracking-widest cursor-pointer ${classNames}`)}
       style={{ 
         backgroundColor: variant === 'dark' ? `#000` : `#f6f6f2`,
         color: variant === 'dark' ? `#fff` : `#000`,
-        border: variant === 'dark' ? `1px solid #fff` : `1px solid #e3e3e3`,
+        border: variant === 'dark' ? `1px solid #fff` : `1px solid #00000`,
       }}
     >
       {text}

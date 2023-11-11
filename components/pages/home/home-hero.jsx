@@ -16,7 +16,7 @@ export default function HomeHero({
           <h1 className='-ml-1 md:-ml-2 text-[12vw] font-light leading-none'>
             {heading}
           </h1>
-          <p className='max-w-[30rem] mt-6 md:mt-20 mb-8 md:mb-12 text-[1.2rem] md:text-2xl font-light'>
+          <p className='max-w-[30rem] mt-6 md:mt-8 mb-8 md:mb-12 text-[1.2rem] md:text-2xl font-light'>
             {paragraph}
           </p>
           <Button 

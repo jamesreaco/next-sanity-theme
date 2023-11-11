@@ -8,18 +8,15 @@ export default function PostAuthor({
 }) {
   return (
     <section className='max-w-xl mx-auto md:my-10 px-6 md:px-0 pb-10'>
-      <div className='flex flex-col md:flex-row md:items-center gap-4 p-8 bg-white border border-gray-200 rounded-2xl'>
+      <div className='flex flex-col md:flex-row md:items-center gap-4 p-4 bg-white border border-gray-200'>
         <Image
           src={image}
           width={80}
           height={80}
           alt={`Image of ${name}`}
-          className='rounded-full'
+          className=''
         />
         <div>
-          <div className='text-sm text-gray-500 tracking-wide'>
-            Written By
-          </div>
           <div className='text-xl'>
             {name}
           </div>

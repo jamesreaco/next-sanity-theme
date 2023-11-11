@@ -8,7 +8,7 @@ export default function CaseStudyCard({ caseStudy }) {
   return (
     <article 
       key={caseStudy.title} 
-      className='relative cursor-pointer overflow-hidden rounded-lg group'
+      className='w-full relative cursor-pointer overflow-hidden group'
     >
       <Link 
         href={`/case-studies/${caseStudy.slug}`}
@@ -19,13 +19,14 @@ export default function CaseStudyCard({ caseStudy }) {
           height={800}
           sizes="(max-width: 640px) 320px, (max-width: 1600px) 584px"
           alt={caseStudy.title}
-          className='w-[100%] h-auto object-cover transition md:hover:scale-[1.02] '
+          className='w-[100%] h-full object-cover transition md:hover:scale-[1.02] '
         />
         <div className='p-[1rem] absolute bottom-0 left-0 right-0 transition-all md:group-hover:p-[2rem]'>
           <Button 
             destination={`/case-studies/${caseStudy.slug}`}
             text={caseStudy.title} 
             variant="light"
+            classNames="rounded-none"
           />
         </div>
       </Link>

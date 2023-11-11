@@ -168,7 +168,7 @@ export async function getPostBySlug(slug) {
 
 export async function getLatestCaseStudies() {
   return createClient(clientConfig).fetch(
-    groq`*[_type == 'caseStudy'][0...2] | order(_createdAt desc) {
+    groq`*[_type == 'caseStudy'][0...3] | order(_createdAt desc) {
       _id,
       title,
       'slug': slug.current,

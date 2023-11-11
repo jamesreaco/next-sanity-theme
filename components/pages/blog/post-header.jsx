@@ -16,7 +16,6 @@ export default function PostHeader({
           width={2000}
           height={2000}
           alt='Thumbnail Image'
-          className='rounded-2xl'
         />
         <div className='max-w-xl mx-auto my-10'>
           <div className='md:mt-20 flex items-center'>
