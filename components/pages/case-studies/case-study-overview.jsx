@@ -9,7 +9,7 @@ export default function CaseStudyOverview({ overview, image, title }) {
         width={2000}
         height={600}
         alt={title}
-        className='h-[600px] md:h-[1200px] object-cover'
+        className='h-[400px] md:h-[1200px] object-cover'
       />
       <div className='relative flex flex-col justify-center mx-auto mt-[60px] md:my-16 md:px-[80px]'>
         <h2 className='mb-4 text-3xl md:text-4xl font-extralight'>
