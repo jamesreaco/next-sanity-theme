@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { urlFor } from '@/sanity/image-builder'
+import { urlFor } from '@/sanity/lib/sanity.image'
 
 export default function PostImageBlock({ block }) {
   return (

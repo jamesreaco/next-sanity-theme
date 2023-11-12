@@ -1,5 +1,5 @@
 import { DocumentTextIcon } from '@sanity/icons'
-import { fieldGroups } from '../../utils/fieldGroups'
+import { fieldGroups } from '../../utils/field-groups'
 import { fieldsets } from '../../utils/fieldsets'
 
 export default {

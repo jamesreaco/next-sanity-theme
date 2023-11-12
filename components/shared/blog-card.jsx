@@ -1,5 +1,7 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
+
+// components
 import Tag from './tag'
 
 export default function BlogCard({ post }) {
@@ -7,7 +9,7 @@ export default function BlogCard({ post }) {
     <article>
       <Link 
         href={`blog/${post.slug}`} 
-        className='flex flex-col items-start pb-8 border-b border-black cursor-pointer group'
+        className='h-full flex flex-col items-start justify-between pb-8 border-b border-black cursor-pointer group'
       >
         <Image 
           src={post.image}

@@ -1,8 +1,8 @@
 import { BlockContentIcon } from '@sanity/icons'
-import { fieldsets } from './utils/fieldsets'
-import { fieldGroups } from './utils/fieldGroups'
-import { seoFields } from './utils/seoFields'
-import { postBuilderFields } from './utils/postBuilderFields'
+import { fieldsets } from '../utils/fieldsets'
+import { fieldGroups } from '../utils/field-groups'
+import { seoFields } from '../utils/seo-fields'
+import { postBuilderFields } from '../utils/post-builder-fields'
 
 export default {
   name: 'post',

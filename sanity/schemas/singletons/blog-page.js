@@ -1,6 +1,6 @@
-import { fieldGroups } from "../utils/fieldGroups"
+import { fieldGroups } from "../utils/field-groups"
 import { fieldsets } from "../utils/fieldsets"
-import { seoFields } from "../utils/seoFields"
+import { seoFields } from "../utils/seo-fields"
 
 export default {
   name: 'blogPage',

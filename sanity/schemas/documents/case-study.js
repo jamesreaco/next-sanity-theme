@@ -1,7 +1,7 @@
 import { CaseIcon } from '@sanity/icons'
-import { fieldsets } from './utils/fieldsets'
-import { fieldGroups } from './utils/fieldGroups'
-import { seoFields } from './utils/seoFields'
+import { fieldsets } from '../utils/fieldsets'
+import { fieldGroups } from '../utils/field-groups'
+import { seoFields } from '../utils/seo-fields'
 
 export default {
   name: 'caseStudy',

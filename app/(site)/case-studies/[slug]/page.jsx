@@ -1,4 +1,4 @@
-import { getCaseStudyBySlug } from '@/sanity/utils'
+import { getCaseStudyBySlug } from '@/sanity/lib/sanity.queries'
 
 // components
 import CaseStudyHeader from '@/components/pages/case-studies/case-study-header'
@@ -11,24 +11,15 @@ export default async function CaseStudyPage({ params }) {
 
   const caseStudy = await getCaseStudyBySlug(params.slug)
 
-  const { 
-    title, 
-    shortDescription, 
-    overview, 
-    image, 
-    url, 
-    imageGallery,
-  } = caseStudy
-
   return (
     <>
       <CaseStudyHeader 
-        title={title}
-        shortDescription={shortDescription}
-        url={url}
+        title={caseStudy.title}
+        shortDescription={caseStudy.shortDescription}
+        url={caseStudy.url}
       />
-      <CaseStudyOverview overview={overview} image={image} title={title} />
-      <CaseStudyImageGallery images={imageGallery} />
+      <CaseStudyOverview overview={caseStudy.overview} image={caseStudy.image} title={caseStudy.title} />
+      <CaseStudyImageGallery images={caseStudy.imageGallery} />
     </>
   )
 }

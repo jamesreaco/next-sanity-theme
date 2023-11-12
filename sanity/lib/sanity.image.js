@@ -1,5 +1,5 @@
 import { createClient } from "next-sanity";
-import clientConfig from './config/client-config'
+import clientConfig from '../config/sanity.client'
 import imageUrlBuilder from '@sanity/image-url'
 
 const builder = imageUrlBuilder(createClient(clientConfig))

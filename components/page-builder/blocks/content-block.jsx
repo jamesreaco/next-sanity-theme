@@ -1,6 +1,6 @@
 import Container from '@/components/global/container'
 import Content from '@/components/shared/content'
-import { urlFor } from '@/sanity/image-builder'
+import { urlFor } from '@/sanity/lib/sanity.image'
 import Image from 'next/image'
 
 export default function ContentBlock({ block }) {

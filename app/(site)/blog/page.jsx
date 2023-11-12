@@ -1,4 +1,4 @@
-import { getAllPosts } from '@/sanity/utils'
+import { getAllPosts } from '@/sanity/lib/sanity.queries'
 
 // components
 import Page from '@/components/global/page'

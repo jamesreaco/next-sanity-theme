@@ -1,4 +1,4 @@
-import { getHomePage } from '@/sanity/utils'
+import { getHomePage } from '@/sanity/lib/sanity.queries'
 
 // components
 import HomeHero from '@/components/pages/home/home-hero'
@@ -11,22 +11,14 @@ export default async function Home() {
 
   const page = await getHomePage()
 
-  const { 
-    heading,
-    paragraph,
-    image,
-    btnText,
-    btnDestination,
-  } = page
-
   return (
     <>
       <HomeHero 
-        heading={heading}
-        paragraph={paragraph}
-        image={image}
-        btnText={btnText}
-        btnDestination={btnDestination}
+        heading={page.heading}
+        paragraph={page.paragraph}
+        image={page.image}
+        btnText={page.btnText}
+        btnDestination={page.btnDestination}
       />
       <HomeCaseStudies />
       <HomeLatestPosts />

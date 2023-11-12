@@ -1,5 +1,5 @@
 import { createClient, groq } from "next-sanity";
-import clientConfig from './config/client-config'
+import clientConfig from '../config/sanity.client'
 
 export async function getSettings() {
   return createClient(clientConfig).fetch(

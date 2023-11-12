@@ -1,4 +1,4 @@
-import { getAllCaseStudies } from '@/sanity/utils'
+import { getAllCaseStudies } from '@/sanity/lib/sanity.queries'
 
 //components
 import Page from '@/components/global/page'

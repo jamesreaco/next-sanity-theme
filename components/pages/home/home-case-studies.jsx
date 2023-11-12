@@ -1,5 +1,5 @@
 "use client"
-import { getLatestCaseStudies } from '@/sanity/utils';
+import { getLatestCaseStudies } from '@/sanity/lib/sanity.queries';
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 import CaseStudyCard from '@/components/shared/case-study-card';

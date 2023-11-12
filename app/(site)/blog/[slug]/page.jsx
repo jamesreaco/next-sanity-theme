@@ -1,4 +1,4 @@
-import { getPostBySlug } from '@/sanity/utils'
+import { getPostBySlug } from '@/sanity/lib/sanity.queries'
 
 // components
 import PostHeader from '@/components/pages/blog/post-header';
@@ -10,23 +10,16 @@ export const dynamic = 'force-dynamic'
 export default async function PostPage({ params }) {
 
   const post = await getPostBySlug(params.slug)
-
-  const { 
-    image, 
-    category, 
-    readTime, 
-    title,
-    author,
-    postBuilder
-  } = post
+  
+  const { author, postBuilder } = post
 
   return (
     <>
       <PostHeader 
-        image={image}
-        category={category}
-        readTime={readTime}
-        title={title}
+        image={post.image}
+        category={post.category}
+        readTime={post.readTime}
+        title={post.title}
       />
       
       {postBuilder ?

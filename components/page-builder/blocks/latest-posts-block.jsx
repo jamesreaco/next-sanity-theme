@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react'
-import { getLatestPosts } from '@/sanity/utils'
+import { getLatestPosts } from '@/sanity/lib/sanity.queries'
 
 // components
 import BlogCard from '@/components/shared/blog-card'

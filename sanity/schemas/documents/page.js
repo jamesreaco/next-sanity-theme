@@ -1,7 +1,7 @@
-import { seoFields } from "./utils/seoFields"
-import { fieldGroups } from "./utils/fieldGroups"
-import { fieldsets } from "./utils/fieldsets"
-import { pageBuilderFields } from "./utils/pageBuilderFields"
+import { seoFields } from "../utils/seo-fields"
+import { fieldGroups } from "../utils/field-groups"
+import { fieldsets } from "../utils/fieldsets"
+import { pageBuilderFields } from "../utils/page-builder-fields"
 import { InsertBelowIcon } from '@sanity/icons'
 
 export default {

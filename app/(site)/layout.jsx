@@ -1,4 +1,4 @@
-import { getSettings } from '@/sanity/utils'
+import { getSettings } from '@/sanity/lib/sanity.queries'
 import '../globals.css'
 import Topbar from '@/components/global/topbar'
 import Navbar from '@/components/global/navbar'
@@ -9,8 +9,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Next.js, Sanity & Tailwind Starter Theme',
-  description: 'Next.js, Sanity & Tailwind starter theme built by James Rea.',
+  title: 'Next.js, Sanity & Tailwind Theme',
+  description: 'Open Source Next.js, Sanity & Tailwind starter theme built by James Rea.',
 }
 
 export default async function RootLayout({ children }) {
