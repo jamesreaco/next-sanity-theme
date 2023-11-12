@@ -1,46 +1,34 @@
-import { getPostBySlug } from '@/sanity/lib/sanity.queries'
+import { draftMode } from "next/headers";
+import { client } from '@/sanity/config/sanity.client';
+import { getPostBySlug } from '@/sanity/lib/sanity.fetch'
+import { postPathsQuery } from '@/sanity/lib/sanity.queries';
 
 // components
-import PostHeader from '@/components/pages/blog/post-header';
-import PostAuthor from '@/components/pages/blog/post-author';
-import Block from '@/components/post-builder/block';
+import Post from '@/components/pages/blog/post';
+import PostPreview from "@/components/preview/post-preview";
+import PreviewProvider from "@/components/preview/preview-provider";
 
 export const dynamic = 'force-dynamic'
+
+export async function generateStaticParams() {
+  const posts = await client.fetch(postPathsQuery);
+  return posts;
+}
 
 export default async function PostPage({ params }) {
 
   const post = await getPostBySlug(params.slug)
+  const isDraftMode = draftMode().isEnabled;
+
+  if (isDraftMode && process.env.SANITY_API_READ_TOKEN) {
+    return (
+      <PreviewProvider token={process.env.SANITY_API_READ_TOKEN}>
+        <PostPreview post={post} />
+      </PreviewProvider>
+    );
+  }
   
-  const { author, postBuilder } = post
-
   return (
-    <>
-      <PostHeader 
-        image={post.image}
-        category={post.category}
-        readTime={post.readTime}
-        title={post.title}
-      />
-      
-      {postBuilder ?
-        <>
-          {postBuilder?.map(block => (
-            <Block key={block._key} block={block} />
-          ))} 
-        </>
-      :
-        <>
-          <p className='mt-4 mb-12 p-10 rounded-lg bg-white'>
-            Nothing to see here. Start adding some blocks in your Sanity Studio!
-          </p>
-        </>
-      }
-
-      <PostAuthor 
-        name={author.name}
-        description={author.description}
-        image={author.image}
-      />
-    </>
+    <Post post={post} />
   )
 }

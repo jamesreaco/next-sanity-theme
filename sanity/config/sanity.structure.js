@@ -1,4 +1,5 @@
 import { CogIcon } from '@sanity/icons'
+import Iframe from 'sanity-plugin-iframe-pane'
 
 export const structure = (S) =>
   S.list()
@@ -23,7 +24,21 @@ export const structure = (S) =>
             .items([
               S.listItem()
                 .title('Home')
-                .child(S.document().schemaType('homePage').documentId('homePage').title('Home Page')),
+                .child(
+                  S.document()
+                  .schemaType('homePage')
+                  .documentId('homePage')
+                  .title('Home Page')
+                  .views([
+                    S.view.form(),
+                    S.view
+                      .component(Iframe)
+                      .options({
+                        url: `http://localhost:3000/api/preview`,
+                      })
+                      .title('Preview'),
+                  ])
+                ),
               S.listItem()
                 .title('Blog')
                 .child(S.document().schemaType('blogPage').documentId('blogPage').title('Blog Page')),
@@ -80,4 +95,9 @@ export const structure = (S) =>
             ].includes(listItem.getId())
         ),
         S.divider(),
+
+        
     ])
+
+
+    

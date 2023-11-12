@@ -1,25 +1,14 @@
 "use client"
-import { getLatestCaseStudies } from '@/sanity/lib/sanity.queries';
+import { getLatestCaseStudies } from '@/sanity/lib/sanity.fetch';
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 import CaseStudyCard from '@/components/shared/case-study-card';
 import Container from '@/components/global/container';
 
-export default function HomeCaseStudies() {
-
-  const [caseStudies, setCaseStudies] = useState([])
+export default function HomeCaseStudies({ caseStudies }) {
 
   const { scrollYProgress } = useScroll();
   const x = useTransform(scrollYProgress, [0, 1], [0, 600]);
-
-  useEffect(() => {
-    fetchLatestCaseStudies()
-  }, [])
-
-  const fetchLatestCaseStudies = async () => {
-    const latestCaseStudies = await getLatestCaseStudies()
-    setCaseStudies(latestCaseStudies)
-  }
 
   return (
     <Container fullWidth={true}>
@@ -31,7 +20,7 @@ export default function HomeCaseStudies() {
           Case Studies ✦ Case Studies ✦ Case Studies ✦ Case Studies ✦ Case Studies ✦ Case Studies
         </motion.div>
         <div className='w-full px-6 md:px-[0px] grid md:grid-cols-3 gap-6 md:gap-0'>
-          {caseStudies.map((item) => (
+          {caseStudies?.map((item) => (
             <CaseStudyCard key={item._id} caseStudy={item} />
           ))}
         </div>

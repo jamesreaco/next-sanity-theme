@@ -1,4 +1,4 @@
-import { getPageBySlug } from '@/sanity/lib/sanity.queries'
+import { getPageBySlug } from '@/sanity/lib/sanity.fetch'
 
 // components
 import Block from '@/components/page-builder/block'

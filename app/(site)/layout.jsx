@@ -1,4 +1,4 @@
-import { getSettings } from '@/sanity/lib/sanity.queries'
+import { getSettings } from '@/sanity/lib/sanity.fetch'
 import '../globals.css'
 import Topbar from '@/components/global/topbar'
 import Navbar from '@/components/global/navbar'

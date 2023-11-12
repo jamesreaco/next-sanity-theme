@@ -1,4 +1,4 @@
-import { getCaseStudyBySlug } from '@/sanity/lib/sanity.queries'
+import { getCaseStudyBySlug } from '@/sanity/lib/sanity.fetch'
 
 // components
 import CaseStudyHeader from '@/components/pages/case-studies/case-study-header'

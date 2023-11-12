@@ -3,6 +3,7 @@ import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from '@/sanity/schemas';
 import { structure } from './sanity/config/sanity.structure';
+import { defaultDocumentNode } from './sanity/config/sanity.default-document-node';
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
@@ -18,7 +19,8 @@ const config = defineConfig({
   basePath: '/admin',
   plugins: [
     deskTool({
-      structure
+      structure,
+      defaultDocumentNode,
     }),
     visionTool()
   ],
