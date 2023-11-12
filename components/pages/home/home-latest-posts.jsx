@@ -1,25 +1,11 @@
 "use client"
-import { useEffect, useState } from 'react'
-import { getLatestPosts } from '@/sanity/lib/sanity.fetch'
 
 // components
 import BlogCard from '@/components/shared/blog-card'
 import Button from '@/components/shared/button'
 import Container from '@/components/global/container'
 
-export default function HomeLatestPosts() {
-
-  const [posts, setPosts] = useState([])
-
-  useEffect(() => {
-    fetchLatestPosts()
-  }, [])
-
-  const fetchLatestPosts = async () => {
-    const latestPosts = await getLatestPosts()
-    setPosts(latestPosts)
-  }
-
+export default function HomeLatestPosts({ posts }) {
   return (
     <Container 
       fullWidth={true}

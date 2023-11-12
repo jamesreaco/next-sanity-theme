@@ -34,7 +34,7 @@ export const structure = (S) =>
                     S.view
                       .component(Iframe)
                       .options({
-                        url: `http://localhost:3000/api/preview`,
+                        url: `${process.env.NEXT_PUBLIC_SITE_URL}/api/preview`,
                       })
                       .title('Preview'),
                   ])

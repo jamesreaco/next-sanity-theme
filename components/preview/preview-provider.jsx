@@ -16,9 +16,8 @@ export default function PreviewProvider({ children, token }) {
     <LiveQueryProvider
       client={client}
       token={token}
-      
       // Uncomment below to see debug reports
-      logger={console}
+      // logger={console}
     >
       {children}
     </LiveQueryProvider>
