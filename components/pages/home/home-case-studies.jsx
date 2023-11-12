@@ -30,7 +30,7 @@ export default function HomeCaseStudies() {
         >
           Case Studies ✦ Case Studies ✦ Case Studies ✦ Case Studies ✦ Case Studies ✦ Case Studies
         </motion.div>
-        <div className='w-full px-[20px] md:px-[0px] grid md:grid-cols-3 gap-[20px] md:gap-[0px]'>
+        <div className='w-full px-6 md:px-[0px] grid md:grid-cols-3 gap-6 md:gap-0'>
           {caseStudies.map((item) => (
             <CaseStudyCard key={item._id} caseStudy={item} />
           ))}

@@ -24,11 +24,11 @@ export default function HomeLatestPosts() {
     <Container 
       fullWidth={true}
     >
-      <div className='mt-4 md:mt-0 mb-4 py-10 md:py-20 px-6 md:px-12 bg-white border-t md-border-t-none border-b'>
+      <div className='mt-6 md:mt-0 mb-4 py-10 md:py-20 px-6 md:px-12 bg-white border-t md-border-t-none border-b'>
         <h2 className='pb-6 text-2xl font-light uppercase tracking-widest border-b border-black'>
           Latest Posts
         </h2>
-        <div className='mt-14 mb-16 grid grid-cols-1 md:grid-cols-3 gap-12'>
+        <div className='mt-14 mb-10 md:mb-16 grid grid-cols-1 md:grid-cols-3 gap-12'>
           {posts.slice(0, 3).map((post) => (
             <BlogCard key={post.title} post={post}/>
           ))}

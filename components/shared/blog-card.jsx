@@ -31,7 +31,7 @@ export default function BlogCard({ post }) {
             src="/images/link-icon.png"
             width={30}
             height={30}
-            className='invert-[100%] transition md:group-hover:rotate-90 w-6'
+            className='invert-[100%] w-[30px] h-[20px] object-contain transition md:group-hover:rotate-90'
             alt="Link Icon Image"
           />
         </div>
