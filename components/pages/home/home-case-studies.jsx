@@ -9,8 +9,8 @@ export default function HomeCaseStudies({ caseStudies }) {
   const x = useTransform(scrollYProgress, [0, 1], [0, 600]);
 
   return (
-    <Container fullWidth={true}>
-      <div className='relative mt-12 md:mt-12 pt-28 md:pt-64'>
+    <section className="relative mt-12 md:mt-12 pt-28 md:pt-64">
+      <Container fullWidth={true}>
         <motion.div 
           className='-left-[40rem] top-0 absolute text-[4rem] md:text-[10rem] font-extralight whitespace-nowrap' 
           style={{ x }}
@@ -22,7 +22,7 @@ export default function HomeCaseStudies({ caseStudies }) {
             <CaseStudyCard key={item._id} caseStudy={item} />
           ))}
         </div>
-      </div>
-    </Container>
+      </Container>
+    </section>
   )
 }

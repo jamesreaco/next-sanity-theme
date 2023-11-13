@@ -1,7 +1,8 @@
-import React from 'react'
+import { twMerge } from 'tailwind-merge'
 
 export default function Container({ 
   children,
+  classNames,
   fullWidth
 }) {
 
@@ -12,7 +13,7 @@ export default function Container({
   )
 
   return (
-    <div className={`${styles}`}>
+    <div className={twMerge(`${styles} ${classNames}`)}>
       {children}
     </div>
   )

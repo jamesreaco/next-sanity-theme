@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
+import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function Button({ 
   text, 
@@ -11,21 +11,18 @@ export default function Button({
   return (
     <Link 
       href={`${destination}`} 
-      className={twMerge(`flex items-center justify-between py-2 md:py-3 px-4 md:px-5 text-base md:text-lg tracking-widest cursor-pointer group ${classNames}`)}
+      className={twMerge(`flex items-center justify-between py-2 md:py-3 px-4 md:px-5 pr-3 md:pr-5 text-base md:text-lg tracking-widest cursor-pointer group ${classNames}`)}
       style={{ 
         backgroundColor: variant === 'dark' ? `#000` : `#f6f6f2`,
         color: variant === 'dark' ? `#fff` : `#000`,
       }}
     >
       {text}
-      <Image 
-        src="/images/link-icon.png"
-        width={12}
-        height={12}
-        alt="Link icon"
+      <FiArrowUpRight 
+        size={20}
         className='ml-8 md:ml-12 transition group-hover:rotate-45'
         style={{
-          filter: variant === 'dark' ? `invert(0)` : `invert(0.8)`,
+          color: variant === 'dark' ? `#fff` : `#000`,
         }}
       />
     </Link>

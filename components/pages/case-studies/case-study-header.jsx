@@ -1,11 +1,11 @@
-import Button from '@/components/shared/button'
 import Tag from '@/components/shared/tag'
+import Button from '@/components/shared/button'
 import Container from '@/components/global/container'
 
 export default function CaseStudyHeader({ caseStudy }) {
   return (
-    <Container>
-      <header className='mt-20 mb-20 -ml-1 flex flex-col items-start'>
+    <header className='mt-20 mb-20 -ml-1'>
+      <Container>
         <div className='w-full flex flex-col md:flex-row items-start md:items-end justify-between'>
           <div className='flex flex-col items-start'>
             <Tag text="Case Study" />
@@ -23,7 +23,7 @@ export default function CaseStudyHeader({ caseStudy }) {
             classNames="mt-8 border"
           />
         </div>
-      </header>
-    </Container>
+      </Container>
+    </header>
   )
 }

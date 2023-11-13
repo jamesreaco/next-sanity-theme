@@ -7,7 +7,7 @@ export default function PostAuthor({
   image
 }) {
   return (
-    <section className='max-w-xl mx-auto md:my-10 px-6 md:px-0 pb-10'>
+    <div className='max-w-xl mx-auto md:my-10 px-6 md:px-0 pb-10'>
       <div className='flex items-center gap-4 p-4 bg-white border border-gray-200'>
         <Image
           src={image}
@@ -25,6 +25,6 @@ export default function PostAuthor({
           </p>
         </div>
       </div>
-    </section>
+    </div>
   )
 }

@@ -1,13 +1,11 @@
 "use client"
 import Link from 'next/link'
-import Image from 'next/image'
 import { useState } from 'react'
 
-// react icons
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { IoClose } from 'react-icons/io5'
+import { FiArrowUpRight } from 'react-icons/fi'
 
-// components
 import Logo from '@/components/shared/logo'
 
 export default function MobileNavbar({ 
@@ -57,11 +55,8 @@ export default function MobileNavbar({
               className='flex items-center justify-between mt-10 py-3 pl-[16px] pr-[24px] tracking-widest cursor-pointer text-[20px] text-white font-light bg-black'
             >
               {buttonText}
-              <Image 
-                src="/images/link-icon.png"
-                width={12}
-                height={12}
-                alt="Link icon"
+              <FiArrowUpRight 
+                size={24}
                 className='ml-8'
               />
             </Link>

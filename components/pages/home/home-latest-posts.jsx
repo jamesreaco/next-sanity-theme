@@ -1,16 +1,12 @@
 "use client"
-
-// components
 import BlogCard from '@/components/shared/blog-card'
 import Button from '@/components/shared/button'
 import Container from '@/components/global/container'
 
 export default function HomeLatestPosts({ posts }) {
   return (
-    <Container 
-      fullWidth={true}
-    >
-      <div className='mt-6 md:mt-0 mb-4 py-10 md:py-20 px-6 md:px-12 bg-white border-t md-border-t-none border-b'>
+    <section className='mt-6 md:mt-0 mb-4 py-10 md:py-20 border-t md-border-t-none border-b bg-white'>
+      <Container>
         <h2 className='pb-6 text-2xl font-light uppercase tracking-widest border-b border-black'>
           Latest Posts
         </h2>
@@ -26,7 +22,7 @@ export default function HomeLatestPosts({ posts }) {
             variant="dark"
           />
         </div>
-      </div>
-    </Container>
+      </Container>
+    </section>
   )
 }

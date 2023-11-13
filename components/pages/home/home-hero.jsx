@@ -1,6 +1,6 @@
-import Container from '@/components/global/container'
-import Button from '@/components/shared/button'
 import Image from 'next/image'
+import Button from '@/components/shared/button'
+import Container from '@/components/global/container'
 
 export default function HomeHero({ 
   heading,
@@ -10,8 +10,8 @@ export default function HomeHero({
   btnDestination
 }) {
   return (
-    <Container>
-      <div className='mt:0 md:mt-20 flex flex-col-reverse md:flex-row justify-between'>
+    <section className='mt:0 md:mt-20'>
+      <Container classNames="flex flex-col-reverse md:flex-row justify-between">
         <div className='flex items-start flex-col'>
           <h1 className='-ml-1 md:-ml-2 text-[12vw] font-light leading-none'>
             {heading}
@@ -33,7 +33,7 @@ export default function HomeHero({
           alt='Image of Brooke'
           className='w-[6rem] md:w-[12rem] mb-10 md:mb-0 mt-10 md:mt-20 object-contain'
         />
-      </div>
-    </Container>
+      </Container>
+    </section>
   )
 }

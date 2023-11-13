@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
-// components
 import Tag from './tag'
 
 export default function BlogCard({ post }) {
@@ -25,18 +23,9 @@ export default function BlogCard({ post }) {
             {post.readTime} Minute Read
           </div>
         </div>
-        <div className='mt-3 flex items-end justify-between'>
-          <h3 className='text-[22px] md:text-[28px] pr-12 font-normal '>
-            {post.title}
-          </h3>
-          <Image
-            src="/images/link-icon.png"
-            width={30}
-            height={30}
-            className='invert-[100%] w-[30px] h-[20px] object-contain transition md:group-hover:rotate-90'
-            alt="Link Icon Image"
-          />
-        </div>
+        <h3 className='mt-3 text-[22px] md:text-[28px] pr-12 font-normal md:group-hover:underline underline-offset-4 decoration-[2px]'>
+          {post.title}
+        </h3>
       </Link>
     </article>
   )

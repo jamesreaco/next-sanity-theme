@@ -7,8 +7,8 @@ export default function CaseStudyImageGallery({ caseStudy }) {
   const { imageGallery: images } = caseStudy
 
   return (
-    <Container>
-      <section className='my-[60px] grid grid-cols-2 gap-[20px] md:gap-[60px]'>
+    <section className='my-[60px]'>
+      <Container classNames="grid grid-cols-2 gap-[20px] md:gap-[60px]">
         {images.map((image) => (
           <Image 
             key={image.url}
@@ -19,7 +19,7 @@ export default function CaseStudyImageGallery({ caseStudy }) {
             className='w-full'
           />
         ))}
-      </section>
-    </Container>
+      </Container>
+    </section>
   )
 }

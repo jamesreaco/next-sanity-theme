@@ -9,8 +9,8 @@ export default function PostHeader({
   title
 }) {
   return (
-    <Container>
-      <header className='mt-6 md:mt-12'>
+    <header className='mt-6 md:mt-12'>
+      <Container>
         <Image 
           src={image}
           width={2000}
@@ -28,8 +28,8 @@ export default function PostHeader({
             {title}
           </h1>
         </div>
-      </header>
-    </Container>
+      </Container>
+    </header>
   )
 }
 
