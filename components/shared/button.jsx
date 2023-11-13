@@ -7,6 +7,7 @@ export default function Button({
   destination, 
   variant, 
   classNames,
+  iconClassNames
 }) {
   return (
     <Link 
@@ -20,7 +21,7 @@ export default function Button({
       {text}
       <FiArrowUpRight 
         size={20}
-        className='ml-8 md:ml-12 transition group-hover:rotate-45'
+        className={twMerge(`ml-8 md:ml-12 transition group-hover:rotate-45 ${iconClassNames}`)}
         style={{
           color: variant === 'dark' ? `#fff` : `#000`,
         }}

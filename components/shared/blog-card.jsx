@@ -6,7 +6,7 @@ export default function BlogCard({ post }) {
   return (
     <article>
       <Link 
-        href={`blog/${post.slug}`} 
+        href={`/blog/${post.slug}`} 
         className='h-full flex flex-col items-start justify-between pb-8 border-b border-black cursor-pointer group'
       >
         <Image 

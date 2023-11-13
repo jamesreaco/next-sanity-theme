@@ -10,7 +10,7 @@ export default function Post({ post }) {
     <>
       <PostHeader 
         image={post.image}
-        category={post.category}
+        category={post.category.title}
         readTime={post.readTime}
         title={post.title}
       />

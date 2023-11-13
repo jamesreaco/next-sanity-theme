@@ -10,7 +10,7 @@ export default function HeaderBlock({ block }) {
           }}
         >
           <h1 
-            className='-ml-1 text-[26px] md:text-[4vw] font-light leading-none' 
+            className='-ml-1 text-[26px] md:text-[48px] font-light leading-none' 
           >
             {block.heading}
           </h1>

@@ -49,7 +49,8 @@ export const allPostsQuery = groq`*[_type == 'post'] | order(_createdAt desc) {
   title,
   'slug': slug.current,
   category->{
-    title
+    title,
+    'slug': slug.current,
   },
   readTime,
   'image': image.asset->url,
@@ -60,7 +61,8 @@ export const latestPostsQuery = groq`*[_type == 'post'][0...5] | order(_createdA
   _id,
   title,
   category->{
-    title
+    title,
+    'slug': slug.current,
   },
   readTime,
   'image': image.asset->url,
@@ -72,7 +74,31 @@ export const postBySlugQuery = groq`*[_type == 'post' && slug.current == $slug][
   _id,
   title,
   'slug': slug.current,
-  'category': category->title,
+  category->{
+    title,
+    'slug': slug.current,
+  },
+  author->{
+    name,
+    description,
+    'image': image.asset->url,
+  },
+  'image': image.asset->url,
+  readTime,
+  postBuilder,
+  metaTitle,
+  metaDescription,
+  metaKeywords,
+}`
+
+export const postsByCategoryQuery = groq`*[_type == 'post' && category->slug.current == $slug] {
+  _id,
+  title,
+  'slug': slug.current,
+  category->{
+    title,
+    'slug': slug.current,
+  },
   author->{
     name,
     description,
@@ -89,6 +115,18 @@ export const postBySlugQuery = groq`*[_type == 'post' && slug.current == $slug][
 export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]{
   'params': { 'slug': slug.current }
 }`;
+
+export const allPostCategoriesQuery = groq`*[_type == 'postCategory'] {
+  _id,
+  title,
+  'slug': slug.current,
+}`
+
+export const postCategoryBySlugQuery = groq`*[_type == 'postCategory' && slug.current == $slug][0] {
+  _id,
+  title,
+  'slug': slug.current,
+}`
 
 export const latestCaseStudiesQuery = groq`*[_type == 'caseStudy'][0...3] | order(_createdAt desc) {
   _id,

@@ -13,9 +13,10 @@ export default function PostHeader({
       <Container>
         <Image 
           src={image}
-          width={2000}
-          height={2000}
+          width={1400}
+          height={800}
           alt='Thumbnail Image'
+          className='h-[600px] object-cover'
         />
         <div className='max-w-xl mx-auto my-10'>
           <div className='md:mt-20 flex items-center'>

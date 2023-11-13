@@ -1,5 +1,5 @@
 import { client } from "../config/sanity.client";
-import { allCaseStudiesQuery, allPostsQuery, blogPageQuery, caseStudyBySlugQuery, caseStudyPageQuery, contactPageQuery, homePageQuery, latestCaseStudiesQuery, latestPostsQuery, pageBySlugQuery, postBySlugQuery, settingsQuery } from "./sanity.queries";
+import { allCaseStudiesQuery, allPostCategoriesQuery, allPostsQuery, blogPageQuery, caseStudyBySlugQuery, caseStudyPageQuery, contactPageQuery, homePageQuery, latestCaseStudiesQuery, latestPostsQuery, pageBySlugQuery, postBySlugQuery, postCategoryBySlugQuery, postsByCategoryQuery, settingsQuery } from "./sanity.queries";
 
 export async function getSettings() {
   return client.fetch(
@@ -52,6 +52,24 @@ export async function getLatestPosts() {
 export async function getPostBySlug(slug) {
   return client.fetch(
     postBySlugQuery, { slug: slug }
+  )
+}
+
+export async function getAllPostsByCategory(slug) {
+  return client.fetch(
+    postsByCategoryQuery, { slug: slug }
+  )
+}
+
+export async function getAllPostCategories() {
+  return client.fetch(
+    allPostCategoriesQuery
+  )
+}
+
+export async function getPostCategoryBySlug(slug) {
+  return client.fetch(
+    postCategoryBySlugQuery, { slug: slug }
   )
 }
 
