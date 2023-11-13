@@ -2,18 +2,20 @@ import Container from "@/components/global/container";
 
 export default function HeaderBlock({ block }) {
   return (
-    <Container>
-      <header className='mt-[30px] md:mt-[50px] pb-[30px] md:mb-[40px] mx-auto' 
-        style={{
-          maxWidth: block.headerWidth === 'narrow' ? '600px' : '1400px'
-        }}
-      >
-        <h1 
-          className='-ml-1 text-4xl md:text-6xl font-light leading-none' 
+    <header className="pt-[20px] md:pt-[40px] pb-[22px] md:pb-[42px] border-b">
+      <Container>
+        <div className='mx-auto' 
+          style={{
+            maxWidth: block.headerWidth === 'narrow' ? '600px' : '1400px'
+          }}
         >
-          {block.heading}
-        </h1>
-      </header>
-    </Container>
+          <h1 
+            className='-ml-1 text-[26px] md:text-[4vw] font-light leading-none' 
+          >
+            {block.heading}
+          </h1>
+        </div>
+      </Container>
+    </header>
   )
 }

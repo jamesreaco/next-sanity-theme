@@ -6,7 +6,7 @@ export default function TextBlock({ block }) {
   if (block.numberOfColumns === '1') {
     return (
       <Container>
-        <div className='my-16 mx-auto' style={{
+        <div className='my-[30px] md:my-[60px] mx-auto' style={{
           maxWidth: block.style === 'narrow' ? '600px' : '1280px'
         }}>
           <div>
