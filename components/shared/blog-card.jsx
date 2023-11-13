@@ -23,7 +23,7 @@ export default function BlogCard({ post }) {
             {post.readTime} Minute Read
           </div>
         </div>
-        <h3 className='mt-3 text-[22px] md:text-[28px] pr-12 font-normal md:group-hover:underline underline-offset-4 decoration-[2px]'>
+        <h3 className='mt-3 text-[20px] md:text-[28px] pr-12 font-normal md:group-hover:underline underline-offset-4 decoration-[2px]'>
           {post.title}
         </h3>
       </Link>
