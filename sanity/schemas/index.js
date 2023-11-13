@@ -21,13 +21,11 @@ const corePagesSchema = [
 import headerBlock from "./objects/page-builder/header-block";
 import contentBlock from "./objects/page-builder/content-block";
 import textBlock from "./objects/page-builder/text-block";
-import latestPostsBlock from "./objects/page-builder/latest-posts-block";
 
 const pageBuilderSchema = [
   headerBlock,
   contentBlock,
   textBlock,
-  latestPostsBlock
 ]
 
 // post builder schema

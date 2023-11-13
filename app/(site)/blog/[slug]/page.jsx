@@ -18,6 +18,7 @@ export async function generateStaticParams() {
 export default async function PostPage({ params }) {
 
   const post = await getPostBySlug(params.slug)
+
   const isDraftMode = draftMode().isEnabled;
 
   if (isDraftMode && process.env.SANITY_API_READ_TOKEN) {

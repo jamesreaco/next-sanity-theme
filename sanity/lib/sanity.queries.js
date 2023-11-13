@@ -122,6 +122,10 @@ export const caseStudyBySlugQuery = groq`*[_type == 'caseStudy' && slug.current 
   metaDescription,
   metaKeywords,
 }`
+
+export const caseStudyPathsQuery = groq`*[_type == "caseStudy" && defined(slug.current)][]{
+  'params': { 'slug': slug.current }
+}`;
   
 export const settingsQuery = groq`*[_type == 'settings' && _id == 'settings'][0]{
   _id,

@@ -17,10 +17,6 @@ export const pageBuilderFields = [
         name: 'textBlock',
         type: 'textBlock'
       },
-      {
-        name: 'latestPostsBlock',
-        type: 'latestPostsBlock'
-      },
     ],
   },
 ]

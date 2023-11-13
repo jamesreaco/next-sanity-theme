@@ -3,7 +3,6 @@ import dynamic from "next/dynamic"
 const HeaderBlock = dynamic(() => import('./blocks/header-block'))
 const ContentBlock = dynamic(() => import('./blocks/content-block'))
 const TextBlock = dynamic(() => import('./blocks/text-block'))
-const LatestPostsBlock = dynamic(() => import('./blocks/latest-posts-block'))
 
 export default function Block({ block }) {
 
@@ -16,8 +15,6 @@ export default function Block({ block }) {
       return <ContentBlock block={block} />
     case 'textBlock':
       return <TextBlock block={block} />
-    case 'latestPostsBlock':
-      return <LatestPostsBlock block={block} />
   }
 
 }

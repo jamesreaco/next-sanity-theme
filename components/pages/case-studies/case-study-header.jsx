@@ -1,13 +1,8 @@
-import Image from 'next/image'
 import Button from '@/components/shared/button'
 import Tag from '@/components/shared/tag'
 import Container from '@/components/global/container'
 
-export default function CaseStudyHeader({ 
-  title, 
-  shortDescription,
-  url 
-}) {
+export default function CaseStudyHeader({ caseStudy }) {
   return (
     <Container>
       <header className='mt-20 mb-20 -ml-1 flex flex-col items-start'>
@@ -15,15 +10,15 @@ export default function CaseStudyHeader({
           <div className='flex flex-col items-start'>
             <Tag text="Case Study" />
             <h1 className='mt-8 text-5xl md:text-7xl font-light'>
-              {title}
+              {caseStudy.title}
             </h1>
             <p className='md:w-[30rem] mt-6 leading-7'>
-              {shortDescription}
+              {caseStudy.shortDescription}
             </p>
           </div>
           <Button 
             text="View Project"
-            destination={`${url}`}
+            destination={`${caseStudy.url}`}
             variant="light"
             classNames="mt-8 border"
           />
