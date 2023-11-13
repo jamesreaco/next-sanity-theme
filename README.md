@@ -1,6 +1,6 @@
 ## Introduction
 
-[Next.js](https://nextjs.org/) + [Sanity](https://sanity.io/) starter theme designed and developed by [James Rea](https://jamesrea.co).
+[Next.js](https://nextjs.org/) + [Sanity](https://sanity.io/) theme designed and developed by [James Rea](https://jamesrea.co).
 
 Recently migrated to the Next.js App Router.
 
@@ -49,15 +49,20 @@ To get started, you'll first need to create a [Sanity](https://sanity.io/) and [
 
 Once you have created a Sanity account, you can create a new Sanity project by following these [instructions](https://www.sanity.io/docs/create-a-sanity-project).
 
-Next, you'll need to clone this repository and set up the following environment variables:
+Next, you'll need to fork this repository and set up the following environment variables in a `.env.local` file:
 
 - `NEXT_PUBLIC_SANITY_PROJECT_ID` – your Sanity Project ID (create an account [here](https://sanity.io))
 - `NEXT_PUBLIC_SANITY_DATASET` – use `production` here.
 - `NEXT_PUBLIC_SANITY_API_VERSION` – use the date you created the dataset in the format yyyy-mm-dd - (`2023-02-18`)
 
+- `SANITY_API_READ_TOKEN`– create an API token in Sanity with 'Viewer' permissions.
+
 - `SENDGRID_API_KEY` – your SendGrid API key. Create an account [here](https://sendgrid.com/).
+
 - `YOUR_EMAIL_ADDRESS` – contact form submissions will be sent to this email.
 - `WEBSITE_EMAIL_ADDRESS` – required by SendGrid, use something like noreply@yourwebsite.com.
+
+- `NEXT_PUBLIC_SITE_URL` - add 'http://localhost:3000' to a `.env.development` file and 'https://yourdomain.com' to a `.env.production file`.
 
 → Remember to add the environment variables to Vercel before deploying to production.
 
