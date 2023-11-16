@@ -1,6 +1,6 @@
 import { FaQuoteLeft } from 'react-icons/fa'
 
-export default function PostQuoteBlock({ block }) {
+export default function PostQuoteBlock({ data }) {
 
   const { 
     quote,
@@ -8,10 +8,10 @@ export default function PostQuoteBlock({ block }) {
     bgColor, 
     iconColor, 
     textColor 
-  } = block
+  } = data
 
   return (
-    <div className='mb-[60px] mx-auto max-w-[600px] px-4'>
+    <div className='my-[40px] block mx-auto w-full'>
       <div className='flex flex-col justify-center items-center p-12 border bg-grey-200' style={{
         backgroundColor: `#${bgColor}`
       }}>

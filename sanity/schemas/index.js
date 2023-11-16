@@ -1,4 +1,5 @@
 import settings from "./singletons/settings";
+import post from "./documents/post";
 import caseStudy from "./documents/case-study";
 import menuItem from "./documents/menu-item";
 
@@ -21,6 +22,8 @@ const corePagesSchema = [
 import headerBlock from "./objects/page-builder/header-block";
 import contentBlock from "./objects/page-builder/content-block";
 import textBlock from "./objects/page-builder/text-block";
+import author from "./documents/author";
+import postCategory from "./documents/post-category";
 
 const pageBuilderSchema = [
   headerBlock,
@@ -29,24 +32,19 @@ const pageBuilderSchema = [
 ]
 
 // post builder schema
-import post from "./documents/post";
-import author from "./documents/author";
-import postCategory from "./documents/post-category";
-import postContentBlock from "./objects/post-builder/post-content-block";
 import postQuoteBlock from "./objects/post-builder/post-quote-block";
 import postImageBlock from "./objects/post-builder/post-image-block";
 
 const postBuilderSchema = [
-  post,
-  author,
-  postCategory,
-  postContentBlock, 
-  postQuoteBlock, 
-  postImageBlock
+  postImageBlock,
+  postQuoteBlock
 ]
 
 export const schemaTypes = [
   settings,
+  post,
+  postCategory,
+  author,
   menuItem,
   caseStudy,
   ...corePagesSchema,

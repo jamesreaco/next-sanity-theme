@@ -1,10 +1,10 @@
 import PostHeader from '@/components/pages/blog/post-header';
 import PostAuthor from '@/components/pages/blog/post-author';
-import Block from '@/components/post-builder/block';
+import PostContent from './post-content';
 
 export default function Post({ post }) {
 
-  const { author, postBuilder } = post
+  const { author, content } = post
 
   return (
     <>
@@ -15,19 +15,9 @@ export default function Post({ post }) {
         title={post.title}
       />
       
-      {postBuilder ?
-        <>
-          {postBuilder?.map(block => (
-            <Block key={block._key} block={block} />
-          ))} 
-        </>
-      :
-        <>
-          <p className='mt-4 mb-12 p-10 rounded-lg bg-white'>
-            Nothing to see here. Start adding some blocks in your Sanity Studio!
-          </p>
-        </>
-      }
+      <PostContent 
+        content={content} 
+      />
 
       <PostAuthor 
         name={author.name}

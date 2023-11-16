@@ -54,7 +54,6 @@ export const allPostsQuery = groq`*[_type == 'post'] | order(_createdAt desc) {
   },
   readTime,
   'image': image.asset->url,
-  postBuilder
 }`
 
 export const latestPostsQuery = groq`*[_type == 'post'][0...5] | order(_createdAt desc) {
@@ -67,7 +66,6 @@ export const latestPostsQuery = groq`*[_type == 'post'][0...5] | order(_createdA
   readTime,
   'image': image.asset->url,
   'slug': slug.current,
-  postBuilder
 }`
 
 export const postBySlugQuery = groq`*[_type == 'post' && slug.current == $slug][0] {
@@ -85,7 +83,7 @@ export const postBySlugQuery = groq`*[_type == 'post' && slug.current == $slug][
   },
   'image': image.asset->url,
   readTime,
-  postBuilder,
+  content,
   metaTitle,
   metaDescription,
   metaKeywords,
@@ -106,7 +104,7 @@ export const postsByCategoryQuery = groq`*[_type == 'post' && category->slug.cur
   },
   'image': image.asset->url,
   readTime,
-  postBuilder,
+  content,
   metaTitle,
   metaDescription,
   metaKeywords,
