@@ -4,14 +4,12 @@ import caseStudy from "./documents/case-study";
 import menuItem from "./documents/menu-item";
 
 // core pages schema 
-import page from "./documents/page";
 import homePage from "./singletons/home-page";
 import blogPage from "./singletons/blog-page";
 import caseStudyPage from "./singletons/case-study-page";
 import contactPage from "./singletons/contact-page";
 
 const corePagesSchema = [
-  page,
   homePage,
   blogPage,
   caseStudyPage,

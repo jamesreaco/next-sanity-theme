@@ -13,12 +13,6 @@ export async function getHomePage() {
   )
 }
 
-export async function getPageBySlug(slug) {
-  return client.fetch(
-    pageBySlugQuery, { slug: slug }
-  )
-}
-
 export async function getBlogPage() {
   return client.fetch(
     blogPageQuery

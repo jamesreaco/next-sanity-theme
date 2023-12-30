@@ -4,14 +4,6 @@ export const fieldGroups = [
     title: 'Content'
   },
   {
-    name: 'pageBuilder',
-    title: 'Page Builder'
-  },
-  {
-    name: 'postBuilder',
-    title: 'Post Builder'
-  },
-  {
     name: 'seo',
     title: 'SEO'
   },
