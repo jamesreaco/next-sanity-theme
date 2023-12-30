@@ -1,6 +1,6 @@
 ## Introduction
 
-[Next.js](https://nextjs.org/) + [Sanity](https://sanity.io/) theme designed and developed by [James Rea](https://jamesrea.co).
+[Next.js](https://nextjs.org/) + [Sanity](https://sanity.io/) portfolio and blog starter theme.
 
 Recently migrated to the Next.js App Router.
 
@@ -8,18 +8,9 @@ Recently migrated to the Next.js App Router.
 
 Here are the features provided out-of-the-box:
 
-- [Page Builder](#page-builder)
-- [Post Builder](#post-builder)
 - [Global Site Settings](#global-site-settings)
 - [Embedded Sanity Studio](#embedded-sanity-studio)
 - [Contact Form (SendGrid API)](#contact-form-sendgrid-api)
-
-
-#### Page Builder
-Create fully custom pages without touching code using pre-made React components (blocks). Easily create new blocks to fit your requirements.
-
-#### Post Builder
-Create fully custom blog posts using pre-made React components (blocks). Easily create new blocks to fit your requirements.
 
 #### Global Site Settings
 
@@ -49,7 +40,7 @@ To get started, you'll first need to create a [Sanity](https://sanity.io/) and [
 
 Once you have created a Sanity account, you can create a new Sanity project by following these [instructions](https://www.sanity.io/docs/create-a-sanity-project).
 
-Next, you'll need to fork this repository and set up the following environment variables in a `.env.local` file:
+Next, you'll need to clone this repository and set up the following environment variables in a `.env.local` file:
 
 - `NEXT_PUBLIC_SANITY_PROJECT_ID` – your Sanity Project ID (create an account [here](https://sanity.io))
 - `NEXT_PUBLIC_SANITY_DATASET` – use `production` here.
