@@ -34,6 +34,6 @@ export type CaseStudy = {
   image: string
   shortDescription: string
   url: string
-  overview: string
+  overview: PortableTextBlock
   imageGallery: CaseStudyGalleryImage[]
 }
