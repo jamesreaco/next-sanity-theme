@@ -82,7 +82,9 @@ export const defaultDocumentNode = (S: any, props: any) => {
       S.view
         .component(Iframe)
         .options({
-          url: `${process.env.NEXT_PUBLIC_SITE_URL}/api/preview`,
+          url: (doc: any) => doc?.slug?.current 
+          ? `${process.env.NEXT_PUBLIC_SITE_URL}/api/preview?page=blog/${doc.slug.current}`
+          : `${process.env.NEXT_PUBLIC_SITE_URL}/api/preview`,
         })
         .title('Preview'),
     ])
