@@ -14,6 +14,7 @@ export const homePageQuery = groq`*[_type == 'homePage'][0]{
 
 export const blogPageQuery = groq`*[_type == 'blogPage'][0]{
   _id,
+  heading,
   metaTitle,
   metaDescription,
   metaKeywords,
@@ -21,6 +22,7 @@ export const blogPageQuery = groq`*[_type == 'blogPage'][0]{
 
 export const caseStudyPageQuery = groq`*[_type == 'caseStudyPage'][0]{
   _id,
+  heading,
   metaTitle,
   metaDescription,
   metaKeywords,
@@ -28,6 +30,7 @@ export const caseStudyPageQuery = groq`*[_type == 'caseStudyPage'][0]{
 
 export const contactPageQuery = groq`*[_type == 'contactPage'][0]{
   _id,
+  heading,
   metaTitle,
   metaDescription,
   metaKeywords,
