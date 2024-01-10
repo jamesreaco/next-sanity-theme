@@ -12,27 +12,23 @@ export default function BlogCategories({ categories }: BlogCategoriesProps) {
   const pathname = usePathname()
 
   return (
-    <div className='mt-[20px] md:mt-0 flex flex-wrap gap-[12px]'>
+    <div className='mt-[20px] md:mt-0 flex flex-wrap gap-[12px] text-[16px]'>
       <Link
         href="/blog"
-        className='px-[10px] md:px-[12px] md:py-[6px] border'
+        className='px-[10px] md:px-[10px] md:py-[4px] border'
         style={{
-          backgroundColor: pathname === '/blog' ? '#000' : '#fff',
-          color: pathname === '/blog' ? '#fff' : '#000',
-          borderColor: pathname === '/blog' ? '#000' : '#e5e7eb'
+          backgroundColor: pathname === '/blog' ? '#fff' : '#F6F6F1',
         }}
       >
-        All
+        All Posts
       </Link>
       {categories.map((category) => (
         <Link
           key={category.slug}
           href={`/blog/category/${category.slug}`}
-          className='px-[10px] md:px-[12px] md:py-[6px] border'
+          className='px-[10px] md:px-[10px] md:py-[4px] border'
           style={{
-            backgroundColor: pathname === `/blog/category/${category.slug}` ? '#000' : '#fff',
-            color: pathname === `/blog/category/${category.slug}` ? '#fff' : '#000',
-            borderColor: pathname === `/blog/category/${category.slug}` ? '#000' : '#e5e7eb'
+            backgroundColor: pathname === `/blog/category/${category.slug}` ? '#fff' : '#F6F6F1',
           }}
         >
           {category.title}
