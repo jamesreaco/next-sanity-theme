@@ -32,7 +32,8 @@ NEXT_PUBLIC_SITE_URL - use 'http://localhost:3000' in development and 'https://y
 
 → You will need to setup CORS in the Sanity dashboard before you can connect to the Sanity API by following [these instructions](https://www.sanity.io/docs/cors#5a355ee47b66). Add http://localhost:3000 to connect in development and add your custom domain before deploying to production.
 
-→ Remember to run `npm install` to install all the required dependencies. 
+→ Remember to run `npm install` to install all the required dependencies.
+ 
 → Remember to add the environment variables to Vercel before deploying to production.
 
  Once everything is set, you can start the development server by running `npm run dev`. To access your Sanity Studio navigate to localhost:3000/studio. You will need to sign in with the credentials you used to create the project.
