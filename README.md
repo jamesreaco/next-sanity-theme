@@ -27,7 +27,7 @@ SANITY_API_READ_TOKEN – create an API token in Sanity with 'Viewer' permissio
 SENDGRID_API_KEY – your SendGrid API key (create an account here - https://sendgrid.com).
 YOUR_EMAIL_ADDRESS – contact form submissions will be sent to this email.
 WEBSITE_EMAIL_ADDRESS – the email you verified with SendGrid.
-NEXT_PUBLIC_SITE_URL - use 'http://localhost:3000' and 'https://yourdomain.com' in production.
+NEXT_PUBLIC_SITE_URL - use 'http://localhost:3000' in development and 'https://yourdomain.com' in production.
 ```
 
 → You will need to setup CORS in the Sanity dashboard before you can connect to the Sanity API by following [these instructions](https://www.sanity.io/docs/cors#5a355ee47b66). Add http://localhost:3000 to connect in development and add your custom domain before deploying to production.
