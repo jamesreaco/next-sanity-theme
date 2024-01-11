@@ -36,7 +36,7 @@ export default function HomeHero(props: HomeHeroProps) {
           height={350}
           sizes="(max-width: 640px) 100px"
           alt='Image of Brooke'
-          className='w-[6rem] md:w-[12rem] mb-10 md:mb-0 mt-10 md:mt-20 object-contain'
+          className='w-[94px] md:w-[160px] lg:w-[190px] mb-10 md:mb-0 mt-10 md:mt-20 object-contain'
         />
       </Container>
     </section>

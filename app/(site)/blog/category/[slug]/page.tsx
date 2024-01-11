@@ -1,7 +1,7 @@
 import { getAllPostCategories, getAllPostsByCategory, getPostCategoryBySlug } from '@/sanity/lib/sanity.fetch'
-import Header from '@/components/shared/header'
 import PostArchive from '@/components/pages/blog/post-archive'
 import BlogCategories from '@/components/pages/blog/blog-categories'
+import BlogArchiveHeader from '@/components/pages/blog/blog-archive-header'
 
 export const dynamic = 'force-dynamic'
 
@@ -17,9 +17,9 @@ export default async function BlogCategorySlugPage({ params }: BlogCategorySlugP
 
   return (
     <> 
-      <Header heading={category.title}>
+      <BlogArchiveHeader heading={category.title}>
         <BlogCategories categories={categories} />
-      </Header>
+      </BlogArchiveHeader>
       <PostArchive posts={posts} />
     </>
   )

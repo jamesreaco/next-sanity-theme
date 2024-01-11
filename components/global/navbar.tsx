@@ -20,7 +20,7 @@ export default function Navbar(props: NavbarProps) {
 
   return (
     <header 
-      className='hidden md:flex items-center justify-between max-w-8xl mx-auto my-0 py-8 px-6 md:px-12 border-b'
+      className='hidden md:flex items-center justify-between max-w-8xl mx-auto my-0 py-8 px-6 md:px-12 rounded-bl-xl rounded-br-xl border-b border-b-[#efeff1]'
     >
       <Logo text={logoText} />
       <nav>
@@ -29,7 +29,7 @@ export default function Navbar(props: NavbarProps) {
             <li key={item.title}>
               <Link 
                 href={`${item.link}`}
-                className='text-lg tracking-wider hover:underline underline-offset-[8px]'
+                className='text-lg tracking-wider hover:underline underline-offset-[12px] decoration-[2px]'
               >
                 {item.title}
               </Link>

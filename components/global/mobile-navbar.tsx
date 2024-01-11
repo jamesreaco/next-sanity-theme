@@ -57,7 +57,7 @@ export default function MobileNavbar(props: MobileNavbarProps) {
             ))}
             <Link 
               href={`${buttonLink}`} 
-              className='flex items-center justify-between mt-10 py-3 pl-[16px] pr-[24px] tracking-widest cursor-pointer text-[20px] text-white font-light bg-black'
+              className='flex items-center justify-between mt-10 py-3 pl-[16px] pr-[24px] tracking-widest cursor-pointer text-[20px] text-white font-light rounded-lg bg-black'
             >
               {buttonText}
               <FiArrowUpRight 

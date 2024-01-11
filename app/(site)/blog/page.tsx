@@ -1,9 +1,9 @@
 import { getAllPostCategories, getAllPosts, getBlogPage } from '@/sanity/lib/sanity.fetch'
 
 // components
-import Header from '@/components/shared/header'
 import PostArchive from '@/components/pages/blog/post-archive'
 import BlogCategories from '@/components/pages/blog/blog-categories'
+import BlogArchiveHeader from '@/components/pages/blog/blog-archive-header'
 
 export const dynamic = 'force-dynamic'
 
@@ -15,9 +15,9 @@ export default async function BlogPage() {
 
   return (
     <> 
-      <Header heading={page.heading}>
+      <BlogArchiveHeader heading={page.heading}>
         <BlogCategories categories={categories} />
-      </Header>
+      </BlogArchiveHeader>
       <PostArchive posts={posts} />
     </>
   )

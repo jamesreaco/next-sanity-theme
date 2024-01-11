@@ -12,7 +12,10 @@ export default async function ContactPage() {
 
   return (
     <>
-      <Header heading={page.heading} />
+      <Header 
+        heading={page.heading} 
+        centerText={true}
+      />
       <Container>
         <ContactForm />
       </Container>

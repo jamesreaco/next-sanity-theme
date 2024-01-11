@@ -14,15 +14,15 @@ export default function HomeCaseStudies({ caseStudies }: HomeCaseStudiesProps) {
   const x = useTransform(scrollYProgress, [0, 1], [0, 600]);
 
   return (
-    <section className="relative mt-12 md:mt-12 pt-28 md:pt-64">
-      <Container fullWidth={true}>
+    <section className="relative mt-12 mb-6 md:mb-12 pt-28 md:pt-64">
+      <Container >
         <motion.div 
           className='-left-[40rem] top-0 absolute text-[4rem] md:text-[10rem] font-extralight whitespace-nowrap' 
           style={{ x }}
         >
           Case Studies ✦ Case Studies ✦ Case Studies ✦ Case Studies ✦ Case Studies ✦ Case Studies
         </motion.div>
-        <div className='w-full px-6 md:px-[0px] grid md:grid-cols-3 gap-6 md:gap-0'>
+        <div className='w-full grid lg:grid-cols-3 gap-[30px] md:gap-[60px] lg:gap-6'>
           {caseStudies?.map((item) => (
             <CaseStudyCard key={item._id} caseStudy={item} />
           ))}

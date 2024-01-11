@@ -14,7 +14,7 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
   return (
     <article 
       key={title} 
-      className='w-full relative cursor-pointer overflow-hidden group'
+      className='w-full relative rounded-lg cursor-pointer overflow-hidden group'
     >
       <Link 
         href={`/case-studies/${slug}`}
@@ -28,7 +28,7 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
           className='w-[100%] h-full object-cover transition md:hover:scale-[1.02] '
         />
         <div className='p-[1rem] absolute bottom-0 left-0 right-0 transition-all md:group-hover:p-[2rem]'>
-          <div className='flex items-center justify-between py-2 md:py-3 px-4 md:px-5 text-base md:text-lg tracking-widest cursor-pointer group rounded-none bg-[#f6f6f2] text-[#000]'>
+          <div className='flex items-center justify-between py-2 md:py-3 px-4 md:px-5 text-base md:text-lg tracking-widest cursor-pointer group rounded-md bg-[#f6f6f2] text-[#000]'>
             {title} 
             <FiArrowUpRight 
               size={20}

@@ -21,7 +21,7 @@ export default function PostHeader(props: PostHeaderProps) {
           width={2000}
           height={600}
           alt='Thumbnail Image'
-          className='h-[250px] md:h-[600px] object-cover'
+          className='h-[250px] md:h-[600px] object-cover rounded-lg md:rounded-xl'
         />
         <div className='max-w-xl mx-auto mt-8 md:my-10'>
           <div className='md:mt-20 flex items-center'>

@@ -14,7 +14,7 @@ export default function PostImageBlock(props: PostImageBlockProps) {
       src={urlFor(image).fit('max').auto('format').url()}
       width={800}
       height={800}
-      className='my-[40px] block mx-auto w-full'
+      className='my-[40px] block mx-auto w-full rounded-xl'
       alt=""
     />
   )

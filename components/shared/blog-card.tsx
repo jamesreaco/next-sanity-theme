@@ -28,7 +28,7 @@ export default function BlogCard({ post }: BlogCardProps) {
           width={600}
           height={400}
           sizes="(max-width: 640px) 320px, (max-width: 1280px) 584px, (max-width: 1600px) 712px"
-          className='w-full h-auto bg-black md:group-hover:scale-[1.01] transition'
+          className='w-full h-auto bg-black rounded-lg md:group-hover:scale-[1.01] transition'
           alt={`${title} Thumbnail Image`}
         />
         <div className='mt-5 flex items-center'>
@@ -37,7 +37,7 @@ export default function BlogCard({ post }: BlogCardProps) {
             {readTime} Minute Read
           </div>
         </div>
-        <h3 className='mt-3 text-[20px] md:text-[28px] pr-12 font-normal md:group-hover:underline underline-offset-4 decoration-[2px]'>
+        <h3 className='mt-3 text-[20px] md:text-[26px] pr-12 font-normal md:group-hover:underline underline-offset-4 decoration-[2px]'>
           {title}
         </h3>
       </Link>

@@ -37,7 +37,7 @@ function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link
       href={`/blog/category/${slug}`}
-      className='p-[20px] flex items-center justify-between border transition md:hover:bg-white group'
+      className='p-[20px] flex items-center justify-between border rounded-lg transition md:hover:bg-white group'
     > 
       <span className='text-[17px] md:text-[18px]'>
         {title}

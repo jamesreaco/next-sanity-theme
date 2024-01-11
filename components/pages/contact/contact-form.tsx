@@ -97,7 +97,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-[800px] mx-auto mt-10 md:mt-12 mb-12 md:border flex flex-col md:px-8 md:py-8 bg-[#F6F6F2]"
+      className="max-w-[800px] flex flex-col mx-auto mt-10 md:mt-12 mb-12 md:px-8 md:py-8 md:border rounded-lg md:bg-[#f9f9f7]"
     >
       <label
         htmlFor="name"
@@ -113,7 +113,7 @@ export default function ContactForm() {
         }}
         name="name"
         placeholder='Jane Doe'
-        className="mt-2 py-3 pl-4 border focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-800 bg-white"
+        className="mt-2 py-3 pl-4 border focus:outline-none rounded-lg focus:ring-1 ring-green-500 font-light text-gray-800 bg-white"
       />
       {errors?.name && (
         <p className="mt-1 text-red-500">Your name cannot be empty.</p>
@@ -132,7 +132,7 @@ export default function ContactForm() {
           setEmail(e.target.value);
         }}
         placeholder='janedoe@email.com'
-        className="mt-2 py-3 pl-4 border focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-800 bg-white"
+        className="mt-2 py-3 pl-4 border focus:outline-none rounded-lg focus:ring-1 ring-green-500 font-light text-gray-800 bg-white"
       />
       {errors?.email && (
         <p className="mt-1 text-red-500">Email cannot be empty.</p>
@@ -151,7 +151,7 @@ export default function ContactForm() {
           setSubject(e.target.value);
         }}
         placeholder='I need a web developer!'
-        className="mt-2 py-3 pl-4 border focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-800 bg-white"
+        className="mt-2 py-3 pl-4 border focus:outline-none rounded-lg focus:ring-1 ring-green-500 font-light text-gray-800 bg-white"
       />
       {errors?.subject && (
         <p className="mt-1 text-red-500">Subject cannot be empty.</p>
@@ -169,7 +169,7 @@ export default function ContactForm() {
           setMessage(e.target.value);
         }}
         placeholder='How can I help?'
-        className="mt-2 py-3 pl-4 min-h-[200px] border focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-800 bg-white"
+        className="mt-2 py-3 pl-4 min-h-[200px] border focus:outline-none rounded-lg focus:ring-1 ring-green-500 font-light text-gray-800 bg-white"
       ></textarea>
       {errors?.message && (
         <p className="mt-1 text-red-500">Message body cannot be empty.</p>
@@ -177,7 +177,7 @@ export default function ContactForm() {
       <div className="flex flex-row items-center justify-start">
         <button
           type="submit"
-          className="px-10 mt-8 py-2 bg-black text-gray-50 font-light text-lg flex flex-row items-center"
+          className="px-10 mt-8 py-2 bg-black text-gray-50 font-light text-lg flex flex-row items-center rounded-lg"
         >
           {buttonText}
         </button>

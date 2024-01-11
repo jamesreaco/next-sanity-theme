@@ -13,13 +13,13 @@ export default function PostAuthor(props: PostAuthorProps) {
 
   return (
     <div className='max-w-xl mx-auto md:my-10 px-6 md:px-0 pb-10'>
-      <div className='flex items-center gap-4 p-4 bg-white border border-gray-200'>
+      <div className='flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-lg'>
         <Image
           src={image}
           width={80}
           height={80}
           alt={`Image of ${name}`}
-          className=''
+          className='rounded-md'
         />
         <div>
           <div className='text-[18px] md:text-[20px]'>

@@ -9,7 +9,7 @@ interface CaseStudyArchiveProps {
 export default function CaseStudyArchive({ caseStudies }: CaseStudyArchiveProps) {
   return (
     <section className='mt-[40px] md:mt-[60px] mb-6 md:mb-16'>
-      <Container classNames="grid md:grid-cols-3 gap-6">
+      <Container classNames="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {caseStudies.map(caseStudy => (
           <CaseStudyCard key={caseStudy._id} caseStudy={caseStudy} />
         ))}

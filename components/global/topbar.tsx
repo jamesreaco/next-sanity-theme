@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 interface TopbarProps {
   message: string 
   enableTopbarLink: boolean 
@@ -19,18 +17,20 @@ export default function Topbar(props: TopbarProps) {
   } = props
 
   return (
-    <div className='fixed md:static bottom-3 left-3 right-3 z-20 flex flex-row items-center justify-between md:justify-center p-4 text-base text-white tracking-wide bg-black'>
-      <div className='text-[15px] md:text-[16px]'>
+    <div className='fixed bottom-3 left-1/2 transform -translate-x-1/2 w-[95%] md:w-fit z-20 flex flex-row items-center justify-between md:justify-center p-2 pl-4 text-base text-white tracking-wide rounded-lg bg-black'>
+      <div className='pr-1 text-[15px] md:text-[16px]'>
         {message}
       </div>
       {enableTopbarLink && (
-        <Link 
+        <a 
           href={`${topbarLinkUrl}`} 
-          className='ml-3 py-[2px] px-[10px] text-[14px] text-black'
+          target='_blank'
+          rel="noopener noreferrer"
+          className='ml-3 py-[2px] px-[10px] text-[14px] text-black rounded transition hover:scale-[0.98]'
           style={{ backgroundColor: topbarLinkColor }}
         >
           {topbarLinkText}
-        </Link>
+        </a>
       )}
     </div>
   )
