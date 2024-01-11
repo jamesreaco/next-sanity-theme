@@ -1,6 +1,6 @@
 import Iframe from 'sanity-plugin-iframe-pane'
 import type {StructureBuilder, StructureResolver} from "sanity/desk";
-import { FiBriefcase, FiSettings, FiEdit2, FiFile } from "react-icons/fi";
+import { FiBriefcase, FiSettings, FiEdit2, FiFile, FiEye, FiFileText, FiFolder } from "react-icons/fi";
 
 export const structure: StructureResolver = (S, _context) =>
   S.list()
@@ -25,12 +25,12 @@ const SettingsItem = (S: StructureBuilder) =>
 const PagesItem = (S: StructureBuilder) =>
   S.listItem()
     .title('Pages')
-    .icon(FiFile)
+    .icon(FiFolder)
     .child(
       S.list()
         .title('Pages')
         .items([
-          S.listItem().title('Home').child(S.document().schemaType('homePage').documentId('homePage').title('Home Page').views([
+          S.listItem().title('Home').icon(FiFile).child(S.document().schemaType('homePage').documentId('homePage').title('Home Page').views([
                 S.view.form(),
                 S.view
                   .component(Iframe)
@@ -42,13 +42,25 @@ const PagesItem = (S: StructureBuilder) =>
             ),
           S.listItem()
             .title('Blog')
+            .icon(FiFile)
             .child(S.document().schemaType('blogPage').documentId('blogPage').title('Blog Page')),
           S.listItem()
             .title('Case Studies')
+            .icon(FiFile)
             .child(S.document().schemaType('caseStudyPage').documentId('caseStudyPage').title('Case Studies Page')),
           S.listItem()
             .title('Contact')
+            .icon(FiFile)
             .child(S.document().schemaType('contactPage').documentId('contactPage').title('Contact Page')),
+          S.divider(),
+          S.listItem()
+            .title('Privacy')
+            .icon(FiEye)
+            .child(S.document().schemaType('privacyPage').documentId('privacyPage').title('Privacy Page')),
+          S.listItem()
+            .title('Terms')
+            .icon(FiFileText)
+            .child(S.document().schemaType('termsPage').documentId('termsPage').title('Terms Page')),
         ])
     )
   

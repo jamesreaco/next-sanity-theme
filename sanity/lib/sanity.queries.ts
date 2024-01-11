@@ -35,6 +35,24 @@ export const contactPageQuery = groq`*[_type == 'contactPage'][0]{
   metaDescription,
   metaKeywords,
 }`
+
+export const privacyPageQuery = groq`*[_type == 'privacyPage'][0]{
+  _id,
+  heading,
+  content,
+  metaTitle,
+  metaDescription,
+  metaKeywords,
+}`
+
+export const termsPageQuery = groq`*[_type == 'termsPage'][0]{
+  _id,
+  heading,
+  content,
+  metaTitle,
+  metaDescription,
+  metaKeywords,
+}`
   
 export const allPostsQuery = groq`*[_type == 'post'] | order(_createdAt desc) {
   _id,

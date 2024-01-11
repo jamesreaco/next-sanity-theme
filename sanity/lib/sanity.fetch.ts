@@ -14,7 +14,9 @@ import {
   postBySlugQuery, 
   postCategoryBySlugQuery, 
   postsByCategoryQuery, 
-  settingsQuery 
+  privacyPageQuery, 
+  settingsQuery, 
+  termsPageQuery
 } from "./sanity.queries";
 
 export async function getSettings() {
@@ -44,6 +46,18 @@ export async function getCaseStudyPage() {
 export async function getContactPage() {
   return client.fetch(
     contactPageQuery
+  )
+}
+
+export async function getPrivacyPage() {
+  return client.fetch(
+    privacyPageQuery
+  )
+}
+
+export async function getTermsPage() {
+  return client.fetch(
+    termsPageQuery
   )
 }
 

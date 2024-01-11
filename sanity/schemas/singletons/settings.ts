@@ -1,11 +1,9 @@
 import { defineField, defineType } from 'sanity'
-import { CogIcon } from '@sanity/icons'
 
 export default defineType({
   name: 'settings',
   title: 'Site Settings',
   type: 'document',
-  icon: CogIcon,
   fieldsets: [
     {
       name: 'topbar',
