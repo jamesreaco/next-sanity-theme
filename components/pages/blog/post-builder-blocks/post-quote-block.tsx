@@ -33,7 +33,7 @@ export default function PostQuoteBlock({ data }: PostQuoteBlockProps) {
             color={`#${iconColor}`}
           />
         </div>
-        <div className='mt-3 text-2xl text-center' style={{
+        <div className='mt-3 text-[20px] md:text-[24px] text-center' style={{
           color: `#${textColor}`
         }}>
           {quote}

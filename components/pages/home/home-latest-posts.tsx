@@ -10,9 +10,9 @@ interface HomeLatestPostsProps {
 
 export default function HomeLatestPosts({ posts }: HomeLatestPostsProps) {
   return (
-    <section className='mt-6 md:mt-0 mb-4 py-10 md:py-20 border-t md-border-t-none border-b bg-[#fff]'>
+    <section className='mt-6 md:mt-0 mb-4 py-[40px] md:py-[80px] border-t md-border-t-none border-b bg-[#fff]'>
       <Container>
-        <h2 className='pb-6 text-2xl font-light uppercase tracking-widest border-b border-b-[#efeff1] border-[#000]'>
+        <h2 className='pb-6 text-[20px] md:text-[24px] font-light uppercase tracking-widest border-b border-b-[#efeff1] border-[#000]'>
           Latest Posts
         </h2>
         <div className='mt-14 mb-10 md:mb-16 grid grid-cols-1 lg:grid-cols-3 gap-12'>

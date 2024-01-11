@@ -15,7 +15,7 @@ export default function Header(props: HeaderProps) {
     <header className='pt-[32px] md:pt-[40px]'>
       <Container>
         <h1 
-          className='-ml-1 text-[26px] md:text-[48px] font-light leading-none'
+          className='-ml-1 text-[28px] md:text-[48px] font-light leading-none'
           style={{
             textAlign: centerText ? 'center' : 'left'
           }}
