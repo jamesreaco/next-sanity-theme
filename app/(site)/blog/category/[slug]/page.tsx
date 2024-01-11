@@ -1,4 +1,8 @@
-import { getAllPostCategories, getAllPostsByCategory, getPostCategoryBySlug } from '@/sanity/lib/sanity.fetch'
+import { 
+  getAllPostCategories, 
+  getAllPostsByCategory, 
+  getPostCategoryBySlug 
+} from '@/sanity/lib/sanity.fetch'
 import PostArchive from '@/components/pages/blog/post-archive'
 import BlogCategories from '@/components/pages/blog/blog-categories'
 import BlogArchiveHeader from '@/components/pages/blog/blog-archive-header'
@@ -7,6 +11,17 @@ export const dynamic = 'force-dynamic'
 
 interface BlogCategorySlugPageProps {
   params: { slug: string }
+}
+
+export async function generateMetadata({ params }: BlogCategorySlugPageProps) {
+
+  const category = await getPostCategoryBySlug(params.slug)
+
+  return {
+    title: `${category.title} | Blog`,
+    description: `Browse articles about ${category.title.toLowerCase()}.`,
+    keywords: `${category.title.toLowerCase()}, blog, post, article`,
+  }
 }
 
 export default async function BlogCategorySlugPage({ params }: BlogCategorySlugPageProps) {

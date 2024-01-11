@@ -6,6 +6,17 @@ import Header from '@/components/shared/header'
 
 export const dynamic = 'force-dynamic'
 
+export async function generateMetadata() {
+
+  const page = await getCaseStudyPage()
+
+  return {
+    title: page.metaTitle,
+    description: page.metaDescription,
+    keywords: page.metaKeywords,
+  }
+}
+
 export default async function CaseStudiesPage() {
 
   const page = await getCaseStudyPage()

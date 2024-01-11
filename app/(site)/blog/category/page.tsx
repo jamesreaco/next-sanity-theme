@@ -7,6 +7,11 @@ import { PostCategory } from '@/types'
 
 export const dynamic = 'force-dynamic'
 
+export const metadata = {
+  title: 'Categories | Blog',
+  description: 'Browse articles by category.',
+}
+
 export default async function BlogCategoryPage() {
 
   const categories = await getAllPostCategories()

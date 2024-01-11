@@ -1,5 +1,9 @@
 import { draftMode } from "next/headers";
-import { getHomePage, getLatestCaseStudies, getLatestPosts } from '@/sanity/lib/sanity.fetch'
+import { 
+  getHomePage, 
+  getLatestCaseStudies, 
+  getLatestPosts 
+} from '@/sanity/lib/sanity.fetch'
 
 // components
 import HomeHero from '@/components/pages/home/home-hero'
@@ -11,6 +15,17 @@ import PreviewProvider from "@/components/preview/preview-provider"
 import HomePreview from "@/components/preview/home-preview"
 
 export const dynamic = 'force-dynamic'
+
+export async function generateMetadata() {
+
+  const page = await getHomePage()
+
+  return {
+    title: page.metaTitle,
+    description: page.metaDescription,
+    keywords: page.metaKeywords,
+  }
+}
 
 export default async function Home() {
 

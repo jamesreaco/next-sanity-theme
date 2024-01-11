@@ -16,7 +16,6 @@ export const seoFields = [
   {
     name: 'metaKeywords',
     title: 'Meta Keywords',
-    description: 'Add keywords seperated by a comma (apple, banana, pear).',
     type: 'string',
     group: 'seo',
     fieldset: 'seo'

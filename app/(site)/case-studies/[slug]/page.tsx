@@ -10,13 +10,24 @@ import PreviewProvider from "@/components/preview/preview-provider";
 
 export const dynamic = 'force-dynamic'
 
+interface CaseStudyPageProps {
+  params: { slug: string }
+}
+
+export async function generateMetadata({ params }: CaseStudyPageProps) {
+
+  const caseStudy = await getCaseStudyBySlug(params.slug)
+
+  return {
+    title: caseStudy.metaTitle,
+    description: caseStudy.metaDescription,
+    keywords: caseStudy.metaKeywords,
+  }
+}
+
 export async function generateStaticParams() {
   const caseStudies = await client.fetch(caseStudyPathsQuery);
   return caseStudies;
-}
-
-interface CaseStudyPageProps {
-  params: { slug: string }
 }
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {

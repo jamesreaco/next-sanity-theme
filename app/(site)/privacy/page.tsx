@@ -5,6 +5,17 @@ import Header from '@/components/shared/header'
 
 export const dynamic = 'force-dynamic'
 
+export async function generateMetadata() {
+
+  const page = await getPrivacyPage()
+
+  return {
+    title: page.metaTitle,
+    description: page.metaDescription,
+    keywords: page.metaKeywords,
+  }
+}
+
 export default async function PrivacyPage() {
 
   const page = await getPrivacyPage()
