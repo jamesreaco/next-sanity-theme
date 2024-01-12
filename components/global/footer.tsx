@@ -13,9 +13,10 @@ interface FooterProps {
   footerTagline: string,
   footerCopyright: string
   enableFootnote: boolean
-  footerFootnoteLink: string
   footerFootnoteText: string
   enableFootnoteLink: boolean
+  footerFootnoteLinkText: string
+  footerFootnoteLink: string
   footerQuickLinks: FooterLink[]
   footerSocialLinks: FooterLink[]
   footerLegalLinks: FooterLink[]
@@ -28,9 +29,10 @@ export default function Footer(props: FooterProps) {
     footerTagline,
     footerCopyright,
     enableFootnote,
-    footerFootnoteLink,
     footerFootnoteText,
     enableFootnoteLink,
+    footerFootnoteLinkText,
+    footerFootnoteLink,
     footerQuickLinks,
     footerSocialLinks,
     footerLegalLinks
@@ -84,15 +86,16 @@ export default function Footer(props: FooterProps) {
             </p>
             {enableFootnote && (
               <span className='mt-1 md:mt-0 ml-0 md:ml-1 font-light text-sm'>
-                {footerFootnoteText}
+                {footerFootnoteText ?? 'A free and open source theme by'}
                 &nbsp;
                 {enableFootnoteLink && (
                   <a 
-                    href="https://jamesrea.co" 
+                    href={footerFootnoteLink ?? 'https://jamesrea.co'}
                     target='_blank'
+                    rel="noopener noreferrer"
                     className='font-medium text-[#0e788a] hover:underline underline-offset-8 decoration-[1.5px]'
                   >
-                    {footerFootnoteLink}
+                    {footerFootnoteLinkText ?? 'James Rea'}
                   </a>
                 )}
               </span>

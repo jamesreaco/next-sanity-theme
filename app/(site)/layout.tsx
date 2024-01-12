@@ -57,8 +57,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           footerCopyright={settings.footerCopyright}
           footerLegalLinks={settings.footerLegalLinks}
           enableFootnote={settings.enableFootnote}
-          footerFootnoteText={settings.footerFootnoteText}
           enableFootnoteLink={settings.enableFootnoteLink}
+          footerFootnoteText={settings.footerFootnoteText}
+          footerFootnoteLinkText={settings.footerFootnoteLinkText}
           footerFootnoteLink={settings.footerFootnoteLink}
         />
       </body>

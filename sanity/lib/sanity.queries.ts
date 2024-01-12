@@ -212,5 +212,6 @@ export const settingsQuery = groq`*[_type == 'settings' && _id == 'settings'][0]
   enableFootnote,
   footerFootnoteText,
   enableFootnoteLink,
+  footerFootnoteLinkText,
   footerFootnoteLink
 }`  

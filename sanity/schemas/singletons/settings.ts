@@ -156,6 +156,14 @@ export default defineType({
       hidden: ({document}) => document?.enableFootnote === false
     }),
     defineField({
+      name: 'footerFootnoteLinkText',
+      title: 'Footer Footnote Link Text',
+      type: 'string',
+      fieldset: 'footer',
+      group: 'footer',
+      hidden: ({document}) => document?.enableFootnoteLink === false || document?.enableFootnote === false
+    }),
+    defineField({
       name: 'footerFootnoteLink',
       title: 'Footer Footnote Link',
       type: 'string',
