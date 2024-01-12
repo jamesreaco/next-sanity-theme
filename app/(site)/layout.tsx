@@ -1,7 +1,7 @@
 import '../globals.css'
 import React, { ReactNode } from 'react';
 import { getSettings } from '@/sanity/lib/sanity.fetch'
-import Topbar from '@/components/global/topbar'
+import BottomBar from '@/components/global/bottom-bar'
 import Navbar from '@/components/global/navbar'
 import MobileNavbar from '@/components/global/mobile-navbar'
 import Footer from '@/components/global/footer'
@@ -25,13 +25,13 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        {settings.enableTopbar && (
-          <Topbar 
-            message={settings.topbarMessage} 
-            enableTopbarLink={settings.enableTopbarLink}
-            topbarLinkUrl={settings.topbarLinkUrl} 
-            topbarLinkText={settings.topbarLinkText}
-            topbarLinkColor={settings.topbarLinkColor}
+        {settings.enableBottomBar && (
+          <BottomBar 
+            message={settings.bottomBarMessage} 
+            enableBottomBarLink={settings.enableBottomBarLink}
+            bottomBarLinkUrl={settings.bottomBarLinkUrl} 
+            bottomBarLinkText={settings.bottomBarLinkText}
+            bottomBarLinkColor={settings.bottomBarLinkColor}
           />
         )}
         <Navbar 

@@ -89,9 +89,10 @@ export default function Footer(props: FooterProps) {
                 {enableFootnoteLink && (
                   <a 
                     href="https://jamesrea.co" 
-                    className='font-medium text-blue-700 hover:underline underline-offset-8 decoration-[1.5px]'
+                    target='_blank'
+                    className='font-medium text-[#0e788a] hover:underline underline-offset-8 decoration-[1.5px]'
                   >
-                  {footerFootnoteLink}
+                    {footerFootnoteLink}
                   </a>
                 )}
               </span>

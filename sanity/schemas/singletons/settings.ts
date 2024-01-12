@@ -6,8 +6,8 @@ export default defineType({
   type: 'document',
   fieldsets: [
     {
-      name: 'topbar',
-      title: 'Topbar',
+      name: 'bottomBar',
+      title: 'Bottom Bar',
     },
     {
       name: 'navbar',
@@ -20,8 +20,8 @@ export default defineType({
   ],
   groups: [
     {
-      name: 'topbar',
-      title: 'Topbar',
+      name: 'bottomBar',
+      title: 'Bottom Bar',
     },
     {
       name: 'navbar',
@@ -44,52 +44,52 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'enableTopbar',
-      title: 'Enable Topbar',
+      name: 'enableBottomBar',
+      title: 'Enable Bottom Bar',
       type: 'boolean',
-      fieldset: 'topbar',
-      group: 'topbar',
+      fieldset: 'bottomBar',
+      group: 'bottomBar',
     }),
     defineField({
-      name: 'topbarMessage',
-      title: 'Topbar Message',
+      name: 'bottomBarMessage',
+      title: 'Bottom Bar Message',
       type: 'string',
-      fieldset: 'topbar',
-      group: 'topbar',
-      hidden: ({document}) => document?.enableTopbar === false
+      fieldset: 'bottomBar',
+      group: 'bottomBar',
+      hidden: ({document}) => document?.enableBottomBar === false
     }),
     defineField({
-      name: 'enableTopbarLink',
-      title: 'Enable Topbar Link',
+      name: 'enableBottomBarLink',
+      title: 'Enable Bottom Bar Link',
       type: 'boolean',
-      fieldset: 'topbar',
-      group: 'topbar',
-      hidden: ({document}) => document?.enableTopbar === false
+      fieldset: 'bottomBar',
+      group: 'bottomBar',
+      hidden: ({document}) => document?.enableBottomBar === false
     }),
     defineField({
-      name: 'topbarLinkUrl',
-      title: 'Topbar Link Url',
+      name: 'bottomBarLinkUrl',
+      title: 'Bottom Bar Link Url',
       type: 'string',
-      fieldset: 'topbar',
-      group: 'topbar',
-      hidden: ({document}) => document?.enableTopbarLink === false || document?.enableTopbar === false
+      fieldset: 'bottomBar',
+      group: 'bottomBar',
+      hidden: ({document}) => document?.enableBottomBarLink === false || document?.enableBottomBar === false
     }),
     defineField({
-      name: 'topbarLinkColor',
-      title: 'Topbar Link Color',
+      name: 'bottomBarLinkColor',
+      title: 'Bottom Bar Link Color',
       description: 'Add the full hexcode (#1AC1DE). You can find inspiration on www.colorhunt.co.',
       type: 'string',
-      fieldset: 'topbar',
-      group: 'topbar',
-      hidden: ({document}) => document?.enableTopbarLink === false || document?.enableTopbar === false
+      fieldset: 'bottomBar',
+      group: 'bottomBar',
+      hidden: ({document}) => document?.enableBottomBarLink === false || document?.enableBottomBar === false
     }),
     defineField({
-      name: 'topbarLinkText',
-      title: 'Topbar Link Text',
+      name: 'bottomBarLinkText',
+      title: 'Bottom Bar Link Text',
       type: 'string',
-      fieldset: 'topbar',
-      group: 'topbar',
-      hidden: ({document}) => document?.enableTopbarLink === false || document?.enableTopbar === false
+      fieldset: 'bottomBar',
+      group: 'bottomBar',
+      hidden: ({document}) => document?.enableBottomBarLink === false || document?.enableBottomBar === false
     }),
     defineField({
       name: 'navbarMenuItems',
