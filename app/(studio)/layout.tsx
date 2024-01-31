@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import '../globals.css'
 
 export const metadata = {
-  title: 'Next + Sanity Starter | Admin',
+  title: 'Next + Sanity Starter | Studio',
 }
 
 interface RootLayoutProps {
