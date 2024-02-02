@@ -5,22 +5,23 @@ import { HiMenuAlt4 } from 'react-icons/hi'
 import { IoClose } from 'react-icons/io5'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Logo from '@/components/shared/logo'
-
-interface MenuItems {
-  title: string,
-  link: string
-}
+import { SettingsPayload } from '@/types'
 
 interface MobileNavbarProps {
-  logoText: string 
-  buttonText: string 
-  buttonLink: string 
-  menuItems: MenuItems[]
+  logoText: SettingsPayload['logoText'] 
+  navbarButtonText: SettingsPayload['navbarButtonText']  
+  navbarButtonLink: SettingsPayload['navbarButtonLink']   
+  navbarMenuItems: SettingsPayload['navbarMenuItems']  
 }
 
 export default function MobileNavbar(props: MobileNavbarProps) {
 
-  const { logoText, buttonText, buttonLink, menuItems } = props
+  const { 
+    logoText, 
+    navbarButtonText, 
+    navbarButtonLink, 
+    navbarMenuItems 
+  } = props
   
   const [showMenu, setShowMenu] = useState(false)
 
@@ -45,7 +46,7 @@ export default function MobileNavbar(props: MobileNavbarProps) {
             onClick={() => setShowMenu(false)}
             className='flex-col items-center list-none h-[100%] w-[100%]'
           >
-            {menuItems.map(item => (
+            {navbarMenuItems.map(item => (
               <li key={item.title} className='mb-8'>
                 <Link 
                   href={`${item.link}`}
@@ -56,10 +57,10 @@ export default function MobileNavbar(props: MobileNavbarProps) {
               </li>
             ))}
             <Link 
-              href={`${buttonLink}`} 
+              href={`${navbarButtonLink}`} 
               className='flex items-center justify-between mt-10 py-3 pl-[16px] pr-[24px] tracking-widest cursor-pointer text-[20px] text-white font-light rounded-lg bg-black'
             >
-              {buttonText}
+              {navbarButtonText}
               <FiArrowUpRight 
                 size={24}
                 className='ml-8'

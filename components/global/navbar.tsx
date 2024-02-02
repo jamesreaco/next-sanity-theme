@@ -1,22 +1,23 @@
-import Button from '@/components/shared/button'
 import Link from 'next/link'
+import { SettingsPayload } from '@/types'
 import Logo from '@/components/shared/logo'
-
-interface MenuItems {
-  title: string,
-  link: string
-}
+import Button from '@/components/shared/button'
 
 interface NavbarProps {
-  logoText: string 
-  buttonText: string 
-  buttonLink: string 
-  menuItems: MenuItems[]
+  logoText: SettingsPayload['logoText'] 
+  navbarButtonText: SettingsPayload['navbarButtonText']  
+  navbarButtonLink: SettingsPayload['navbarButtonLink']   
+  navbarMenuItems: SettingsPayload['navbarMenuItems']   
 }
 
 export default function Navbar(props: NavbarProps) {
   
-  const { logoText, buttonText, buttonLink, menuItems } = props
+  const { 
+    logoText, 
+    navbarButtonText, 
+    navbarButtonLink, 
+    navbarMenuItems 
+  } = props
 
   return (
     <header 
@@ -25,8 +26,8 @@ export default function Navbar(props: NavbarProps) {
       <Logo text={logoText} />
       <nav>
         <ul className='hidden md:flex gap-12 items-center list-none'>
-          {menuItems.map(item => (
-            <li key={item.title}>
+          {navbarMenuItems.map(item => (
+            <li key={item._id}>
               <Link 
                 href={`${item.link}`}
                 className='text-lg tracking-wider hover:underline underline-offset-[12px] decoration-[2px]'
@@ -37,8 +38,8 @@ export default function Navbar(props: NavbarProps) {
           ))}
           <li>
             <Button 
-              text={buttonText} 
-              destination={`${buttonLink}`} 
+              text={navbarButtonText} 
+              destination={`${navbarButtonLink}`} 
               variant="dark"
             />
           </li>

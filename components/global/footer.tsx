@@ -2,25 +2,20 @@
 import Link from 'next/link'
 import Logo from '@/components/shared/logo'
 import SubscribeForm from './subscribe-form'
-
-type FooterLink = {
-  _id: string
-  link: string
-  title: string
-}
+import { SettingsPayload } from '@/types'
 
 interface FooterProps {
-  logoText: string,
-  footerTagline: string,
-  footerCopyright: string
-  enableFootnote: boolean
-  footerFootnoteText: string
-  enableFootnoteLink: boolean
-  footerFootnoteLinkText: string
-  footerFootnoteLink: string
-  footerQuickLinks: FooterLink[]
-  footerSocialLinks: FooterLink[]
-  footerLegalLinks: FooterLink[]
+  logoText: SettingsPayload['logoText'] 
+  footerTagline: SettingsPayload['footerTagline'],
+  footerCopyright: SettingsPayload['footerCopyright'],
+  enableFootnote: SettingsPayload['enableFootnote'],
+  footerFootnoteText: SettingsPayload['footerFootnoteText'],
+  enableFootnoteLink: SettingsPayload['enableFootnoteLink'],
+  footerFootnoteLinkText: SettingsPayload['footerFootnoteLinkText'],
+  footerFootnoteLink: SettingsPayload['footerFootnoteLink'],
+  footerQuickLinks: SettingsPayload['footerQuickLinks'],
+  footerSocialLinks: SettingsPayload['footerSocialLinks'],
+  footerLegalLinks: SettingsPayload['footerLegalLinks'],
 }
 
 export default function Footer(props: FooterProps) {

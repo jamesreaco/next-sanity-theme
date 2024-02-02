@@ -1,12 +1,9 @@
 import '../globals.css'
 import React, { ReactNode } from 'react';
 import { getSettings } from '@/sanity/lib/sanity.fetch'
-import BottomBar from '@/components/global/bottom-bar'
-import Navbar from '@/components/global/navbar'
-import MobileNavbar from '@/components/global/mobile-navbar'
-import Footer from '@/components/global/footer'
 
 import { Inter } from 'next/font/google'
+import Layout from '@/components/global/layout';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -25,43 +22,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        {settings.enableBottomBar && (
-          <BottomBar 
-            message={settings.bottomBarMessage} 
-            enableBottomBarLink={settings.enableBottomBarLink}
-            bottomBarLinkUrl={settings.bottomBarLinkUrl} 
-            bottomBarLinkText={settings.bottomBarLinkText}
-            bottomBarLinkColor={settings.bottomBarLinkColor}
-          />
-        )}
-        <Navbar 
-          buttonText={settings.navbarButtonText} 
-          buttonLink={settings.navbarButtonLink}
-          logoText={settings.logoText}
-          menuItems={settings.navbarMenuItems}
-        />
-        <MobileNavbar
-          buttonText={settings.navbarButtonText} 
-          buttonLink={settings.navbarButtonLink}
-          logoText={settings.logoText}
-          menuItems={settings.navbarMenuItems}
-        />
-        <main>
+        <Layout settings={settings}>
           {children}
-        </main>
-        <Footer 
-          logoText={settings.logoText}
-          footerTagline={settings.footerTagline}
-          footerQuickLinks={settings.footerQuickLinks}
-          footerSocialLinks={settings.footerSocialLinks}
-          footerCopyright={settings.footerCopyright}
-          footerLegalLinks={settings.footerLegalLinks}
-          enableFootnote={settings.enableFootnote}
-          enableFootnoteLink={settings.enableFootnoteLink}
-          footerFootnoteText={settings.footerFootnoteText}
-          footerFootnoteLinkText={settings.footerFootnoteLinkText}
-          footerFootnoteLink={settings.footerFootnoteLink}
-        />
+        </Layout>
       </body>
     </html>
   )
