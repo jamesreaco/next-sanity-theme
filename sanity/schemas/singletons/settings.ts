@@ -126,6 +126,30 @@ export default defineType({
       group: 'footer',
     }),
     defineField({
+      name: 'enableSubscribeForm',
+      title: 'Enable Subscribe Form',
+      type: 'boolean',
+      fieldset: 'footer',
+      group: 'footer',
+      initialValue: false
+    }),
+    defineField({
+      name: 'subscribeFormTitle',
+      title: 'Subscribe Form Title',
+      type: 'string',
+      fieldset: 'footer',
+      group: 'footer',
+      hidden: ({document}) => document?.enableSubscribeForm === false
+    }),
+    defineField({
+      name: 'subscribeFormPlaceholder',
+      title: 'Subscribe Form Placeholder',
+      type: 'string',
+      fieldset: 'footer',
+      group: 'footer',
+      hidden: ({document}) => document?.enableSubscribeForm === false
+    }),
+    defineField({
       name: 'footerCopyright',
       title: 'Footer Copyright',
       type: 'string',

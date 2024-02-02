@@ -193,6 +193,9 @@ export const settingsQuery = groq`*[_type == 'settings' && _id == 'settings'][0]
   navbarButtonText,
   navbarButtonLink,
   footerTagline,
+  enableSubscribeForm,
+  subscribeFormTitle,
+  subscribeFormPlaceholder,
   footerCopyright,
   footerQuickLinks[]-> {
     _id,

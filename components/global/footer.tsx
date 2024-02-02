@@ -7,6 +7,9 @@ import { SettingsPayload } from '@/types'
 interface FooterProps {
   logoText: SettingsPayload['logoText'] 
   footerTagline: SettingsPayload['footerTagline'],
+  enableSubscribeForm: SettingsPayload['enableSubscribeForm'],
+  subscribeFormTitle: SettingsPayload['subscribeFormTitle'],
+  subscribeFormPlaceholder: SettingsPayload['subscribeFormPlaceholder'],
   footerCopyright: SettingsPayload['footerCopyright'],
   enableFootnote: SettingsPayload['enableFootnote'],
   footerFootnoteText: SettingsPayload['footerFootnoteText'],
@@ -23,6 +26,9 @@ export default function Footer(props: FooterProps) {
   const {
     logoText,
     footerTagline,
+    enableSubscribeForm,
+    subscribeFormTitle,
+    subscribeFormPlaceholder,
     footerCopyright,
     enableFootnote,
     footerFootnoteText,
@@ -43,7 +49,12 @@ export default function Footer(props: FooterProps) {
             <p className='mt-4'>
               {footerTagline}
             </p>
-            <SubscribeForm />
+            {enableSubscribeForm && (
+              <SubscribeForm 
+                title={subscribeFormTitle} 
+                placeholder={subscribeFormPlaceholder}
+              />
+            )}
           </div>
           <div className='mt-10 md:mt-0 pb-6 md:pb-0 grid grid-cols-2 gap-24 border-b md:border-b-0 border-gray-100'>
             <QuickLinks footerQuickLinks={footerQuickLinks} />

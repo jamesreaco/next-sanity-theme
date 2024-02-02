@@ -1,7 +1,15 @@
+import { SettingsPayload } from '@/types';
 import { useState, FormEvent } from 'react'
 import { TbMail } from "react-icons/tb";
 
-export default function SubscribeForm() {
+interface SubscribeFormProps {
+  title: SettingsPayload['subscribeFormTitle']
+  placeholder: SettingsPayload['subscribeFormPlaceholder']
+}
+
+export default function SubscribeForm(props: SubscribeFormProps) {
+
+  const { title, placeholder } = props
 
   const [email, setEmail] = useState<string>('')
   const [error, setError] = useState<boolean>(false)
@@ -41,7 +49,7 @@ export default function SubscribeForm() {
       <div className='flex items-center gap-[6px] mt-[30px] mb-[8px]'>
         <TbMail />
         <span className='text-[15px]'>
-          Subscribe to my newsletter
+          {title}
         </span> 
       </div>
       <form 
@@ -56,7 +64,7 @@ export default function SubscribeForm() {
             setEmail(e.target.value);
           }}
           className='w-full px-[14px] py-[8px] rounded-tl-lg rounded-bl-lg bg-zinc-100'
-          placeholder='Your Email'
+          placeholder={placeholder ?? 'Enter your email'}
         />
         <button 
           type="submit"

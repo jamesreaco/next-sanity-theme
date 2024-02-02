@@ -43,6 +43,9 @@ export default function Layout(props: LayoutProps) {
       <Footer 
         logoText={settings.logoText}
         footerTagline={settings.footerTagline}
+        enableSubscribeForm={settings.enableSubscribeForm}
+        subscribeFormTitle={settings.subscribeFormTitle}
+        subscribeFormPlaceholder={settings.subscribeFormPlaceholder}
         footerQuickLinks={settings.footerQuickLinks}
         footerSocialLinks={settings.footerSocialLinks}
         footerCopyright={settings.footerCopyright}

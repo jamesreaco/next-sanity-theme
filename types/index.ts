@@ -54,6 +54,9 @@ export interface SettingsPayload {
     link: string
   }[]
   footerTagline: string
+  enableSubscribeForm: boolean
+  subscribeFormTitle: string
+  subscribeFormPlaceholder: string
   footerQuickLinks: {
     _id: string
     title: string
