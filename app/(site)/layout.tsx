@@ -1,9 +1,9 @@
 import '../globals.css'
 import React, { ReactNode } from 'react';
 import { getSettings } from '@/sanity/lib/sanity.fetch'
+import Layout from '@/components/global/layout';
 
 import { Inter } from 'next/font/google'
-import Layout from '@/components/global/layout';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {

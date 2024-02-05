@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import BottomBar from './bottom-bar'
 import Navbar from './navbar'
