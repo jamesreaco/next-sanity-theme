@@ -25,10 +25,10 @@ export default function Post({ post }: PostProps) {
   } = post
 
   return (
-    <div className='h-full mt-[40px]'>
+    <div className='h-full mt-[40px] z-[200] relative bg-[#F6F6F1]'>
       <ScrollProgress />
       <Container classNames='flex flex-col xl:flex-row gap-[40px] relative'>
-        <div className='hidden xl:block flex-1 lg:sticky top-[140px] left-0 h-screen border-r'>
+        <div className='hidden xl:block flex-1 lg:sticky top-[40px] left-0 h-screen border-r'>
           <PostTableOfContents content={post.content}/>
         </div>
         <div className='flex-[2.2]'>
@@ -43,7 +43,7 @@ export default function Post({ post }: PostProps) {
             content={content} 
           />
         </div>
-        <div className='flex-1 xl:sticky top-[140px] left-0 xl:h-screen xl:border-l'>
+        <div className='flex-1 xl:sticky top-[40px] left-0 xl:h-screen xl:border-l'>
           <div className='flex flex-col xl:pl-[30px]'>
             <PostAuthor 
               name={author.name}
