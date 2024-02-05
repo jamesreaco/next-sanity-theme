@@ -32,7 +32,7 @@ export default function Button(props: ButtonProps) {
       {text}
       <FiArrowUpRight 
         size={20}
-        className={twMerge(`ml-8 md:ml-12 transition group-hover:rotate-45 ${iconClassNames}`)}
+        className={twMerge(`ml-8 md:ml-6 transition group-hover:rotate-45 ${iconClassNames}`)}
         style={{
           color: variant === 'dark' ? `#fff` : `#000`,
         }}

@@ -63,7 +63,15 @@ export default defineType({
       title: 'Content',
       type: 'array',
       of: [
-        { type: 'block' },
+        { 
+          type: 'block',
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'H2', value: 'h2' },
+            { title: 'H3', value: 'h3' },
+            { title: 'H4', value: 'h4' },
+          ], 
+        },
         { type: 'postImageBlock' },
         { type: 'postQuoteBlock' },
       ]

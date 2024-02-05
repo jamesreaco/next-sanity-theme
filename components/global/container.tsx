@@ -18,7 +18,7 @@ export default function Container(props: ContainerProps) {
   )
 
   return (
-    <div className={twMerge(`${styles} ${classNames}`)}>
+    <div className={twMerge(`${styles} ${classNames} h-full`)}>
       {children}
     </div>
   )

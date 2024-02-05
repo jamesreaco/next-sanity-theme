@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 
 interface PostAuthorProps {
   name: string
@@ -12,23 +11,21 @@ export default function PostAuthor(props: PostAuthorProps) {
   const { name, description, image } = props
 
   return (
-    <div className='max-w-xl mx-auto md:my-10 px-6 md:px-0 pb-10'>
-      <div className='flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-lg'>
-        <Image
-          src={image}
-          width={80}
-          height={80}
-          alt={`Image of ${name}`}
-          className='rounded-md'
-        />
-        <div>
-          <div className='text-[18px] md:text-[20px]'>
-            {name}
-          </div>
-          <p className='text-[14px] md:text-[16px] text-base text-gray-600 antialiased'>
-            {description}
-          </p>
+    <div className='flex flex-col items-start gap-[10px] pt-[60px] xl:pt-0 pb-[30px] border-t xl:border-t-[0px] xl:border-b'>
+      <Image
+        src={image}
+        width={50}
+        height={50}
+        alt={`Image of ${name}`}
+        className='rounded-full'
+      />
+      <div>
+        <div className='text-[18px]'>
+          {name}
         </div>
+        <p className='text-[14px] md:text-[16px] text-base text-gray-600 antialiased'>
+          {description}
+        </p>
       </div>
     </div>
   )
