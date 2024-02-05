@@ -26,7 +26,7 @@ export default function MobileNavbar(props: MobileNavbarProps) {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
-    <header className='relative md:hidden my-0 py-8 px-6 md:px-12 border-b'>
+    <header className='sticky top-0 md:hidden my-0 py-4 px-6 md:px-12 border-b bg-[#F6F6F1] bg-opacity-90 z-50 backdrop-blur-sm'>
       <div className='flex items-center justify-between'>
         <Logo text={logoText} />
         <button 
@@ -41,7 +41,7 @@ export default function MobileNavbar(props: MobileNavbarProps) {
         </button>
       </div>
       {showMenu && (
-        <nav className='z-10 absolute top-[6rem] bottom-0 left-0 h-[100vh] w-[100vw] pt-8 px-6 bg-[#F6F6F2] border-t'>
+        <nav className='z-10 absolute top-[65px] bottom-0 left-0 h-[100vh] w-[100vw] pt-8 px-6 bg-[#F6F6F1] bg-opacity-[98%] backdrop-blur-sm'>
           <ul 
             onClick={() => setShowMenu(false)}
             className='flex-col items-center list-none h-[100%] w-[100%]'
