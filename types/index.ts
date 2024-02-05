@@ -20,6 +20,7 @@ export type Post = {
   author: PostAuthor
   content: PortableTextBlock
   category: PostCategory
+  relatedPosts: Post[]
 }
 
 export type CaseStudyGalleryImage = {

@@ -94,6 +94,16 @@ export const postBySlugQuery = groq`*[_type == 'post' && slug.current == $slug][
   'image': image.asset->url,
   readTime,
   content,
+  relatedPosts[]->{
+    title,
+    'image': image.asset->url,
+    'slug': slug.current,
+    readTime,
+    category->{
+      title,
+      'slug': slug.current,
+    },
+  },
   metaTitle,
   metaDescription,
   metaKeywords,

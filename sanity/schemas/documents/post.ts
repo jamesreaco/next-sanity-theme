@@ -76,6 +76,17 @@ export default defineType({
         { type: 'postQuoteBlock' },
       ]
     }),
+    defineField({
+      name: 'relatedPosts',
+      title: 'Related Posts',
+      type: 'array',
+      of: [
+        { 
+          type: 'reference', 
+          to: { type: 'post' } 
+        }
+      ]
+    }),
     ...seoFields
   ]
 })
