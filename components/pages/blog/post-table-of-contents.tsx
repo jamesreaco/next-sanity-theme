@@ -46,18 +46,20 @@ export default function PostTableOfContents(props: PostTableOfContentsProps) {
 
   return (
     <div>
-      <div className='pt-[20px] xl:pt-0 pb-[20px] flex items-center justify-between pr-[30px] gap-[10px] border-b'>
-        <div className='text-[16px] font-medium'>
+      <div className='pt-[20px] pb-[20px] flex items-center justify-between pr-[30px] pl-[20px] gap-[10px] border-b bg-[#f0f0eb]'>
+        <div className='text-[16px] font-medium '>
           Table Of Contents
         </div>
         <div>
         <IoListOutline size={20} />
         </div>
       </div>
-      <PortableText 
-        value={content} 
-        components={components}
-      />
+      <div className='pl-[16px]'>
+        <PortableText 
+          value={content} 
+          components={components}
+        />
+      </div>
     </div>
   )
 }

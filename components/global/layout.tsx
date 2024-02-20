@@ -5,6 +5,7 @@ import Navbar from './navbar'
 import MobileNavbar from './mobile-navbar'
 import Footer from './footer'
 import { SettingsPayload } from '@/types'
+import ScrollProgress from './scroll-progress'
 
 interface LayoutProps {
   children: React.ReactNode

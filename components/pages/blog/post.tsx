@@ -25,13 +25,13 @@ export default function Post({ post }: PostProps) {
   } = post
 
   return (
-    <div className='h-full mt-[40px] z-[200] relative bg-[#F6F6F1]'>
+    <div className='h-full z-[200] relative bg-[#F6F6F1]'>
       <ScrollProgress />
       <Container classNames='flex flex-col xl:flex-row gap-[40px] relative'>
-        <div className='hidden xl:block flex-1 lg:sticky top-[40px] left-0 h-screen border-r'>
+        <div className='hidden xl:block flex-1 lg:sticky top-[6px] left-0 h-screen border-l border-r'>
           <PostTableOfContents content={post.content}/>
         </div>
-        <div className='flex-[2.2]'>
+        <div className='mt-[40px] flex-[2.2]'>
           <PostHeader 
             image={image}
             category={category.title}
@@ -43,7 +43,7 @@ export default function Post({ post }: PostProps) {
             content={content} 
           />
         </div>
-        <div className='flex-1 xl:sticky top-[40px] left-0 xl:h-screen xl:border-l'>
+        <div className='flex-1 xl:sticky mt-[40px] top-[40px] left-0 h-screen border-l'>
           <div className='flex flex-col xl:pl-[30px]'>
             <PostAuthor 
               name={author.name}
