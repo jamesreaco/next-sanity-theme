@@ -15,7 +15,7 @@ export default function HomeCaseStudies({ caseStudies }: HomeCaseStudiesProps) {
 
   return (
     <section className="relative mt-12 mb-6 md:mb-12 pt-28 md:pt-64 overflow-x-hidden">
-      <Container >
+      <Container>
         <motion.div 
           className='-left-[640px] top-0 absolute text-[64px] md:text-[160px] font-extralight whitespace-nowrap' 
           style={{ x }}

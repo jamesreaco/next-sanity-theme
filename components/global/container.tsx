@@ -1,24 +1,31 @@
-import React, { ReactNode } from 'react';
-import { twMerge } from 'tailwind-merge'
+import { cn } from '@/lib/utils';
+import { cva, VariantProps } from 'class-variance-authority'
 
-interface ContainerProps {
-  children: ReactNode
-  classNames?: string
-  fullWidth?: boolean
-}
+const containerVariants = cva(
+  'h-full mx-auto my-0',
+  {
+    variants: {
+      variant: {
+        default:
+          'max-w-8xl px-6 md:px-12',
+        fullWidth:
+          'max-w-full px-0 md:px-0',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+    },
+  }
+)
+
+interface ContainerProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof containerVariants>{}
 
 export default function Container(props: ContainerProps) {
 
-  const { fullWidth, classNames, children } = props
+  const { variant, className, children } = props
  
-  const styles = fullWidth ? (
-    'max-w-full mx-auto my-0 px-0 md:px-0'
-  ) : (
-    'max-w-8xl mx-auto my-0 px-6 md:px-12'
-  )
-
   return (
-    <div className={twMerge(`${styles} ${classNames} h-full`)}>
+    <div className={cn(containerVariants({ variant, className }))}>
       {children}
     </div>
   )

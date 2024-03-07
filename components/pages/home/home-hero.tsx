@@ -16,7 +16,7 @@ export default function HomeHero(props: HomeHeroProps) {
 
   return (
     <section className='mt:0 md:mt-20'>
-      <Container classNames="flex flex-col-reverse md:flex-row justify-between">
+      <Container className="flex flex-col-reverse md:flex-row justify-between">
         <div className='flex items-start flex-col'>
           <h1 className='-ml-1 md:-ml-2 text-[12vw] font-light leading-none'>
             {heading}

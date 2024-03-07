@@ -27,7 +27,7 @@ export default function Post({ post }: PostProps) {
   return (
     <div className='z-[200] relative h-full bg-[#F6F6F1]'>
       <ScrollProgress />
-      <Container classNames='flex flex-col xl:flex-row gap-10 relative'>
+      <Container className='flex flex-col xl:flex-row gap-10 relative'>
         <div className='hidden xl:block flex-1 lg:sticky top-1.5 left-0 h-screen border-l border-r'>
           <PostTableOfContents content={post.content}/>
         </div>
