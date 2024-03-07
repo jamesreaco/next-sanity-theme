@@ -42,7 +42,7 @@ export default function Footer(props: FooterProps) {
 
   return (
     <footer className='bg-white border-t'>
-      <div className='max-w-8xl mx-auto p-12 pb-[115px] md:pb-[60px] lg:pb-6 px-6 md:px-12'>
+      <div className='max-w-8xl mx-auto p-12 pb-28 md:pb-4 lg:pb-6 px-6 md:px-12'>
         <div className='flex flex-col md:flex-row'>
           <div className='w-full md:w-fit mr-auto pb-8 md:pb-0 border-b md:border-b-0 border-gray-100'>
             <Logo text={logoText} />
@@ -94,7 +94,7 @@ function QuickLinks({ footerQuickLinks }: QuickLinksProps) {
       </h5>
       <ul>
         {footerQuickLinks?.map((item) => (
-          <li key={item._id} className='mb-4 hover:underline underline-offset-[8px]'>
+          <li key={item._id} className='mb-4 hover:underline underline-offset-2'>
             <Link href={`${item.link}`}>
               {item.title}
             </Link>
@@ -117,7 +117,7 @@ function SocialLinks({ footerSocialLinks }: SocialLinksProps) {
       </h5>
       <ul>
         {footerSocialLinks?.map((item) => (
-          <li key={item._id} className='mb-4 hover:underline underline-offset-[8px]'>
+          <li key={item._id} className='mb-4 hover:underline underline-offset-2'>
             <Link href={`${item.link}`}>
               {item.title}
             </Link>
@@ -153,7 +153,7 @@ function Footnote(props: FootnoteProps) {
           href={footerFootnoteLink ?? 'https://jamesrea.co'}
           target='_blank'
           rel="noopener noreferrer"
-          className='font-medium text-[#0e788a] hover:underline underline-offset-8 decoration-[1.5px]'
+          className='font-medium text-[#0e788a] hover:underline underline-offset-8 decoration-0.5'
         >
           {footerFootnoteLinkText ?? 'James Rea'}
         </a>
@@ -173,7 +173,7 @@ function LegalLinks({ footerLegalLinks }: LegalLinksProps) {
         <div key={link._id} className='flex items-center gap-1 group'>
           <Link 
             href={link.link}
-            className='mt-1 md:mt-0 text-sm hover:underline underline-offset-[8px]'
+            className='mt-1 md:mt-0 text-sm hover:underline underline-offset-2'
           >
             {link.title}
           </Link>

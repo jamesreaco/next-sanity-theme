@@ -19,7 +19,7 @@ export default async function BlogCategoryPage() {
   return (
     <> 
       <Header heading="Blog Categories" />
-      <Container classNames='my-[30px] md:my-[60px] grid md:grid-cols-3 gap-[30px]'>
+      <Container classNames='my-8 md:my-16 grid md:grid-cols-3 gap-8'>
         {categories.map((category: PostCategory) => (
           <CategoryCard 
             key={category.slug}
@@ -42,9 +42,9 @@ function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link
       href={`/blog/category/${slug}`}
-      className='p-[20px] flex items-center justify-between border rounded-lg transition md:hover:bg-white group'
+      className='p-5 flex items-center justify-between border rounded-lg transition md:hover:bg-white group'
     > 
-      <span className='text-[17px] md:text-[18px]'>
+      <span className='md:text-lg'>
         {title}
       </span>
       <FiChevronRight size={20} />

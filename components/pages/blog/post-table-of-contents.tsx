@@ -12,7 +12,7 @@ const components: PortableTextComponents = {
     switch (value.style) {
       case 'h2':
         return (
-          <li className='mt-[15px] text-[15px] font-semibold border-b border-b-[#ebebe6] pb-[15px] cursor-pointer antialiased list-none'>
+          <li className='mt-4 text-sm font-semibold border-b border-b-[#ebebe6] pb-4 cursor-pointer antialiased list-none'>
             <a href={`#${value._key}`}>
               - {value.children[0].text} 
             </a>
@@ -20,7 +20,7 @@ const components: PortableTextComponents = {
         )
       case 'h3':
         return (
-          <li className='ml-[10px] mt-[15px] text-[15px] border-b border-b-[#efefea] pb-[15px] antialiased list-none'>
+          <li className='ml-2.5 mt-4 text-sm border-b border-b-[#efefea] pb-4 antialiased list-none'>
             <a href={`#${value._key}`}>
               - {value.children[0].text} 
             </a>
@@ -28,7 +28,7 @@ const components: PortableTextComponents = {
         )
       case 'h4':
         return (
-          <li className='ml-[20px] mt-[15px] text-[15px] border-b border-b-[#efefea] pb-[15px] antialiased list-none'>
+          <li className='ml-5 mt-4 text-sm border-b border-b-[#efefea] pb-4 antialiased list-none'>
             <a href={`#${value._key}`}>
               - {value.children[0].text} 
             </a>
@@ -46,15 +46,15 @@ export default function PostTableOfContents(props: PostTableOfContentsProps) {
 
   return (
     <div>
-      <div className='pt-[20px] pb-[20px] flex items-center justify-between pr-[30px] pl-[20px] gap-[10px] border-b bg-[#f0f0eb]'>
-        <div className='text-[16px] font-medium '>
+      <div className='py-5 px-8 flex items-center justify-between gap-2.5 border-b bg-[#f0f0eb]'>
+        <div className='font-medium '>
           Table Of Contents
         </div>
         <div>
         <IoListOutline size={20} />
         </div>
       </div>
-      <div className='pl-[16px]'>
+      <div className='pl-4'>
         <PortableText 
           value={content} 
           components={components}

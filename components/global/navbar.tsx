@@ -21,7 +21,7 @@ export default function Navbar(props: NavbarProps) {
 
   return (
     <header 
-      className='hidden sticky top-0 md:flex backdrop-blur-sm items-center justify-between max-w-8xl mx-auto my-0 py-6 px-6 md:px-12 rounded-bl-xl rounded-br-xl border-b border-b-[#efeff1] bg-[#F6F6F1] bg-opacity-80 z-50'
+      className='z-50 hidden sticky top-0 md:flex backdrop-blur-sm items-center justify-between max-w-8xl mx-auto my-0 py-6 px-6 md:px-12 rounded-bl-xl rounded-br-xl border-b border-b-[#efeff1] bg-[#F6F6F1] bg-opacity-80'
     >
       <Logo text={logoText} />
       <nav>
@@ -30,7 +30,7 @@ export default function Navbar(props: NavbarProps) {
             <li key={item._id}>
               <Link 
                 href={`${item.link}`}
-                className='text-lg tracking-wider hover:underline underline-offset-[12px] decoration-[2px]'
+                className='text-lg tracking-wider hover:underline underline-offset-[12px] decoration-2'
               >
                 {item.title}
               </Link>

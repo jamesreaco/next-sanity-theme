@@ -41,7 +41,7 @@ export default function MobileNavbar(props: MobileNavbarProps) {
         </button>
       </div>
       {showMenu && (
-        <nav className='z-10 absolute top-[65px] bottom-0 left-0 h-[100vh] w-[100vw] pt-8 px-6 bg-[#F6F6F1] bg-opacity-[98%] backdrop-blur-sm'>
+        <nav className='z-10 absolute top-16 bottom-0 left-0 h-[100vh] w-[100vw] pt-8 px-6 bg-[#F6F6F1] bg-opacity-[98%] backdrop-blur-sm'>
           <ul 
             onClick={() => setShowMenu(false)}
             className='flex-col items-center list-none h-[100%] w-[100%]'
@@ -58,7 +58,7 @@ export default function MobileNavbar(props: MobileNavbarProps) {
             ))}
             <Link 
               href={`${navbarButtonLink}`} 
-              className='flex items-center justify-between mt-10 py-3 pl-[16px] pr-[24px] tracking-widest cursor-pointer text-[20px] text-white font-light rounded-lg bg-black'
+              className='flex items-center justify-between mt-10 py-3 pl-4 pr-6 tracking-widest cursor-pointer text-xl text-white font-light rounded-lg bg-black'
             >
               {navbarButtonText}
               <FiArrowUpRight 

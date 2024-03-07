@@ -97,7 +97,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-[800px] flex flex-col mx-auto mt-10 md:mt-12 mb-12 md:px-8 md:py-8 md:border rounded-lg md:bg-[#f9f9f7]"
+      className="max-w-4xl flex flex-col mx-auto mt-10 md:mt-12 mb-12 md:px-8 md:py-8 md:border rounded-lg md:bg-[#f9f9f7]"
     >
       <label
         htmlFor="name"

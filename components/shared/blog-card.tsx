@@ -33,11 +33,11 @@ export default function BlogCard({ post }: BlogCardProps) {
         />
         <div className='mt-5 flex items-center'>
           <Tag text={category.title} />
-          <div className='ml-3 text-gray-500 text-[15px] md:text-[16px] font-light tracking-wide antialiased'>
+          <div className='ml-3 text-gray-500 text-sm md:text-base font-light tracking-wide antialiased'>
             {readTime} Minute Read
           </div>
         </div>
-        <h3 className='mt-3 text-[20px] md:text-[26px] pr-12 font-normal md:group-hover:underline underline-offset-4 decoration-[2px]'>
+        <h3 className='mt-3 text-xl md:text-2xl pr-12 font-normal md:group-hover:underline underline-offset-4 decoration-2'>
           {title}
         </h3>
       </Link>

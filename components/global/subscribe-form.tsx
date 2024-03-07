@@ -45,16 +45,16 @@ export default function SubscribeForm(props: SubscribeFormProps) {
   }
 
   return (
-    <div className='w-full border-t border-t-zinc-100 mt-[30px]'>
-      <div className='flex items-center gap-[6px] mt-[30px] mb-[8px]'>
+    <div className='w-full border-t border-t-zinc-100 mt-8'>
+      <div className='flex items-center gap-1.5 mt-8'>
         <TbMail />
-        <span className='text-[15px]'>
+        <span className='text-sm'>
           {title}
         </span> 
       </div>
       <form 
         onSubmit={handleSubmit}
-        className='flex'
+        className='flex mt-2'
       >
         <input 
           type="email" 
@@ -63,18 +63,18 @@ export default function SubscribeForm(props: SubscribeFormProps) {
           onChange={(e) => {
             setEmail(e.target.value);
           }}
-          className='w-full px-[14px] py-[8px] rounded-tl-lg rounded-bl-lg bg-zinc-100'
+          className='w-full px-3.5 py-2 rounded-tl-lg rounded-bl-lg bg-zinc-100'
           placeholder={placeholder ?? 'Enter your email'}
         />
         <button 
           type="submit"
-          className='px-[14px] py-[8px] rounded-tr-lg rounded-br-lg bg-[#000] text-[#fff]'
+          className='px-3.5 py-2 rounded-tr-lg rounded-br-lg bg-[#000] text-[#fff]'
         >
           Submit
         </button>
       </form>
       <p 
-      className='mt-[8px] text-center font-medium antialiased text-[14px]'
+      className='mt-2 text-center font-medium antialiased text-sm'
         style={{
           color: error ? '#ff3535' : '#0E788A'
         }}

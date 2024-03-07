@@ -26,7 +26,7 @@ const components: PortableTextComponents = {
       return (
         <h2 
           id={`${value._key}`}
-          className='pt-[10px] text-[28px] text-[#000]'
+          className='pt-2.5 text-3xl text-[#000]'
         >
           {value.children[0].text}
         </h2>
@@ -36,7 +36,7 @@ const components: PortableTextComponents = {
       return (
         <h3 
           id={`${value._key}`}
-          className='pt-[24px] text-[22px] text-[#000]'
+          className='pt-6 text-2xl text-[#000]'
         >
           {value.children[0].text}
         </h3>
@@ -46,7 +46,7 @@ const components: PortableTextComponents = {
       return (
         <h4 
           id={`${value._key}`}
-          className='pt-[24px] text-[18px] text-[#000]'
+          className='pt-6 text-xl text-[#000]'
         >
           {value.children[0].text}
         </h4>

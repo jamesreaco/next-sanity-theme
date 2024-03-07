@@ -17,7 +17,7 @@ export default function CaseStudyHeader({ caseStudy }: CaseStudyHeaderProps) {
             <h1 className='mt-8 text-4xl md:text-7xl font-light'>
               {caseStudy.title}
             </h1>
-            <p className='md:w-[30rem] mt-6 leading-7'>
+            <p className='md:max-w-md mt-6 leading-7'>
               {caseStudy.shortDescription}
             </p>
           </div>

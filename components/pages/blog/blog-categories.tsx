@@ -12,10 +12,10 @@ export default function BlogCategories({ categories }: BlogCategoriesProps) {
   const pathname = usePathname()
 
   return (
-    <div className='mt-[30px] lg:mt-0 flex flex-wrap gap-[12px] text-[16px]'>
+    <div className='mt-2 lg:mt-0 flex flex-wrap gap-3'>
       <Link
         href="/blog"
-        className='px-[10px] md:px-[10px] md:py-[4px] border rounded-md transition hover:border-zinc-300'
+        className='px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300'
         style={{
           backgroundColor: pathname === '/blog' ? '#fff' : '#F6F6F1',
         }}
@@ -26,7 +26,7 @@ export default function BlogCategories({ categories }: BlogCategoriesProps) {
         <Link
           key={category.slug}
           href={`/blog/category/${category.slug}`}
-          className='px-[10px] md:px-[10px] md:py-[4px] border rounded-md transition hover:border-zinc-300'
+          className='px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300'
           style={{
             backgroundColor: pathname === `/blog/category/${category.slug}` ? '#fff' : '#F6F6F1',
           }}

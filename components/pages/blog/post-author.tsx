@@ -11,7 +11,7 @@ export default function PostAuthor(props: PostAuthorProps) {
   const { name, description, image } = props
 
   return (
-    <div className='flex flex-col items-start gap-[10px] pt-[60px] xl:pt-0 pb-[30px] border-t xl:border-t-[0px] xl:border-b'>
+    <div className='flex flex-col items-start gap-2.5 pt-16 xl:pt-0 pb-8 border-t xl:border-t-0 xl:border-b'>
       <Image
         src={image}
         width={50}
@@ -20,10 +20,10 @@ export default function PostAuthor(props: PostAuthorProps) {
         className='rounded-full'
       />
       <div>
-        <div className='text-[18px]'>
+        <div className='text-lg'>
           {name}
         </div>
-        <p className='text-[14px] md:text-[16px] text-base text-gray-600 antialiased'>
+        <p className='text-base text-gray-600 antialiased'>
           {description}
         </p>
       </div>

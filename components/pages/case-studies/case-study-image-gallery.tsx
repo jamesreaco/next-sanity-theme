@@ -12,9 +12,9 @@ export default function CaseStudyImageGallery({ caseStudy }: CaseStudyImageGalle
   const { imageGallery: images } = caseStudy
 
   return (
-    <section className='my-[60px] md:my-[120px]'>
+    <section className='my-16 md:my-32'>
       <Container>
-        <div className='max-w-[900px] mx-auto grid grid-cols-2 gap-[20px] md:gap-[60px]'>
+        <div className='max-w-4xl mx-auto grid grid-cols-2 gap-5 md:gap-16'>
           {images.map((image) => (
             <Image 
               key={image.url}

@@ -18,7 +18,7 @@ export default function CaseStudyOverview({ caseStudy }: CaseStudyOverviewProps)
           alt={caseStudy.title}
           className='h-[400px] md:h-[600px] object-cover rounded-xl'
         />
-        <div className='relative flex flex-col justify-center max-w-[900px] mx-auto mt-[60px] md:my-[120px]'>
+        <div className='relative flex flex-col justify-center max-w-4xl mx-auto mt-16 md:my-32'>
           <h2 className='mb-4 text-3xl md:text-4xl font-extralight'>
             Project Overview
           </h2>

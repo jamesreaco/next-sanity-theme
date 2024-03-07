@@ -21,7 +21,7 @@ export default function HomeHero(props: HomeHeroProps) {
           <h1 className='-ml-1 md:-ml-2 text-[12vw] font-light leading-none'>
             {heading}
           </h1>
-          <p className='max-w-[30rem] mt-6 md:mt-8 mb-8 md:mb-12 text-[1.2rem] md:text-2xl font-light'>
+          <p className='max-w-lg mt-6 md:mt-8 mb-8 md:mb-12 text-lg md:text-2xl font-light'>
             {paragraph}
           </p>
           <Button 
@@ -36,7 +36,7 @@ export default function HomeHero(props: HomeHeroProps) {
           height={350}
           sizes="(max-width: 640px) 100px"
           alt='Image of Brooke'
-          className='w-[94px] md:w-[160px] lg:w-[190px] mb-10 md:mb-0 mt-10 md:mt-20 object-contain'
+          className='w-24 md:w-40 lg:w-48 mb-10 md:mb-0 mt-10 md:mt-20 object-contain'
         />
       </Container>
     </section>

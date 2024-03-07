@@ -23,7 +23,7 @@ export default function PostQuoteBlock({ data }: PostQuoteBlockProps) {
   } = data
 
   return (
-    <div className='my-[40px] block mx-auto w-full'>
+    <div className='my-10 block mx-auto w-full'>
       <div className='flex flex-col justify-center items-center p-12 border bg-grey-200 rounded-xl' style={{
         backgroundColor: `#${bgColor}`
       }}>
@@ -33,7 +33,7 @@ export default function PostQuoteBlock({ data }: PostQuoteBlockProps) {
             color={`#${iconColor}`}
           />
         </div>
-        <div className='mt-3 text-[20px] md:text-[24px] text-center' style={{
+        <div className='mt-3 text-xl md:text-2xl text-center' style={{
           color: `#${textColor}`
         }}>
           {quote}
