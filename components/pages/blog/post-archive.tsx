@@ -26,13 +26,14 @@ export default function PostArchive({ posts }: PostArchiveProps) {
             <div className='text-xl'>
               No Posts Found
             </div>
-            <Button 
-              text="Browse Categories"
-              destination="/blog/category"
-              variant="light"
-              classNames="mt-6 py-2 md:py-2 px-4 md:px-4 border tracking-wide"
-              iconClassNames='md:ml-8'
-            />
+            <Button
+              href="/blog/category"
+              variant="outline"
+              size="default"
+              className="mt-6"
+            >
+              Browse Categories
+            </Button>
           </div>
         )}
       </Container>
