@@ -23,11 +23,13 @@ export default function RelatedPosts(props: RelatedPostsProps) {
           ))}
         </div>
         <div className='flex items-center justify-center'>
-          <Button 
-            text="View All Posts" 
-            destination="/blog" 
-            variant="dark"
-          />
+          <Button
+            href="/blog"
+            variant="default"
+            size="default"
+          >
+            View All Posts
+          </Button>
         </div>
       </Container>
     </section>

@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { IoClose } from 'react-icons/io5'
-import { FiArrowUpRight } from 'react-icons/fi'
 import Logo from '@/components/shared/logo'
 import { SettingsPayload } from '@/types'
+import Button from '../shared/button'
 
 interface MobileNavbarProps {
   logoText: SettingsPayload['logoText'] 
@@ -56,16 +56,13 @@ export default function MobileNavbar(props: MobileNavbarProps) {
                 </Link>
               </li>
             ))}
-            <Link 
+            <Button
               href={`${navbarButtonLink}`} 
-              className='flex items-center justify-between mt-10 py-3 pl-4 pr-6 tracking-widest cursor-pointer text-xl text-white font-light rounded-lg bg-black'
+              variant="default"
+              className='text-xl py-7 px-5'
             >
               {navbarButtonText}
-              <FiArrowUpRight 
-                size={24}
-                className='ml-8'
-              />
-            </Link>
+            </Button>
           </ul>
         </nav>
       )}

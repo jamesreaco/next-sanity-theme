@@ -1,41 +1,45 @@
 import Link from 'next/link'
-import { twMerge } from 'tailwind-merge'
+import { cn } from '@/lib/utils'
+import { cva, VariantProps } from 'class-variance-authority'
 import { FiArrowUpRight } from 'react-icons/fi'
 
-interface ButtonProps {
-  text: string
-  destination: string
-  variant?: string
-  classNames?: string
-  iconClassNames?: string
-}
+const buttonVariants = cva(
+  'flex items-center justify-between text-sm md:text-base tracking-wide cursor-pointer group transition hover:scale-[0.98]',
+  {
+    variants: {
+      variant: {
+        default:
+          'bg-zinc-950 text-zinc-100 hover:bg-zinc-900',
+        outline:
+          'border hover:border-zinc-300',
+        },
+      size: {
+        default: 'h-12 px-4 md:px-5 rounded-lg',
+        large: 'h-14 px-6 rounded-lg',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
+    },
+  }
+)
+
+interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement>, VariantProps<typeof buttonVariants> {}
 
 export default function Button(props: ButtonProps) {
 
-  const { 
-    text, 
-    destination, 
-    variant, 
-    classNames, 
-    iconClassNames 
-  } = props
+  const { href, variant, size, className, children } = props
 
   return (
     <Link 
-      href={`${destination}`} 
-      className={twMerge(`flex items-center justify-between py-2 md:py-3 px-4 md:px-5 pr-3 md:pr-5 text-base md:text-lg tracking-widest rounded-lg transition hover:scale-[0.98] cursor-pointer group ${classNames}`)}
-      style={{ 
-        backgroundColor: variant === 'dark' ? `#000` : `#f6f6f2`,
-        color: variant === 'dark' ? `#fff` : `#000`,
-      }}
+      href={`${href}`} 
+      className={cn(buttonVariants({ variant, size, className }))}
     >
-      {text}
+      {children}
       <FiArrowUpRight 
         size={20}
-        className={twMerge(`ml-8 md:ml-6 transition group-hover:rotate-45 ${iconClassNames}`)}
-        style={{
-          color: variant === 'dark' ? `#fff` : `#000`,
-        }}
+        className="ml-8 md:ml-6 transition group-hover:rotate-45"
       />
     </Link>
   )

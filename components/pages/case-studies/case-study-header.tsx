@@ -21,12 +21,13 @@ export default function CaseStudyHeader({ caseStudy }: CaseStudyHeaderProps) {
               {caseStudy.shortDescription}
             </p>
           </div>
-          <Button 
-            text="View Project"
-            destination={`${caseStudy.url}`}
-            variant="light"
-            classNames="mt-8 border hover:border-zinc-300"
-          />
+          <Button
+            href={`${caseStudy.url}`}
+            variant="outline"
+            size="large"
+          >
+            View Project
+          </Button>
         </div>
       </Container>
     </header>

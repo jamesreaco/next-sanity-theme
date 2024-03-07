@@ -24,11 +24,13 @@ export default function HomeHero(props: HomeHeroProps) {
           <p className='max-w-lg mt-6 md:mt-8 mb-8 md:mb-12 text-lg md:text-2xl font-light'>
             {paragraph}
           </p>
-          <Button 
-            text={btnText} 
-            destination={`${btnDestination}`} 
-            variant="dark"
-          />
+          <Button
+            href={btnDestination}
+            variant="default"
+            size="default"
+          >
+            {btnText}
+          </Button>
         </div>
         <Image 
           src={image}

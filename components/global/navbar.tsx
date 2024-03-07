@@ -37,11 +37,13 @@ export default function Navbar(props: NavbarProps) {
            </li>
           ))}
           <li>
-            <Button 
-              text={navbarButtonText} 
-              destination={`${navbarButtonLink}`} 
-              variant="dark"
-            />
+            <Button
+              href={navbarButtonLink}
+              variant="default"
+              size="default"
+            >
+              {navbarButtonText}
+            </Button>
           </li>
         </ul>
       </nav>
