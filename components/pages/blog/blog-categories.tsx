@@ -1,4 +1,5 @@
 "use client"
+import { cn } from '@/lib/utils'
 import { PostCategory } from '@/types'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -15,10 +16,9 @@ export default function BlogCategories({ categories }: BlogCategoriesProps) {
     <div className='mt-2 lg:mt-0 flex flex-wrap gap-3'>
       <Link
         href="/blog"
-        className='px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300'
-        style={{
-          backgroundColor: pathname === '/blog' ? '#fff' : '#F6F6F1',
-        }}
+        className={cn('px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300 bg-[#F6F6F1]', {
+          'bg-white': pathname === '/blog'
+        })}
       >
         All Posts
       </Link>
@@ -26,10 +26,9 @@ export default function BlogCategories({ categories }: BlogCategoriesProps) {
         <Link
           key={category.slug}
           href={`/blog/category/${category.slug}`}
-          className='px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300'
-          style={{
-            backgroundColor: pathname === `/blog/category/${category.slug}` ? '#fff' : '#F6F6F1',
-          }}
+          className={cn('px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300 bg-[#F6F6F1]', {
+            'bg-white': pathname === `/blog/category/${category.slug}`
+          })}
         >
           {category.title}
         </Link>

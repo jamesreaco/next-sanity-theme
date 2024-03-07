@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import { SettingsPayload } from '@/types';
 import { useState, FormEvent } from 'react'
 import { TbMail } from "react-icons/tb";
@@ -74,10 +75,9 @@ export default function SubscribeForm(props: SubscribeFormProps) {
         </button>
       </form>
       <p 
-      className='mt-2 text-center font-medium antialiased text-sm'
-        style={{
-          color: error ? '#ff3535' : '#0E788A'
-        }}
+        className={cn('mt-2 text-center font-medium antialiased text-sm text-[#0E788A]', {
+          'text-[#ff3535]': error
+        })}
       >
         {message}
       </p>

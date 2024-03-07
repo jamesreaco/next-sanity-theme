@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import Container from '../global/container'
+import { cn } from '@/lib/utils';
 
 interface HeaderProps {
   children?: ReactNode
@@ -15,10 +16,9 @@ export default function Header(props: HeaderProps) {
     <header className='pt-8 md:pt-10'>
       <Container>
         <h1 
-          className='-ml-1 text-3xl md:text-5xl font-light leading-none'
-          style={{
-            textAlign: centerText ? 'center' : 'left'
-          }}
+          className={cn('-ml-1 text-3xl md:text-5xl font-light leading-none text-left', {
+            'text-center': centerText
+          })}
         >
           {heading}
         </h1>
