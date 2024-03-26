@@ -5,77 +5,49 @@ import SubscribeForm from './subscribe-form'
 import { SettingsPayload } from '@/types'
 
 interface FooterProps {
-  logoText: SettingsPayload['logoText'] 
-  footerTagline: SettingsPayload['footerTagline'],
-  enableSubscribeForm: SettingsPayload['enableSubscribeForm'],
-  subscribeFormTitle: SettingsPayload['subscribeFormTitle'],
-  subscribeFormPlaceholder: SettingsPayload['subscribeFormPlaceholder'],
-  footerCopyright: SettingsPayload['footerCopyright'],
-  enableFootnote: SettingsPayload['enableFootnote'],
-  footerFootnoteText: SettingsPayload['footerFootnoteText'],
-  enableFootnoteLink: SettingsPayload['enableFootnoteLink'],
-  footerFootnoteLinkText: SettingsPayload['footerFootnoteLinkText'],
-  footerFootnoteLink: SettingsPayload['footerFootnoteLink'],
-  footerQuickLinks: SettingsPayload['footerQuickLinks'],
-  footerSocialLinks: SettingsPayload['footerSocialLinks'],
-  footerLegalLinks: SettingsPayload['footerLegalLinks'],
+  settings: SettingsPayload
 }
 
 export default function Footer(props: FooterProps) {
 
-  const {
-    logoText,
-    footerTagline,
-    enableSubscribeForm,
-    subscribeFormTitle,
-    subscribeFormPlaceholder,
-    footerCopyright,
-    enableFootnote,
-    footerFootnoteText,
-    enableFootnoteLink,
-    footerFootnoteLinkText,
-    footerFootnoteLink,
-    footerQuickLinks,
-    footerSocialLinks,
-    footerLegalLinks
-  } = props
+  const { settings } = props
 
   return (
     <footer className='bg-white border-t'>
       <div className='max-w-8xl mx-auto p-12 pb-28 md:pb-4 lg:pb-6 px-6 md:px-12'>
         <div className='flex flex-col md:flex-row'>
           <div className='w-full md:w-fit mr-auto pb-8 md:pb-0 border-b md:border-b-0 border-gray-100'>
-            <Logo text={logoText} />
+            <Logo text={settings.logoText} />
             <p className='mt-4'>
-              {footerTagline}
+              {settings.footerTagline}
             </p>
-            {enableSubscribeForm && (
+            {settings.enableSubscribeForm && (
               <SubscribeForm 
-                title={subscribeFormTitle} 
-                placeholder={subscribeFormPlaceholder}
+                title={settings.subscribeFormTitle} 
+                placeholder={settings.subscribeFormPlaceholder}
               />
             )}
           </div>
           <div className='mt-10 md:mt-0 pb-6 md:pb-0 grid grid-cols-2 gap-24 border-b md:border-b-0 border-gray-100'>
-            <QuickLinks footerQuickLinks={footerQuickLinks} />
-            <SocialLinks footerSocialLinks={footerSocialLinks} />
+            <QuickLinks footerQuickLinks={settings.footerQuickLinks} />
+            <SocialLinks footerSocialLinks={settings.footerSocialLinks} />
           </div>
         </div>
         <div className='mt-10 md:mt-24 flex flex-col md:flex-row justify-between'>
           <div className='flex flex-col md:flex-row'>
             <p className='font-light text-sm'>
-              {footerCopyright}
+              {settings.footerCopyright}
             </p>
-            {enableFootnote && (
+            {settings.enableFootnote && (
               <Footnote 
-                footerFootnoteText={footerFootnoteText}
-                enableFootnoteLink={enableFootnoteLink}
-                footerFootnoteLink={footerFootnoteLink}
-                footerFootnoteLinkText={footerFootnoteLinkText}
+                footerFootnoteText={settings.footerFootnoteText}
+                enableFootnoteLink={settings.enableFootnoteLink}
+                footerFootnoteLink={settings.footerFootnoteLink}
+                footerFootnoteLinkText={settings.footerFootnoteLinkText}
               />
             )}
           </div>
-          <LegalLinks footerLegalLinks={footerLegalLinks}/>
+          <LegalLinks footerLegalLinks={settings.footerLegalLinks}/>
         </div>
       </div>
     </footer>

@@ -18,45 +18,14 @@ export default function Layout(props: LayoutProps) {
   return (
     <>
       {settings.enableBottomBar && (
-        <BottomBar 
-          bottomBarMessage={settings.bottomBarMessage} 
-          enableBottomBarLink={settings.enableBottomBarLink}
-          bottomBarLinkUrl={settings.bottomBarLinkUrl} 
-          bottomBarLinkText={settings.bottomBarLinkText}
-          bottomBarLinkColor={settings.bottomBarLinkColor}
-        />
+        <BottomBar settings={settings} />
       )}
-      <Navbar
-        logoText={settings.logoText}
-        navbarButtonText={settings.navbarButtonText} 
-        navbarButtonLink={settings.navbarButtonLink}
-        navbarMenuItems={settings.navbarMenuItems}
-      />
-      <MobileNavbar
-        logoText={settings.logoText}
-        navbarButtonText={settings.navbarButtonText} 
-        navbarButtonLink={settings.navbarButtonLink}
-        navbarMenuItems={settings.navbarMenuItems}
-      />
+      <Navbar settings={settings} />
+      <MobileNavbar settings={settings} />
       <main>
         {children}
       </main>
-      <Footer 
-        logoText={settings.logoText}
-        footerTagline={settings.footerTagline}
-        enableSubscribeForm={settings.enableSubscribeForm}
-        subscribeFormTitle={settings.subscribeFormTitle}
-        subscribeFormPlaceholder={settings.subscribeFormPlaceholder}
-        footerQuickLinks={settings.footerQuickLinks}
-        footerSocialLinks={settings.footerSocialLinks}
-        footerCopyright={settings.footerCopyright}
-        footerLegalLinks={settings.footerLegalLinks}
-        enableFootnote={settings.enableFootnote}
-        enableFootnoteLink={settings.enableFootnoteLink}
-        footerFootnoteText={settings.footerFootnoteText}
-        footerFootnoteLinkText={settings.footerFootnoteLinkText}
-        footerFootnoteLink={settings.footerFootnoteLink}
-      />
+      <Footer settings={settings} />
     </>
   )
 }

@@ -8,27 +8,18 @@ import { SettingsPayload } from '@/types'
 import Button from '../shared/button'
 
 interface MobileNavbarProps {
-  logoText: SettingsPayload['logoText'] 
-  navbarButtonText: SettingsPayload['navbarButtonText']  
-  navbarButtonLink: SettingsPayload['navbarButtonLink']   
-  navbarMenuItems: SettingsPayload['navbarMenuItems']  
+  settings: SettingsPayload
 }
 
 export default function MobileNavbar(props: MobileNavbarProps) {
 
-  const { 
-    logoText, 
-    navbarButtonText, 
-    navbarButtonLink, 
-    navbarMenuItems 
-  } = props
-  
+  const { settings } = props
   const [showMenu, setShowMenu] = useState(false)
 
   return (
     <header className='sticky top-0 md:hidden my-0 py-4 px-6 md:px-12 border-b bg-[#F6F6F1] bg-opacity-90 z-50 backdrop-blur-sm'>
       <div className='flex items-center justify-between'>
-        <Logo text={logoText} />
+        <Logo text={settings.logoText} />
         <button 
           aria-label='Navigation Menu'
           onClick={() => setShowMenu(!showMenu)}
@@ -46,7 +37,7 @@ export default function MobileNavbar(props: MobileNavbarProps) {
             onClick={() => setShowMenu(false)}
             className='flex-col items-center list-none h-[100%] w-[100%]'
           >
-            {navbarMenuItems.map(item => (
+            {settings.navbarMenuItems.map(item => (
               <li key={item.title} className='mb-8'>
                 <Link 
                   href={`${item.link}`}
@@ -57,11 +48,11 @@ export default function MobileNavbar(props: MobileNavbarProps) {
               </li>
             ))}
             <Button
-              href={`${navbarButtonLink}`} 
+              href={`${settings.navbarButtonLink}`} 
               variant="default"
               className='text-xl py-7 px-5'
             >
-              {navbarButtonText}
+              {settings.navbarButtonText}
             </Button>
           </ul>
         </nav>
