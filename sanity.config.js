@@ -4,19 +4,16 @@ import { visionTool } from '@sanity/vision'
 import { schemaTypes } from '@/sanity/schemas';
 import { structure } from './sanity/config/sanity.structure';
 import { defaultDocumentNode } from './sanity/config/sanity.structure';
-
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
-const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION
+import { apiVersion, dataset, projectId, studioUrl, useCdn } from './sanity/config/sanity.api';
 
 const title = 'Next.js, Sanity & Tailwind Theme'
 
 const config = defineConfig({
-  projectId: projectId,
-  dataset: dataset,
   title: title,
+  dataset: dataset,
+  basePath: studioUrl,
+  projectId: projectId,
   apiVersion: apiVersion,
-  basePath: '/studio',
   plugins: [
     structureTool({
       structure,
@@ -27,7 +24,7 @@ const config = defineConfig({
   schema: { 
     types: schemaTypes 
   },
-  useCdn: false
+  useCdn: useCdn
 })
 
 export default config
