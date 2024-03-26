@@ -32,31 +32,43 @@ export default function MobileNavbar(props: MobileNavbarProps) {
         </button>
       </div>
       {showMenu && (
-        <nav className='z-10 absolute top-16 bottom-0 left-0 h-[100vh] w-[100vw] pt-8 px-6 bg-[#F6F6F1] bg-opacity-[98%] backdrop-blur-sm'>
-          <ul 
-            onClick={() => setShowMenu(false)}
-            className='flex-col items-center list-none h-[100%] w-[100%]'
-          >
-            {settings.navbarMenuItems.map(item => (
-              <li key={item.title} className='mb-8'>
-                <Link 
-                  href={`${item.link}`}
-                  className='text-2xl tracking-wider'
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-            <Button
-              href={`${settings.navbarButtonLink}`} 
-              variant="default"
-              className='text-xl py-7 px-5'
-            >
-              {settings.navbarButtonText}
-            </Button>
-          </ul>
-        </nav>
+        <Menu 
+          settings={settings} 
+          setShowMenu={setShowMenu} 
+        />
       )}
     </header>
+  )
+}
+
+function Menu({ settings, setShowMenu }: {
+  settings: SettingsPayload
+  setShowMenu: (value: boolean) => void
+}) {
+  return (
+    <nav className='z-10 absolute top-16 bottom-0 left-0 h-[100vh] w-[100vw] pt-8 px-6 bg-[#F6F6F1] bg-opacity-[98%] backdrop-blur-sm'>
+      <ul 
+        onClick={() => setShowMenu(false)}
+        className='flex-col items-center list-none h-[100%] w-[100%]'
+      >
+        {settings.navbarMenuItems.map(item => (
+          <li key={item.title} className='mb-8'>
+            <Link 
+              href={`${item.link}`}
+              className='text-2xl tracking-wider'
+            >
+              {item.title}
+            </Link>
+          </li>
+        ))}
+        <Button
+          href={`${settings.navbarButtonLink}`} 
+          variant="default"
+          className='text-xl py-7 px-5'
+        >
+          {settings.navbarButtonText}
+        </Button>
+      </ul>
+    </nav>
   )
 }
