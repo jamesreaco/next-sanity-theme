@@ -1,12 +1,7 @@
+import { PostAuthor } from '@/types'
 import Image from 'next/image'
 
-interface PostAuthorProps {
-  name: string
-  description: string
-  image: string
-}
-
-export default function PostAuthor(props: PostAuthorProps) {
+export default function PostAuthor(props: PostAuthor) {
 
   const { name, description, image } = props
 
