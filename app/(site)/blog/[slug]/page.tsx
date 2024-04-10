@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { draftMode } from "next/headers";
 import { client } from '@/sanity/config/sanity.client';
 import { getPostBySlug } from '@/sanity/lib/sanity.fetch'
@@ -14,7 +15,7 @@ interface PostPageProps {
   params: { slug: string }
 }
 
-export async function generateMetadata({ params }: PostPageProps) {
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
 
   const post = await getPostBySlug(params.slug)
 

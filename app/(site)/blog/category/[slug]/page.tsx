@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { 
   getAllPostCategories, 
   getAllPostsByCategory, 
@@ -13,7 +14,7 @@ interface BlogCategorySlugPageProps {
   params: { slug: string }
 }
 
-export async function generateMetadata({ params }: BlogCategorySlugPageProps) {
+export async function generateMetadata({ params }: BlogCategorySlugPageProps): Promise<Metadata> {
 
   const category = await getPostCategoryBySlug(params.slug)
 

@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { 
   getAllPostCategories, 
   getAllPosts, 
@@ -11,7 +12,7 @@ import BlogArchiveHeader from '@/components/pages/blog/blog-archive-header'
 
 export const dynamic = 'force-dynamic'
 
-export async function generateMetadata() {
+export async function generateMetadata(): Promise<Metadata> {
 
   const page = await getBlogPage()
 

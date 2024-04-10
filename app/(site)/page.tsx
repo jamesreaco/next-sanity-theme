@@ -1,4 +1,6 @@
+import { Metadata } from "next";
 import { draftMode } from "next/headers";
+
 import { 
   getHomePage, 
   getLatestCaseStudies, 
@@ -14,9 +16,10 @@ import HomeLatestPosts from '@/components/pages/home/home-latest-posts'
 import PreviewProvider from "@/components/preview/preview-provider"
 import HomePreview from "@/components/preview/home-preview"
 
+
 export const dynamic = 'force-dynamic'
 
-export async function generateMetadata() {
+export async function generateMetadata(): Promise<Metadata> {
 
   const page = await getHomePage()
 

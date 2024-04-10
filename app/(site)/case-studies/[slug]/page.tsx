@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { draftMode } from "next/headers";
 import { client } from '@/sanity/config/sanity.client';
 import { getCaseStudyBySlug } from '@/sanity/lib/sanity.fetch'
@@ -14,7 +15,7 @@ interface CaseStudyPageProps {
   params: { slug: string }
 }
 
-export async function generateMetadata({ params }: CaseStudyPageProps) {
+export async function generateMetadata({ params }: CaseStudyPageProps): Promise<Metadata> {
 
   const caseStudy = await getCaseStudyBySlug(params.slug)
 
