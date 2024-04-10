@@ -1,8 +1,8 @@
-import { type NextRequest } from "next/server";
+import { NextRequest } from "next/server";
 
-export async function POST(req: NextRequest) {
+export async function POST(request: NextRequest) {
 
-  const body = await req.json()
+  const body = await request.json()
   const email: string = body.email
   
   const apiKey = process.env.CONVERT_KIT_API_KEY
