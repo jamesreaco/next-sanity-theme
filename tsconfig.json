@@ -24,6 +24,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/pages/blog/post.tsx", "components/pages/blog/post-content.tsx", "components/preview/home-preview.tsx", "app/(site)/blog/category/[slug]/page.tsx", "app/(site)/api/sendgrid/route.ts", "components/pages/contact/contact-form.5sx", "sanity/config/sanity.structure.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/pages/blog/post.tsx", "components/pages/blog/post-content.tsx", "components/preview/home-preview.tsx", "app/(site)/blog/category/[slug]/page.tsx", "app/(site)/api/sendgrid/route.ts", "components/pages/contact/contact-form.5sx", "sanity/config/sanity.structure.ts", "sanity.config.js"],
   "exclude": ["node_modules"]
 }

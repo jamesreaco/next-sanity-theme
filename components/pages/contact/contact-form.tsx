@@ -46,7 +46,7 @@ export default function ContactForm() {
     setErrors({ ...tempErrors })
     return isValid
   }
-
+  
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault()
 
@@ -67,26 +67,22 @@ export default function ContactForm() {
         method: "POST",
       });
 
-      const { error } = await res.json()
-      
-      if (error) {
-        
+      const response = await res.json()
+
+      if (response.status === 400) {
         setShowSuccessMessage(false)
         setShowFailureMessage(true)
         setButtonText("Send")
-
         setName("")
         setEmail("")
         setMessage("")
         setSubject("")
-
         return
       }
-      
+
       setShowSuccessMessage(true)
       setShowFailureMessage(false)
       setButtonText("Send")
-      
       setName("")
       setEmail("")
       setMessage("")
