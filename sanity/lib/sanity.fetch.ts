@@ -24,9 +24,11 @@ import {
 
 import { 
   BlogPagePayload, 
+  CaseStudy, 
   CaseStudyPagePayload, 
   ContactPagePayload, 
   HomePagePayload, 
+  Post, 
   PrivacyPagePayload, 
   SettingsPayload, 
   TermsPagePayload 
@@ -102,21 +104,25 @@ export async function getTermsPage() {
 }
 
 export async function getAllPosts() {
-  return client.fetch(
-    allPostsQuery
-  )
+  return sanityFetch<Post[]>({
+    query: allPostsQuery,
+    tags: ['post']
+  })
 }
 
 export async function getLatestPosts() {
-  return client.fetch(
-    latestPostsQuery
-  )
+  return sanityFetch<Post[]>({
+    query: latestPostsQuery,
+    tags: ['post']
+  })
 }
 
 export async function getPostBySlug(slug: string) {
-  return client.fetch(
-    postBySlugQuery, { slug: slug }
-  )
+  return sanityFetch<Post>({
+    query: postBySlugQuery,
+    tags: [`post:${slug}`],
+    params: { slug },
+  })
 }
 
 export async function getAllPostsByCategory(slug: string) {
@@ -138,19 +144,23 @@ export async function getPostCategoryBySlug(slug: string) {
 }
 
 export async function getLatestCaseStudies() {
-  return client.fetch(
-    latestCaseStudiesQuery
-  )
+  return sanityFetch<CaseStudy[]>({
+    query: latestCaseStudiesQuery,
+    tags: ['caseStudy']
+  })
 }
 
 export async function getAllCaseStudies() {
-  return client.fetch(
-    allCaseStudiesQuery
-  )
+  return sanityFetch<CaseStudy[]>({
+    query: allCaseStudiesQuery,
+    tags: ['caseStudy']
+  })
 }
 
 export async function getCaseStudyBySlug(slug: string) {
-  return client.fetch(
-    caseStudyBySlugQuery, { slug: slug }
-  )
+  return sanityFetch<CaseStudy>({
+    query: caseStudyBySlugQuery,
+    tags: [`caseStudy:${slug}`],
+    params: { slug },
+  })
 }

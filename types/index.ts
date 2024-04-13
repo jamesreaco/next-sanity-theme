@@ -21,6 +21,9 @@ export type Post = {
   content: PortableTextBlock
   category: PostCategory
   relatedPosts: Post[]
+  metaTitle: string
+  metaDescription: string
+  metaKeywords: string
 }
 
 export type CaseStudyGalleryImage = {
@@ -37,6 +40,9 @@ export type CaseStudy = {
   url: string
   overview: PortableTextBlock
   imageGallery: CaseStudyGalleryImage[]
+  metaTitle: string
+  metaDescription: string
+  metaKeywords: string
 }
 
 export interface SettingsPayload {

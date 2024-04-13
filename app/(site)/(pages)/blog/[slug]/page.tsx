@@ -9,8 +9,6 @@ import Post from '@/components/pages/blog/post';
 import PostPreview from "@/components/preview/post-preview";
 import PreviewProvider from "@/components/preview/preview-provider";
 
-export const dynamic = 'force-dynamic'
-
 interface PostPageProps {
   params: { slug: string }
 }

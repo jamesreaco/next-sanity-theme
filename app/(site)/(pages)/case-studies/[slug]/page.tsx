@@ -9,8 +9,6 @@ import CaseStudy from '@/components/pages/case-studies/case-study'
 import CaseStudyPreview from '@/components/preview/case-study-preview';
 import PreviewProvider from "@/components/preview/preview-provider";
 
-export const dynamic = 'force-dynamic'
-
 interface CaseStudyPageProps {
   params: { slug: string }
 }
