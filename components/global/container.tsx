@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/cn'
 import { cva, VariantProps } from 'class-variance-authority'
 
 const containerVariants = cva(

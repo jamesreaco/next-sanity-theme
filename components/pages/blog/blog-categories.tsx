@@ -1,5 +1,5 @@
 "use client"
-import { cn } from '@/lib/utils'
+import { cn } from '@/utils/cn'
 import { PostCategory } from '@/types'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

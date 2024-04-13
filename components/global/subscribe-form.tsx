@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/cn'
 import { SettingsPayload } from '@/types';
 import { useState, FormEvent } from 'react'
 import { TbMail } from "react-icons/tb";

@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import Container from '../global/container'
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/cn'
 
 interface HeaderProps {
   children?: ReactNode

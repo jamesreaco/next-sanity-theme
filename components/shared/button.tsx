@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { cn } from '@/lib/utils'
+import { cn } from '@/utils/cn'
 import { cva, VariantProps } from 'class-variance-authority'
 import { FiArrowUpRight } from 'react-icons/fi'
 
