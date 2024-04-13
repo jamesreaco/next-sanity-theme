@@ -1,4 +1,6 @@
 import '../globals.css'
+import { Metadata } from 'next';
+import { site } from '@/constants/config';
 import React, { ReactNode } from 'react';
 import { getSettings } from '@/sanity/lib/sanity.fetch'
 import Layout from '@/components/global/layout';
@@ -6,10 +8,34 @@ import Layout from '@/components/global/layout';
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Next.js, Sanity & Tailwind Theme',
-  description: 'Open Source Next.js, Sanity & Tailwind starter theme built by James Rea.',
-}
+export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  title: site.title,
+  description: site.description,
+  robots: { index: true, follow: true },
+  openGraph: {
+    url: site.url,
+    title: site.title,
+    description: site.description,
+    siteName: site.title,
+    images: [`${site.url}/images/og.png`],
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: site.title,
+    description: site.description,
+    images: [`${site.url}/images/og.png`],
+    creator: site.authorUsername,
+  },
+  authors: [
+    {
+      name: site.authorName,
+      url: site.authorWebsite,
+    },
+  ],
+};
 
 interface RootLayoutProps {
   children: ReactNode
