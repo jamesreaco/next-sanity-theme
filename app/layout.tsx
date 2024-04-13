@@ -1,4 +1,4 @@
-import '../globals.css'
+import './globals.css'
 import { Metadata } from 'next';
 import { defaultMetadata } from '@/utils/default-metadata';
 import React, { ReactNode } from 'react';
