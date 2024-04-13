@@ -1,4 +1,7 @@
 import { groq } from "next-sanity";
+import { client } from "../config/sanity.client";
+import { Post } from "@/types";
+import { readToken } from "../config/sanity.api";
 
 export const homePageQuery = groq`*[_type == 'homePage'][0]{
   _id,
@@ -53,7 +56,7 @@ export const termsPageQuery = groq`*[_type == 'termsPage'][0]{
   metaDescription,
   metaKeywords,
 }`
-  
+
 export const allPostsQuery = groq`*[_type == 'post'] | order(_createdAt desc) {
   _id,
   title,
@@ -182,7 +185,7 @@ export const caseStudyBySlugQuery = groq`*[_type == 'caseStudy' && slug.current 
 export const caseStudyPathsQuery = groq`*[_type == "caseStudy" && defined(slug.current)][]{
   'params': { 'slug': slug.current }
 }`;
-  
+
 export const settingsQuery = groq`*[_type == 'settings' && _id == 'settings'][0]{
   _id,
   logoText,

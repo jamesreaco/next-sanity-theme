@@ -1,13 +1,12 @@
 import { Metadata } from "next";
 import { draftMode } from "next/headers";
-import { client } from '@/sanity/config/sanity.client';
 import { getPostBySlug } from '@/sanity/lib/sanity.fetch'
-import { postPathsQuery } from '@/sanity/lib/sanity.queries';
+import PreviewProvider from "@/components/preview/preview-provider";
 
 // components
 import Post from '@/components/pages/blog/post';
 import PostPreview from "@/components/preview/post-preview";
-import PreviewProvider from "@/components/preview/preview-provider";
+import { generateStaticSlugs } from "@/utils/generate-static-slugs";
 
 interface PostPageProps {
   params: { slug: string }
@@ -25,14 +24,12 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 }
 
 export async function generateStaticParams() {
-  const posts = await client.fetch(postPathsQuery);
-  return posts;
+  return generateStaticSlugs('post');
 }
 
 export default async function PostPage({ params }: PostPageProps) {
 
   const post = await getPostBySlug(params.slug)
-
   const isDraftMode = draftMode().isEnabled;
 
   if (isDraftMode && process.env.SANITY_API_READ_TOKEN) {
