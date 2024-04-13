@@ -16,13 +16,10 @@ import HomeLatestPosts from '@/components/pages/home/home-latest-posts'
 import PreviewProvider from "@/components/preview/preview-provider"
 import HomePreview from "@/components/preview/home-preview"
 
-
-export const dynamic = 'force-dynamic'
-
 export async function generateMetadata(): Promise<Metadata> {
 
   const page = await getHomePage()
-
+  
   return {
     title: page.metaTitle,
     description: page.metaDescription,

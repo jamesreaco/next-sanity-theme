@@ -80,3 +80,15 @@ export interface SettingsPayload {
   footerFootnoteLinkText: string
   footerFootnoteLink: string
 }
+
+export type HomePagePayload = {
+  _id: string
+  heading: string
+  paragraph: string
+  image: string
+  btnText: string
+  btnDestination: string
+  metaTitle: string
+  metaDescription: string
+  metaKeywords: string
+}

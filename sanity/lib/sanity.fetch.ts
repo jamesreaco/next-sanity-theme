@@ -1,3 +1,6 @@
+import 'server-only'
+
+import type { QueryParams } from '@sanity/client'
 import { client } from "../config/sanity.client";
 
 import { 
@@ -18,17 +21,40 @@ import {
   settingsQuery, 
   termsPageQuery
 } from "./sanity.queries";
+import { HomePagePayload, SettingsPayload } from '@/types';
+
+const DEFAULT_PARAMS = {} as QueryParams
+const DEFAULT_TAGS = [] as string[]
+
+export async function sanityFetch<QueryResponse>({ 
+  query, 
+  params = DEFAULT_PARAMS, 
+  tags = DEFAULT_TAGS 
+}: {
+  query: string
+  params?: QueryParams
+  tags: string[]
+}): Promise<QueryResponse> {
+  return client.fetch<QueryResponse>(query, params, {
+      cache: 'no-store',
+      next: {
+        tags
+      }
+  })
+}
 
 export async function getSettings() {
-  return client.fetch(
-    settingsQuery
-  )
+  return sanityFetch<SettingsPayload>({
+    query: settingsQuery,
+    tags: ['settings']
+  })
 }
 
 export async function getHomePage() {
-  return client.fetch(
-    homePageQuery
-  )
+  return sanityFetch<HomePagePayload>({
+    query: homePageQuery,
+    tags: ['homePage']
+  })
 }
 
 export async function getBlogPage() {

@@ -11,6 +11,8 @@ export const projectId = assertValue(
 )
 
 export const readToken = process.env.SANITY_API_READ_TOKEN || ''
+export const revalidateSecret = process.env.SANITY_REVALIDATE_SECRET
+
 export const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2023-06-21'
 
 export const studioUrl = '/studio'
