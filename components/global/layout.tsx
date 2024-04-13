@@ -17,7 +17,7 @@ export default function Layout(props: LayoutProps) {
   const { children, settings } = props
   const pathname = usePathname()
 
-  if (pathname === '/studio') {
+  if (pathname.includes('/studio')) {
     return (
       <html lang="en">
         <body>
