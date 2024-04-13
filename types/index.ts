@@ -92,3 +92,45 @@ export type HomePagePayload = {
   metaDescription: string
   metaKeywords: string
 }
+
+export type BlogPagePayload = {
+  _id: string
+  heading: string
+  metaTitle: string
+  metaDescription: string
+  metaKeywords: string
+}
+
+export type CaseStudyPagePayload = {
+  _id: string
+  heading: string
+  metaTitle: string
+  metaDescription: string
+  metaKeywords: string
+}
+
+export type TermsPagePayload = {
+  _id: string
+  heading: string
+  content: PortableTextBlock
+  metaTitle: string
+  metaDescription: string
+  metaKeywords: string
+}
+
+export type PrivacyPagePayload = {
+  _id: string
+  heading: string
+  content: PortableTextBlock
+  metaTitle: string
+  metaDescription: string
+  metaKeywords: string
+}
+
+export type ContactPagePayload = {
+  _id: string
+  heading: string
+  metaTitle: string
+  metaDescription: string
+  metaKeywords: string
+}

@@ -21,7 +21,16 @@ import {
   settingsQuery, 
   termsPageQuery
 } from "./sanity.queries";
-import { HomePagePayload, SettingsPayload } from '@/types';
+
+import { 
+  BlogPagePayload, 
+  CaseStudyPagePayload, 
+  ContactPagePayload, 
+  HomePagePayload, 
+  PrivacyPagePayload, 
+  SettingsPayload, 
+  TermsPagePayload 
+} from '@/types';
 
 const DEFAULT_PARAMS = {} as QueryParams
 const DEFAULT_TAGS = [] as string[]
@@ -58,33 +67,38 @@ export async function getHomePage() {
 }
 
 export async function getBlogPage() {
-  return client.fetch(
-    blogPageQuery
-  )
+  return sanityFetch<BlogPagePayload>({
+    query: blogPageQuery,
+    tags: ['blogPage']
+  })
 }
 
 export async function getCaseStudyPage() {
-  return client.fetch(
-    caseStudyPageQuery
-  )
+  return sanityFetch<CaseStudyPagePayload>({
+    query: caseStudyPageQuery,
+    tags: ['caseStudyPage']
+  })
 }
 
 export async function getContactPage() {
-  return client.fetch(
-    contactPageQuery
-  )
+  return sanityFetch<ContactPagePayload>({
+    query: contactPageQuery,
+    tags: ['contactPage']
+  })
 }
 
 export async function getPrivacyPage() {
-  return client.fetch(
-    privacyPageQuery
-  )
+  return sanityFetch<PrivacyPagePayload>({
+    query: privacyPageQuery,
+    tags: ['privacyPage']
+  })
 }
 
 export async function getTermsPage() {
-  return client.fetch(
-    termsPageQuery
-  )
+  return sanityFetch<TermsPagePayload>({
+    query: termsPageQuery,
+    tags: ['termsPage']
+  })
 }
 
 export async function getAllPosts() {

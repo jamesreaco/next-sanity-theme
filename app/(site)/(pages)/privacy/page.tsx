@@ -4,8 +4,6 @@ import Container from '@/components/global/container'
 import Content from '@/components/shared/content'
 import Header from '@/components/shared/header'
 
-export const dynamic = 'force-dynamic'
-
 export async function generateMetadata(): Promise<Metadata> {
 
   const page = await getPrivacyPage()

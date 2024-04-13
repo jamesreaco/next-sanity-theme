@@ -5,8 +5,6 @@ import { getAllCaseStudies, getCaseStudyPage } from '@/sanity/lib/sanity.fetch'
 import CaseStudyArchive from '@/components/pages/case-studies/case-study-archive'
 import Header from '@/components/shared/header'
 
-export const dynamic = 'force-dynamic'
-
 export async function generateMetadata(): Promise<Metadata> {
 
   const page = await getCaseStudyPage()
