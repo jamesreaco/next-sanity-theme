@@ -5,8 +5,6 @@ import Header from '@/components/shared/header'
 import { FiChevronRight } from 'react-icons/fi'
 import { PostCategory } from '@/types'
 
-export const dynamic = 'force-dynamic'
-
 export const metadata = {
   title: 'Categories | Blog',
   description: 'Browse articles by category.',

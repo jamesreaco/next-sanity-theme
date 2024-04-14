@@ -29,6 +29,7 @@ import {
   ContactPagePayload, 
   HomePagePayload, 
   Post, 
+  PostCategory, 
   PrivacyPagePayload, 
   SettingsPayload, 
   TermsPagePayload 
@@ -120,21 +121,26 @@ export async function getPostBySlug(slug: string) {
 }
 
 export async function getAllPostsByCategory(slug: string) {
-  return client.fetch(
-    postsByCategoryQuery, { slug: slug }
-  )
+  return sanityFetch<Post[]>({
+    query: postsByCategoryQuery,
+    params: { slug: slug },
+    tags: ['post'],
+  })
 }
 
 export async function getAllPostCategories() {
-  return client.fetch(
-    allPostCategoriesQuery
-  )
+  return sanityFetch<PostCategory[]>({
+    query: allPostCategoriesQuery,
+    tags: ['postCategory'],
+  })
 }
 
 export async function getPostCategoryBySlug(slug: string) {
-  return client.fetch(
-    postCategoryBySlugQuery, { slug: slug }
-  )
+  return sanityFetch<Post>({
+    query: postCategoryBySlugQuery,
+    params: { slug: slug },
+    tags: ['post'],
+  })
 }
 
 export async function getLatestCaseStudies() {

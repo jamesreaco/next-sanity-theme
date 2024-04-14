@@ -8,8 +8,6 @@ import PostArchive from '@/components/pages/blog/post-archive'
 import BlogCategories from '@/components/pages/blog/blog-categories'
 import BlogArchiveHeader from '@/components/pages/blog/blog-archive-header'
 
-export const dynamic = 'force-dynamic'
-
 interface BlogCategorySlugPageProps {
   params: { slug: string }
 }
