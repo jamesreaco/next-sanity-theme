@@ -1,4 +1,4 @@
-import { PostAuthor } from '@/types'
+import { type PostAuthor } from '@/types'
 import Image from 'next/image'
 
 export default function PostAuthor(props: PostAuthor) {

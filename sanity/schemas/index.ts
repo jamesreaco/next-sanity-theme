@@ -32,8 +32,8 @@ const pagesSchema = [
 ]
 
 // post builder schema
-import postQuoteBlock from "./objects/post-builder/post-quote-block";
-import postImageBlock from "./objects/post-builder/post-image-block";
+import postQuoteBlock from "./objects/portable-text/post-quote-block";
+import postImageBlock from "./objects/portable-text/post-image-block";
 
 const postBuilderSchema = [
   postImageBlock,

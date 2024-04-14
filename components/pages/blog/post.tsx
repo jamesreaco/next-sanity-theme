@@ -1,5 +1,5 @@
 "use client"
-import { Post } from '@/types';
+import { type Post } from '@/types';
 import PostContent from './post-content';
 import PostHeader from '@/components/pages/blog/post-header';
 import PostAuthor from '@/components/pages/blog/post-author';

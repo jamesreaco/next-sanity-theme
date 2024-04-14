@@ -1,7 +1,6 @@
-import Container from '@/components/global/container'
-import { CaseStudy } from '@/types'
 import Image from 'next/image'
-import React from 'react'
+import { CaseStudy } from '@/types'
+import Container from '@/components/global/container'
 
 interface CaseStudyImageGalleryProps {
   caseStudy: CaseStudy

@@ -13,11 +13,13 @@ export async function POST(req: NextRequest) {
     }>(req, revalidateSecret)
 
     if (!isValidSignature) {
-      return new Response("Invalid Signature", { status: 401 });
+      const message = "Invalid Signature"
+      return new Response(message, { status: 401 });
     }
 
     if (!body?._type) {
-      return new Response('Bad Request', { status: 400 })
+      const message = "Bad Request"
+      return new Response(message, { status: 400 })
     }
 
     revalidateTag(body._type)
@@ -30,7 +32,6 @@ export async function POST(req: NextRequest) {
     })
 
   } catch (err: any) {
-    console.error(err)
     return new Response(err.message, { status: 500 })
   }
 }
