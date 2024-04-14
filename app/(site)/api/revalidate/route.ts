@@ -23,7 +23,8 @@ export async function POST(req: NextRequest) {
     revalidateTag(body._type)
 
     if (body.slug) {
-      revalidateTag(`${body._type}:${body.slug}`)
+      revalidatePath(`/(pages)/blog/${body.slug}`, 'page')
+      // revalidateTag(`${body._type}:${body.slug}`)
     }
 
     return NextResponse.json({

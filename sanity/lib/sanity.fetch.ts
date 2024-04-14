@@ -119,8 +119,8 @@ export async function getLatestPosts() {
 export async function getPostBySlug(slug: string) {
   return sanityFetch<Post>({
     query: postBySlugQuery,
-    tags: [`post:${slug}`],
     params: { slug },
+    tags: [`post:${slug}`],
   })
 }
 
