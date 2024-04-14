@@ -12,8 +12,6 @@ interface PostPageProps {
   params: { slug: string }
 }
 
-export const revalidate = 30;
-
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
 
   const post = await getPostBySlug(params.slug)

@@ -12,8 +12,6 @@ interface CaseStudyPageProps {
   params: { slug: string }
 }
 
-export const revalidate = 30;
-
 export async function generateMetadata({ params }: CaseStudyPageProps): Promise<Metadata> {
 
   const caseStudy = await getCaseStudyBySlug(params.slug)
