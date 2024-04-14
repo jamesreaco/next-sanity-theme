@@ -119,7 +119,7 @@ export async function getLatestPosts() {
 export async function getPostBySlug(slug: string) {
   return sanityFetch<Post>({
     query: postBySlugQuery,
-    params: { slug },
+    params: { slug: slug },
     tags: [`post:${slug}`],
   })
 }
@@ -159,7 +159,7 @@ export async function getAllCaseStudies() {
 export async function getCaseStudyBySlug(slug: string) {
   return sanityFetch<CaseStudy>({
     query: caseStudyBySlugQuery,
+    params: { slug: slug },
     tags: [`caseStudy:${slug}`],
-    params: { slug },
   })
 }

@@ -8,7 +8,8 @@ export async function POST(req: NextRequest) {
   try {
 
     const { body, isValidSignature } = await parseBody<{ 
-      _type: string, slug?: string | undefined 
+      _type: string, 
+      slug?: string | undefined 
     }>(req, revalidateSecret)
 
     if (!isValidSignature) {
