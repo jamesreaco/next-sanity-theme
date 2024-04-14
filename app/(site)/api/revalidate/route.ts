@@ -3,6 +3,8 @@ import { parseBody } from 'next-sanity/webhook'
 import { type NextRequest, NextResponse } from 'next/server'
 import { revalidateSecret } from '@/sanity/config/sanity.api'
 
+export const revalidate = true
+
 export async function POST(req: NextRequest) {
   try {
     const { body, isValidSignature } = await parseBody<{ 
