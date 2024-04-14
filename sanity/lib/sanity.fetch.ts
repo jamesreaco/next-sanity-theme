@@ -34,22 +34,18 @@ import {
   TermsPagePayload 
 } from '@/types';
 
-const DEFAULT_PARAMS = {} as QueryParams
-const DEFAULT_TAGS = [] as string[]
-
 export async function sanityFetch<QueryResponse>({ 
   query, 
-  params = DEFAULT_PARAMS, 
-  tags = DEFAULT_TAGS 
+  params = {} as QueryParams, 
+  tags = [] as string[]
 }: {
   query: string
   params?: QueryParams
   tags: string[]
 }): Promise<QueryResponse> {
   return client.fetch<QueryResponse>(query, params, {
-    next: {
-      tags
-    }
+    cache: "force-cache",
+    next: { tags }
   })
 }
 
@@ -120,7 +116,7 @@ export async function getPostBySlug(slug: string) {
   return sanityFetch<Post>({
     query: postBySlugQuery,
     params: { slug: slug },
-    tags: [`post:${slug}`],
+    tags: ['post'],
   })
 }
 
@@ -160,6 +156,6 @@ export async function getCaseStudyBySlug(slug: string) {
   return sanityFetch<CaseStudy>({
     query: caseStudyBySlugQuery,
     params: { slug: slug },
-    tags: [`caseStudy:${slug}`],
+    tags: ['caseStudy'],
   })
 }
