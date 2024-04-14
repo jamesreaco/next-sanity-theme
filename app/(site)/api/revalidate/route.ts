@@ -1,4 +1,4 @@
-import { revalidatePath, revalidateTag } from 'next/cache'
+import { revalidateTag } from 'next/cache'
 import { parseBody } from 'next-sanity/webhook'
 import { type NextRequest, NextResponse } from 'next/server'
 import { revalidateSecret } from '@/sanity/config/sanity.api'
