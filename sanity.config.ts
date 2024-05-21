@@ -2,8 +2,8 @@ import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from '@/sanity/schemas';
-import { structure } from './sanity/config/sanity.structure';
-import { defaultDocumentNode } from './sanity/config/sanity.structure';
+import { structure } from './sanity/config/structure';
+import {defaultDocumentNode} from '@/sanity/config/structure/default-document-node';
 import { apiVersion, dataset, projectId, studioUrl, useCdn } from './sanity/config/sanity.api';
 
 const title = 'Next.js, Sanity & Tailwind Theme'
