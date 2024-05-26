@@ -1,9 +1,10 @@
 import './globals.css'
 import { Metadata } from 'next';
-import { defaultMetadata } from '@/utils/default-metadata';
 import React, { ReactNode } from 'react';
 import { getSettings } from '@/sanity/lib/sanity.fetch'
-import Layout from '@/components/global/layout';
+import { defaultMetadata } from '@/utils/default-metadata';
+import ClientLayout from '@/components/global/client-layout';
+
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,9 +21,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <Layout settings={settings}>
+        <ClientLayout settings={settings}>
           {children}
-        </Layout>
+        </ClientLayout>
       </body>
     </html>
   )

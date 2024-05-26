@@ -1,31 +1,32 @@
 import Image from 'next/image'
 import { CaseStudy } from '@/types'
+import Grid from '@/components/shared/ui/grid'
+import Section from '@/components/shared/ui/section'
 import Container from '@/components/global/container'
 
-interface CaseStudyImageGalleryProps {
+export default function CaseStudyImageGallery({ caseStudy }: {
   caseStudy: CaseStudy
-}
-
-export default function CaseStudyImageGallery({ caseStudy }: CaseStudyImageGalleryProps) {
+}) {
 
   const { imageGallery: images } = caseStudy
 
   return (
-    <section className='my-16 md:my-32'>
+    <Section className='my-16 md:my-32'>
       <Container>
-        <div className='max-w-4xl mx-auto grid grid-cols-2 gap-5 md:gap-16'>
+        <Grid className='grid-cols-2 gap-5 md:gap-16 max-w-4xl mx-auto'>
           {images.map((image) => (
-            <Image 
-              key={image.url}
-              src={image.url}
-              width={800}
-              height={800}
-              alt={image.alt}
-              className='w-full rounded-xl'
-            />
+            <li key={image.url}>
+              <Image 
+                src={image.url}
+                width={800}
+                height={800}
+                alt={image.alt}
+                className='w-full rounded-xl'
+              />
+            </li>
           ))}
-        </div>
+        </Grid>
       </Container>
-    </section>
+    </Section>
   )
 }

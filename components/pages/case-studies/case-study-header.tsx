@@ -1,35 +1,58 @@
 import { CaseStudy } from '@/types'
 import Tag from '@/components/shared/tag'
+import Flex from '@/components/shared/ui/flex'
 import Button from '@/components/shared/button'
+import Header from '@/components/shared/ui/header'
 import Container from '@/components/global/container'
 
-interface CaseStudyHeaderProps {
+export default function CaseStudyHeader({ caseStudy }: {
   caseStudy: CaseStudy
-}
+}) {
 
-export default function CaseStudyHeader({ caseStudy }: CaseStudyHeaderProps) {
+  const { title, shortDescription, url } = caseStudy
+
   return (
-    <header className='mt-20 mb-20 -ml-1'>
+    <Header className='mt-20 mb-20 -ml-1'>
       <Container>
-        <div className='w-full flex flex-col md:flex-row items-start md:items-end justify-between'>
-          <div className='flex flex-col items-start'>
+        <Flex className='flex-col md:flex-row items-start md:items-end justify-between w-full'>
+          <Flex className='flex-col items-start'>
             <Tag text="Case Study" />
-            <h1 className='mt-8 text-4xl md:text-7xl font-light'>
-              {caseStudy.title}
-            </h1>
-            <p className='md:max-w-md mt-6 leading-7'>
-              {caseStudy.shortDescription}
-            </p>
-          </div>
+            <Title>
+              {title}
+            </Title>
+            <Description>
+              {shortDescription}
+            </Description>
+          </Flex>
           <Button
-            href={`${caseStudy.url}`}
+            href={`${url}`}
             variant="outline"
             size="large"
           >
             View Project
           </Button>
-        </div>
+        </Flex>
       </Container>
-    </header>
+    </Header>
+  )
+}
+
+function Title({ children }: {
+  children: React.ReactNode
+}) {
+  return (
+    <h1 className='mt-8 text-4xl md:text-7xl font-light'>
+      {children}
+    </h1>
+  )
+}
+
+function Description({ children }: {
+  children: React.ReactNode
+}) {
+  return (
+    <p className='md:max-w-md mt-6 leading-7'>
+      {children}
+    </p>
   )
 }

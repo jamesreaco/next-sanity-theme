@@ -140,3 +140,11 @@ export type ContactPagePayload = {
   metaDescription: string
   metaKeywords: string
 }
+
+export type Quote = {
+  quote: string
+  author: string
+  bgColor: string
+  iconColor: string 
+  textColor: string
+}

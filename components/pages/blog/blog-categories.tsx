@@ -1,38 +1,39 @@
 "use client"
+import Link from 'next/link'
 import { cn } from '@/utils/cn'
 import { PostCategory } from '@/types'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-interface BlogCategoriesProps {
+export default function BlogCategories({ categories }: {
   categories: PostCategory[]
-}
-
-export default function BlogCategories({ categories }: BlogCategoriesProps) {
+}) {
 
   const pathname = usePathname()
 
   return (
-    <div className='mt-2 lg:mt-0 flex flex-wrap gap-3'>
-      <Link
-        href="/blog"
-        className={cn('px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300 bg-[#F6F6F1]', {
-          'bg-white': pathname === '/blog'
-        })}
-      >
-        All Posts
-      </Link>
-      {categories.map((category) => (
+    <ul className='flex flex-wrap gap-3 mt-2 lg:mt-0'>
+      <li>
         <Link
-          key={category.slug}
-          href={`/blog/category/${category.slug}`}
+          href="/blog"
           className={cn('px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300 bg-[#F6F6F1]', {
-            'bg-white': pathname === `/blog/category/${category.slug}`
+            'bg-white': pathname === '/blog'
           })}
         >
-          {category.title}
+          All Posts
         </Link>
+      </li>
+      {categories.map((category) => (
+        <li key={category.slug}>
+          <Link
+            href={`/blog/category/${category.slug}`}
+            className={cn('px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300 bg-[#F6F6F1]', {
+              'bg-white': pathname === `/blog/category/${category.slug}`
+            })}
+          >
+            {category.title}
+          </Link>
+        </li>
       ))}
-    </div> 
+    </ul> 
   )
 }

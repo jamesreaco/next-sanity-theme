@@ -1,18 +1,11 @@
+import { Quote } from '@/types'
 import { FaQuoteLeft } from 'react-icons/fa'
+import Box from '@/components/shared/ui/box'
+import Flex from '@/components/shared/ui/flex'
 
-type Quote = {
-  quote: string
-  author: string
-  bgColor: string
-  iconColor: string 
-  textColor: string
-}
-
-interface PostQuoteBlockProps {
+export default function PostQuoteBlock({ data }: {
   data: Quote
-}
-
-export default function PostQuoteBlock({ data }: PostQuoteBlockProps) {
+}) {
 
   const { 
     quote,
@@ -23,27 +16,27 @@ export default function PostQuoteBlock({ data }: PostQuoteBlockProps) {
   } = data
 
   return (
-    <div className='my-10 block mx-auto w-full'>
-      <div className='flex flex-col justify-center items-center p-12 border bg-grey-200 rounded-xl' style={{
+    <Box className='my-10 block mx-auto w-full'>
+      <Flex className='flex-col justify-center items-center p-12 border bg-grey-200 rounded-xl' style={{
         backgroundColor: `#${bgColor}`
       }}>
-        <div>
+        <Box>
           <FaQuoteLeft 
             size={20} 
             color={`#${iconColor}`}
           />
-        </div>
-        <div className='mt-3 text-xl md:text-2xl text-center' style={{
+        </Box>
+        <Box className='mt-3 text-xl md:text-2xl text-center' style={{
           color: `#${textColor}`
         }}>
           {quote}
-        </div>
-        <div className='mt-4 antialiased text-center text-white' style={{
+        </Box>
+        <Box className='mt-4 antialiased text-center text-white' style={{
           color: `#${textColor}`
         }}>
           {author}
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Flex>
+    </Box>
   )
 }

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { FiArrowUpRight } from 'react-icons/fi'
 import { CaseStudy } from '@/types'
+import { FiArrowUpRight } from 'react-icons/fi'
 
 interface CaseStudyCardProps {
   caseStudy: CaseStudy
@@ -14,7 +14,7 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
   return (
     <article 
       key={title} 
-      className='w-full relative rounded-lg cursor-pointer overflow-hidden group'
+      className='w-full h-full relative rounded-lg cursor-pointer overflow-hidden group'
     >
       <Link 
         href={`/case-studies/${slug}`}

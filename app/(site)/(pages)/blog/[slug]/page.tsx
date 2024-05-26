@@ -4,7 +4,7 @@ import { getPostBySlug } from '@/sanity/lib/sanity.fetch'
 import PreviewProvider from "@/components/preview/preview-provider";
 
 // components
-import Post from '@/components/pages/blog/post';
+import Post from '@/components/pages/post';
 import PostPreview from "@/components/preview/post-preview";
 import { generateStaticSlugs } from "@/utils/generate-static-slugs";
 

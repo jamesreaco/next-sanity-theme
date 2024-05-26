@@ -1,13 +1,13 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import Tag from './tag'
+import Box from './ui/box'
+import Link from 'next/link'
+import Flex from './ui/flex'
+import Image from 'next/image'
 import { Post } from '@/types'
 
-interface BlogCardProps {
+export default function BlogCard({ post }: {
   post: Post
-}
-
-export default function BlogCard({ post }: BlogCardProps) {
+}) {
 
   const { 
     slug, 
@@ -31,16 +31,26 @@ export default function BlogCard({ post }: BlogCardProps) {
           className='w-full h-auto bg-black rounded-lg md:group-hover:scale-[1.01] transition'
           alt={`${title} Thumbnail Image`}
         />
-        <div className='mt-5 flex items-center'>
+        <Flex className='items-center mt-5'>
           <Tag text={category.title} />
-          <div className='ml-3 text-gray-500 text-sm md:text-base font-light tracking-wide antialiased'>
+          <Box className='ml-3 text-gray-500 text-sm md:text-base font-light tracking-wide antialiased'>
             {readTime} Minute Read
-          </div>
-        </div>
-        <h3 className='mt-3 text-xl md:text-2xl pr-12 font-normal md:group-hover:underline underline-offset-4 decoration-2'>
+          </Box>
+        </Flex>
+        <Title>
           {title}
-        </h3>
+        </Title>
       </Link>
     </article>
+  )
+}
+
+function Title({ children }: {
+  children: React.ReactNode
+}) {
+  return (
+    <h3 className='mt-3 text-xl md:text-2xl pr-12 font-normal md:group-hover:underline underline-offset-4 decoration-2'>
+      {children}
+    </h3>
   )
 }

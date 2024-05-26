@@ -12,7 +12,7 @@ interface LayoutProps {
   settings: SettingsPayload
 }
 
-export default function Layout(props: LayoutProps) {
+export default function ClientLayout(props: LayoutProps) {
 
   const { children, settings } = props
   const pathname = usePathname()

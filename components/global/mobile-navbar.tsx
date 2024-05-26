@@ -1,11 +1,12 @@
 "use client"
 import Link from 'next/link'
 import { useState } from 'react'
-import { HiMenuAlt4 } from 'react-icons/hi'
-import { IoClose } from 'react-icons/io5'
-import Logo from '@/components/shared/logo'
-import { SettingsPayload } from '@/types'
+import Flex from '../shared/ui/flex'
 import Button from '../shared/button'
+import { IoClose } from 'react-icons/io5'
+import { SettingsPayload } from '@/types'
+import { HiMenuAlt4 } from 'react-icons/hi'
+import Logo from '@/components/shared/logo'
 
 interface MobileNavbarProps {
   settings: SettingsPayload
@@ -17,8 +18,8 @@ export default function MobileNavbar(props: MobileNavbarProps) {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
-    <header className='sticky top-0 md:hidden my-0 py-4 px-6 md:px-12 border-b bg-[#F6F6F1] bg-opacity-90 z-50 backdrop-blur-sm'>
-      <div className='flex items-center justify-between'>
+    <header className='sticky top-0 md:hidden py-4 px-6 md:px-12 border-b z-50 backdrop-blur-sm bg-[#F6F6F1]/90'>
+      <Flex className='items-center justify-between'>
         <Logo text={settings.logoText} />
         <button 
           aria-label='Navigation Menu'
@@ -30,7 +31,7 @@ export default function MobileNavbar(props: MobileNavbarProps) {
             <HiMenuAlt4 size={30} />
           }
         </button>
-      </div>
+      </Flex>
       {showMenu && (
         <Menu 
           settings={settings} 
