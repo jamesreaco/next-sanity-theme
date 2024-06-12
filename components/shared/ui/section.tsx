@@ -7,8 +7,8 @@ export default function Section(props: SectionProps) {
   const { className, children } = props
 
   return (
-    <div className={cn(className)}>
+    <section className={cn(className)}>
       {children}
-    </div>
+    </section>
   )
 }

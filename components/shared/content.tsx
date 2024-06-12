@@ -57,7 +57,7 @@ const components: PortableTextComponents = {
 
 export default function Content({ data }: ContentProps) {
   return (
-    <div className={styles.content}>
+    <div className='prose'>
       <PortableText 
         value={data} 
         components={components}
