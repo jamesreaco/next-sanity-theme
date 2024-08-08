@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import Header from '@/components/shared/ui/header';
 import Container from '@/components/global/container';
 
 export default function BlogArchiveHeader({ children, heading }: {
@@ -7,14 +6,14 @@ export default function BlogArchiveHeader({ children, heading }: {
   heading: string
 }) { 
   return (
-    <Header className='pt-8 md:pt-10'>
+    <header className='pt-8 md:pt-10'>
       <Container className="flex flex-col lg:flex-row lg:items-center justify-between">
         <Heading>
           {heading}
         </Heading>
         {children}
       </Container>
-    </Header>
+    </header>
   )
 }
 

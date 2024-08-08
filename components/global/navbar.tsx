@@ -1,24 +1,30 @@
 import Link from 'next/link'
-import { SettingsPayload } from '@/types'
+import { cn } from '@/utils/cn'
+import { Settings } from '@/types/settings'
 import Logo from '@/components/shared/logo'
 import Button from '@/components/shared/button'
 
 interface NavbarProps {
-  settings: SettingsPayload
+  settings: Settings
 }
 
-export default function Navbar(props: NavbarProps) {
+export default function Navbar({ settings }: NavbarProps) {
   
-  const { settings } = props
+  const { logoText, navbarMenuItems, navbarButtonLink, navbarButtonText} = settings
 
   return (
     <header 
-      className='z-50 hidden sticky top-0 md:flex backdrop-blur-sm items-center justify-between max-w-8xl mx-auto my-0 py-6 px-6 md:px-12 rounded-bl-xl rounded-br-xl border-b border-b-[#efeff1] bg-[#F6F6F1] bg-opacity-80'
+      className={cn(
+        'sticky top-0 max-w-8xl mx-auto my-0 py-6 px-6 md:px-12 z-50',
+        'hidden md:flex items-center justify-between',
+        'rounded-bl-xl rounded-br-xl border-b border-b-[#efeff1]',
+        'backdrop-blur-sm bg-[#F6F6F1] bg-opacity-80'
+      )}
     >
-      <Logo text={settings.logoText} />
+      <Logo text={logoText} />
       <nav>
         <ul className='hidden md:flex gap-12 items-center list-none'>
-          {settings.navbarMenuItems.map(item => (
+          {navbarMenuItems.map(item => (
             <li key={item._id}>
               <Link 
                 href={`${item.link}`}
@@ -30,11 +36,11 @@ export default function Navbar(props: NavbarProps) {
           ))}
           <li>
             <Button
-              href={settings.navbarButtonLink}
+              href={navbarButtonLink}
               variant="default"
               size="default"
             >
-              {settings.navbarButtonText}
+              {navbarButtonText}
             </Button>
           </li>
         </ul>

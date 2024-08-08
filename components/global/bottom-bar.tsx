@@ -1,26 +1,25 @@
-import Flex from "../shared/ui/flex"
-import { SettingsPayload } from "@/types"
+import { Settings } from "@/types/settings"
 
 interface BottomBarProps {
-  settings: SettingsPayload
+  settings: Settings
 }
 
-export default function BottomBar(props: BottomBarProps) {
+export default function BottomBar({ settings }: BottomBarProps) {
 
-  const { settings } = props
+  const { bottomBarMessage, enableBottomBarLink, bottomBarLinkText } = settings
 
   return (
     <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] md:w-fit z-20">
-      <Flex className='flex-row items-center justify-between md:justify-center p-2 pl-4 border rounded-lg bg-[#F6F6F1]'>
+      <div className='flex flex-row items-center justify-between md:justify-center p-2 pl-4 border rounded-lg bg-[#F6F6F1]'>
         <Message>
-          {settings.bottomBarMessage}
+          {bottomBarMessage}
         </Message>
-        {settings.enableBottomBarLink && (
+        {enableBottomBarLink && (
           <Link settings={settings}>
-            {settings.bottomBarLinkText}
+            {bottomBarLinkText}
           </Link>
         )}
-      </Flex>
+      </div>
     </div>
   )
 }
@@ -36,16 +35,19 @@ function Message({ children }: {
 }
 
 function Link({ children, settings }: {
-  settings: SettingsPayload,
+  settings: Settings,
   children: React.ReactNode
 }) {
+
+  const { bottomBarLinkUrl, bottomBarLinkColor } = settings
+
   return (
     <a 
-      href={`${settings.bottomBarLinkUrl}`} 
+      href={`${bottomBarLinkUrl}`} 
       target='_blank'
       rel="noopener noreferrer"
       className='ml-3 py-0.5 px-2.5 text-3.5 text-white rounded transition hover:scale-[0.98]'
-      style={{ backgroundColor: settings.bottomBarLinkColor }}
+      style={{ backgroundColor: bottomBarLinkColor }}
     >
      {children}
     </a>

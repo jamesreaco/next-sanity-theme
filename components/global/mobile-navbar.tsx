@@ -1,26 +1,26 @@
 "use client"
 import Link from 'next/link'
+import { cn } from '@/utils/cn'
 import { useState } from 'react'
-import Flex from '../shared/ui/flex'
 import Button from '../shared/button'
 import { IoClose } from 'react-icons/io5'
-import { SettingsPayload } from '@/types'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import Logo from '@/components/shared/logo'
+import { Settings } from '@/types/settings'
 
 interface MobileNavbarProps {
-  settings: SettingsPayload
+  settings: Settings
 }
 
-export default function MobileNavbar(props: MobileNavbarProps) {
+export default function MobileNavbar({ settings }: MobileNavbarProps) {
 
-  const { settings } = props
-  const [showMenu, setShowMenu] = useState(false)
+  const { logoText } = settings
+  const [showMenu, setShowMenu] = useState<boolean>(false)
 
   return (
     <header className='sticky top-0 md:hidden py-4 px-6 md:px-12 border-b z-50 backdrop-blur-sm bg-[#F6F6F1]/90'>
-      <Flex className='items-center justify-between'>
-        <Logo text={settings.logoText} />
+      <div className='flex items-center justify-between'>
+        <Logo text={logoText} />
         <button 
           aria-label='Navigation Menu'
           onClick={() => setShowMenu(!showMenu)}
@@ -31,7 +31,7 @@ export default function MobileNavbar(props: MobileNavbarProps) {
             <HiMenuAlt4 size={30} />
           }
         </button>
-      </Flex>
+      </div>
       {showMenu && (
         <Menu 
           settings={settings} 
@@ -43,16 +43,24 @@ export default function MobileNavbar(props: MobileNavbarProps) {
 }
 
 function Menu({ settings, setShowMenu }: {
-  settings: SettingsPayload
+  settings: Settings
   setShowMenu: (value: boolean) => void
 }) {
+
+  const { navbarMenuItems, navbarButtonLink, navbarButtonText } = settings
+
   return (
-    <nav className='z-10 absolute top-16 bottom-0 left-0 h-[100vh] w-[100vw] pt-8 px-6 bg-[#F6F6F1] bg-opacity-[98%] backdrop-blur-sm'>
+    <nav 
+      className={cn(
+        'absolute top-16 bottom-0 left-0 h-[100vh] w-[100vw] pt-8 px-6 z-10',
+        'backdrop-blur-sm bg-[#F6F6F1] bg-opacity-[98%]'
+      )}
+    >
       <ul 
         onClick={() => setShowMenu(false)}
         className='flex-col items-center list-none h-[100%] w-[100%]'
       >
-        {settings.navbarMenuItems.map(item => (
+        {navbarMenuItems.map(item => (
           <li key={item.title} className='mb-8'>
             <Link 
               href={`${item.link}`}
@@ -63,11 +71,11 @@ function Menu({ settings, setShowMenu }: {
           </li>
         ))}
         <Button
-          href={`${settings.navbarButtonLink}`} 
           variant="default"
+          href={`${navbarButtonLink}`} 
           className='text-xl py-7 px-5'
         >
-          {settings.navbarButtonText}
+          {navbarButtonText}
         </Button>
       </ul>
     </nav>

@@ -1,30 +1,36 @@
 "use client"
 import Link from 'next/link'
+import { Settings } from '@/types/settings'
 import Logo from '@/components/shared/logo'
 import SubscribeForm from './subscribe-form'
-import { SettingsPayload } from '@/types'
 
 interface FooterProps {
-  settings: SettingsPayload
+  settings: Settings
 }
 
-export default function Footer(props: FooterProps) {
+export default function Footer({ settings }: FooterProps) {
 
-  const { settings } = props
+  const { 
+    logoText, 
+    footerTagline, 
+    enableSubscribeForm, 
+    subscribeFormTitle, 
+    subscribeFormPlaceholder 
+  } = settings
 
   return (
     <footer className='bg-white border-t'>
       <div className='max-w-8xl mx-auto p-12 pb-28 md:pb-4 lg:pb-6 px-6 md:px-12'>
         <div className='flex flex-col md:flex-row'>
           <div className='w-full md:w-fit mr-auto pb-8 md:pb-0 border-b md:border-b-0 border-gray-100'>
-            <Logo text={settings.logoText} />
+            <Logo text={logoText} />
             <p className='mt-4'>
-              {settings.footerTagline}
+              {footerTagline}
             </p>
-            {settings.enableSubscribeForm && (
+            {enableSubscribeForm && (
               <SubscribeForm 
-                title={settings.subscribeFormTitle} 
-                placeholder={settings.subscribeFormPlaceholder}
+                title={subscribeFormTitle} 
+                placeholder={subscribeFormPlaceholder}
               />
             )}
           </div>
@@ -55,7 +61,7 @@ export default function Footer(props: FooterProps) {
 }
 
 interface QuickLinksProps {
-  footerQuickLinks: SettingsPayload['footerQuickLinks']
+  footerQuickLinks: Settings['footerQuickLinks']
 }
 
 function QuickLinks({ footerQuickLinks }: QuickLinksProps) {
@@ -66,7 +72,10 @@ function QuickLinks({ footerQuickLinks }: QuickLinksProps) {
       </h5>
       <ul>
         {footerQuickLinks?.map((item) => (
-          <li key={item._id} className='mb-4 hover:underline underline-offset-2'>
+          <li 
+            key={item._id} 
+            className='mb-4 hover:underline underline-offset-2'
+          >
             <Link href={`${item.link}`}>
               {item.title}
             </Link>
@@ -78,7 +87,7 @@ function QuickLinks({ footerQuickLinks }: QuickLinksProps) {
 }
 
 interface SocialLinksProps {
-  footerSocialLinks: SettingsPayload['footerSocialLinks']
+  footerSocialLinks: Settings['footerSocialLinks']
 }
 
 function SocialLinks({ footerSocialLinks }: SocialLinksProps) {
@@ -89,7 +98,10 @@ function SocialLinks({ footerSocialLinks }: SocialLinksProps) {
       </h5>
       <ul>
         {footerSocialLinks?.map((item) => (
-          <li key={item._id} className='mb-4 hover:underline underline-offset-2'>
+          <li 
+            key={item._id} 
+            className='mb-4 hover:underline underline-offset-2'
+          >
             <Link href={`${item.link}`}>
               {item.title}
             </Link>
@@ -101,10 +113,10 @@ function SocialLinks({ footerSocialLinks }: SocialLinksProps) {
 }
 
 interface FootnoteProps {
-  footerFootnoteText: SettingsPayload['footerFootnoteText']
-  enableFootnoteLink: SettingsPayload['enableFootnoteLink']
-  footerFootnoteLink: SettingsPayload['footerFootnoteLink']
-  footerFootnoteLinkText: SettingsPayload['footerFootnoteLinkText']
+  footerFootnoteText: Settings['footerFootnoteText']
+  enableFootnoteLink: Settings['enableFootnoteLink']
+  footerFootnoteLink: Settings['footerFootnoteLink']
+  footerFootnoteLinkText: Settings['footerFootnoteLinkText']
 }
 
 function Footnote(props: FootnoteProps) {
@@ -135,14 +147,17 @@ function Footnote(props: FootnoteProps) {
 }
 
 interface LegalLinksProps {
-  footerLegalLinks: SettingsPayload['footerLegalLinks']
+  footerLegalLinks: Settings['footerLegalLinks']
 }
 
 function LegalLinks({ footerLegalLinks }: LegalLinksProps) {
   return (
     <div className='mt-2 md:mt-0 flex items-center gap-1'>
       {footerLegalLinks?.map((link) => (
-        <div key={link._id} className='flex items-center gap-1 group'>
+        <div 
+          key={link._id} 
+          className='flex items-center gap-1 group'
+        >
           <Link 
             href={link.link}
             className='mt-1 md:mt-0 text-sm hover:underline underline-offset-2'

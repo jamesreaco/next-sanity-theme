@@ -1,9 +1,9 @@
-import { getAllPostCategories } from '@/sanity/lib/sanity.fetch'
 import Link from 'next/link'
-import Container from '@/components/global/container'
+import { PostCategory } from '@/types/post'
 import Header from '@/components/shared/header'
 import { FiChevronRight } from 'react-icons/fi'
-import { PostCategory } from '@/types'
+import Container from '@/components/global/container'
+import { getAllPostCategories } from '@/sanity/lib/sanity.fetch'
 
 export const metadata = {
   title: 'Categories | Blog',

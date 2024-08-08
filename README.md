@@ -1,8 +1,6 @@
 ## Introduction
 
-[Next.js](https://nextjs.org/) + [Sanity](https://sanity.io/) portfolio and blog theme. 
-
-Recently migrated to the Next.js App Router and TypeScript 🥳.
+[Next.js](https://nextjs.org/) (App Router) + [Sanity](https://sanity.io/) template. 
 
 View a full working demo by visiting [nextsanity.com](https://nextsanity.com)
 

@@ -1,11 +1,10 @@
 import { cn } from '@/utils/cn'
-import { SettingsPayload } from '@/types';
 import { useState, FormEvent } from 'react'
 import { TbMail } from "react-icons/tb";
 
 interface SubscribeFormProps {
-  title: SettingsPayload['subscribeFormTitle']
-  placeholder: SettingsPayload['subscribeFormPlaceholder']
+  title: string
+  placeholder: string
 }
 
 export default function SubscribeForm(props: SubscribeFormProps) {

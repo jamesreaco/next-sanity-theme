@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { cn } from '@/utils/cn'
-import { PostCategory } from '@/types'
+import { PostCategory } from '@/types/post'
 import { usePathname } from 'next/navigation'
 
 export default function BlogCategories({ categories }: {
@@ -15,7 +15,7 @@ export default function BlogCategories({ categories }: {
       <li>
         <Link
           href="/blog"
-          className={cn('px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300 bg-[#F6F6F1]', {
+          className={cn('px-2.5 md:py-1 transition border rounded-md hover:border-zinc-300 bg-[#F6F6F1]', {
             'bg-white': pathname === '/blog'
           })}
         >
@@ -26,7 +26,7 @@ export default function BlogCategories({ categories }: {
         <li key={category.slug}>
           <Link
             href={`/blog/category/${category.slug}`}
-            className={cn('px-2.5 md:py-1 border rounded-md transition hover:border-zinc-300 bg-[#F6F6F1]', {
+            className={cn('px-2.5 md:py-1 transition border rounded-md hover:border-zinc-300 bg-[#F6F6F1]', {
               'bg-white': pathname === `/blog/category/${category.slug}`
             })}
           >

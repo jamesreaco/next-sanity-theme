@@ -1,7 +1,4 @@
 import { groq } from "next-sanity";
-import { client } from "../config/sanity.client";
-import { Post } from "@/types";
-import { readToken } from "../config/sanity.api";
 
 export const homePageQuery = groq`*[_type == 'homePage'][0]{
   _id,

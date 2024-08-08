@@ -1,13 +1,11 @@
 import Image from 'next/image'
 import { urlForImage } from '@/sanity/lib/sanity.image'
 
-interface PostImageBlockProps {
+export default function PostImageBlock({ data }: {
   data: string
-}
+}) {
 
-export default function PostImageBlock(props: PostImageBlockProps) {
-
-  const { data: image } = props
+  const image = data
 
   return (
     <Image

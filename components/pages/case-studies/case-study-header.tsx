@@ -1,29 +1,27 @@
-import { CaseStudy } from '@/types'
+import { CaseStudy } from '@/types/case-study'
 import Tag from '@/components/shared/tag'
-import Flex from '@/components/shared/ui/flex'
 import Button from '@/components/shared/button'
-import Header from '@/components/shared/ui/header'
 import Container from '@/components/global/container'
 
 export default function CaseStudyHeader({ caseStudy }: {
   caseStudy: CaseStudy
 }) {
 
-  const { title, shortDescription, url } = caseStudy
+  const { title, shortDescription: description, url } = caseStudy
 
   return (
-    <Header className='mt-20 mb-20 -ml-1'>
+    <header className='mt-20 mb-20 -ml-1'>
       <Container>
-        <Flex className='flex-col md:flex-row items-start md:items-end justify-between w-full'>
-          <Flex className='flex-col items-start'>
+        <div className='flex flex-col md:flex-row items-start md:items-end justify-between w-full'>
+          <div className='flex-col items-start'>
             <Tag text="Case Study" />
-            <Title>
+            <h1 className='mt-8 text-4xl md:text-7xl font-light'>
               {title}
-            </Title>
-            <Description>
-              {shortDescription}
-            </Description>
-          </Flex>
+            </h1>
+            <p className='md:max-w-md mt-6 leading-7'>
+              {description}
+            </p>
+          </div>
           <Button
             href={`${url}`}
             variant="outline"
@@ -31,28 +29,8 @@ export default function CaseStudyHeader({ caseStudy }: {
           >
             View Project
           </Button>
-        </Flex>
+        </div>
       </Container>
-    </Header>
-  )
-}
-
-function Title({ children }: {
-  children: React.ReactNode
-}) {
-  return (
-    <h1 className='mt-8 text-4xl md:text-7xl font-light'>
-      {children}
-    </h1>
-  )
-}
-
-function Description({ children }: {
-  children: React.ReactNode
-}) {
-  return (
-    <p className='md:max-w-md mt-6 leading-7'>
-      {children}
-    </p>
+    </header>
   )
 }

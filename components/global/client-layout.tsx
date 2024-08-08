@@ -1,45 +1,33 @@
 "use client"
 import React from 'react'
-import BottomBar from './bottom-bar'
 import Navbar from './navbar'
-import MobileNavbar from './mobile-navbar'
 import Footer from './footer'
-import { SettingsPayload } from '@/types'
+import BottomBar from './bottom-bar'
+import MobileNavbar from './mobile-navbar'
+import { Settings } from '@/types/settings'
 import { usePathname } from 'next/navigation'
 
-interface LayoutProps {
+export default function ClientLayout({ settings, children }: {
+  settings: Settings,
   children: React.ReactNode
-  settings: SettingsPayload
-}
+}) {
 
-export default function ClientLayout(props: LayoutProps) {
-
-  const { children, settings } = props
   const pathname = usePathname()
-
-  if (pathname.includes('/studio')) {
-    return (
-      <html lang="en">
-        <body>
-          <main>
-            {children}
-          </main>
-        </body>
-      </html>
-    )
-  }
+  if (pathname.includes('/studio')) return (children)
 
   return (
     <>
-      {settings.enableBottomBar && (
-        <BottomBar settings={settings} />
-      )}
       <Navbar settings={settings} />
       <MobileNavbar settings={settings} />
       <main>
         {children}
       </main>
       <Footer settings={settings} />
+      <>
+        {settings.enableBottomBar && (
+          <BottomBar settings={settings} />
+        )}
+      </>
     </>
   )
 }

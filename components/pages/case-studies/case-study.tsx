@@ -1,4 +1,4 @@
-import { type CaseStudy } from '@/types'
+import { type CaseStudy } from '@/types/case-study'
 import CaseStudyHeader from './case-study-header'
 import CaseStudyOverview from './case-study-overview'
 import CaseStudyImageGallery from './case-study-image-gallery'

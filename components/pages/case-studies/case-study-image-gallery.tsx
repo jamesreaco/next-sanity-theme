@@ -1,7 +1,5 @@
 import Image from 'next/image'
-import { CaseStudy } from '@/types'
-import Grid from '@/components/shared/ui/grid'
-import Section from '@/components/shared/ui/section'
+import { CaseStudy } from '@/types/case-study'
 import Container from '@/components/global/container'
 
 export default function CaseStudyImageGallery({ caseStudy }: {
@@ -11,9 +9,9 @@ export default function CaseStudyImageGallery({ caseStudy }: {
   const { imageGallery: images } = caseStudy
 
   return (
-    <Section className='my-16 md:my-32'>
+    <section className='my-16 md:my-32'>
       <Container>
-        <Grid className='grid-cols-2 gap-5 md:gap-16 max-w-4xl mx-auto'>
+        <ul className='grid grid-cols-2 gap-5 md:gap-16 max-w-4xl mx-auto'>
           {images.map((image) => (
             <li key={image.url}>
               <Image 
@@ -25,8 +23,8 @@ export default function CaseStudyImageGallery({ caseStudy }: {
               />
             </li>
           ))}
-        </Grid>
+        </ul>
       </Container>
-    </Section>
+    </section>
   )
 }

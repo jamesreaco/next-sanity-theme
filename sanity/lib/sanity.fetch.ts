@@ -1,5 +1,4 @@
 import 'server-only'
-
 import type { QueryParams } from '@sanity/client'
 import { client } from "../config/sanity.client";
 
@@ -22,18 +21,11 @@ import {
   termsPageQuery
 } from "./sanity.queries";
 
-import { 
-  BlogPagePayload, 
-  CaseStudy, 
-  CaseStudyPagePayload, 
-  ContactPagePayload, 
-  HomePagePayload, 
-  Post, 
-  PostCategory, 
-  PrivacyPagePayload, 
-  SettingsPayload, 
-  TermsPagePayload 
-} from '@/types';
+import { Settings } from '@/types/singletons/settings';
+import { Page } from '@/types/documents/page';
+import { HomePage } from '@/types/singletons/home-page';
+import { CaseStudy } from '@/types/documents/case-study';
+import { Post, PostCategory } from '@/types/documents/post';
 
 export async function sanityFetch<QueryResponse>({ 
   query, 
@@ -50,49 +42,49 @@ export async function sanityFetch<QueryResponse>({
 }
 
 export async function getSettings() {
-  return sanityFetch<SettingsPayload>({
+  return sanityFetch<Settings>({
     query: settingsQuery,
     tags: ['settings']
   })
 }
 
 export async function getHomePage() {
-  return sanityFetch<HomePagePayload>({
+  return sanityFetch<HomePage>({
     query: homePageQuery,
     tags: ['homePage']
   })
 }
 
 export async function getBlogPage() {
-  return sanityFetch<BlogPagePayload>({
+  return sanityFetch<Page>({
     query: blogPageQuery,
     tags: ['blogPage']
   })
 }
 
 export async function getCaseStudyPage() {
-  return sanityFetch<CaseStudyPagePayload>({
+  return sanityFetch<Page>({
     query: caseStudyPageQuery,
     tags: ['caseStudyPage']
   })
 }
 
 export async function getContactPage() {
-  return sanityFetch<ContactPagePayload>({
+  return sanityFetch<Page>({
     query: contactPageQuery,
     tags: ['contactPage']
   })
 }
 
 export async function getPrivacyPage() {
-  return sanityFetch<PrivacyPagePayload>({
+  return sanityFetch<Page>({
     query: privacyPageQuery,
     tags: ['privacyPage']
   })
 }
 
 export async function getTermsPage() {
-  return sanityFetch<TermsPagePayload>({
+  return sanityFetch<Page>({
     query: termsPageQuery,
     tags: ['termsPage']
   })
