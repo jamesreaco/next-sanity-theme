@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { PostCategory } from '@/types/post'
 import Header from '@/components/shared/header'
 import { FiChevronRight } from 'react-icons/fi'
+import { PostCategory } from '@/types/documents/post'
 import Container from '@/components/global/container'
-import { getAllPostCategories } from '@/sanity/lib/sanity.fetch'
+import { fetchAllPostCategories } from '@/sanity/lib/sanity.fetch'
 
 export const metadata = {
   title: 'Categories | Blog',
@@ -12,7 +12,7 @@ export const metadata = {
 
 export default async function BlogCategoryPage() {
 
-  const categories = await getAllPostCategories()
+  const categories = await fetchAllPostCategories()
 
   return (
     <> 

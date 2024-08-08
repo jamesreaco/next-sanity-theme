@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { getAllCaseStudies, getCaseStudyPage } from '@/sanity/lib/sanity.fetch'
+import { fetchAllCaseStudies, fetchCaseStudyPage } from '@/sanity/lib/sanity.fetch'
 
 //components
 import CaseStudyArchive from '@/components/pages/case-studies/case-study-archive'
@@ -7,7 +7,7 @@ import Header from '@/components/shared/header'
 
 export async function generateMetadata(): Promise<Metadata> {
 
-  const page = await getCaseStudyPage()
+  const page = await fetchCaseStudyPage()
 
   return {
     title: page.metaTitle,
@@ -18,8 +18,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function CaseStudiesPage() {
 
-  const page = await getCaseStudyPage()
-  const caseStudies = await getAllCaseStudies()
+  const page = await fetchCaseStudyPage()
+  const caseStudies = await fetchAllCaseStudies()
 
   return (
     <>

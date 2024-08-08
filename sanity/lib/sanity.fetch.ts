@@ -41,70 +41,70 @@ export async function sanityFetch<QueryResponse>({
   })
 }
 
-export async function getSettings() {
+export async function fetchSettings() {
   return sanityFetch<Settings>({
     query: settingsQuery,
     tags: ['settings']
   })
 }
 
-export async function getHomePage() {
+export async function fetchHomePage() {
   return sanityFetch<HomePage>({
     query: homePageQuery,
     tags: ['homePage']
   })
 }
 
-export async function getBlogPage() {
+export async function fetchBlogPage() {
   return sanityFetch<Page>({
     query: blogPageQuery,
     tags: ['blogPage']
   })
 }
 
-export async function getCaseStudyPage() {
+export async function fetchCaseStudyPage() {
   return sanityFetch<Page>({
     query: caseStudyPageQuery,
     tags: ['caseStudyPage']
   })
 }
 
-export async function getContactPage() {
+export async function fetchContactPage() {
   return sanityFetch<Page>({
     query: contactPageQuery,
     tags: ['contactPage']
   })
 }
 
-export async function getPrivacyPage() {
+export async function fetchPrivacyPage() {
   return sanityFetch<Page>({
     query: privacyPageQuery,
     tags: ['privacyPage']
   })
 }
 
-export async function getTermsPage() {
+export async function fetchTermsPage() {
   return sanityFetch<Page>({
     query: termsPageQuery,
     tags: ['termsPage']
   })
 }
 
-export async function getAllPosts() {
+export async function fetchAllPosts() {
   return sanityFetch<Post[]>({
     query: allPostsQuery,
     tags: ['post']
   })
 }
 
-export async function getLatestPosts() {
+export async function fetchLatestPosts() {
   return sanityFetch<Post[]>({
     query: latestPostsQuery,
     tags: ['post']
   })
 }
 
-export async function getPostBySlug(slug: string) {
+export async function fetchPostBySlug(slug: string) {
   return sanityFetch<Post>({
     query: postBySlugQuery,
     params: { slug: slug },
@@ -112,7 +112,7 @@ export async function getPostBySlug(slug: string) {
   })
 }
 
-export async function getAllPostsByCategory(slug: string) {
+export async function fetchAllPostsByCategory(slug: string) {
   return sanityFetch<Post[]>({
     query: postsByCategoryQuery,
     params: { slug: slug },
@@ -120,14 +120,14 @@ export async function getAllPostsByCategory(slug: string) {
   })
 }
 
-export async function getAllPostCategories() {
+export async function fetchAllPostCategories() {
   return sanityFetch<PostCategory[]>({
     query: allPostCategoriesQuery,
     tags: ['postCategory'],
   })
 }
 
-export async function getPostCategoryBySlug(slug: string) {
+export async function fetchPostCategoryBySlug(slug: string) {
   return sanityFetch<Post>({
     query: postCategoryBySlugQuery,
     params: { slug: slug },
@@ -135,21 +135,21 @@ export async function getPostCategoryBySlug(slug: string) {
   })
 }
 
-export async function getLatestCaseStudies() {
+export async function fetchLatestCaseStudies() {
   return sanityFetch<CaseStudy[]>({
     query: latestCaseStudiesQuery,
     tags: ['caseStudy']
   })
 }
 
-export async function getAllCaseStudies() {
+export async function fetchAllCaseStudies() {
   return sanityFetch<CaseStudy[]>({
     query: allCaseStudiesQuery,
     tags: ['caseStudy']
   })
 }
 
-export async function getCaseStudyBySlug(slug: string) {
+export async function fetchCaseStudyBySlug(slug: string) {
   return sanityFetch<CaseStudy>({
     query: caseStudyBySlugQuery,
     params: { slug: slug },

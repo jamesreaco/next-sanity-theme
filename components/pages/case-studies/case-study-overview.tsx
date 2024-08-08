@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { CaseStudy } from '@/types/case-study';
+import { CaseStudy } from '@/types/documents/case-study';
 import Content from '@/components/shared/content';
 import Container from '@/components/global/container';
 

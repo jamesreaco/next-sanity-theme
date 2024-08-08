@@ -1,4 +1,4 @@
-import { Post } from '@/types'
+import { Post } from '@/types/documents/post'
 import Container from '../../global/container'
 import BlogCard from '../../shared/blog-card'
 import Button from '../../shared/button'

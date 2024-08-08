@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
-import { getTermsPage } from '@/sanity/lib/sanity.fetch'
+import { fetchTermsPage } from '@/sanity/lib/sanity.fetch'
 import Container from '@/components/global/container'
 import Content from '@/components/shared/content'
 import Header from '@/components/shared/header'
 
 export async function generateMetadata(): Promise<Metadata> {
 
-  const page = await getTermsPage()
+  const page = await fetchTermsPage()
 
   return {
     title: page.metaTitle,
@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function TermsPage() {
 
-  const page = await getTermsPage()
+  const page = await fetchTermsPage()
   
   return (
     <>

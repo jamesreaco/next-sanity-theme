@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import { 
-  getAllPostCategories, 
-  getAllPostsByCategory, 
-  getPostCategoryBySlug 
+  fetchAllPostCategories, 
+  fetchAllPostsByCategory, 
+  fetchPostCategoryBySlug 
 } from '@/sanity/lib/sanity.fetch'
 import PostArchive from '@/components/pages/blog/post-archive'
 import BlogCategories from '@/components/pages/blog/blog-categories'
@@ -14,7 +14,7 @@ interface BlogCategorySlugPageProps {
 
 export async function generateMetadata({ params }: BlogCategorySlugPageProps): Promise<Metadata> {
 
-  const category = await getPostCategoryBySlug(params.slug)
+  const category = await fetchPostCategoryBySlug(params.slug)
 
   return {
     title: `${category.title} | Blog`,
@@ -25,9 +25,9 @@ export async function generateMetadata({ params }: BlogCategorySlugPageProps): P
 
 export default async function BlogCategorySlugPage({ params }: BlogCategorySlugPageProps) {
 
-  const categories = await getAllPostCategories()
-  const category = await getPostCategoryBySlug(params.slug)
-  const posts = await getAllPostsByCategory(params.slug)
+  const categories = await fetchAllPostCategories()
+  const category = await fetchPostCategoryBySlug(params.slug)
+  const posts = await fetchAllPostsByCategory(params.slug)
 
   return (
     <> 

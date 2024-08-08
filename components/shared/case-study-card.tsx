@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { CaseStudy } from '@/types'
+import { CaseStudy } from '@/types/documents/case-study'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 interface CaseStudyCardProps {

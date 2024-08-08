@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { draftMode } from "next/headers";
-import { getCaseStudyBySlug } from '@/sanity/lib/sanity.fetch'
+import { fetchCaseStudyBySlug } from '@/sanity/lib/sanity.fetch'
 import { generateStaticSlugs } from "@/utils/generate-static-slugs";
 
 // components
@@ -14,7 +14,7 @@ interface CaseStudyPageProps {
 
 export async function generateMetadata({ params }: CaseStudyPageProps): Promise<Metadata> {
 
-  const caseStudy = await getCaseStudyBySlug(params.slug)
+  const caseStudy = await fetchCaseStudyBySlug(params.slug)
 
   return {
     title: caseStudy.metaTitle,
@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
-  const caseStudy = await getCaseStudyBySlug(params.slug)
+  const caseStudy = await fetchCaseStudyBySlug(params.slug)
   const isDraftMode = draftMode().isEnabled;
 
   if (isDraftMode && process.env.SANITY_API_READ_TOKEN) {

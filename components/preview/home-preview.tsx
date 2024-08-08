@@ -1,5 +1,6 @@
 "use client";
-import { CaseStudy, Post } from "@/types";
+import { Post } from "@/types/documents/post";
+import { CaseStudy } from "@/types/documents/case-study";
 import { useLiveQuery } from "@sanity/preview-kit";
 
 // sanity queries

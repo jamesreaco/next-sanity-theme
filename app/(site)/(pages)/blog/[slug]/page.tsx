@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { draftMode } from "next/headers";
-import { getPostBySlug } from '@/sanity/lib/sanity.fetch'
+import { fetchPostBySlug } from '@/sanity/lib/sanity.fetch'
 import PreviewProvider from "@/components/preview/preview-provider";
 
 // components
@@ -14,7 +14,7 @@ interface PostPageProps {
 
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
 
-  const post = await getPostBySlug(params.slug)
+  const post = await fetchPostBySlug(params.slug)
 
   return {
     title: post.metaTitle,
@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 
 export default async function PostPage({ params }: PostPageProps) {
 
-  const post = await getPostBySlug(params.slug)
+  const post = await fetchPostBySlug(params.slug)
   const isDraftMode = draftMode().isEnabled;
 
   if (isDraftMode && process.env.SANITY_API_READ_TOKEN) {

@@ -6,7 +6,7 @@ import Button from '../shared/button'
 import { IoClose } from 'react-icons/io5'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import Logo from '@/components/shared/logo'
-import { Settings } from '@/types/settings'
+import { Settings } from '@/types/singletons/settings'
 
 interface MobileNavbarProps {
   settings: Settings

@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { cn } from '@/utils/cn'
-import { PostCategory } from '@/types/post'
+import { PostCategory } from '@/types/documents/post'
 import { usePathname } from 'next/navigation'
 
 export default function BlogCategories({ categories }: {

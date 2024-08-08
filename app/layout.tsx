@@ -1,7 +1,6 @@
 import './globals.css'
 import { Metadata } from 'next';
-import React, { ReactNode } from 'react';
-import { getSettings } from '@/sanity/lib/sanity.fetch'
+import { fetchSettings } from '@/sanity/lib/sanity.fetch'
 import { defaultMetadata } from '@/utils/default-metadata';
 import ClientLayout from '@/components/global/client-layout';
 
@@ -16,7 +15,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const settings = await getSettings()
+  const settings = await fetchSettings()
 
   return (
     <html lang="en">

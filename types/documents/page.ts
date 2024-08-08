@@ -6,5 +6,5 @@ export type Page = {
   metaTitle: string
   metaDescription: string
   metaKeywords: string
-  content?: PortableTextBlock
+  content: PortableTextBlock
 }

@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import { Settings } from '@/types/settings'
+import { Settings } from '@/types/singletons/settings'
 import Logo from '@/components/shared/logo'
 import SubscribeForm from './subscribe-form'
 

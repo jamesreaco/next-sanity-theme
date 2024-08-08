@@ -1,6 +1,6 @@
 "use client"
-import { type Post } from '@/types';
 import PostContent from './post-content';
+import { type Post } from '@/types/documents/post';
 import Container from '@/components/global/container';
 import PostTableOfContents from './post-table-of-contents';
 import PostHeader from '@/components/pages/post/post-header';

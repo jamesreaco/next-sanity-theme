@@ -3,11 +3,11 @@ import { Metadata } from 'next'
 import Header from '@/components/shared/header'
 import Container from '@/components/global/container'
 import ContactForm from '@/components/pages/contact/contact-form'
-import { getContactPage } from '@/sanity/lib/sanity.fetch'
+import { fetchContactPage } from '@/sanity/lib/sanity.fetch'
 
 export async function generateMetadata(): Promise<Metadata> {
 
-  const page = await getContactPage()
+  const page = await fetchContactPage()
 
   return {
     title: page.metaTitle,
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ContactPage() {
 
-  const page = await getContactPage()
+  const page = await fetchContactPage()
 
   return (
     <>

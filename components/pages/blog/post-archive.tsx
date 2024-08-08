@@ -1,5 +1,5 @@
 "use client"
-import { Post } from '@/types/post'
+import { Post } from '@/types/documents/post'
 import Button from '@/components/shared/button'
 import BlogCard from '@/components/shared/blog-card'
 import Container from '@/components/global/container'

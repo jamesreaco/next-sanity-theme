@@ -4,7 +4,7 @@ import Navbar from './navbar'
 import Footer from './footer'
 import BottomBar from './bottom-bar'
 import MobileNavbar from './mobile-navbar'
-import { Settings } from '@/types/settings'
+import { Settings } from '@/types/singletons/settings'
 import { usePathname } from 'next/navigation'
 
 export default function ClientLayout({ settings, children }: {
@@ -23,11 +23,9 @@ export default function ClientLayout({ settings, children }: {
         {children}
       </main>
       <Footer settings={settings} />
-      <>
-        {settings.enableBottomBar && (
-          <BottomBar settings={settings} />
-        )}
-      </>
+      {settings.enableBottomBar && (
+        <BottomBar settings={settings} />
+      )}
     </>
   )
 }

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { CaseStudy } from '@/types/case-study'
+import { CaseStudy } from '@/types/documents/case-study'
 import Container from '@/components/global/container'
 
 export default function CaseStudyImageGallery({ caseStudy }: {

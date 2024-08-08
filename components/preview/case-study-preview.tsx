@@ -6,7 +6,7 @@ import { caseStudyBySlugQuery } from "@/sanity/lib/sanity.queries";
 import CaseStudyHeader from "../pages/case-studies/case-study-header";
 import CaseStudyOverview from "../pages/case-studies/case-study-overview";
 import CaseStudyImageGallery from "../pages/case-studies/case-study-image-gallery";
-import { CaseStudy } from "@/types";
+import { CaseStudy } from "@/types/documents/case-study";
 
 interface CaseStudyPreviewProps {
   caseStudy: CaseStudy

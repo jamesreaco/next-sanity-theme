@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { draftMode } from "next/headers";
 
 import { 
-  getHomePage, 
-  getLatestCaseStudies, 
-  getLatestPosts 
+  fetchHomePage, 
+  fetchLatestCaseStudies, 
+  fetchLatestPosts 
 } from '@/sanity/lib/sanity.fetch'
 
 // components
@@ -18,7 +18,7 @@ import HomePreview from "@/components/preview/home-preview"
 
 export async function generateMetadata(): Promise<Metadata> {
 
-  const page = await getHomePage()
+  const page = await fetchHomePage()
   
   return {
     title: page.metaTitle,
@@ -29,9 +29,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Home() {
 
-  const pageData = await getHomePage()
-  const caseStudiesData = await getLatestCaseStudies()
-  const postsData = await getLatestPosts()
+  const pageData = await fetchHomePage()
+  const caseStudiesData = await fetchLatestCaseStudies()
+  const postsData = await fetchLatestPosts()
 
   const [ 
     page, 

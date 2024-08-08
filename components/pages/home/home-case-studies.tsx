@@ -1,5 +1,5 @@
 "use client"
-import { CaseStudy } from "@/types";
+import { CaseStudy } from "@/types/documents/case-study";
 import Container from '@/components/global/container';
 import { motion, useScroll, useTransform } from "framer-motion";
 import CaseStudyCard from '@/components/shared/case-study-card';

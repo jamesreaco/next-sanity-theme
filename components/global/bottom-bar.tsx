@@ -1,4 +1,4 @@
-import { Settings } from "@/types/settings"
+import { Settings } from "@/types/singletons/settings"
 
 interface BottomBarProps {
   settings: Settings

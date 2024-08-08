@@ -1,4 +1,4 @@
-import { CaseStudy } from '@/types/case-study'
+import { CaseStudy } from '@/types/documents/case-study'
 import Container from '@/components/global/container'
 import CaseStudyCard from '@/components/shared/case-study-card'
 
