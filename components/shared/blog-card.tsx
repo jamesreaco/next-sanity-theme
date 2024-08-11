@@ -24,14 +24,14 @@ export default function BlogCard({ post }: {
           className='w-full h-auto bg-black rounded-lg transition'
           alt={`${title} Thumbnail Image`}
         />
-        <div className='space-y-3'>
+        <div className='space-y-4'>
           <div className='flex items-center'>
             <Tag text={category.title} />
             <span className='ml-3 text-sm  tracking-tight text-gray-600'>
               {readTime} Minute Read
             </span>
           </div>
-          <h3 className='text-xl md:text-2xl font-normal tracking-tight'>
+          <h3 className='text-xl md:text-[1.6rem] font-normal tracking-tight leading-snug'>
             {title}
           </h3>
         </div>

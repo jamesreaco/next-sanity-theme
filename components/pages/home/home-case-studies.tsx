@@ -15,7 +15,7 @@ export default function HomeCaseStudies({ caseStudies }: {
     <section className="relative mt-12 mb-6 md:mb-12 pt-28 md:pt-64 overflow-x-hidden">
       <Container>
         <motion.div 
-          className='-left-[640px] top-0 absolute text-[64px] md:text-[160px] font-extralight whitespace-nowrap' 
+          className='-left-[640px] top-0 absolute text-[3.8rem] md:text-[9.8rem] tracking-tighter font-extralight whitespace-nowrap' 
           style={{ x }}
         >
           {([...Array(6)].map(() => "Case Studies ✦ ")).join("")}

@@ -10,7 +10,7 @@ export default function HomeLatestPosts({ posts }: {
   return (
     <section className='mt-6 md:mt-0 mb-4 py-10 md:py-16 border-t md-border-t-none border-b bg-white'>
       <Container>
-        <h2 className='text-xl md:text-2xl font-light uppercase tracking-widest'>
+        <h2 className='text-2xl md:text-4xl tracking-tight'>
           Latest Posts
         </h2>
         <hr className='mt-8'/>
