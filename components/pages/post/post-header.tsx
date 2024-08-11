@@ -29,7 +29,7 @@ export default function PostHeader({ ...props }: {
             {readTime} Minute Read
           </span>
         </div>
-        <h1 className='text-2xl md:text-3xl mt-4'>
+        <h1 className='mt-4 text-2xl md:text-3xl tracking-tighter'>
           {title}
         </h1>
       </div>

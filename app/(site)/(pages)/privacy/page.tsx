@@ -3,6 +3,7 @@ import { fetchPrivacyPage } from '@/sanity/lib/sanity.fetch'
 import Container from '@/components/global/container'
 import Content from '@/components/shared/content'
 import Header from '@/components/shared/header'
+import { cn } from '@/utils/cn'
 
 export async function generateMetadata(): Promise<Metadata> {
 
@@ -20,13 +21,17 @@ export default async function PrivacyPage() {
   const page = await fetchPrivacyPage()
   
   return (
-    <>
-      <Header heading={page.heading} />
+    <div className='py-16'>
       <Container>
-        <div className='mx-auto md:pt-6 pb-10 px-6 md:px-0 text-lg text-gray-700 blog-content'>
-          <Content data={page.content} />
+        <div className='flex flex-col lg:flex-row gap-16 lg:gap-40'>
+          <h1 className='flex-none -ml-1 text-3xl md:text-4xl leading-none tracking-tighter'>
+            {page.heading}
+          </h1>
+          <div className='flex-1'>
+            <Content data={page.content} />
+          </div>
         </div>
       </Container>
-    </>
+    </div>
   )
 }

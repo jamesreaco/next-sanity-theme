@@ -10,11 +10,11 @@ export default function HomeLatestPosts({ posts }: {
   return (
     <section className='mt-6 md:mt-0 mb-4 py-10 md:py-16 border-t md-border-t-none border-b bg-white'>
       <Container>
-        <h2 className='text-2xl md:text-4xl tracking-tight'>
+        <h2 className='text-2xl md:text-3xl antialiased tracking-tight'>
           Latest Posts
         </h2>
         <hr className='mt-8'/>
-        <ul className='grid grid-cols-1 lg:grid-cols-3 gap-12 mt-12'>
+        <ul className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12'>
           {posts.slice(0, 3).map((post) => (
             <li key={post.title}>
               <BlogCard post={post} />

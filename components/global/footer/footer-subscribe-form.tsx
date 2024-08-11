@@ -54,7 +54,7 @@ export default function FooterSubscribeForm(props: FooterSubscribeFormProps) {
       </div>
       <form 
         onSubmit={handleSubmit}
-        className='flex gap-1 mt-2'
+        className='flex gap-1.5 mt-2'
       >
         <input 
           type="email" 
