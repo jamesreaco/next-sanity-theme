@@ -11,10 +11,10 @@ export default function BlogCard({ post }: {
   const { slug, image, category, readTime, title } = post
 
   return (
-    <article>
+    <article className='h-full'>
       <Link 
         href={`/blog/${slug}`} 
-        className='relative h-full flex flex-col items-start justify-between pb-8 border-b border-black cursor-pointer group'
+        className='relative h-full flex flex-col gap-8 items-start pb-8 border-b cursor-pointer group'
       >
         <Image 
           src={image}
@@ -24,15 +24,17 @@ export default function BlogCard({ post }: {
           className='w-full h-auto bg-black rounded-lg transition'
           alt={`${title} Thumbnail Image`}
         />
-        <div className='flex items-center mt-5'>
-          <Tag text={category.title} />
-          <span className='ml-3 text-gray-500 text-sm md:text-base font-light tracking-wide antialiased'>
-            {readTime} Minute Read
-          </span>
+        <div className='space-y-3'>
+          <div className='flex items-center'>
+            <Tag text={category.title} />
+            <span className='ml-3 text-sm  tracking-tight text-gray-600'>
+              {readTime} Minute Read
+            </span>
+          </div>
+          <h3 className='text-xl md:text-2xl font-normal tracking-tight'>
+            {title}
+          </h3>
         </div>
-        <h3 className='mt-3 text-xl md:text-2xl pr-12 font-normal'>
-          {title}
-        </h3>
         <AnimatedUnderline className='-bottom-0'/>
       </Link>
     </article>

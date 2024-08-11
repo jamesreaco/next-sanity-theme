@@ -16,7 +16,7 @@ export default function Header(props: HeaderProps) {
     <header className='pt-8 md:pt-10'>
       <Container>
         <h1 
-          className={cn('-ml-1 text-3xl md:text-5xl font-light leading-none text-left', {
+          className={cn('-ml-1 text-3xl md:text-5xl font-light leading-none tracking-tight text-left', {
             'text-center': centerText
           })}
         >

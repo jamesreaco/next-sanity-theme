@@ -28,7 +28,7 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
           className='w-full h-full object-cover transition md:hover:scale-[1.02] '
         />
         <div className='p-[1rem] absolute bottom-0 left-0 right-0 transition-all md:group-hover:p-[2rem]'>
-          <div className='flex items-center justify-between py-2 md:py-3 px-4 md:px-5 text-base md:text-lg tracking-widest cursor-pointer group rounded-md bg-[#f6f6f2] text-black'>
+          <div className='flex items-center justify-between py-2 md:py-3 px-4 md:px-5 text-base md:text-lg tracking-tight cursor-pointer group rounded-md bg-[#f6f6f2] text-black'>
             {title} 
             <FiArrowUpRight 
               size={20}
