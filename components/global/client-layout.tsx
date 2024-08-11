@@ -4,8 +4,8 @@ import Navbar from './navbar'
 import Footer from './footer/footer'
 import BottomBar from './bottom-bar'
 import MobileNavbar from './mobile-navbar'
-import { Settings } from '@/types/singletons/settings'
 import { usePathname } from 'next/navigation'
+import { Settings } from '@/types/singletons/settings'
 
 export default function ClientLayout({ settings, children }: {
   settings: Settings,

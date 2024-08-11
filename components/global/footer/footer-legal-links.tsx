@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Settings } from "@/types/singletons/settings"
+import AnimatedUnderline from "@/components/shared/ui/animated-underline"
 
 interface FooterLegalLinksProps {
   footerLegalLinks: Settings['footerLegalLinks']
@@ -18,7 +19,7 @@ export default function FooterLegalLinks({ footerLegalLinks }: FooterLegalLinksP
             className='relative mt-1 md:mt-0 text-sm tracking-tight group'
           >
             {link.title}
-            <span className="absolute -bottom-1.5 left-0 block h-0.5 w-full max-w-0 group-hover:max-w-full transition-all duration-500 bg-black"></span>
+            <AnimatedUnderline className="-bottom-1.5" />
           </Link>
           <span className='group-last:hidden'>
             /

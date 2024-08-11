@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { cn } from '@/utils/cn'
-import { Settings } from '@/types/singletons/settings'
 import Logo from '@/components/shared/logo'
 import Button from '@/components/shared/button'
+import { Settings } from '@/types/singletons/settings'
+import AnimatedUnderline from '../shared/ui/animated-underline'
 
 interface NavbarProps {
   settings: Settings
@@ -28,9 +29,10 @@ export default function Navbar({ settings }: NavbarProps) {
             <li key={item._id}>
               <Link 
                 href={`${item.link}`}
-                className='text-lg tracking-wider hover:underline underline-offset-[12px] decoration-2'
+                className='relative text-lg tracking-tight group'
               >
                 {item.title}
+                <AnimatedUnderline className='-bottom-4'/>
               </Link>
            </li>
           ))}

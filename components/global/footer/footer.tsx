@@ -1,4 +1,5 @@
 "use client"
+import Container from '../container'
 import Logo from '@/components/shared/logo'
 import { Settings } from '@/types/singletons/settings'
 import FooterQuickLinks from './footer-quick-links'
@@ -6,7 +7,6 @@ import FooterSocialLinks from './footer-social-links'
 import FooterLegalLinks from './footer-legal-links'
 import FooterFootnote from './footer-footnote'
 import FooterSubscribeForm from './footer-subscribe-form'
-import Container from '../container'
 
 interface FooterProps {
   settings: Settings
@@ -49,9 +49,9 @@ export default function Footer({ settings }: FooterProps) {
         </div>
         <div className='mt-10 md:mt-24 flex flex-col md:flex-row justify-between'>
           <div className='flex flex-col md:flex-row'>
-            <p className='font-light text-sm'>
+            <span className='font-light text-sm'>
               {settings.footerCopyright}
-            </p>
+            </span>
             {settings.enableFootnote && (
               <FooterFootnote 
                 footerFootnoteText={settings.footerFootnoteText}

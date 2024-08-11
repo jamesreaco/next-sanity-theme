@@ -1,3 +1,4 @@
+import AnimatedUnderline from "@/components/shared/ui/animated-underline"
 import { Settings } from "@/types/singletons/settings"
 
 interface FooterFootnoteProps {
@@ -28,7 +29,7 @@ export default function FooterFootnote(props: FooterFootnoteProps) {
           className='relative font-medium text-[#0e788a] group'
         >
           {footerFootnoteLinkText ?? 'James Rea'}
-          <span className="absolute -bottom-1.5 left-0 block h-0.5 w-full max-w-0 group-hover:max-w-full transition-all duration-500 bg-[#0e788a]"></span>
+          <AnimatedUnderline className="-bottom-1.5 bg-[#0e788a]" />
         </a>
       )}
     </span>
