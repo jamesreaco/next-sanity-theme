@@ -17,10 +17,10 @@ export default function HomeHero({ ...props }: {
       <Container>
         <div className='flex flex-col-reverse md:flex-row justify-between'>
           <div className='flex items-start flex-col'>
-            <h1 className='-ml-1 md:-ml-2 text-[12vw] font-light leading-none'>
+            <h1 className='-ml-1 md:-ml-2 text-[12vw] font-light tracking-tight leading-none'>
               {heading}
             </h1>
-            <p className='max-w-lg mt-6 md:mt-8 mb-8 md:mb-12 text-lg md:text-2xl font-light'>
+            <p className='max-w-lg mt-6 md:mt-8 mb-8 md:mb-12 text-lg md:text-2xl font-light tracking-tight'>
               {paragraph}
             </p>
             <Button

@@ -1,13 +1,13 @@
 import { cn } from '@/utils/cn'
-import { useState, FormEvent } from 'react'
 import { TbMail } from "react-icons/tb";
+import { useState, FormEvent } from 'react'
 
-interface SubscribeFormProps {
+interface FooterSubscribeFormProps {
   title: string
   placeholder: string
 }
 
-export default function SubscribeForm(props: SubscribeFormProps) {
+export default function FooterSubscribeForm(props: FooterSubscribeFormProps) {
 
   const { title, placeholder } = props
 
@@ -45,16 +45,16 @@ export default function SubscribeForm(props: SubscribeFormProps) {
   }
 
   return (
-    <div className='w-full border-t border-t-zinc-100 mt-8'>
+    <div className='pb-8 w-full border-t border-t-zinc-100 mt-8'>
       <div className='flex items-center gap-1.5 mt-8'>
         <TbMail />
-        <span className='text-sm'>
+        <span className='text-sm tracking-tight'>
           {title}
         </span> 
       </div>
       <form 
         onSubmit={handleSubmit}
-        className='flex mt-2'
+        className='flex gap-1 mt-2'
       >
         <input 
           type="email" 
@@ -63,12 +63,12 @@ export default function SubscribeForm(props: SubscribeFormProps) {
           onChange={(e) => {
             setEmail(e.target.value);
           }}
-          className='w-full px-3.5 py-2 rounded-tl-lg rounded-bl-lg bg-zinc-100'
+          className='w-full px-3.5 py-2 text-sm rounded-lg bg-zinc-100'
           placeholder={placeholder ?? 'Enter your email'}
         />
         <button 
           type="submit"
-          className='px-3.5 py-2 rounded-tr-lg rounded-br-lg bg-[#000] text-[#fff]'
+          className='px-5 py-2 rounded-lg bg-[#000] text-[#fff]'
         >
           Submit
         </button>

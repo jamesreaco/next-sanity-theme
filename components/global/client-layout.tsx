@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Navbar from './navbar'
-import Footer from './footer'
+import Footer from './footer/footer'
 import BottomBar from './bottom-bar'
 import MobileNavbar from './mobile-navbar'
 import { Settings } from '@/types/singletons/settings'

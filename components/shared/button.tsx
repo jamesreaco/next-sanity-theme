@@ -37,10 +37,6 @@ export default function Button(props: ButtonProps) {
       className={cn(buttonVariants({ variant, size, className }))}
     >
       {children}
-      <FiArrowUpRight 
-        size={20}
-        className="ml-8 md:ml-6 transition group-hover:rotate-45"
-      />
     </Link>
   )
 }
