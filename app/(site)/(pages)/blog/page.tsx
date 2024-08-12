@@ -1,14 +1,12 @@
 import { Metadata } from 'next'
+
 import { 
   fetchAllPostCategories, 
   fetchAllPosts, 
   fetchBlogPage 
 } from '@/sanity/lib/sanity.fetch'
 
-// components
-import PostArchive from '@/components/pages/blog/post-archive'
-import BlogCategories from '@/components/pages/blog/blog-categories'
-import BlogArchiveHeader from '@/components/pages/blog/blog-archive-header'
+import BlogArchive from '@/components/pages/blog/blog-archive'
 
 export async function generateMetadata(): Promise<Metadata> {
 
@@ -28,11 +26,10 @@ export default async function BlogPage() {
   const categories = await fetchAllPostCategories()
 
   return (
-    <> 
-      <BlogArchiveHeader heading={page.heading}>
-        <BlogCategories categories={categories} />
-      </BlogArchiveHeader>
-      <PostArchive posts={posts} />
-    </>
+    <BlogArchive 
+      posts={posts} 
+      categories={categories}
+      heading={page.heading}
+    />
   )
 }
