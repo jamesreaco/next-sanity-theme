@@ -19,9 +19,9 @@ export default function PostQuoteBlock({ data }: {
             color={`#${iconColor}`}
           />
         </div>
-        <div className='mt-3'>
+        <div className='mt-6 text-center'>
           <span 
-            className='text-xl md:text-2xl text-center'
+            className='text-xl md:text-2xl'
             style={{ color: `#${textColor}` }}
           >
             {quote}

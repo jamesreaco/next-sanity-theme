@@ -7,7 +7,7 @@ interface PostContentProps {
 
 export default function PostContent({ content }: PostContentProps) {
   return (
-    <div className='w-full mx-auto md:pt-5 xl:pb-32 xl:px-5 text-gray-700 blog-content'>
+    <div className='w-full mx-auto pt-5 md:pt-5 xl:pb-32 xl:px-5 text-gray-700 blog-content'>
       <Content data={content} />
     </div>
   )

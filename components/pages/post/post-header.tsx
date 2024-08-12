@@ -14,7 +14,7 @@ export default function PostHeader({ ...props }: {
   const { image, category, readTime, title, content } = props 
 
   return (
-    <header>
+    <header className='pb-4'>
       <Image 
         src={image}
         width={2000}

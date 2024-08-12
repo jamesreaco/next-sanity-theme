@@ -45,7 +45,7 @@ export default function PostTableOfContents(props: PostTableOfContentsProps) {
   const { content } = props
 
   return (
-    <div>
+    <div className='hidden xl:block'>
       <div className='py-5 px-8 flex items-center justify-between gap-2.5 border-b bg-[#f0f0eb]'>
         <div className='font-medium '>
           Table Of Contents
