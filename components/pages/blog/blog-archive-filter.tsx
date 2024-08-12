@@ -75,6 +75,7 @@ export default function BlogArchiveFilter({ categories, handleFilterPosts }: {
         </motion.li>
         {categories?.map((category) => (
           <Option 
+            key={category.slug}
             setOpen={setOpen} 
             category={category}
             currentCategory={currentCategory}
