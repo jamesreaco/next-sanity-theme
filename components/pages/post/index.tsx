@@ -17,7 +17,7 @@ export default function Post({ post }: { post: Post }) {
       <ScrollProgress />
       <Container>
         <div className='flex flex-col xl:flex-row gap-10 relative'>
-          <div className='hidden xl:block flex-1 lg:sticky top-1.5 left-0 h-screen border-l border-r'>
+          <div className='hidden xl:block flex-1 mt-9 lg:sticky top-9 left-0 h-screen border rounded-tr-xl rounded-tl-xl overflow-hidden'>
             <PostTableOfContents content={post.content}/>
           </div>
           <div className='mt-10 flex-[2.2]'>

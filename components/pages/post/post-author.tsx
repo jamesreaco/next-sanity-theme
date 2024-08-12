@@ -18,10 +18,10 @@ export default function PostAuthor(props: PostAuthor) {
         />
       </div>
       <div>
-        <div className='text-lg'>
+        <div>
           {name}
         </div>
-        <div className='text-base antialiased text-gray-600'>
+        <div className='text-sm antialiased text-gray-600'>
           {description}
         </div>
       </div>
