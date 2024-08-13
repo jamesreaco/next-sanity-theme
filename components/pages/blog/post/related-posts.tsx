@@ -1,7 +1,7 @@
 import { Post } from '@/types/documents/post'
-import Container from '../../global/container'
-import BlogCard from '../../shared/blog-card'
-import Button from '../../shared/button'
+import Container from '@/components/global/container'
+import BlogCard from '@/components/shared/blog-card'
+import Button from '@/components/shared/button'
 
 export default function RelatedPosts({ posts }: {
   posts: Post[]

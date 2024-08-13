@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
-import Content from '@/components/shared/content'
 import Container from '@/components/global/container'
 import { fetchPrivacyPage } from '@/sanity/lib/fetches'
+import PortableTextEditor from '@/components/portable-text'
 
 export async function generateMetadata(): Promise<Metadata> {
 
@@ -26,7 +26,9 @@ export default async function PrivacyPage() {
             {page.heading}
           </h1>
           <div className='flex-1'>
-            <Content data={page.content} />
+            <PortableTextEditor 
+              data={page.content} 
+            />
           </div>
         </div>
       </Container>

@@ -3,9 +3,9 @@ import { useParams } from "next/navigation";
 import { useLiveQuery } from "@sanity/preview-kit";
 import { caseStudyBySlugQuery } from "@/sanity/lib/queries";
 
-import CaseStudyHeader from "../pages/case-studies/case-study-header";
-import CaseStudyOverview from "../pages/case-studies/case-study-overview";
-import CaseStudyImageGallery from "../pages/case-studies/case-study-image-gallery";
+import CaseStudyHeader from "./case-study-header";
+import CaseStudyOverview from "./case-study-overview";
+import CaseStudyImageGallery from "./case-study-image-gallery";
 import { CaseStudy } from "@/types/documents/case-study";
 
 interface CaseStudyPreviewProps {

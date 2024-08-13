@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Content from '@/components/shared/content';
 import Container from '@/components/global/container';
 import { CaseStudy } from '@/types/documents/case-study';
+import PortableTextEditor from '@/components/portable-text';
 
 export default function CaseStudyOverview({ caseStudy }: {
   caseStudy: CaseStudy
@@ -20,7 +20,9 @@ export default function CaseStudyOverview({ caseStudy }: {
           <h2 className='mb-4 text-3xl md:text-4xl font-extralight'>
             Project Overview
           </h2>
-          <Content data={caseStudy.overview} />
+          <PortableTextEditor
+            data={caseStudy.overview}
+          />
         </div>
       </Container>
     </section>

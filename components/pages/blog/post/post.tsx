@@ -3,9 +3,9 @@ import PostContent from './post-content';
 import { type Post } from '@/types/documents/post';
 import Container from '@/components/global/container';
 import PostTableOfContents from './post-table-of-contents';
-import PostHeader from '@/components/pages/post/post-header';
-import PostAuthor from '@/components/pages/post/post-author';
-import RelatedPosts from '@/components/pages/post/related-posts';
+import PostHeader from '@/components/pages/blog/post/post-header';
+import PostAuthor from '@/components/pages/blog/post/post-author';
+import RelatedPosts from '@/components/pages/blog/post/related-posts';
 import ScrollProgress from '@/components/shared/scroll-progress';
 
 export default function Post({ post }: { post: Post }) {

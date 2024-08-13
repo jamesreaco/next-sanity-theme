@@ -13,7 +13,7 @@ interface PreviewProviderProps {
 
 export default function PreviewProvider({ children, token }: PreviewProviderProps) {
   
-  const { client } = suspend(() => import("../../sanity/config/sanity.client"), [UniqueKey])
+  const { client } = suspend(() => import("../sanity/config/sanity.client"), [UniqueKey])
 
   if (!token) {
     throw new TypeError("Missing token")

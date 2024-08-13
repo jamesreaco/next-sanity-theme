@@ -1,5 +1,5 @@
 "use client";
-import Post from "../pages/post/post";
+import Post from "./post";
 import { useParams } from 'next/navigation'
 import { useLiveQuery } from "@sanity/preview-kit";
 import { Post as PostType } from '@/types/documents/post';

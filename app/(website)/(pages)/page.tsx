@@ -13,8 +13,8 @@ import HomeCaseStudies from '@/components/pages/home/home-case-studies'
 import HomeLatestPosts from '@/components/pages/home/home-latest-posts'
 
 // preview components
-import PreviewProvider from "@/components/preview/preview-provider"
-import HomePreview from "@/components/preview/home-preview"
+import PreviewProvider from "@/providers/preview-provider"
+import HomePreview from "@/components/pages/home/home-preview"
 
 export async function generateMetadata(): Promise<Metadata> {
 

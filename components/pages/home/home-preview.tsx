@@ -9,9 +9,9 @@ import { latestCaseStudiesQuery } from "@/sanity/lib/queries";
 import { latestPostsQuery } from "@/sanity/lib/queries";
 
 // components
-import HomeHero from "../pages/home/home-hero";
-import HomeCaseStudies from "../pages/home/home-case-studies";
-import HomeLatestPosts from "../pages/home/home-latest-posts";
+import HomeHero from "./home-hero";
+import HomeCaseStudies from "./home-case-studies";
+import HomeLatestPosts from "./home-latest-posts";
 
 interface Page {
   heading: string

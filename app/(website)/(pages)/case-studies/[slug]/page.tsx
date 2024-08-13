@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { draftMode } from "next/headers";
 import { fetchCaseStudyBySlug } from '@/sanity/lib/fetches'
 import { generateStaticSlugs } from "@/utils/generate-static-slugs";
-import CaseStudy from '@/components/pages/case-studies/case-study'
-import CaseStudyPreview from '@/components/preview/case-study-preview';
-import PreviewProvider from "@/components/preview/preview-provider";
+import CaseStudy from '@/components/pages/case-studies/case-study/case-study'
+import CaseStudyPreview from '@/components/pages/case-studies/case-study/case-study-preview';
+import PreviewProvider from "@/providers/preview-provider";
 
 interface CaseStudyPageProps {
   params: { slug: string }

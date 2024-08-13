@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { draftMode } from "next/headers";
 import { fetchPostBySlug } from '@/sanity/lib/fetches'
-import PreviewProvider from "@/components/preview/preview-provider";
+import PreviewProvider from "@/providers/preview-provider";
 import { generateStaticSlugs } from "@/utils/generate-static-slugs";
-import Post from "@/components/pages/post/post";
-import PostPreview from "@/components/preview/post-preview";
+import Post from "@/components/pages/blog/post/post";
+import PostPreview from "@/components/pages/blog/post/post-preview";
 
 interface PostPageProps {
   params: { slug: string }
