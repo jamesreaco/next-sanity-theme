@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { cn } from '@/utils/cn'
 import { type PostAuthor } from '@/types/documents/post'
 
 export default function PostAuthor(props: PostAuthor) {

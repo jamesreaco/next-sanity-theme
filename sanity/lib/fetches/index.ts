@@ -1,25 +1,6 @@
 import 'server-only'
-import type { QueryParams } from '@sanity/client'
-import { client } from "../config/sanity.client";
 
-import { 
-  allCaseStudiesQuery, 
-  allPostCategoriesQuery, 
-  allPostsQuery, 
-  blogPageQuery, 
-  caseStudyBySlugQuery, 
-  caseStudyPageQuery, 
-  contactPageQuery, 
-  homePageQuery, 
-  latestCaseStudiesQuery, 
-  latestPostsQuery, 
-  postBySlugQuery, 
-  postCategoryBySlugQuery, 
-  postsByCategoryQuery, 
-  privacyPageQuery, 
-  settingsQuery, 
-  termsPageQuery
-} from "./queries";
+import { sanityFetch } from './utils/sanity-fetch';
 
 import { Settings } from '@/types/singletons/settings';
 import { Page } from '@/types/documents/page';
@@ -27,19 +8,21 @@ import { HomePage } from '@/types/singletons/home-page';
 import { CaseStudy } from '@/types/documents/case-study';
 import { Post, PostCategory } from '@/types/documents/post';
 
-export async function sanityFetch<QueryResponse>({ 
-  query, 
-  params = {} as QueryParams, 
-  tags = [] as string[]
-}: {
-  query: string
-  params?: QueryParams
-  tags: string[]
-}): Promise<QueryResponse> {
-  return client.fetch<QueryResponse>(query, params, {
-    next: { tags }
-  })
-}
+import { settingsQuery } from '../queries/singletons/settings-query';
+import { homePageQuery } from '../queries/singletons/pages/home-page-query';
+import { blogPageQuery } from '../queries/singletons/pages/blog-page-query';
+import { caseStudyPageQuery } from '../queries/singletons/pages/case-study-page-query';
+import { contactPageQuery } from '../queries/singletons/pages/contact-page-query';
+import { privacyPageQuery } from '../queries/singletons/pages/privacy-page-query';
+import { termsPageQuery } from '../queries/singletons/pages/terms-page-query';
+import { allPostsQuery } from '../queries/documents/posts/all-posts-query';
+import { latestPostsQuery } from '../queries/documents/posts/latest-posts-query';
+import { postBySlugQuery } from '../queries/documents/posts/posts-by-slug-query';
+import { allPostCategoriesQuery } from '../queries/documents/posts/all-post-categories-query';
+import { latestCaseStudiesQuery } from '../queries/documents/case-studies/latest-case-studies-query';
+import { allCaseStudiesQuery } from '../queries/documents/case-studies/all-case-studies-query';
+import { caseStudyBySlugQuery } from '../queries/documents/case-studies/case-study-by-slug-query';
+
 
 export async function fetchSettings() {
   return sanityFetch<Settings>({
@@ -112,26 +95,10 @@ export async function fetchPostBySlug(slug: string) {
   })
 }
 
-export async function fetchAllPostsByCategory(slug: string) {
-  return sanityFetch<Post[]>({
-    query: postsByCategoryQuery,
-    params: { slug: slug },
-    tags: ['post'],
-  })
-}
-
 export async function fetchAllPostCategories() {
   return sanityFetch<PostCategory[]>({
     query: allPostCategoriesQuery,
     tags: ['postCategory'],
-  })
-}
-
-export async function fetchPostCategoryBySlug(slug: string) {
-  return sanityFetch<Post>({
-    query: postCategoryBySlugQuery,
-    params: { slug: slug },
-    tags: ['post'],
   })
 }
 

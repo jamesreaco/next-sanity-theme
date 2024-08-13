@@ -7,12 +7,10 @@ import {
   fetchLatestPosts 
 } from '@/sanity/lib/fetches'
 
-// components
 import HomeHero from '@/components/pages/home/home-hero'
 import HomeCaseStudies from '@/components/pages/home/home-case-studies'
 import HomeLatestPosts from '@/components/pages/home/home-latest-posts'
 
-// preview components
 import PreviewProvider from "@/providers/preview-provider"
 import HomePreview from "@/components/pages/home/home-preview"
 
