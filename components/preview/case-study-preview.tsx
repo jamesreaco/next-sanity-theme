@@ -1,7 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 import { useLiveQuery } from "@sanity/preview-kit";
-import { caseStudyBySlugQuery } from "@/sanity/lib/sanity.queries";
+import { caseStudyBySlugQuery } from "@/sanity/lib/queries";
 
 import CaseStudyHeader from "../pages/case-studies/case-study-header";
 import CaseStudyOverview from "../pages/case-studies/case-study-overview";

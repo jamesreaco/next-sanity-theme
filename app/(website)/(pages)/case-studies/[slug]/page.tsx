@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { draftMode } from "next/headers";
-import { fetchCaseStudyBySlug } from '@/sanity/lib/sanity.fetch'
+import { fetchCaseStudyBySlug } from '@/sanity/lib/fetches'
 import { generateStaticSlugs } from "@/utils/generate-static-slugs";
 import CaseStudy from '@/components/pages/case-studies/case-study'
 import CaseStudyPreview from '@/components/preview/case-study-preview';

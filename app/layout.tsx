@@ -1,6 +1,6 @@
 import './globals.css'
 import { Metadata } from 'next';
-import { fetchSettings } from '@/sanity/lib/sanity.fetch'
+import { fetchSettings } from '@/sanity/lib/fetches'
 import { defaultMetadata } from '@/utils/default-metadata';
 import ClientLayout from '@/components/global/client-layout';
 

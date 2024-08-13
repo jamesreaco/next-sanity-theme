@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Header from '@/components/shared/header'
 import CaseStudyArchive from '@/components/pages/case-studies/case-study-archive'
-import { fetchAllCaseStudies, fetchCaseStudyPage } from '@/sanity/lib/sanity.fetch'
+import { fetchAllCaseStudies, fetchCaseStudyPage } from '@/sanity/lib/fetches'
 
 export async function generateMetadata(): Promise<Metadata> {
 

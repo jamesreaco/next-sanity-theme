@@ -5,7 +5,7 @@ import {
   fetchHomePage, 
   fetchLatestCaseStudies, 
   fetchLatestPosts 
-} from '@/sanity/lib/sanity.fetch'
+} from '@/sanity/lib/fetches'
 
 // components
 import HomeHero from '@/components/pages/home/home-hero'

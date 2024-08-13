@@ -3,7 +3,7 @@ import Post from "../pages/post/post";
 import { useParams } from 'next/navigation'
 import { useLiveQuery } from "@sanity/preview-kit";
 import { Post as PostType } from '@/types/documents/post';
-import { postBySlugQuery } from "@/sanity/lib/sanity.queries";
+import { postBySlugQuery } from "@/sanity/lib/queries";
 
 interface PostPreviewProps {
   post: PostType

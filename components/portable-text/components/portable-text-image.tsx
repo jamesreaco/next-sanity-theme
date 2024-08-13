@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { urlForImage } from '@/sanity/lib/sanity.image'
+import { urlForImage } from '@/sanity/utils/urlForImage'
 
-export default function PostImageBlock({ data }: {
+export default function PortableTextImage({ data }: {
   data: string
 }) {
 

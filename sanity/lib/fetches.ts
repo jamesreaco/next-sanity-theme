@@ -19,7 +19,7 @@ import {
   privacyPageQuery, 
   settingsQuery, 
   termsPageQuery
-} from "./sanity.queries";
+} from "./queries";
 
 import { Settings } from '@/types/singletons/settings';
 import { Page } from '@/types/documents/page';

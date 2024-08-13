@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Header from '@/components/shared/header'
 import Container from '@/components/global/container'
 import ContactForm from '@/components/forms/contact-form'
-import { fetchContactPage } from '@/sanity/lib/sanity.fetch'
+import { fetchContactPage } from '@/sanity/lib/fetches'
 
 export async function generateMetadata(): Promise<Metadata> {
 

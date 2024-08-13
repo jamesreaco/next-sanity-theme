@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Content from '@/components/shared/content'
 import Container from '@/components/global/container'
-import { fetchPrivacyPage } from '@/sanity/lib/sanity.fetch'
+import { fetchPrivacyPage } from '@/sanity/lib/fetches'
 
 export async function generateMetadata(): Promise<Metadata> {
 

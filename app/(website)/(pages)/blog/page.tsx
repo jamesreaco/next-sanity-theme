@@ -4,7 +4,7 @@ import {
   fetchAllPostCategories, 
   fetchAllPosts, 
   fetchBlogPage 
-} from '@/sanity/lib/sanity.fetch'
+} from '@/sanity/lib/fetches'
 
 import BlogArchive from '@/components/pages/blog/blog-archive'
 

@@ -4,9 +4,9 @@ import { CaseStudy } from "@/types/documents/case-study";
 import { useLiveQuery } from "@sanity/preview-kit";
 
 // sanity queries
-import { homePageQuery } from "@/sanity/lib/sanity.queries";
-import { latestCaseStudiesQuery } from "@/sanity/lib/sanity.queries";
-import { latestPostsQuery } from "@/sanity/lib/sanity.queries";
+import { homePageQuery } from "@/sanity/lib/queries";
+import { latestCaseStudiesQuery } from "@/sanity/lib/queries";
+import { latestPostsQuery } from "@/sanity/lib/queries";
 
 // components
 import HomeHero from "../pages/home/home-hero";
