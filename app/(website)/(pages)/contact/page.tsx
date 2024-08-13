@@ -20,14 +20,17 @@ export default async function ContactPage() {
   const page = await fetchContactPage()
 
   return (
-    <>
-      <Header 
-        heading={page.heading} 
-        centerText={true}
-      />
+    <div className='py-16'>
       <Container>
-        <ContactForm />
+        <div className='flex flex-col lg:flex-row gap-16 lg:gap-40'>
+          <h1 className='flex-none -ml-1 text-3xl md:text-4xl leading-none tracking-tighter'>
+            {page.heading}
+          </h1>
+          <div className='flex-1'>
+          <ContactForm />
+          </div>
+        </div>
       </Container>
-    </>
+    </div>
   )
 }
