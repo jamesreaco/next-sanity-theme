@@ -7,8 +7,8 @@ import { Post, PostCategory } from '@/types/documents/post'
 
 export default function BlogArchive({ posts, categories, heading }: {
   posts: Post[]
-  categories: PostCategory[]
   heading: string
+  categories: PostCategory[]
 }) {
 
   const [filteredPosts, setFilteredPosts] = useState<Post[]>(posts)

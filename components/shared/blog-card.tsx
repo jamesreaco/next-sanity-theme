@@ -2,7 +2,7 @@ import Tag from './tag'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Post } from '@/types/documents/post'
-import AnimatedUnderline from './ui/animated-underline'
+import AnimatedUnderline from './animated-underline'
 
 export default function BlogCard({ post }: {
   post: Post

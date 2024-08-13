@@ -16,7 +16,7 @@ export default function HomeHero({ ...props }: {
     <section className='pt-8 md:pt-24'>
       <Container>
         <div className='flex flex-col-reverse md:flex-row justify-between'>
-          <div className='flex items-start flex-col'>
+          <div className='flex flex-col items-start'>
             <h1 className='w-full max-w-[60rem] -ml-1 md:-ml-2 text-[14vw] lg:text-[10vw] font-light tracking-tighter leading-none'>
               {heading}
             </h1>

@@ -1,7 +1,7 @@
-import { CaseStudy } from '@/types/documents/case-study'
 import Tag from '@/components/shared/tag'
 import Button from '@/components/shared/button'
 import Container from '@/components/global/container'
+import { CaseStudy } from '@/types/documents/case-study'
 
 export default function CaseStudyHeader({ caseStudy }: {
   caseStudy: CaseStudy

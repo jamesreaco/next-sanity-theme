@@ -2,12 +2,12 @@ import { cn } from '@/utils/cn'
 import { TbMail } from "react-icons/tb";
 import { useState, FormEvent } from 'react'
 
-interface FooterSubscribeFormProps {
+interface SubscribeFormProps {
   title: string
   placeholder: string
 }
 
-export default function FooterSubscribeForm(props: FooterSubscribeFormProps) {
+export default function SubscribeForm(props: SubscribeFormProps) {
 
   const { title, placeholder } = props
 

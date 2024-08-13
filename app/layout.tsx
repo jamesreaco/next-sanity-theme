@@ -19,7 +19,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} bg-[#F6F6F2]`}>
         <ClientLayout settings={settings}>
           {children}
         </ClientLayout>

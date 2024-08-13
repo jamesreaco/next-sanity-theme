@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
-import Navbar from './navbar'
-import Footer from './footer/footer'
+import Footer from './footer'
 import BottomBar from './bottom-bar'
 import MobileNavbar from './mobile-navbar'
+import DesktopNavbar from './desktop-navbar'
 import { usePathname } from 'next/navigation'
 import { Settings } from '@/types/singletons/settings'
 
@@ -17,7 +17,7 @@ export default function ClientLayout({ settings, children }: {
 
   return (
     <>
-      <Navbar settings={settings} />
+      <DesktopNavbar settings={settings} />
       <MobileNavbar settings={settings} />
       <main>
         {children}

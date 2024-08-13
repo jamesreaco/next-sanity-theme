@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { CaseStudy } from '@/types/documents/case-study';
 import Content from '@/components/shared/content';
 import Container from '@/components/global/container';
+import { CaseStudy } from '@/types/documents/case-study';
 
 export default function CaseStudyOverview({ caseStudy }: {
   caseStudy: CaseStudy

@@ -5,13 +5,13 @@ import useScroll from '@/hooks/use-scroll'
 import Logo from '@/components/shared/logo'
 import Button from '@/components/shared/button'
 import { Settings } from '@/types/singletons/settings'
-import AnimatedUnderline from '../shared/ui/animated-underline'
+import AnimatedUnderline from '../shared/animated-underline'
 
 interface NavbarProps {
   settings: Settings
 }
 
-export default function Navbar({ settings }: NavbarProps) {
+export default function DesktopNavbar({ settings }: NavbarProps) {
   
   const { logoText, navbarMenuItems, navbarButtonLink, navbarButtonText} = settings
 

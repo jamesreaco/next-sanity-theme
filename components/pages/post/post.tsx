@@ -6,7 +6,7 @@ import PostTableOfContents from './post-table-of-contents';
 import PostHeader from '@/components/pages/post/post-header';
 import PostAuthor from '@/components/pages/post/post-author';
 import RelatedPosts from '@/components/pages/post/related-posts';
-import ScrollProgress from '@/components/global/scroll-progress';
+import ScrollProgress from '@/components/shared/scroll-progress';
 
 export default function Post({ post }: { post: Post }) {
 
@@ -32,14 +32,12 @@ export default function Post({ post }: { post: Post }) {
               content={content} 
             />
           </div>
-          <div className='flex-1 xl:sticky mt-10 top-10 left-0 h-screen border-l'>
-            <div className='flex flex-col xl:pl-8'>
-              <PostAuthor 
-                name={author.name}
-                description={author.description}
-                image={author.image}
-              />
-            </div>
+          <div className='flex-1 xl:sticky mt-10 top-10 left-0 h-screen border-l flex flex-col xl:pl-8'>
+            <PostAuthor 
+              name={author.name}
+              description={author.description}
+              image={author.image}
+            />
           </div>
         </div>
       </Container>

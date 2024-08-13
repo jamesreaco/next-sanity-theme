@@ -74,7 +74,7 @@ export default function BlogArchiveFilter({ categories, handleFilterPosts }: {
           </span>
         </motion.li>
         {categories?.map((category) => (
-          <Option 
+          <CategoryItem
             key={category.slug}
             setOpen={setOpen} 
             category={category}
@@ -88,13 +88,13 @@ export default function BlogArchiveFilter({ categories, handleFilterPosts }: {
   );
 };
 
-const Option = ({ setOpen, category, handleFilterPosts, currentCategory, setCurrentCategory }: {
-  setOpen: Dispatch<SetStateAction<boolean>>
+function CategoryItem({ setOpen, category, handleFilterPosts, currentCategory, setCurrentCategory }: {
   category: PostCategory
-  handleFilterPosts: (slug: string) => void
   currentCategory: string | null
+  handleFilterPosts: (slug: string) => void
+  setOpen: Dispatch<SetStateAction<boolean>>
   setCurrentCategory: Dispatch<SetStateAction<string | null>>
-}) => {
+}) {
 
   function handleClick() {
     handleFilterPosts(category.slug)
@@ -132,4 +132,4 @@ const Option = ({ setOpen, category, handleFilterPosts, currentCategory, setCurr
       </span>
     </motion.li>
   );
-};
+}
