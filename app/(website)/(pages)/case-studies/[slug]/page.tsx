@@ -2,8 +2,6 @@ import { Metadata } from "next";
 import { draftMode } from "next/headers";
 import { fetchCaseStudyBySlug } from '@/sanity/lib/sanity.fetch'
 import { generateStaticSlugs } from "@/utils/generate-static-slugs";
-
-// components
 import CaseStudy from '@/components/pages/case-studies/case-study'
 import CaseStudyPreview from '@/components/preview/case-study-preview';
 import PreviewProvider from "@/components/preview/preview-provider";

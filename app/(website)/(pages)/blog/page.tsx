@@ -21,9 +21,15 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function BlogPage() {
 
-  const page = await fetchBlogPage()
-  const posts = await fetchAllPosts()
-  const categories = await fetchAllPostCategories()
+  const pageData = await fetchBlogPage()
+  const postsData = await fetchAllPosts()
+  const categoriesData = await fetchAllPostCategories()
+
+  const [ 
+    page, 
+    posts, 
+    categories
+  ] = await Promise.all([pageData, postsData, categoriesData])
 
   return (
     <BlogArchive 

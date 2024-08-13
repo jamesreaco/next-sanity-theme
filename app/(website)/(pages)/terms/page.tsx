@@ -1,8 +1,7 @@
 import { Metadata } from 'next'
-import { fetchTermsPage } from '@/sanity/lib/sanity.fetch'
-import Container from '@/components/global/container'
 import Content from '@/components/shared/content'
-import Header from '@/components/shared/header'
+import Container from '@/components/global/container'
+import { fetchTermsPage } from '@/sanity/lib/sanity.fetch'
 
 export async function generateMetadata(): Promise<Metadata> {
 

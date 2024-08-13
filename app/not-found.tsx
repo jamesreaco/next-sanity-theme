@@ -8,7 +8,9 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <div className='my-20 flex flex-col items-center text-center text-black'>
-      <h1 className='text-3xl md:text-4xl'>Page Not Found</h1>
+      <h1 className='text-3xl md:text-4xl'>
+        Page Not Found
+      </h1>
       <Button
         href='/'
         variant="default"

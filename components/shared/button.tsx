@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { cn } from '@/utils/cn'
 import { cva, VariantProps } from 'class-variance-authority'
-import { FiArrowUpRight } from 'react-icons/fi'
 
 const buttonVariants = cva(
   'flex items-center justify-between text-sm md:text-base tracking-wide cursor-pointer group transition-all duration-200 hover:scale-[0.98]',

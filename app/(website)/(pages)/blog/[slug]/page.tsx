@@ -3,8 +3,6 @@ import { draftMode } from "next/headers";
 import { fetchPostBySlug } from '@/sanity/lib/sanity.fetch'
 import PreviewProvider from "@/components/preview/preview-provider";
 import { generateStaticSlugs } from "@/utils/generate-static-slugs";
-
-// components
 import Post from "@/components/pages/post/post";
 import PostPreview from "@/components/preview/post-preview";
 
@@ -29,8 +27,8 @@ export async function generateStaticParams() {
 
 export default async function PostPage({ params }: PostPageProps) {
 
+  const isDraftMode = draftMode().isEnabled
   const post = await fetchPostBySlug(params.slug)
-  const isDraftMode = draftMode().isEnabled;
 
   if (isDraftMode && process.env.SANITY_API_READ_TOKEN) {
     return (
