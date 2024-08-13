@@ -63,7 +63,7 @@ function Posts({ posts }: {
 
 function NoPosts() {
   return (
-    <div className='flex-col items-start mt-10 pt-16 text-center mb-12 md:mb-20 border-t border-t-[#efeff1]'>
+    <div className='flex-col items-start mt-10 pt-[4.4rem] text-center mb-12 md:mb-20 border-t border-t-[#efeff1]'>
       <div>
         <span className='text-xl'>
           No Posts Found

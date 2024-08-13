@@ -1,4 +1,4 @@
-import { Quote } from '@/types/objects/quote'
+import { Quote } from '@/types/portable-text/quote'
 import { FaQuoteLeft } from 'react-icons/fa'
 
 export default function PortableTextQuote({ data }: {

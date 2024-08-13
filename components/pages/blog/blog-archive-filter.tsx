@@ -39,7 +39,7 @@ export default function BlogArchiveFilter({ categories, handleFilterPosts }: {
   return (
     <motion.div 
       animate={open ? "open" : "closed"} 
-      className="mt-8 xl:mt-0 relative z-20"
+      className="mt-8 xl:mt-0 relative z-20 w-[14rem]"
     >
       <button
         onClick={() => setOpen((open) => !open)}
